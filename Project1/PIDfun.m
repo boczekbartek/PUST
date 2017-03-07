@@ -2,11 +2,11 @@ function  err  = PIDfun( param )
 
 %__init__():
 n = 10000;
-Yzad(1:n) = 1.8;
+Yzad(1:n) = 1.9;
 Yzad(21:n) = 1.6;
 Yzad(1001:n)=1.4;
-Yzad(1501:n)=1.5;
-Yzad(2201:n)=1.7;
+Yzad(1501:n)=2.5;
+Yzad(2201:n)=1.4;
 U(1:n) = 1.0;
  
 %self.punkt_pracy

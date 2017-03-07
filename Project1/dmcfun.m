@@ -2,7 +2,7 @@ function err = dmcfun( param )
 %DMC_ERR liczy wartosc bledu regulatora dla zadanych parametrow przy D=120
 zadanie3
 params
-n = 8000; %dlugosc symulacji
+n = 10000; %dlugosc symulacji
 
 Yzad(1:n) = 1.9;
 Yzad(21:n) = 1.6;
