@@ -47,7 +47,7 @@ for i = 1:101
     Ys(i) = Y(n);
    
 end
-Kstat=(Ys(101)-Ys(1))/(Us(101)-Us(1));
+Kstat=(Ys(50)-Ys(49))/(Us(50)-Us(49));
  
 hold off;
 figure
