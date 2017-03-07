@@ -53,7 +53,7 @@ for k=21:n
      U(k)= u(k) + Upp; %przesuniecie sterowania do punktu pracy
 end;
  
-err = sum(e.^2)
+err = sum(e.^2);
 
 end
 
