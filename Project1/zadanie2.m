@@ -23,13 +23,13 @@ for k=jumps
 end
 title('odpowiedzi skokowe')
 legend('skok U do 1.3','skok U do 1,2','skok U do 1.0','skok U do 0.9');
-dane = fopen('dane2.txt','wt');
- 
-for i =1:150
-    fprintf(dane,'%f %f\n',U(i),Y(i));
-end
-fclose(dane);
- 
+% dane = fopen('dane2.txt','wt');
+%  
+% for i =1:150
+%     fprintf(dane,'%f %f\n',U(i),Y(i));
+% end
+% fclose(dane);
+savePlot(U,Y,'dane.txt'); 
 n=200;
 for i = 1:101
     Us(i) = 0.9 + 0.4*(i-1)*(1/100);
