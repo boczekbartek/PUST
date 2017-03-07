@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.5)  7 MAR 2017 19:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.5)  7 MAR 2017 20:46
 entering extended mode
 **./projekt1_main.tex
 (projekt1_main.tex
@@ -1132,6 +1132,12 @@ LaTeX Warning: Label `r_pgfplots_funkcje' multiply defined.
 
 LaTeX Warning: Label `r_pgfplots_funkcje' multiply defined.
 
+
+LaTeX Warning: Label `r_pgfplots_funkcje' multiply defined.
+
+
+LaTeX Warning: Label `r_pgfplots_funkcje' multiply defined.
+
 )
 \openout1 = `projekt1_main.aux'.
 
@@ -1338,10 +1344,12 @@ PGFPlots: reading {wykresy/zadanie2_jump=1.3.txt}
 PGFPlots: reading {wykresy/zadanie2_jump=1.2.txt}
 PGFPlots: reading {wykresy/zadanie2_jump=1.txt}
 PGFPlots: reading {wykresy/zadanie2_jump=0.9.txt}
+PGFPlots: reading {wykresy/zadanie2_wzmStat.txt}
 [3
 
 ]
 Rozdzia\PlPrIeC {\l } 3.
+PGFPlots: reading {wykresy/zadanie3_odpSkok_schodki.txt}
 [4
 
 ]
@@ -1354,10 +1362,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 36519 strings out of 493333
- 878391 string characters out of 3139198
- 1025673 words of memory out of 3000000
- 39488 multiletter control sequences out of 15000+200000
+ 36540 strings out of 493333
+ 878898 string characters out of 3139198
+ 1027673 words of memory out of 3000000
+ 39507 multiletter control sequences out of 15000+200000
  21572 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,22n,100p,10387b,2168s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1368,7 +1376,7 @@ fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/pl/plr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl
 /plr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr8.pfb>
-Output written on projekt1_main.pdf (6 pages, 61738 bytes).
+Output written on projekt1_main.pdf (6 pages, 64907 bytes).
 PDF statistics:
  54 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
