@@ -12,12 +12,14 @@ U(21:end)=Umax;
     Y(k) = symulacja_obiektu3Y(U(k-10), U(k-11), Y(k-1), Y(k-2));
  end
  
-%  figure
-%  plot(Y)
+ figure
+ plot(Y)
  
  s=zeros(n-21,1); %odpowiedz skokowa
  for k = 21:n
     s(k-20) = (Y(k)-Ypp)/(Umax-Upp);
  end
-%  figure
-%  stairs(s)
+ figure
+ stairs(s)
+ nazwa = strcat('wykresy/zadanie3_odpSkok_schodki.txt');
+ savePlot(1:1:130,s,nazwa);

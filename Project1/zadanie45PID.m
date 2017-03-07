@@ -21,10 +21,9 @@ err = 0;
 %end __init__
  
  
-%K = 0.6; Ti = 11; Td = 3; Ts = 0.5;
-K=0.360187; Ti=13.386198; Td=0.010000; Ts=0.5;
+K = 0.6; Ti = 11; Td = 3; Ts = 0.5;
 
- 
+% K=0.360187; Ti=13.386198; Td=0.010000; Ts=0.5;
  
 r2 = K*Td/Ts;
 r1 = K*(Ts/(2*Ti)-2*Td/Ts - 1);
@@ -60,13 +59,20 @@ end;
 err = sum(e.^2)
  
 figure('Position',  [403 246 820 420]);
-%title('PID z parametrami eksperymentalnymi, err=19.68');
 subplot('Position', [0.1 0.12 0.8 0.15]);
 stairs(U);
 ylabel('u');
 xlabel('k');
 subplot('Position', [0.1 0.37 0.8 0.6]);
+
 stairs(Y);
 ylabel('y');
 hold on;
 stairs(Yzad,':');
+nazwa = strcat('wykresy/zadanie45_PID_Yzad.txt');
+savePlot(1:1:2500,Yzad,nazwa);
+nazwa = strcat('wykresy/zadanie45_PID_U.txt');
+savePlot(1:1:2500,U,nazwa);
+
+nazwa = strcat('wykresy/zadanie45_PID_Y.txt');
+savePlot(1:1:2500,Y,nazwa);
