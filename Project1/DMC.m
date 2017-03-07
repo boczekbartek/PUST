@@ -1,41 +1,23 @@
-clear all;
+%obliczenie odpowiedzi skokowej
 zadanie3
-n = 2500; %dlugosc symulacji, skróæ do 3000 w rysunkach do pdfa i wspomnij
-          %o tym w sprawku. wyd³u¿ona do usuniêcia oscylacji
-          %przy optymalizacji
-% Yzad(1:199) = 2.5;
-% Yzad(200:1000) = 2.0;
-% Yzad(1001:1500)=1.4;
-% Yzad(1501:2200)=1.5;
-% Yzad(2201:n)=1.7;
-Yzad(1:n) = 1.8;
+params
+n = 2500; %dlugosc symulacji
+
+Yzad(1:n) = 1.9;
 Yzad(21:n) = 1.6;
 Yzad(1001:n)=1.4;
-Yzad(1501:n)=1.5;
-Yzad(2201:n)=1.7;
-Ypp = 2.0; %punkt pracy
-Upp = 1.1;
-Y(1:n) = 2.0; %inicjalizacje tablic
-U(1:n) = 1.1;
+Yzad(1501:n)=2.5;
+Yzad(2201:n)=1.4;
+
+Y(1:n) = Ypp; %inicjalizacje tablic
+U(1:n) = Upp;
 u = U - Upp;
 err = 0;
 
-%odpowiedzi skokowe pobrane z utworzonego wczesniej pliku
-
-
-
 D=100; 
 %parametry regulatora dobrane eksperymentalnie
-% N=25; Nu=3; lambda=0.6; %err=15.6111
-N=126.000000; Nu=9.000000; lambda=0.248702;
-%parametry dobrane skryptem param_optimizer
-%N=12; Nu=7; lambda=0.0103;
-%N=14; Nu=20; lambda=0.2290;
-%N=13; Nu=13; lambda=0;
-%N=37.000000; Nu=3.000000; lambda=0.015540; %final w/ err=sum(|e|) as quality index
-%N=64.000000; Nu=9.000000; lambda=0.013380; %final w/ normal err
-%N=33.000000; Nu=4.000000; lambda=0.018527; %really final, after changing DMC_err yzad
-                                %err = 15.5746
+N=25; Nu=3; lambda=0.6;
+
 %inicjalizacja macierzy dUp
 for i=1:D-1
    dup(i)=0;
@@ -119,5 +101,10 @@ ylabel('y');
 
 hold on; 
 stairs(Yzad,':');
-
-
+%zapisywanie danych do plikow txt w celu narysowania wykresow w LATEXie
+nazwa = strcat('wykresy/zadanie45_DMC_Yzad.txt');
+savePlot(1:1:2500,Yzad,nazwa);
+nazwa = strcat('wykresy/zadanie45_DMC_U.txt');
+savePlot(1:1:2500,U,nazwa);
+nazwa = strcat('wykresy/zadanie45_DMC_Y.txt');
+savePlot(1:1:2500,Y,nazwa);

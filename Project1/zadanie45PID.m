@@ -1,15 +1,14 @@
-clear all;
- 
- 
+clear all
+params 
  
 %__init__():
 n = 2500;
-Yzad(1:n) = 1.8;
+Yzad(1:n) = 1.9;
 Yzad(21:n) = 1.6;
 Yzad(1001:n)=1.4;
-Yzad(1501:n)=1.5;
-Yzad(2201:n)=1.7;
-U(1:n) = 1.0;
+Yzad(1501:n)=2.5;
+Yzad(2201:n)=1.4;
+U(1:n) = Upp;
  
 %self.punkt_pracy
 Ypp = 2;
