@@ -19,9 +19,14 @@ u = U - Upp;
 err = 0;
 %end __init__
  
- 
-K = 0.6; Ti = 11; Td = 3; Ts = 0.5;
+%wyznaczone metod¹ eksperymentaln¹ 
+K = 0.6; Ti = 11; Td = 3; Ts = 0.5; %JAK ODKOMANTOWYJESZ TO ZMIEN NA KONCU Z 6 na 45 
+                    %W NAZWIE PLIKU DO EKSPORTU
 
+%wyznaczone z optymalizacji
+% K=1.015455; Ti=7.406523; Td=3.983255; Ts=0.5;%JAK ODKOMANTOWYJESZ TO ZMIEN NA KONCU Z 45 na 6
+                    %W NAZWIE PLIKU DO EKSPORTU
+                    
 % K=0.360187; Ti=13.386198; Td=0.010000; Ts=0.5;
  
 r2 = K*Td/Ts;
