@@ -13,8 +13,8 @@ subplot(2,1,1)
 plot(Y)
 subplot(2,1,2)
 plot(U)
-nazwa = strcat('wykresy/zadanie1Y');
+nazwa = strcat('wykresy/zadanie1Y.txt');
 savePlot(1:1:300,Y,nazwa);
 
-nazwa = strcat('wykresy/zadanie1U');
+nazwa = strcat('wykresy/zadanie1U.txt');
 savePlot(1:1:300,U,nazwa)
