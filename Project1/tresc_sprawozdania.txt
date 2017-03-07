@@ -1,6 +1,7 @@
 1. Sprawdzamy poprawnoœæ wartoœci punktu pracy poprzez zasymulowanie wejœcia obiektu jako Upp. W odpowiedzi otrzymujemy brak zmian, Y utrzymuje siê w wartoœci Ypp=2.
 2. Wybraliœmy 4 ró¿ne skoki sygna³u steruj¹cego, od Upp do U (legenda wykresu) w chwili k=20; charakterystykê statyczn¹ y(u) otrzymujemy poprzez symulowanie skoku sterowania od Upp do Umax w 100 krokach. Char stat jest liniowa, wartoœæ wzmocnienia statycznego K=3.1752
-3. Bartek
+3. W celu wyznaczenia odpowiedzi skokowej wykonujemy skok sygna³u steruj¹cego od wartoœci w punkcie pracy (Upp) do wartoœci maksymalnej (Umax). Nastêpnie dokonujemy symulacji wyjœcia na podstawie modelu. OdpowiedŸ skokow¹ obliczamy ze wzoru:
+(wzór na materia³ach do æwiczeñ)Si = ....
 4. Skrypt symuluj¹cy cyfrowe algorytmy PID i DMC s¹ zaimplementowane w plikach zadanie45PID.m i DMC.m. 
 Postaæ dyskretna algorytmu PID: 
 r2 = K*Td/Ts;
@@ -8,7 +9,11 @@ r1 = K*(Ts/(2*Ti)-2*Td/Ts - 1);
 r0 = K*(1+Ts/(2*Ti) + Td/Ts);
 
 gdzie K to wzmocnienie regulatora, Ti sta³a ca³kowania, Td sta³a ró¿niczkowania, Ts okres próbkowania. Dodatkowo zgodnie z poleceniem uwzglêdniliœmy ograniczenia zmiany wartoœci sterowania -0.05 < delta U(k) < 0.05. Bartek dopisz o dmc
-5. Nastawy regulatorów zosta³y dobrane metod¹ eksperymentaln¹. W regulatorze PID wynosz¹ one: K = 0.6; Ti = 11; Td = 3; Ts = 0.5;. Dla symulacji trwaj¹cej 2500 próbek, wartoœæ b³êdu œredniokwadratowego, czyli wskaŸnika jakoœci regulacji, wynosi E=81.1977. Przerywan¹ lini¹ oznaczyliœmy wartoœæ zadan¹ regulatora, niebieskimi, wartoœci wyjœcia i sterowania.  (Tu rysunek z pida i Bartek dopisz o DMC)
+5. Nastawy regulatorów zosta³y dobrane metod¹ eksperymentaln¹. W regulatorze PID wynosz¹ one: K = 0.6; Ti = 11; Td = 3; Ts = 0.5;. Dla symulacji trwaj¹cej 2500 próbek, wartoœæ b³êdu œredniokwadratowego, czyli wskaŸnika jakoœci regulacji, wynosi E=81.1977. Przerywan¹ lini¹ oznaczyliœmy wartoœæ zadan¹ regulatora, niebieskimi, wartoœci wyjœcia i sterowania.  (Tu rysunek z pida)
+W regulatorze DMC obliczone nastawy wynosz¹: D=110; N=19; Nu=6; lambda=0.15. Dla symulacji o takiej samej d³ugoœci jak w przypadku PID (2500 próbek) wartoœæ b³êdu wynosi E=69.3695. Zgodnie z oczekiwaniami b³¹d ten jest znacz¹co mniejszy ni¿ ten otrzymany przy regulacji PIDem. 
 6. Korzystaj¹c z optymalizacji algorytmem genetycznym 'ga', szukamy wartoœci parametrów regulatorów PID i DMC tak aby wartoœæ b³êdu œredniokwadratowego by³a jak najmniejsza. Jest to wiêc problem wielowymiarowy i niezbêdne jest u¿ycie CAM (ciê¿kiej artylerii matematycznej) i mimo tego, wartoœci nastaw regulatora DMC na ca³kiem szybkiej maszynie, liczy³y siê oko³o 10 minut. 
-Dla nastaw regulatora PID równych K=1.280581; Ti=6.152453; Td=4.639602;, otrzymujemy b³¹d E=73.1407. B³¹d jest nieznacznie mniejszy ni¿ w metodzie eksperymentalnej, ale uk³ad wpada w niegasn¹ce oscylacje. Aby usprawniæ obliczenia 'ga', ograniczyliœmy przestrzeñ przeszukiwania w PID: K>=0.01, Ti>= 1, Td>= 0.01. (wstaw tu swoje ograniczenia)
+Dla nastaw regulatora PID równych K=1.280581; Ti=6.152453; Td=4.639602;, otrzymujemy b³¹d E=73.1407. B³¹d jest nieznacznie mniejszy ni¿ w metodzie eksperymentalnej, ale uk³ad wpada w niegasn¹ce oscylacje. Aby usprawniæ obliczenia 'ga', ograniczyliœmy przestrzeñ przeszukiwania w PID: K>=0.01, Ti>= 1, Td>= 0.01, brak górnych ograniczeñ a w DMC 130>N>1 130>Nu>1 Inf>lambda>0.01. Waroœæ 130 wziê³a siê z d³ugoœci odpowiedzi skokowej na podstawiem, której obliczaliœmy regulator predykcyjny DMC.
 Symulacje przeprowadzono na tych samych skokach wartoœci zadanej co w punkcie pi¹tym. (tu wykresy)
+Podczas optymalizacji regulatora DMC optymalizowaliœmy tylko parametry Nu, N i lambda. Parametr D zosta³ usatwiony na sta³¹ wartosc 110. Dla nastaw regulatora DMC otrzymanch w wyniku optymaliacji D =110; N=130.000000; Nu=6.000000; lambda=0.010000 otrzymaliœmy b³¹d œredniokwadratowy równy E =  69.3671, co jest bardzo nieznacznie mniejsz¹ wartoœci¹ ni¿ ta obliczona eksperymantalnie, a przebiegi zdradzaj¹, ¿e w tym przypadku optymalizacja okaza³a sie lepsza ni¿ dla PIDa, uk³ad nie wpada w oscylacje a regulacja wydaje siê byæ ogólnie nieco lepsza ni¿ w punkcie 5.
+Na podstawie powy¿szych eksperymentów mo¿emy stwierdziæ, ¿e nie zawsze metody matematyczne daj¹ lepsze rezultaty. Przypadek PIDa pokaza³, ¿e pomimo mniejszej wartoœci b³êdu regulacja by³a gorsza z powodu ograniczeñ, dlatego do wyników metod mateamtycznych nale¿y podchodziæ z pewnym pragmatyzmem.
+
