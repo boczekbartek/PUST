@@ -1,0 +1,14 @@
+1. Sprawdzamy poprawnoœæ wartoœci punktu pracy poprzez zasymulowanie wejœcia obiektu jako Upp. W odpowiedzi otrzymujemy brak zmian, Y utrzymuje siê w wartoœci Ypp=2.
+2. Wybraliœmy 4 ró¿ne skoki sygna³u steruj¹cego, od Upp do U (legenda wykresu) w chwili k=20; charakterystykê statyczn¹ y(u) otrzymujemy poprzez symulowanie skoku sterowania od Upp do Umax w 100 krokach. Char stat jest liniowa, wartoœæ wzmocnienia statycznego K=3.1752
+3. Bartek
+4. Skrypt symuluj¹cy cyfrowe algorytmy PID i DMC s¹ zaimplementowane w plikach zadanie45PID.m i DMC.m. 
+Postaæ dyskretna algorytmu PID: 
+r2 = K*Td/Ts;
+r1 = K*(Ts/(2*Ti)-2*Td/Ts - 1);
+r0 = K*(1+Ts/(2*Ti) + Td/Ts);
+
+gdzie K to wzmocnienie regulatora, Ti sta³a ca³kowania, Td sta³a ró¿niczkowania, Ts okres próbkowania. Dodatkowo zgodnie z poleceniem uwzglêdniliœmy ograniczenia zmiany wartoœci sterowania -0.05 < delta U(k) < 0.05. Bartek dopisz o dmc
+5. Nastawy regulatorów zosta³y dobrane metod¹ eksperymentaln¹. W regulatorze PID wynosz¹ one: K = 0.6; Ti = 11; Td = 3; Ts = 0.5;. Dla symulacji trwaj¹cej 2500 próbek, wartoœæ b³êdu œredniokwadratowego, czyli wskaŸnika jakoœci regulacji, wynosi E=81.1977. Przerywan¹ lini¹ oznaczyliœmy wartoœæ zadan¹ regulatora, niebieskimi, wartoœci wyjœcia i sterowania.  (Tu rysunek z pida i Bartek dopisz o DMC)
+6. Korzystaj¹c z optymalizacji algorytmem genetycznym 'ga', szukamy wartoœci parametrów regulatorów PID i DMC tak aby wartoœæ b³êdu œredniokwadratowego by³a jak najmniejsza. Jest to wiêc problem wielowymiarowy i niezbêdne jest u¿ycie CAM (ciê¿kiej artylerii matematycznej) i mimo tego, wartoœci nastaw regulatora DMC na ca³kiem szybkiej maszynie, liczy³y siê oko³o 10 minut. 
+Dla nastaw regulatora PID równych K=1.280581; Ti=6.152453; Td=4.639602;, otrzymujemy b³¹d E=73.1407. B³¹d jest nieznacznie mniejszy ni¿ w metodzie eksperymentalnej, ale uk³ad wpada w niegasn¹ce oscylacje. Aby usprawniæ obliczenia 'ga', ograniczyliœmy przestrzeñ przeszukiwania w PID: K>=0.01, Ti>= 1, Td>= 0.01. (wstaw tu swoje ograniczenia)
+Symulacje przeprowadzono na tych samych skokach wartoœci zadanej co w punkcie pi¹tym. (tu wykresy)
