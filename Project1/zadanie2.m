@@ -22,8 +22,9 @@ for j=jumps
  
     
     plot(Y)
+    
     nazwa = strcat('wykresy/zadanie2_jump=', num2str(j),'.txt');
-    savePlot(U,Y,nazwa);
+    savePlot(1:1:150,Y,nazwa);
     hold on;    
 end
 
