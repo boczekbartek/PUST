@@ -1,4 +1,5 @@
 %obliczenie odpowiedzi skokowej
+clear all
 zadanie3
 params
 n = 2500; %dlugosc symulacji
@@ -14,9 +15,9 @@ U(1:n) = Upp;
 u = U - Upp;
 err = 0;
 
-D=100; 
+D=110; 
 %parametry regulatora dobrane eksperymentalnie
-N=25; Nu=3; lambda=0.6;
+N=19; Nu=6; lambda=0.15;
 
 %inicjalizacja macierzy dUp
 for i=1:D-1
