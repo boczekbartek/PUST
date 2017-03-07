@@ -21,5 +21,5 @@ U(21:end)=Umax;
  end
 %  figure
 %  stairs(s)
- nazwa = strcat('wykresy/zadanie3_odpSkok_schodki.txt');
- savePlot(1:1:130,s,nazwa);
+%  nazwa = strcat('wykresy/zadanie3_odpSkok_schodki.txt');
+%  savePlot(1:1:130,s,nazwa);

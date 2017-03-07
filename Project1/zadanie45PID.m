@@ -20,11 +20,11 @@ err = 0;
 %end __init__
  
 %wyznaczone metod¹ eksperymentaln¹ 
-K = 0.6; Ti = 11; Td = 3; Ts = 0.5; %JAK ODKOMANTOWYJESZ TO ZMIEN NA KONCU Z 6 na 45 
+%K = 0.6; Ti = 11; Td = 3; Ts = 0.5; %JAK ODKOMANTOWYJESZ TO ZMIEN NA KONCU Z 6 na 45 
                     %W NAZWIE PLIKU DO EKSPORTU
 
 %wyznaczone z optymalizacji
-%K=1.280581; Ti=6.152453; Td=4.639602; Ts=0.5;%JAK ODKOMANTOWYJESZ TO ZMIEN NA KONCU Z 45 na 6
+K=1.280581; Ti=6.152453; Td=4.639602; Ts=0.5;%JAK ODKOMANTOWYJESZ TO ZMIEN NA KONCU Z 45 na 6
                     %W NAZWIE PLIKU DO EKSPORTU
                     
 % K=0.360187; Ti=13.386198; Td=0.010000; Ts=0.5;
@@ -73,10 +73,10 @@ stairs(Y);
 ylabel('y');
 hold on;
 stairs(Yzad,':');
-nazwa = strcat('wykresy/zadanie45_PID_Yzad.txt');
+nazwa = strcat('wykresy/zadanie6_PID_Yzad.txt');
 savePlot(1:1:2500,Yzad,nazwa);
-nazwa = strcat('wykresy/zadanie45_PID_U.txt');
+nazwa = strcat('wykresy/zadanie6_PID_U.txt');
 savePlot(1:1:2500,U,nazwa);
 
-nazwa = strcat('wykresy/zadanie45_PID_Y.txt');
+nazwa = strcat('wykresy/zadanie6_PID_Y.txt');
 savePlot(1:1:2500,Y,nazwa);

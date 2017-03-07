@@ -15,7 +15,7 @@ U(1:n) = Upp;
 u = U - Upp;
 err = 0;
 
-D=100;
+D=110;
 
 %inicjalizacja macierzy dUp
 for i=1:D-1

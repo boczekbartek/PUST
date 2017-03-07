@@ -17,7 +17,9 @@ err = 0;
 
 D=110; 
 %parametry regulatora dobrane eksperymentalnie
-N=19; Nu=6; lambda=0.15;
+% N=19; Nu=6; lambda=0.15;
+%parametry wyznaczone z optymalizacji
+N=130.000000; Nu=6.000000; lambda=0.010000;
 
 %inicjalizacja macierzy dUp
 for i=1:D-1
@@ -103,9 +105,9 @@ ylabel('y');
 hold on; 
 stairs(Yzad,':');
 %zapisywanie danych do plikow txt w celu narysowania wykresow w LATEXie
-nazwa = strcat('wykresy/zadanie45_DMC_Yzad.txt');
+nazwa = strcat('wykresy/zadanie6_DMC_Yzad.txt');
 savePlot(1:1:2500,Yzad,nazwa);
-nazwa = strcat('wykresy/zadanie45_DMC_U.txt');
+nazwa = strcat('wykresy/zadanie6_DMC_U.txt');
 savePlot(1:1:2500,U,nazwa);
-nazwa = strcat('wykresy/zadanie45_DMC_Y.txt');
+nazwa = strcat('wykresy/zadanie6_DMC_Y.txt');
 savePlot(1:1:2500,Y,nazwa);
