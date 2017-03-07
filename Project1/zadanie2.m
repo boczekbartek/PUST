@@ -1,16 +1,18 @@
 clear all;
 jumps = [1.2,1.0,0.9,1.3];
  
-Upp=1.1;
-Ypp=2;
-% U=zeros(150);
-% Y=zeros(150);
+params
+
+
+
 for j=jumps
- 
-    for i=1:150
-        U(i)=j;
-        Y(i)=Ypp;
-    end
+    
+%     for i=1:150
+%         U(i)=j;
+%         Y(i)=Ypp;
+%     end
+    U=1:1:150;
+    Y(1:150)=Ypp;
      U(1)=Upp;
 %     U(2:end)=k;
 %     Y(1:end)=Ypp;
@@ -23,7 +25,7 @@ for j=jumps
     
     plot(Y)
     
-    nazwa = strcat('wykresy/zadanie2_jump=', num2str(j),'.txt');
+    nazwa = strcat('wykresy/zadanie2_jump=', num2str(j));
     savePlot(1:1:150,Y,nazwa);
     hold on;    
 end

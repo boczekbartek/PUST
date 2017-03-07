@@ -27,7 +27,7 @@ err = 0;
 D=100; 
 %parametry regulatora dobrane eksperymentalnie
 % N=25; Nu=3; lambda=0.6; %err=15.6111
-N=171.0; Nu=10.0; lambda=0.290732;
+N=126.000000; Nu=9.000000; lambda=0.248702;
 %parametry dobrane skryptem param_optimizer
 %N=12; Nu=7; lambda=0.0103;
 %N=14; Nu=20; lambda=0.2290;

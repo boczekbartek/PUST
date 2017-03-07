@@ -21,7 +21,7 @@ err = 0;
 
 %parametry regulatora dobrane eksperymentalnie
 
-D=120;
+D=100;
 %param(1)=30;
 %param(2)=3;
 %param(3)=0.8;
