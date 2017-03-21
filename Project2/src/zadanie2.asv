@@ -65,8 +65,8 @@ for i = 1:41
         Ys(i,j) = Y(n);
     end
 end
-KstatU=(Ys(41,1)-Ys(40,1))/(Us(41)-Us(40))
-KstatZ=(Ys(1,41)-Ys(1,40))/(Zs(41)-Zs(40))
+KstatU=(Ys(41,1)-Ys(49,1))/(Us(50)-Us(49))
+KstatZ=(Ys(1,50)-Ys(1,49))/(Zs(50)-Zs(49))
 figure
 surf(Us,Zs,Ys)
 
