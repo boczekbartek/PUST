@@ -2,7 +2,7 @@ clear all
 zadanie3;
 s=su;
 %params
-
+wykresy = 1;
 n = 2500; %dlugosc symulacji
 
 Yzad(1:20) = 0;
@@ -10,7 +10,7 @@ Yzad(21:1000) = 1.6;
 Yzad(1001:1500)=1.4;
 Yzad(1501:n)=2.5;
 
-czyPomiar = 1;
+czyPomiar = 0;
 
 
 Z=sin(0:0.01:25);
@@ -124,9 +124,20 @@ ylabel('y');
 hold on;
 stairs(Yzad,':');
 %zapisywanie danych do plikow txt w celu narysowania wykresow w LATEXie
-nazwa = strcat('wykresy/zadanie6_DMC_Yzad.txt');
-%savePlot(1:1:2500,Yzad,nazwa);
-nazwa = strcat('wykresy/zadanie6_DMC_U.txt');
-%savePlot(1:1:2500,U,nazwa);
-nazwa = strcat('wykresy/zadanie6_DMC_Y.txt');
-%savePlot(1:1:2500,Y,nazwa);
+if wykresy
+    if czyPomiar
+        nazwa = strcat('../wykresy/zadanie6_pomiar_DMC_Yzad.txt');
+        savePlot(1:1:2500,Yzad,nazwa);
+        nazwa = strcat('../wykresy/zadanie6_pomiar_DMC_U.txt');
+        savePlot(1:1:2500,U,nazwa);
+        nazwa = strcat('../wykresy/zadanie6_pomiar_DMC_Y.txt');
+        savePlot(1:1:2500,Y,nazwa);
+    else
+        nazwa = strcat('../wykresy/zadanie6_bezpomiaru_DMC_Yzad.txt');
+        savePlot(1:1:2500,Yzad,nazwa);
+        nazwa = strcat('../wykresy/zadanie6_bezpomiaru_DMC_U.txt');
+        savePlot(1:1:2500,U,nazwa);
+        nazwa = strcat('../wykresy/zadanie6_bezpomiaru_DMC_Y.txt');
+        savePlot(1:1:2500,Y,nazwa);
+    end
+end

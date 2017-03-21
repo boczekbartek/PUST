@@ -1,5 +1,6 @@
 clear all
 zadanie3;
+wykresy = 0;
 s=su;
 %params
 
@@ -12,8 +13,8 @@ Yzad(1501:n)=2.5;
 
 czyPomiar = 0;
 
-Z=zeros(1,n);   
-Z(160:800) = 1; 
+Z=zeros(1,n);
+Z(160:800) = 1;
 Z(1040:1200) = 1;
 Z(1640:2000) = 1;
 Z(2290:n)=1;
@@ -24,7 +25,7 @@ Ypp=0;
 Upp=0;
 Zpp=0;
 
-Y(1:n) = Ypp; 
+Y(1:n) = Ypp;
 U(1:n) = Upp;
 u = U - Upp;
 err = 0;
@@ -80,7 +81,7 @@ K=((M'*M+lambda*eye(Nu))^-1)*M';
 Ku=K(1,:)*Mp;
 Kz=K(1,:)*Mz;
 Ke=sum(K(1,:));
-
+Zp = Z;
 for i=21:n
     
     Y(i)=symulacja_obiektu6y(U(i-6), U(i-7), Z(i-3) , Z(i-4), Y(i-1), Y(i-2));
@@ -95,7 +96,7 @@ for i=21:n
         for n=Dz:-1:2
             dz(n)=dz(n-1);
         end
-        dz(1)=Zpom(i)-Zpom(i-1);
+        dz(1)=Zp(i)-Zp(i-1);
         
     end
     
@@ -126,9 +127,20 @@ ylabel('y');
 hold on;
 stairs(Yzad,':');
 %zapisywanie danych do plikow txt w celu narysowania wykresow w LATEXie
-nazwa = strcat('wykresy/zadanie5_DMC_Yzad.txt');
-%savePlot(1:1:2500,Yzad,nazwa);
-nazwa = strcat('wykresy/zadanie5_DMC_U.txt');
-%savePlot(1:1:2500,U,nazwa);
-nazwa = strcat('wykresy/zadanie5_DMC_Y.txt');
-%savePlot(1:1:2500,Y,nazwa);
+if wykresy
+    if czyPomiar
+        nazwa = strcat('../wykresy/zadanie5_pomiar_DMC_Yzad.txt');
+        savePlot(1:1:2500,Yzad,nazwa);
+        nazwa = strcat('../wykresy/zadanie5_pomiar_DMC_U.txt');
+        savePlot(1:1:2500,U,nazwa);
+        nazwa = strcat('../wykresy/zadanie5_pomiar_DMC_Y.txt');
+        savePlot(1:1:2500,Y,nazwa);
+    else
+        nazwa = strcat('../wykresy/zadanie5_bezpomiaru_DMC_Yzad.txt');
+        savePlot(1:1:2500,Yzad,nazwa);
+        nazwa = strcat('../wykresy/zadanie5_bezpomiaru_DMC_U.txt');
+        savePlot(1:1:2500,U,nazwa);
+        nazwa = strcat('../wykresy/zadanie5_bezpomiaru_DMC_Y.txt');
+        savePlot(1:1:2500,Y,nazwa);
+    end
+end
