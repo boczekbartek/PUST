@@ -12,7 +12,19 @@ k=1040 powrót z wartości 1 do 0 w k=1200
 k=1640 powrót z wartości 1 do 0 w k=2000
 k=2290 
 
-Wartość parametru D^z = 50 (tutaj wykresy) z rysunków wynika że regulacja z pomiarem zakłócenia polepsza się jakościowo (skoki wyjścia są mniejsze) i ilościowo
+Wartość parametru D^z = 50 dobrana eksperymentalnie (tutaj wykresy) z rysunków wynika że regulacja z pomiarem zakłócenia polepsza się jakościowo (skoki wyjścia są mniejsze) i ilościowo
 Błąd E maleje z 71.1137 w przypadku bez pomiaru do 41.6930 w przypadku z pomiarem.
 
 Zadanie 6.
+Dla zakłócenia sinusoidalnego Z=sin(0:0.01:25); włączonego do obiektu w momencie k=80; regulacja z pomiarem zakłócenia jest znacznie lepsza, mimo że regulator DMC nie jest w stanie całkowicie wyeliminować oscylacji.
+Bez pomiaru błąd E = 49.1146; z pomiarem E = 33.0742. 
+(Tu wykresy z pomiarem i bez)
+widzimy że regulacja z pomiarem zakłócenia powoduje wygładzenie oscylacji które wprowadza zakłócenie.
+
+Zadanie 7.
+
+Symulowanie szumu pomiarowego wykonujemy poprzez wołanie funkcji awgn(wektor_zakłócenia,SNR)
+która zaszumia nasz wektor z wartościami zakłócenia.  Dla skoków zakłócenia takich samych jak w zadaniu 5, 
+dodaliśmy zaszumienie w postaci szumu białego o stałym widmie częstotliwościowym.
+Dla SNR = 40 dB, zakłócenia regulacji są znikome, błąd E=41.7274, jest to wartość niewiele większa od braku zaszumienia.
+Dla wartości poniżej 15 dB szum zaczyna dominować. 
