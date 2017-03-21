@@ -3,12 +3,16 @@ Zadanie 4.
 dobrane metodą eksperymentalną oceniając jakoś regulacji jakościowo, aby nie było oscylacji przy skokach sterowania
 oraz minimalizująć błąd średniokwadratowy (tu możesz wstawić wzór na E ale nie musisz). Dla długości symulacji równej n=2500
 wartość błędu E = 39.8848.
+
 Zadanie 5.
+
 Skoki zakłócenia z wartości 0 do 1 następują w chwilach:
 k=160 powrót z wartości 1 do 0 w k=800
 k=1040 powrót z wartości 1 do 0 w k=1200
 k=1640 powrót z wartości 1 do 0 w k=2000
 k=2290 
 
-Wartość parametru D^z = 50 (tutaj wykresy) z rysunków wynika że regulacja z pomiarem zakłócenia polepsza się jakościowo i ilościowo
-Błąd E maleje z 71.1137 w przypadku bez pomiaru do 
+Wartość parametru D^z = 50 (tutaj wykresy) z rysunków wynika że regulacja z pomiarem zakłócenia polepsza się jakościowo (skoki wyjścia są mniejsze) i ilościowo
+Błąd E maleje z 71.1137 w przypadku bez pomiaru do 41.6930 w przypadku z pomiarem.
+
+Zadanie 6.
