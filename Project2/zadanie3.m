@@ -21,10 +21,10 @@ U(21:end)=Uskok;
     su(k-20) = (Yu(k)-Ypp)/(Uskok-Upp);
  end
  
- figure
- stairs(su)
- title('Odpowiedz skokowa dla U')
- hold off
+%  figure
+%  stairs(su)
+%  title('Odpowiedz skokowa dla U')
+%  hold off
  
  U(1:n) = Upp;
  Z(1:20) = Zpp;
@@ -41,9 +41,9 @@ U(21:end)=Uskok;
     sz(k-20) = (Yz(k)-Ypp)/(Zskok-Zpp);
  end
  
- figure
- stairs(sz)
- title('Odpowiedz skokowa dla Z')
+%  figure
+%  stairs(sz)
+%  title('Odpowiedz skokowa dla Z')
  
 %  nazwa = strcat('wykresy/zadanie3_odpSkok_schodki.txt');
 %  savePlot(1:1:130,s,nazwa);
