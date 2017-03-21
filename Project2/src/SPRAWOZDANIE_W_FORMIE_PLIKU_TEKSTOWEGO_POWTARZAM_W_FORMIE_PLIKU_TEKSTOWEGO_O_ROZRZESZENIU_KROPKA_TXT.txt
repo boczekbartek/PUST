@@ -1,0 +1,3 @@
+Zadanie 4.
+(Tu wykres) Parametry regulatora DMC:
+D=110; N=130.000000; Nu=6.000000; lambda=0.920000;
