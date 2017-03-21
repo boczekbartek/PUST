@@ -2,7 +2,7 @@ clear all
 zadanie3;
 s=su;
 %params
-
+wykresy=1;
 n = 2500; %dlugosc symulacji
 
 Yzad(1:20) = 0;
@@ -14,7 +14,11 @@ czyPomiar = 1;
 czySzum = 1; 
 snr = 10;
 
-Z = zeros(1,n);
+Z=zeros(1,n);
+Z(160:800) = 1;
+Z(1040:1200) = 1;
+Z(1640:2000) = 1;
+Z(2290:n)=1;
 
 Ypp=0;
 Upp=0;
@@ -130,10 +134,13 @@ ylabel('y');
 
 hold on;
 stairs(Yzad,':');
-%zapisywanie danych do plikow txt w celu narysowania wykresow w LATEXie
-nazwa = strcat('wykresy/zadanie7_DMC_Yzad.txt');
-%savePlot(1:1:2500,Yzad,nazwa);
-nazwa = strcat('wykresy/zadanie7_DMC_U.txt');
-%savePlot(1:1:2500,U,nazwa);
-nazwa = strcat('wykresy/zadanie7_DMC_Y.txt');
-%savePlot(1:1:2500,Y,nazwa);
+if wykresy
+    if czyPomiar && czySzum
+        nazwa = strcat('../wykresy/zadanie7_pomiar_DMC_Yzad_snr=',num2str(snr),'skok_z.txt');
+        savePlot(1:1:2500,Yzad,nazwa);
+        nazwa = strcat('../wykresy/zadanie7_pomiar_DMC_U_snr=',num2str(snr),'skok_z.txt');
+        savePlot(1:1:2500,U,nazwa);
+        nazwa = strcat('../wykresy/zadanie7_pomiar_DMC_Y_snr=',num2str(snr),'skok_z.txt');
+        savePlot(1:1:2500,Y,nazwa);
+    end
+end
