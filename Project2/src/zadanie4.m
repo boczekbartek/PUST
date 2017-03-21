@@ -3,7 +3,7 @@ clear all
 zadanie3;
 s=su;
 %params
-pomiar = 1;
+pomiar = 0;
 n = 2500; %dlugosc symulacji
 
 Yzad(1:20) = 0;
@@ -29,14 +29,8 @@ D=110; Dz=50;
 %parametry regulatora dobrane eksperymentalnie
 % N=19; Nu=6; lambda=0.15;
 N=130.000000; Nu=6.000000; lambda=0.920000;
-for i=1:Dz
-   dz(i)=0;
-end
-Zpom = Z;
-if szum
-    Zpom = awgn(Zpom,snr); %dodaje bialy szum gaussowski o zadanym stosunku
-                          %sygna³u do szumu (SNR)
-end
+
+
 %inicjalizacja macierzy dUp
 for i=1:D-1
     dup(i)=0;
@@ -79,7 +73,7 @@ Mz = [sz(1:N) Mz];
 
 K=((M'*M+lambda*eye(Nu))^-1)*M';
 Ku=K(1,:)*Mp;
-Kz=K(1,:)*Mz;
+% Kz=K(1,:)*Mz;
 Ke=sum(K(1,:));
 
 %glowna petla
@@ -92,13 +86,6 @@ for i=21:n
     err = err + e^2;
     
     du=Ke*e-Ku*dup'; %regulator
-    if pomiar %regulator nie bierze pod uwage pomiaru zaklocen gdy pomiar=0
-        du = du - Kz*dz';
-        for n=Dz:-1:2
-            dz(n)=dz(n-1);
-        end
-        dz(1)=Zpom(i)-Zpom(i-1);
-    end
     for n=D-1:-1:2
         dup(n)=dup(n-1);
     end
