@@ -1,9 +1,7 @@
 %obliczenie odpowiedzi skokowej
 clear all
-zadanie3;
-s=su;
-%params
-
+zadanie3
+params
 n = 2500; %dlugosc symulacji
 
 Yzad(1:n) = 1.9;
@@ -11,15 +9,6 @@ Yzad(21:n) = 1.6;
 Yzad(1001:n)=1.4;
 Yzad(1501:n)=2.5;
 Yzad(2201:n)=1.4;
-
-Z=sin(0:0.01:25);
-Z=Z(1:2500);    %znowu nie rozumiem jak mozna to mierzyc lub nie xD
-Z(1:80)=0;
-
-
-Ypp=0;
-Upp=0;
-Zpp=0;
 
 Y(1:n) = Ypp; %inicjalizacje tablic
 U(1:n) = Upp;
@@ -29,7 +18,8 @@ err = 0;
 D=110; 
 %parametry regulatora dobrane eksperymentalnie
 % N=19; Nu=6; lambda=0.15;
-N=130.000000; Nu=6.000000; lambda=0.920000;
+%parametry wyznaczone z optymalizacji
+N=130.000000; Nu=6.000000; lambda=0.010000;
 
 %inicjalizacja macierzy dUp
 for i=1:D-1
@@ -68,19 +58,34 @@ Ke=sum(K(1,:));
 
 for i=21:n
    
-   Y(i)=symulacja_obiektu6y(U(i-6), U(i-7), Z(i-3) , Z(i-4), Y(i-1), Y(i-2));
+   Y(i)=symulacja_obiektu3Y(U(i-10), U(i-11), Y(i-1), Y(i-2));
    
    e=Yzad(i)-Y(i); %uchyb
    err = err + e^2;
    
    du=Ke*e-Ku*dup'; %regulator
    
+   if du>0.05 %ograniczenia na szybkosc zmiany sygnalu sterowania
+       du = 0.05;
+   elseif du<-0.05
+       du = -0.05;
+   end
+   
    for n=D-1:-1:2
       dup(n)=dup(n-1);
    end
    dup(1)=du;
    u(i)=u(i-1)+dup(1);
-  
+   
+   if u(i)>0.2 %ograniczenia na min/max sygnalu sterowania
+       u(i) = 0.2;
+       dup(1) = u(i)-u(i-1);
+   elseif u(i)<-0.2
+       u(i) = -0.2;
+       dup(1) = u(i)-u(i-1);
+   end
+   
+   
    U(i)=u(i)+Upp; %przesuniecie do punktu pracy
 end
 
@@ -101,8 +106,8 @@ hold on;
 stairs(Yzad,':');
 %zapisywanie danych do plikow txt w celu narysowania wykresow w LATEXie
 nazwa = strcat('wykresy/zadanie6_DMC_Yzad.txt');
-%savePlot(1:1:2500,Yzad,nazwa);
+savePlot(1:1:2500,Yzad,nazwa);
 nazwa = strcat('wykresy/zadanie6_DMC_U.txt');
-%savePlot(1:1:2500,U,nazwa);
+savePlot(1:1:2500,U,nazwa);
 nazwa = strcat('wykresy/zadanie6_DMC_Y.txt');
-%savePlot(1:1:2500,Y,nazwa);
+savePlot(1:1:2500,Y,nazwa);
