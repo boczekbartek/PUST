@@ -12,7 +12,11 @@ Yzad(1001:n)=1.4;
 Yzad(1501:n)=2.5;
 Yzad(2201:n)=1.4;
 
-Z=zeros(1,n);
+Z=zeros(1,n);   %skoki po uzyskaniu wartosci zadanej
+Z(160:800) = 1; %nie rozumiem o co chodzi ze pomiar zaklocenia wplywa lepiej na jakosc regulacji i parametr D^z
+Z(1040:1200) = 1;
+Z(1640:2000) = 1;
+Z(2290:n)=1;
 
 
 

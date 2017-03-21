@@ -12,8 +12,9 @@ Yzad(1001:n)=1.4;
 Yzad(1501:n)=2.5;
 Yzad(2201:n)=1.4;
 
-Z=zeros(1,n);
-
+Z=sin(0:0.01:25);
+Z=Z(1:2500);    %znowu nie rozumiem jak mozna to mierzyc lub nie xD
+Z(1:80)=0;
 
 
 Ypp=0;
