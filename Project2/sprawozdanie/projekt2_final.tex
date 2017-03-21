@@ -1,0 +1,365 @@
+\chapter{Punkt 1}
+%Wyjscie procesu zbiega do $Y_{\mathrm{pp}}$ przy sygnale sterujacym rownym  $U_{\mathrm{pp}}$. Potwierdza to poprawnosc wartosci punktu pracy.
+
+Na samym pocz¹tku æwiczenia laboratoryjnego sprawdziliœmy, ¿e jest mo¿liwoœæ sterowania obiektem oraz pomiaru sygna³u wyjœciowego. 
+Dla mocy grza³ki $G1=\num{28}\%$ wartoœæ temperatury w punkcie pracy ustali³a siê na poziomie $\num{30,87}$ $\degree$C. Wartoœæ mocy wentylatora $W1$ przez ca³y przebieg laboratorium wynosi³a $\num{50}\%$.
+
+\chapter{Punkt 2}
+Z punktu pracy $G1=\num{28}\%$ wybraliœmy trzy skoki sygna³u steruj¹cego: do $\num{50}\%$, $\num{70}\%$ oraz $\num{90}\%$. 
+
+\begin{comment}
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=0.65\textwidth,
+	xmin=1,xmax=350,ymin=30,ymax=50,
+	xlabel={$sek$},
+	ylabel={$y$},
+	xtick={1,100, 200, 300, 350},
+	ytick={30, 35, 40, 45, 50},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot, red,semithick] file {wykresy/lab1/Y2_50.txt};
+	\addplot[const plot, blue,semithick] file {wykresy/lab1/Y2_60.txt};
+	\addplot[const plot, color=green,semithick] file {wykresy/lab1/Y2_90.txt};
+	\legend{$G1=\num{50}\%$, $G1=\num{70}\%$, $G1=\num{90}\%$}
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Odpowiedzi skokowe dla trzech zmian sygna³u steruj¹cego}
+	\label{r_pgfplots_funkcje}
+\end{figure}
+\end{comment}
+
+
+
+Nie zrobiliœmy odpowiedniego eksperymentu (nale¿a³o liniowo zwiêkszaæ sterowanie), 
+dlatego te¿ nie mo¿emy stwierdziæ, na podstawie naszych danych wyniesionych ze stanowiska laboratoryjnego, czy w³aœciwoœci statyczne obiektu s¹ liniowe i jakie jest wzmocnienie statyczne.
+
+
+\chapter{Punkt 3}
+ 
+W tym zadaniu szukaliœmy optymalnej aproksymacji otrzymanej przez nas odpowiedzi skokowej dla skoku z wartoœci $U_{\mathrm{pp}}=\num{28}$ do $U = \num{50}$.
+Podczas wyznaczania funkcji aproksymuj¹cej optymalizowaliœmy parametry $T_{\mathrm{1}}$, $T_{\mathrm{2}}$ oraz $K$ cz³onu inercyjnego drugiego rzêdu z opóŸnieniem. Optymalizacja polega³a na minimalizacji b³êdu œredniokwadratowego miêdzy rzeczywist¹ odpowiedzi¹ skokow¹ a funkcj¹ aproksymuj¹c¹.
+Przy u¿yciu optymalizatora \verb+ga+ uda³o nam siê uzyskaæ funkcjê, dla której b³¹d wyniós³ $E=\num{1,8765}$, przy wartoœciach parametrów: $T_{\mathrm{1}}=\num{17,099506}$; $T_{\mathrm{2}}=\num{64,970974}$; $K=\num{0,263644}$. Wartoœæ $T_{\mathrm{d}}$ (opóŸnienia) eksperymentalnie ustawiliœmy na \num{10}, gdy¿ dla niej wyszed³ najmniejszy b³¹d aproksymacji. Poni¿ej przedstawione zosta³y wykresy odpowiedzi skokowej oraz funckji aproksymuj¹cej.
+
+\begin{comment}
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=0.5\textwidth,
+	xmin=1,xmax=130,ymin=0,ymax=3.5,
+	xlabel={$k$},
+	ylabel={$y$},
+	xtick={1, 50, 100, 130},
+	ytick={0, 1, 2, 3, 3.5},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,color=blue,semithick] file {wykresy/zadanie3_odpSkok_schodki.txt};	
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Odpowiedz SKOKOWA}
+	\label{r_pgfplots_funkcje}
+\end{figure}	
+\end{comment}
+\begin{comment}
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=0.7\textwidth,
+	xmin=1,xmax=350,ymin=-0.05,ymax=0.3,
+	xlabel={$sek$},
+	ylabel={$y$},
+	xtick={1,100, 200, 300, 350},
+	ytick={-0.05, 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,color=blue,semithick] file {wykresy/lab1/odp_skokowa.txt};	
+	\addplot[color=red, semithick, densely dashed] file {wykresy/lab1/funkcja_aproks.txt};
+	\legend{orygina³, aproksymacja}
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Odpowiedz skokowa oryginalna i wersja aproksymowana}
+	\label{r_pgfplots_funkcje}
+\end{figure}
+\end{comment}
+
+
+
+
+\chapter{Punkt 4 i 5}
+
+Z tym punktem nie poradziliœmy sobie w regulaminowych 3 godzinach zajêæ. Mamy jednak œwiadomoœæ, jak na podstawie odpowiedzi skokowej mo¿na obliczyæ parametry algorytmu DMC, a te z algorytmu PID okreœliæ metod¹ eksperymentaln¹ lub in¿yniersk¹, wykorzystuj¹c skrypty z oddanego wczeœniej projektu 1. Wystarczy³oby pomin¹æ ograniczenia szybkoœci zmian wartoœci steruj¹cej, a ograniczenia wartoœci zadanej ustaliæ na $\num{0}< U < \num{100}$. 
+
+\begin{comment}
+
+Skrypt symulujacy cyfrowe algorytmy PID i DMC jest zaimplementowany w plikach zadanie45PID.m i DMC.m. 
+Postac dyskretna algorytmu PID: 
+\begin{equation}
+r_2 = \frac{K T_{\mathrm{d}}}{T_{\mathrm{s}}} \
+r_1 = K \left( \frac{T_{\mathrm{s}}}{2 T_{\mathrm{i}}} - \frac{2 T_{\mathrm{d}}}{T_{\mathrm{s}}} - 1 \right) \
+r_0 = K \left( 1 + \frac{T_{\mathrm{s}}}{2 T_{\mathrm{i}}} + \frac{T_{\mathrm{d}}}{T_{\mathrm{s}}} \right) \\
+\label{r_t}
+\end{equation}
+
+gdzie K to wzmocnienie regulatora, $T_{\mathrm{i}}$ stala calkowania, $T_{\mathrm{d}}$ stala rozniczkowania, $T_{\mathrm{s}}$ okres probkowania. Dodatkowo zgodnie z poleceniem uwzglednilismy ograniczenia zmiany wartosci sterowania $\num{-0,05}$  $\le$ $\triangle U(k)$ $\le$ $\num{0,05}$.
+
+Nastawy regulatorow zostaly dobrane metoda eksperymentalna. W regulatorze PID wynosza one: K =  $\num{0,6}$; $T_{\mathrm{i}}$ = 11; $T_{\mathrm{d}}$ =  $\num{3}$; $T_{\mathrm{s}}$ = $\num{0,5}$;. Dla symulacji trwajacej 2500 probek, wartosc bledu sredniokwadratowego, czyli wskaznika jakosci regulacji, wynosi E= $\num{81,1977}$. Przerywana linia oznaczylismy wartosc zadana regulatora, niebieskimi, wartosci wyjscia i sterowania. 
+
+
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+%	\begin{groupplot}[group style={group size=1 by 1,vertical sep=\odstepionowy},width=\szer,height=\wys]
+	%%1
+%	\nextgroupplot
+	\begin{axis}[
+	width=0.8\textwidth,
+	height=0.19\textheight,
+	xmin=1,xmax=2500,ymin=1,ymax=3,
+	%xlabel={$k$},
+	ylabel={$y$},
+	xtick={1, 1000, 2000, 2500},
+	ytick={1,2,3},
+	legend pos=north west,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[blue,semithick] file {wykresy/zadanie45_PID_Y.txt};
+	\addplot[red , semithick , densely dashed] file {wykresy/zadanie45_PID_Yzad.txt};
+
+	\legend{$Y$, $Y_{\mathrm{zad}}$}
+	\end{axis}
+	%\end{groupplot}
+	\end{tikzpicture}
+	%\caption{PID???}
+	\label{r_pgfplots_funkcje}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+	%	\begin{groupplot}[group style={group size=1 by 1,vertical sep=\odstepionowy},width=\szer,height=\wys]
+	%%1
+	%	\nextgroupplot
+	\begin{axis}[
+	width=0.8\textwidth,
+	height=0.17\textheight,
+	xmin=1,xmax=2500,ymin=0.7,ymax=1.5,
+	xlabel={$k$},
+	ylabel={$u$},
+	xtick={1, 1000, 2000, 2500},
+	ytick={0.7, 1, 1.5},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[blue,semithick] file {wykresy/zadanie45_PID_U.txt};
+
+	\end{axis}
+	%\end{groupplot}
+	\end{tikzpicture}
+	\caption{PID}
+	\label{r_pgfplots_funkcje}
+\end{figure}
+
+
+
+W regulatorze DMC obliczone nastawy wynosza: D=110; N=19; Nu=6; $\lambda$=$\num{0,15}$. Dla symulacji o takiej samej dlugosci jak w przypadku PID (2500 probek) wartosc bledu wynosi E=$\num{69,3695}$. Zgodnie z oczekiwaniami blad ten jest znaczaco mniejszy niz ten otrzymany przy regulacji PIDem. 
+
+%%%%%%%%%%%To samo co wyzej ale na DMC zmien::
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+	%	\begin{groupplot}[group style={group size=1 by 1,vertical sep=\odstepionowy},width=\szer,height=\wys]
+	%%1
+	%	\nextgroupplot
+	\begin{axis}[
+	width=0.8\textwidth,
+	height=0.19\textheight,
+	xmin=1,xmax=2500,ymin=1,ymax=3,
+	%xlabel={$k$},
+	ylabel={$y$},
+	xtick={1, 1000, 2000, 2500},
+	ytick={1,2,3},
+	legend pos=north west,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[blue,semithick] file {wykresy/zadanie45_DMC_Y.txt};
+	\addplot[red , semithick , densely dashed] file {wykresy/zadanie45_DMC_Yzad.txt};
+	
+	\legend{$Y$, $Y_{\mathrm{zad}}$}
+	\end{axis}
+	%\end{groupplot}
+	\end{tikzpicture}
+	%\caption{PID???}
+	\label{r_pgfplots_funkcje}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+	%	\begin{groupplot}[group style={group size=1 by 1,vertical sep=\odstepionowy},width=\szer,height=\wys]
+	%%1
+	%	\nextgroupplot
+	\begin{axis}[
+	width=0.8\textwidth,
+	height=0.17\textheight,
+	xmin=1,xmax=2500,ymin=0.7,ymax=1.5,
+	xlabel={$k$},
+	ylabel={$u$},
+	xtick={1, 1000, 2000, 2500},
+	ytick={0.7, 1, 1.5},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[blue,semithick] file {wykresy/zadanie45_DMC_U.txt};
+	
+	\end{axis}
+	%\end{groupplot}
+	\end{tikzpicture}
+	\caption{DMC}
+	\label{r_pgfplots_funkcje}
+\end{figure}
+
+
+
+
+
+
+
+\chapter{Punkt 5}
+
+Omówiæ wyniki i ewentualne sposoby poprawy jakoœci regulacji. Jakoœæ
+regulacji oceniaæ jakoœciowo (na podstawie rysunków przebiegów sygna³ów) oraz ilo-
+œciowo, wyznaczaj¹c wskaŸnik jakoœci regulacji.
+
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+	%	\begin{groupplot}[group style={group size=1 by 1,vertical sep=\odstepionowy},width=\szer,height=\wys]
+	%%1
+	%	\nextgroupplot
+	\begin{axis}[
+	width=0.8\textwidth,
+	height=0.19\textheight,
+	xmin=1,xmax=2500,ymin=1,ymax=3,
+	%xlabel={$k$},
+	ylabel={$y$},
+	xtick={1, 1000, 2000, 2500},
+	ytick={1,2,3},
+	legend pos=north west,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[blue,semithick] file {wykresy/zadanie6_PID_Y.txt};
+	\addplot[red , semithick , densely dashed] file {wykresy/zadanie6_PID_Yzad.txt};
+	
+	\legend{$Y$, $Y_{\mathrm{zad}}$}
+	\end{axis}
+	%\end{groupplot}
+	\end{tikzpicture}
+	%\caption{PID???}
+	\label{r_pgfplots_funkcje}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+	%	\begin{groupplot}[group style={group size=1 by 1,vertical sep=\odstepionowy},width=\szer,height=\wys]
+	%%1
+	%	\nextgroupplot
+	\begin{axis}[
+	width=0.8\textwidth,
+	height=0.17\textheight,
+	xmin=1,xmax=2500,ymin=0.7,ymax=1.5,
+	xlabel={$k$},
+	ylabel={$u$},
+	xtick={1, 1000, 2000, 2500},
+	ytick={0.7, 1, 1.5},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[blue,semithick] file {wykresy/zadanie6_PID_U.txt};
+	
+	\end{axis}
+	%\end{groupplot}
+	\end{tikzpicture}
+	\caption{PID}
+	\label{r_pgfplots_funkcje}
+\end{figure}
+
+
+
+
+
+%%%%%%%%%%%To samo co wyzej ale na DMC zmien::
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+	%	\begin{groupplot}[group style={group size=1 by 1,vertical sep=\odstepionowy},width=\szer,height=\wys]
+	%%1
+	%	\nextgroupplot
+	\begin{axis}[
+	width=0.8\textwidth,
+	height=0.19\textheight,
+	xmin=1,xmax=2500,ymin=1,ymax=3,
+	%xlabel={$k$},
+	ylabel={$y$},
+	xtick={1, 1000, 2000, 2500},
+	ytick={1,2,3},
+	legend pos=north west,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[blue,semithick] file {wykresy/zadanie6_DMC_Y.txt};
+	\addplot[red , semithick , densely dashed] file {wykresy/zadanie6_DMC_Yzad.txt};
+	
+	\legend{$Y$, $Y_{\mathrm{zad}}$}
+	\end{axis}
+	%\end{groupplot}
+	\end{tikzpicture}
+	%\caption{PID???}
+	\label{r_pgfplots_funkcje}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+	%	\begin{groupplot}[group style={group size=1 by 1,vertical sep=\odstepionowy},width=\szer,height=\wys]
+	%%1
+	%	\nextgroupplot
+	\begin{axis}[
+	width=0.8\textwidth,
+	height=0.17\textheight,
+	xmin=1,xmax=2500,ymin=0.7,ymax=1.5,
+	xlabel={$k$},
+	ylabel={$u$},
+	xtick={1, 1000, 2000, 2500},
+	ytick={0.7, 1, 1.5},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[blue,semithick] file {wykresy/zadanie6_DMC_U.txt};
+	
+	\end{axis}
+	%\end{groupplot}
+	\end{tikzpicture}
+	\caption{DMC}
+	\label{r_pgfplots_funkcje}
+\end{figure}
+
+Podczas optymalizacji regulatora DMC optymalizowalismy tylko parametry $N_{\mathrm{u}}$, N i $\lambda$. Parametr D zostal ustawiony na stala wartosc 110. Dla nastaw regulatora DMC otrzymanch w wyniku optymaliacji D =110; N=130; $N_{\mathrm{u}}$=6; $\lambda$=$\num{0,01}$ otrzymalismy blad sredniokwadratowy równy E =$\num{69,3671}$ , co jest bardzo nieznacznie mniejsza wartoscia niz ta obliczona eksperymantalnie, a przebiegi zdradzaja, ze w tym przypadku optymalizacja okazala sie lepsza niz dla PIDa, uklad nie wpada w oscylacje a regulacja wydaje sie byc ogolnie nieco lepsza niz w punkcie 5.
+Na podstawie powyzszych eksperymentow mozemy stwierdzic, ze nie zawsze metody matematyczne daja lepsze rezultaty. Przypadek PIDa pokazal, ze pomimo mniejszej wartosci bledu regulacja byla gorsza z powodu ograniczen, dlatego do wynikow metod matematycznych nalezy podchodzic z pewnym pragmatyzmem.
+\end{comment}
