@@ -1,4 +1,3 @@
-%obliczenie odpowiedzi skokowej
 clear all
 zadanie3;
 s=su;
@@ -11,10 +10,10 @@ Yzad(21:1000) = 1.6;
 Yzad(1001:1500)=1.4;
 Yzad(1501:n)=2.5;
 
-pomiar = 0;
+czyPomiar = 0;
 
-Z=zeros(1,n);   %skoki po uzyskaniu wartosci zadanej
-Z(160:800) = 1; %nie rozumiem o co chodzi ze pomiar zaklocenia wplywa lepiej na jakosc regulacji i parametr D^z
+Z=zeros(1,n);   
+Z(160:800) = 1; 
 Z(1040:1200) = 1;
 Z(1640:2000) = 1;
 Z(2290:n)=1;
@@ -25,24 +24,17 @@ Ypp=0;
 Upp=0;
 Zpp=0;
 
-Y(1:n) = Ypp; %inicjalizacje tablic
+Y(1:n) = Ypp; 
 U(1:n) = Upp;
 u = U - Upp;
 err = 0;
 
-szum = 0;
 D=110; Dz=50;
 
 %parametry regulatora dobrane eksperymentalnie
-% N=19; Nu=6; lambda=0.15;
 N=130.000000; Nu=6.000000; lambda=0.920000;
 for i=1:Dz
     dz(i)=0;
-end
-Zpom = Z;
-if szum
-    Zpom = awgn(Zpom,snr); %dodaje bialy szum gaussowski o zadanym stosunku
-    %sygna<B3>u do szumu (SNR)
 end
 
 %inicjalizacja macierzy dUp
@@ -83,15 +75,11 @@ for i=1:N
     end;
 end;
 Mz = [sz(1:N) Mz];
-
-%przeksztalcanie wyliczonych macierzy do potrzebnych nam parametrow
-
+%podstawienie do wzoru reg. DMC
 K=((M'*M+lambda*eye(Nu))^-1)*M';
 Ku=K(1,:)*Mp;
 Kz=K(1,:)*Mz;
 Ke=sum(K(1,:));
-
-%glowna petla
 
 for i=21:n
     
@@ -100,17 +88,21 @@ for i=21:n
     e=Yzad(i)-Y(i); %uchyb
     err = err + e^2;
     
-    du=Ke*e-Ku*dup'; %regulator
-    if pomiar %regulator nie bierze pod uwage pomiaru zaklocen gdy pomiar=0
+    du=Ke*e-Ku*dup'; %reg
+    if czyPomiar
+        
         du = du - Kz*dz';
         for n=Dz:-1:2
             dz(n)=dz(n-1);
         end
         dz(1)=Zpom(i)-Zpom(i-1);
+        
     end
+    
     for n=D-1:-1:2
         dup(n)=dup(n-1);
     end
+    
     dup(1)=du;
     u(i)=u(i-1)+dup(1);
     
@@ -134,9 +126,9 @@ ylabel('y');
 hold on;
 stairs(Yzad,':');
 %zapisywanie danych do plikow txt w celu narysowania wykresow w LATEXie
-nazwa = strcat('wykresy/zadanie6_DMC_Yzad.txt');
+nazwa = strcat('wykresy/zadanie5_DMC_Yzad.txt');
 %savePlot(1:1:2500,Yzad,nazwa);
-nazwa = strcat('wykresy/zadanie6_DMC_U.txt');
+nazwa = strcat('wykresy/zadanie5_DMC_U.txt');
 %savePlot(1:1:2500,U,nazwa);
-nazwa = strcat('wykresy/zadanie6_DMC_Y.txt');
+nazwa = strcat('wykresy/zadanie5_DMC_Y.txt');
 %savePlot(1:1:2500,Y,nazwa);

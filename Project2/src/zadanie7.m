@@ -11,13 +11,10 @@ Yzad(1001:1500)=1.4;
 Yzad(1501:n)=2.5;
 
 czyPomiar = 1;
+czySzum = 1; 
+snr = 10;
 
-
-Z=sin(0:0.01:25);
-Z=Z(1:2500);
-Z(1:80)=0;
-
-
+Z = zeros(1,n);
 
 Ypp=0;
 Upp=0;
@@ -35,7 +32,7 @@ N=130.000000; Nu=6.000000; lambda=0.920000;
 for i=1:Dz
     dz(i)=0;
 end
-Zpom = Z;
+Zp = Z;
 
 %inicjalizacja macierzy dUp
 for i=1:D-1
@@ -81,6 +78,13 @@ Ku=K(1,:)*Mp;
 Kz=K(1,:)*Mz;
 Ke=sum(K(1,:));
 
+Zp = Z;
+
+%szumimy sygna³ z czujnika bia³ym szumem o sta³ej wartoœci widma
+if czySzum
+    Zp = awgn(Zp,snr); 
+end
+
 for i=21:n
     
     Y(i)=symulacja_obiektu6y(U(i-6), U(i-7), Z(i-3) , Z(i-4), Y(i-1), Y(i-2));
@@ -91,12 +95,15 @@ for i=21:n
     
     
     if czyPomiar 
+        
         du = du - Kz*dz';
         for n=Dz:-1:2
             dz(n)=dz(n-1);
         end
-        dz(1)=Zpom(i)-Zpom(i-1);
+        dz(1)=Zp(i)-Zp(i-1);
+        
     end
+    
     for n=D-1:-1:2
         dup(n)=dup(n-1);
     end
@@ -124,9 +131,9 @@ ylabel('y');
 hold on;
 stairs(Yzad,':');
 %zapisywanie danych do plikow txt w celu narysowania wykresow w LATEXie
-nazwa = strcat('wykresy/zadanie6_DMC_Yzad.txt');
+nazwa = strcat('wykresy/zadanie7_DMC_Yzad.txt');
 %savePlot(1:1:2500,Yzad,nazwa);
-nazwa = strcat('wykresy/zadanie6_DMC_U.txt');
+nazwa = strcat('wykresy/zadanie7_DMC_U.txt');
 %savePlot(1:1:2500,U,nazwa);
-nazwa = strcat('wykresy/zadanie6_DMC_Y.txt');
+nazwa = strcat('wykresy/zadanie7_DMC_Y.txt');
 %savePlot(1:1:2500,Y,nazwa);
