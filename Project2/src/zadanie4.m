@@ -1,5 +1,7 @@
-%obliczenie odpowiedzi skokowej
+
 clear all
+
+%obliczenie odpowiedzi skokowej
 zadanie3;
 s=su;
 %params
@@ -26,8 +28,8 @@ u = U - Upp;
 err = 0;
 szum = 0;
 D=110; Dz=50;
+
 %parametry regulatora dobrane eksperymentalnie
-% N=19; Nu=6; lambda=0.15;
 N=130.000000; Nu=6.000000; lambda=0.920000;
 
 

@@ -10,7 +10,7 @@ Yzad(21:1000) = 1.6;
 Yzad(1001:1500)=1.4;
 Yzad(1501:n)=2.5;
 
-czyPomiar = 0;
+czyPomiar = 1;
 
 
 Z=sin(0:0.01:25);
@@ -132,6 +132,8 @@ if wykresy
         savePlot(1:1:2500,U,nazwa);
         nazwa = strcat('../wykresy/zadanie6_pomiar_DMC_Y.txt');
         savePlot(1:1:2500,Y,nazwa);
+        nazwa = strcat('../wykresy/zadanie5_pomiar_DMC_Z.txt');
+        savePlot(1:1:2500,Z,nazwa);
     else
         nazwa = strcat('../wykresy/zadanie6_bezpomiaru_DMC_Yzad.txt');
         savePlot(1:1:2500,Yzad,nazwa);
@@ -139,5 +141,7 @@ if wykresy
         savePlot(1:1:2500,U,nazwa);
         nazwa = strcat('../wykresy/zadanie6_bezpomiaru_DMC_Y.txt');
         savePlot(1:1:2500,Y,nazwa);
+        nazwa = strcat('../wykresy/zadanie5_bezpomiaru_DMC_Z.txt');
+        savePlot(1:1:2500,Z,nazwa);
     end
 end

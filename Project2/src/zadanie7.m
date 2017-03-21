@@ -12,7 +12,7 @@ Yzad(1501:n)=2.5;
 
 czyPomiar = 1;
 czySzum = 1; 
-snr = 10;
+snr = 25;
 
 Z=zeros(1,n);
 Z(160:800) = 1;
@@ -142,5 +142,7 @@ if wykresy
         savePlot(1:1:2500,U,nazwa);
         nazwa = strcat('../wykresy/zadanie7_pomiar_DMC_Y_snr=',num2str(snr),'skok_z.txt');
         savePlot(1:1:2500,Y,nazwa);
+        nazwa = strcat('../wykresy/zadanie7_pomiar_DMC_Z_snr=',num2str(snr),'skok_z.txt');
+        savePlot(1:1:2500,Z,nazwa);
     end
 end
