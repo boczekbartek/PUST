@@ -124,9 +124,9 @@ ylabel('y');
 hold on;
 stairs(Yzad,':');
 %zapisywanie danych do plikow txt w celu narysowania wykresow w LATEXie
-nazwa = strcat('wykresy/zadanie6_DMC_Yzad.txt');
-%savePlot(1:1:2500,Yzad,nazwa);
-nazwa = strcat('wykresy/zadanie6_DMC_U.txt');
-%savePlot(1:1:2500,U,nazwa);
-nazwa = strcat('wykresy/zadanie6_DMC_Y.txt');
-%savePlot(1:1:2500,Y,nazwa);
+nazwa = strcat('../wykresy/zadanie4_DMC_Yzad.txt');
+savePlot(1:1:2500,Yzad,nazwa);
+nazwa = strcat('../wykresy/zadanie4_DMC_U.txt');
+savePlot(1:1:2500,U,nazwa);
+nazwa = strcat('../wykresy/zadanie4_DMC_Y.txt');
+savePlot(1:1:2500,Y,nazwa);
