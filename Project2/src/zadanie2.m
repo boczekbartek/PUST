@@ -17,9 +17,9 @@ for j=jumps
     plot(Y)
     hold on;
     
-%     nazwa = strcat('wykresy/zadanie2_jump=', num2str(j),'.txt');
-%     savePlot(1:1:n,Y,nazwa);
-%     
+    nazwa = strcat('../wykresy/zadanie2_jump=', num2str(j),'_U.txt');
+    savePlot(1:1:n,Y,nazwa);
+    %
 end
 
 title('odpowiedzi skokowe dla Y')
@@ -40,9 +40,9 @@ for j=jumps
     hold on;
     stairs(Z(1:n))
     
-%     nazwa = strcat('wykresy/zadanie2_jump=', num2str(j),'.txt');
-%     savePlot(1:1:n,Y,nazwa);
-%     
+    nazwa = strcat('../wykresy/zadanie2_jump=', num2str(j),'_Z.txt');
+    savePlot(1:1:n,Y,nazwa);
+    
 end
 
 title('odpowiedzi skokowe dla Z')
@@ -60,57 +60,45 @@ for i = 1:41
         U(10:n) = Us(i);
         Z(10:n) = Zs(j);
         for k = 8:n
-             Y(k)=symulacja_obiektu6y(U(k-6),U(k-7),Z(k-3),Z(k-4),Y(k-1),Y(k-2));
+            Y(k)=symulacja_obiektu6y(U(k-6),U(k-7),Z(k-3),Z(k-4),Y(k-1),Y(k-2));
         end
         Ys(i,j) = Y(n);
     end
 end
-% for i = 1:101
-%     Us(i) = 1.1 + 0.2*(i-1)*(1/100);
-%     Zs(i) = 1.1 + 0.2*(i-1)*(1/100);
-%     Z(1:20) = 1.1;
-%     Z(20:n) = Zs(i);
-%     U(1:20) = 1.1;
-%     U(20:n) = Us(i);
-%     for k = 12:n
-%         Y(k)=symulacja_obiektu6y(U(k-6),U(k-7),Z(k-3),Z(k-4),Y(k-1),Y(k-2));
-%     end
-%     Ys(i,i) = Y(n);
-% end
 
 surf(Us,Zs,Ys)
-% 
+
+%eksport danych dla Latexa
+tab=zeros(41*41,4);
+i = 1;
+for x=1:size(Us')
+    for y =1:size(Zs')
+        tab(i,:) = [Us(x) Zs(y) Ys(x,y) Ys(x,y)];
+        i = i+1;
+    end
+end
+
+dane = fopen('../wykresy/surf.txt','wt');
+
+for i=1:41*41
+    fprintf(dane,'%f\t%f\t%f\t%f\\\\ \n', tab(i,1),tab(i,2),tab(i,3),tab(i,4));
+end
+fclose(dane);
+
+
+
+%
 % %Wzmocnienie statyczne jako wspó³czynnik a - nachylenie prostej bêd¹cej
 % %charakterystyk¹ statyczn¹
-% 
+%
 % KstatU=(Ys(50)-Ys(49))/(Us(50)-Us(49));
-% 
+%
 % hold off;
 % figure
 % plot(Us,Ys);
 % title(sprintf('Wzmocnienie statyczne U = %f',KstatU));
-% % 
+% %
 % % nazwa = strcat('wykresy/zadanie2_wzmStat.txt');
 % % savePlot(Us,Ys,nazwa);
-% % 
-% 
-% for i = 1:101
-%     Zs(i) = 1.1 + 0.2*(i-1)*(1/100);
-%     Z(1:20) = 1.1;
-%     Z(20:n) = Zs(i);
-%     for k = 12:n
-%         Y(k)=symulacja_obiektu6y(U(k-6),U(k-7),Z(k-3),Z(k-4),Y(k-1),Y(k-2));
-%     end
-%     Ys(i) = Y(n);
-%     
-% end
-% 
-% KstatZ=(Ys(50)-Ys(49))/(Zs(50)-Zs(49));
-% 
-% hold off;
-% figure
-% surf(Zs,Ys,Us);
-% title(sprintf('Wzmocnienie statyczne Z = %f',KstatZ));
-% % 
-% 
-%statyczne s¹, dynamiczne nie, bo jest inercja z opóŸnieniem chyba xD
+% %
+%
