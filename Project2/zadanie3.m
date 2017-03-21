@@ -35,7 +35,7 @@ U(21:end)=Uskok;
     Yz(k)=symulacja_obiektu6y(U(k-6),U(k-7),Z(k-3),Z(k-4),Yz(k-1),Yz(k-2));
  end
  
- plot(Yz)
+ %plot(Yz)
  sz=zeros(n-21,1);
  for k = 21:n
     sz(k-20) = (Yz(k)-Ypp)/(Zskok-Zpp);
