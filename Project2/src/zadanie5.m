@@ -85,10 +85,10 @@ for i=21:n
     
     Y(i)=symulacja_obiektu6y(U(i-6), U(i-7), Z(i-3) , Z(i-4), Y(i-1), Y(i-2));
     
-    e=Yzad(i)-Y(i); %uchyb
+    e=Yzad(i)-Y(i);
     err = err + e^2;
     
-    du=Ke*e-Ku*dup'; %reg
+    du=Ke*e-Ku*dup';
     if czyPomiar
         
         du = du - Kz*dz';
