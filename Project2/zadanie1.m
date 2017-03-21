@@ -5,7 +5,7 @@ params
 Z(1:300)=Zpp;
 U(1:300)=Upp;
 Y(1:300)=Ypp;
-for k=12:1:300
+for k=8:1:300
 Y(k)=symulacja_obiektu6y(U(k-6),U(k-7),Z(k-3),Z(k-4),Y(k-1),Y(k-2));
 end
 figure
