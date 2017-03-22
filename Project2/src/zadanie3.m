@@ -1,6 +1,6 @@
 
 params
-wykresy = 1;
+wykresy = 0;
 %inicjalizacja
 Uskok = 0.9;
 Zskok = 0.9;

@@ -11,7 +11,7 @@ Yzad(21:1000) = 1.6;
 Yzad(1001:1500)=1.4;
 Yzad(1501:n)=2.5;
 
-czyPomiar = 1;
+czyPomiar = 0;
 
 Z=zeros(1,n);
 Z(160:800) = 1;
@@ -127,6 +127,7 @@ ylabel('y');
 hold on;
 stairs(Yzad,':');
 plot(Z)
+
 %zapisywanie danych do plikow txt w celu narysowania wykresow w LATEXie
 if wykresy
     if czyPomiar
@@ -145,5 +146,7 @@ if wykresy
         savePlot(1:1:2500,U,nazwa);
         nazwa = strcat('../wykresy/zadanie5_bezpomiaru_DMC_Y.txt');
         savePlot(1:1:2500,Y,nazwa);
+        nazwa = strcat('../wykresy/zadanie5_bezpomiaru_DMC_Z.txt');
+        savePlot(1:1:2500,Z,nazwa);
     end
 end
