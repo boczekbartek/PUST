@@ -2,3 +2,44 @@
 \chapter{Punkt 4}
 
 Dobrane nastawy regulatora DMC wynosz¹: $D=\num{110}$; $N=\num{130}$; $Nu=\num{6}$; $\lambda={1,8}$;
+
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.2in,
+	xmin=0,xmax=350,ymin=31,ymax=42,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie4_Y.txt};
+	\addplot[const plot,red, densely dashed] file {wykresy/zadanie4_Yzad.txt};
+	\legend{$Y$,$Y^{zad}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.2in,
+	xmin=0,xmax=350,ymin=3,ymax=74,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie4_U.txt};
+	\end{axis}
+	\end{tikzpicture}
+
+	
+	
+	\caption{Przebiegi sygna³ów z regulatora DMC przy zerowym zak³óceniu}
+	\label{bezPomZak}
+\end{figure}
+\FloatBarrier
