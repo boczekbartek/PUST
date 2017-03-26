@@ -1,0 +1,3 @@
+3. W tym zadaniu tym szukaliœmy optymalnej aproksymacji otrzymanej przez nas odpowiedzi skokowej dla skoku z wartoœci Upp=28 do U = 50.
+Podczas wyznaczania fukncji aproksymuj¹cej optymalizowaliœmy parametry T1, T2 oraz K cz³onu inercyjnego drugiego rzêdu z opóŸnieniem. Optymalizacja polega³a na minimalizacji b³êdu œredniokwadratowego miêdzy rzeczywiskt¹ odpowiedzi¹ skokow¹ a funkcj¹ aproksymuj¹c¹.
+Przy u¿yciu optymalizatora 'ga' uda³o nam siê uzyskaæ funkcjê, dla której b³¹d wyniós³ E=1.8765, przy wartoœciach parametrów: T1=17.099506; T2=64.970974; K=0.263644. Wartoœæ Td (opóŸnienia) eksperymentalnie ustawiliœmy na 10, gdy¿ dla niej wyszed³ najmniejszy b³¹d aproksymacji. Poni¿ej przedstawione zosta³y wykresy odpowiedzi skokowej oraz funckji aproksymuj¹cej.
