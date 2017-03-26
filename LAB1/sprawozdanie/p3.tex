@@ -1,0 +1,45 @@
+\chapter{Punkt 3}
+
+W tym zadaniu szukaliœmy optymalnej aproksymacji otrzymanej przez nas odpowiedzi skokowej
+dla skoku z wartosci $U_{\mathrm{pp}} = \num{28}$ do $U = \num{50}$. Podczas wyznaczania funkcji aproksymujacej
+optymalizowalismy parametry $T1$, $T2$ oraz $K$ cz³onu inercyjnego drugiego rzêdu z opóznieniem.
+Optymalizacja polega³a na minimalizacji b³êdu œredniokwadratowego miêdzy rzeczywist¹ odpowiedzi¹
+skoko¹a a funkcj¹ aproksymujac¹. Przy u¿yciu optymalizatora $ga$ uda³o nam siê uzyskaæ
+funkcjê, dla której b³ad wyniós³ $E = \num{1,8765}$, przy wartosciach parametrów: $T1 = \num{17,099506}$;
+$T2 = \num{64,970974}$; $K = \num{0,263644}$. Wartosc $T_d$ (opóznienia) eksperymentalnie ustawilismy na \num{10},
+gdy¿ dla niej wyszed³ najmniejszy b³¹d aproksymacji. Poni¿ej przedstawione zosta³y wykresy
+odpowiedzi skokowej oraz funkcji aproksymuj¹cej.
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=3.7in,
+	xmin=0,xmax=350,ymin=-0.05,ymax=0.3,
+	xlabel={$k$},
+	ylabel={$s$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/odp_skokowa.txt};
+	\addplot[red, densely dashed] file {wykresy/funkcja_aproksymujaca.txt};
+	\end{axis}
+	\end{tikzpicture}
+	\caption{OdpowiedŸ skokowa oryginalna i wersja aproksymowana}
+	\label{odpskokUdmc3}
+\end{figure}
+
+
+\begin{figure}[ht]
+
+UZASADNIÆ WYBÓR PARAMETRÓW OPPYTMALIZACJI
+\end{figure}
+
+
+
+
+
+
+
+

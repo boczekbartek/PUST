@@ -1,0 +1,34 @@
+\chapter{Punkt 2}
+
+Z punktu pracy $G1 = \num{28}\%$ wybralismy trzy skoki sygna³u sterujacego: do $\num{50}\%$, $\num{70}\%$ oraz
+$\num{90}\%$.
+
+
+\begin{figure}[ht]
+	\centering
+		
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=5in,
+	xmin=0,xmax=350,ymin=29,ymax=50,
+	xlabel={$sek$},
+	ylabel={$Y$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,green] file {wykresy/Y_50.txt};
+	\addplot[const plot,red] file {wykresy/Y_70.txt};
+	\addplot[const plot,blue] file {wykresy/Y_90.txt};
+	\legend{$G1=\num{50}\%$,$G1=\num{70}\%$,$G1=\num{90}\%$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Odpowiedzi skokowe dla trzech ró¿nych zmian sygna³u steruj¹cego}
+	\label{odpWeWy}
+\end{figure}
+
+Nie zrobilismy odpowiedniego eksperymentu (nale¿a³o liniowo zwiekszac sterowanie), dlatego
+tez nie mozemy stwierdzic, na podstawie naszych danych wyniesionych ze stanowiska laboratoryjnego,
+czy w³asciwosci statyczne obiektu sa liniowe i jakie jest wzmocnienie statyczne.
+
