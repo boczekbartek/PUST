@@ -1,0 +1,123 @@
+\chapter{Punkt 5}
+
+Skoki zak³ócenia z wartoœci 0 do 1 nastêpuj¹ w chwilach:\\
+k=160 powrót z wartoœci 1 do 0 w k=800\\
+k=1040 powrót z wartoœci 1 do 0 w k=1200\\
+k=1640 powrót z wartoœci 1 do 0 w k=2000\\
+k=2290 \\
+
+Wartoœæ parametru $D^{\mathrm{z}}$ = $\num{50}$ zosta³a dobrana eksperymentalnie. Z rysunków wynika, ¿e regulacja z pomiarem zak³ócenia polepsza siê jakoœciowo (skoki wyjœcia s¹ mniejsze) i iloœciowo.
+B³¹d $E$ maleje z $\num{71,1137}$ w przypadku bez pomiaru do $\num{41,6930}$ w przypadku z pomiarem.
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.2in,
+	xmin=0,xmax=2500,ymin=-0.2,ymax=4,
+	%ytick={0,0,2},
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie5_bezpomiaru_DMC_Y.txt};
+	\addplot[const plot,red,densely dashed] file {wykresy/zadanie5_bezpomiaru_DMC_Yzad.txt};
+	\legend{$Y(k)$,$Y^{zad}(k)$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.2in,
+	xmin=0,xmax=2500,ymin=-1,ymax=3.5,
+	%ytick={-3,0,3},
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie5_bezpomiaru_DMC_U.txt};
+	\end{axis}
+	\end{tikzpicture}
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.1in,
+	xmin=0,xmax=2500,ymin=-0.5,ymax=1.5,
+	ytick={0,0,1.5},
+	xlabel={$k$},
+	ylabel={$Z$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie5_bezpomiaru_DMC_Z.txt};
+	\end{axis}
+	\end{tikzpicture}
+
+
+	\caption{Odpowied¿ skokowa toru wejœcie-wyjœcie w wersji bez pomiaru}
+	\label{bezPomZak}
+\end{figure}
+\FloatBarrier
+
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.2in,
+	xmin=0,xmax=2500,ymin=-0.2,ymax=4,
+	%ytick={0,0,2},
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie5_pomiar_DMC_Y.txt};
+	\addplot[const plot,red, densely dashed] file {wykresy/zadanie5_pomiar_DMC_Yzad.txt};
+	\legend{$Y(k)$,$Y^{zad}(k)$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.2in,
+	xmin=0,xmax=2500,ymin=-2,ymax=3.5,
+	%ytick={-3,0,3},
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie5_pomiar_DMC_U.txt};
+	\end{axis}
+	\end{tikzpicture}
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.1in,
+	xmin=0,xmax=2500,ymin=-0.5,ymax=1.5,
+%	ytick={0,0,1.5},
+	xlabel={$k$},
+	ylabel={$Z$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie5_pomiar_DMC_Z.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+	\caption{OdpowiedŸ skokowa toru wejœcie-wyjœcie w wersji z pomiarem}
+	\label{bezPomZak}
+\end{figure}
+\FloatBarrier
+
+

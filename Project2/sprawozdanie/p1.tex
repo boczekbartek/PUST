@@ -1,0 +1,50 @@
+\chapter{Punkt 1 }
+
+
+Z poni¿szych wykresów mo¿emy odczytaæ, ¿e dla punktu pracy $U=Z=0$ wartoœæ wyjœcia $Y$ jest sta³a i ma wartoœæ $Y=0$, co dowodzi poprawnoœci wybrania punktu pracy.
+
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.645in,
+	xmin=0,xmax=300,ymin=-1,ymax=1,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie1Y.txt};
+	\end{axis}
+	\end{tikzpicture}
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.645in,
+	xmin=0,xmax=300,ymin=-1,ymax=1,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie1U.txt};
+	\end{axis}
+	\end{tikzpicture}
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.645in,
+	xmin=0,xmax=300,ymin=-1,ymax=1,
+	xlabel={$k$},
+	ylabel={$Z$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,red] file {wykresy/zadanie1Z.txt};
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Sygna³y w punkcie pracy}
+	\label{r_pgfplots_funkcje}
+\end{figure}

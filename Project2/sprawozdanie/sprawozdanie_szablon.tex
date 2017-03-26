@@ -18,25 +18,11 @@
 \usepackage{listings}
 \usepackage{matlab-prettifier}
 \usepackage{siunitx}
-\usepackage{verbatim}
+\usepackage{placeins}
 \definecolor{szary}{rgb}{0.95,0.95,0.95}
-\usepackage{gensymb}
-%dodane z pliku zapisz_pdf_symulacje22.tex
-\begin{comment}
-\pgfplotsset{compat=1.11}
-\usepgfplotslibrary{external}
-%\tikzexternalize
-\textwidth 160mm \textheight 247mm
-
-
-\newcommand{\szer}{16cm}
-\newcommand{\wys}{6cm}
-\newcommand{\odstepionowy}{1.2cm}
-\end{comment}
-
-
 \sisetup{detect-weight,exponent-product=\cdot,output-decimal-marker={,},per-mode=symbol,binary-units=true,range-phrase={-},range-units=single}
 \SendSettingsToPgf
+
 %konfiguracje pakietu listings
 \lstset{
 	backgroundcolor=\color{szary},
@@ -102,9 +88,9 @@ title style={font=\small}
 \pagestyle{uheadings}
 
 %strona tytu³owa
-\title{\bf Sprawozdanie z æwiczenia laboratoryjnego nr 1, zadanie nr 3\vskip 0.1cm}
+\title{\bf Sprawozdanie z projektu nr 2, zadanie nr 6\vskip 0.1cm}
 \author{Bart³omiej Boczek, Aleksander Piotrowski, £ukasz Œmigielski}
-\date{2017}
+\date{23 marca 2017}
 
 \makeatletter
 \renewcommand{\maketitle}{\begin{titlepage}
@@ -137,7 +123,16 @@ Wydzia³ Elektroniki i Technik Informacyjnych}}\\
 \maketitle
 
 \tableofcontents
-\input{projekt2_final}
+\input{p1}
+\input{p2}
+\input{p3}
+\input{p4}
+\input{p5}
+\input{p6}
+\input{p7_calosc}
+%\input{p7.1}
+%\input{p7.2}
+%\input{p7.3}
 \end{document}
 
 

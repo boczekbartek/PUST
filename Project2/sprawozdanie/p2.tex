@@ -1,0 +1,73 @@
+\chapter{Punkt 2}
+
+Na wykresie zale¿noœci wyjœcia $Y_{\mathrm{s}}$ od $U_{\mathrm{s}}$ i $Z_{\mathrm{s}}$ mo¿emy zaobserwowaæ, ¿e w przybli¿eniu proces ma w³aœciwoœci statyczne. Z odpowiedzi skokowych natomiast odczytujemy w³aœciwoœci dynamiczne: obiekt ma opóŸnienie oraz jest stabilny.
+Na podstawie powy¿szych informacji mo¿emy obliczyæ wzmocnienie statyczne dla skoku sterowania: $K_{\mathrm{statU}}$ = $\num{2,0068}$
+oraz dla skoku zak³óceñ: $K_{\mathrm{statZ}}$ = $\num{1,1057}$
+
+\begin{figure}[ht]
+	\centering
+		
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.945in,
+	xmin=0,xmax=150,ymin=-1,ymax=3,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie2_jump=0.2_U.txt};
+	\addplot[const plot,red] file {wykresy/zadanie2_jump=0.5_U.txt};
+	\addplot[const plot,blue] file {wykresy/zadanie2_jump=0.9_U.txt};
+	\addplot[const plot,yellow] file {wykresy/zadanie2_jump=1.3_U.txt};
+	\legend{$U=\num{0,2}$,$U=\num{0,5}$,$U=\num{0,9}$,$U=\num{1,3}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{OdpowiedŸ dla zmian sygna³u steruj¹cego}
+	\label{odpWeWy}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.945in,
+	xmin=0,xmax=150,ymin=-1,ymax=2,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie2_jump=0.2_Z.txt};
+	\addplot[const plot,red] file {wykresy/zadanie2_jump=0.5_Z.txt};
+	\addplot[const plot,blue] file {wykresy/zadanie2_jump=0.9_Z.txt};
+	\addplot[const plot,yellow] file {wykresy/zadanie2_jump=1.3_Z.txt};
+	\legend{$Z=\num{0,2}$,$Z=\num{0,5}$,$Z=\num{0,9}$,$Z=\num{1,3}$}
+	\end{axis}
+	\end{tikzpicture}
+	\caption{OdpowiedŸ dla zmian sygna³u zak³ócenia}
+	\label{odpZakWy}
+\end{figure}
+\FloatBarrier
+
+
+\begin{figure}[ht]
+	\centering
+	\input{./wykresy/p2_charStat}
+	\caption{Charakterystyka statyczna procesu $y(u,z)$}
+	\label{Z2c}
+\end{figure}
+
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[scale=0.8]{images/stat}
+%	\caption{Charakerystyka statyczna procesu $y(u,z)$}
+%	\label{odpCharStat}
+%\end{figure}
+%\FloatBarrier
+
+

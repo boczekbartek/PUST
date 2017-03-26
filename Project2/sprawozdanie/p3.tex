@@ -1,0 +1,37 @@
+\chapter{Punkt 3}
+
+
+
+Odpowiedzi skokowe wyznaczamy analogicznie do poprzedniego projektu, jedyn¹ zmian¹ jest to, ¿e w przypadku obliczania odpowiedzi skokowej dla skoku sygna³u steruj³cego, zerujemy wartoœæ zak³óceñ, a w przypadku obliczania odpowiedzi skokowej od zak³óce? zerujemy sygna³ steruj¹cy.
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=2.4in,
+	xmin=0,xmax=130,ymin=0,ymax=2.5,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie3_odpSkok_U_schodki.txt};
+	\end{axis}
+	\end{tikzpicture}
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=2.4in,
+	xmin=0,xmax=130,ymin=0,ymax=1.5,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie3_odpSkok_Z_schodki.txt};
+	\end{axis}
+	\end{tikzpicture}
+	\caption{OdpowiedŸ skokowa toru wejœcie-wyjœcie (góra) oraz  zak³ócenie-wyjœcie (dó³)}
+	\label{odpskokUdmc}
+\end{figure}

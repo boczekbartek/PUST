@@ -1,0 +1,42 @@
+\chapter{Punkt 4}
+
+
+Parametry regulatora DMC: $D=\num{110}$; $N=\num{130}$; $N_u=\num{130}$; $\lambda=\num{0,92}$ dobrane metod¹ eksperymentaln¹ oceniaj¹c jakoœæ regulacji jakoœciowo, aby nie by³o oscylacji przy skokach sterowania oraz minimalizuj¹c b³¹d œredniokwadratowy. Dla d³ugoœci symulacji równej $n=\num{2500}$
+wartoœæ b³êdu $E=\num{39,8848}$.
+
+\begin{figure}[h!]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.645in,
+	xmin=0,xmax=2500,ymin=-0.1,ymax=3,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie4_DMC_Y.txt};
+	\addplot[const plot,red, densely dashed] file {wykresy/zadanie4_DMC_Yzad.txt};
+	\legend{$Y(k)$,$Y^{zad}(k)$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.645in,
+	xmin=0,xmax=2500,ymin=-1,ymax=3.5,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie4_DMC_U.txt};
+	\end{axis}
+	\end{tikzpicture}
+
+	\caption{Przebiegi sygna³ów wejœciowych i wyjœciowych procesu}
+	\label{dmcinz}
+\end{figure}
+\FloatBarrier
