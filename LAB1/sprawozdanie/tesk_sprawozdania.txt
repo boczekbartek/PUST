@@ -1,0 +1,8 @@
+zad4.
+Implementacje algorytmów zosta³y przedstawione odpowiednio w plikach PID.m i DMC.m. Jako model obiektu w algorytmach zosta³a wykorzystana wyznaczona w zadaniu 3 akroksymacja odpowiedzi skokowej przeskalowana odpowiedznio do punktu pracy.
+
+zad5.
+Dla dwóch spoków amplitudy sygna³u wartoœci zadanej wyznaczono dostrojono algorytm dostrojone zosta³y algorytmy DMC oraz PID. Podczas dostrajania wykorzystany zosta³ optymalizator ga, a nastêpnie zosta³y naniesione drobne rêczne poprawki. Dla obydwu algorytmów jako wspó³czynnik jakoœci zosta³ wykorzystany b³¹d œredniokwadratowy.
+Nastawy DMC:  D=300;N=130.000000; Nu=6.000000; lambda=0.010000 B³¹d: E = 3.2695e+03.
+PID: K=14.307542; Ti=38.320299; Td=6.677860; Ts=0.5. B³¹d: E = 2.6998e+03.
+Nastawy te powinny byæ dostrojone na rzeczywistym obiekcie, co wynika z pewnych niedok³adnoœci modelu.
