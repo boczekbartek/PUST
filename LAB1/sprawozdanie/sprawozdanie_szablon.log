@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  26 MAR 2017 21:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  26 MAR 2017 21:43
 entering extended mode
 **./sprawozdanie_szablon.tex
 (sprawozdanie_szablon.tex
@@ -1320,12 +1320,17 @@ PGFPlots: reading {wykresy/Y_50.txt}
 PGFPlots: reading {wykresy/Y_70.txt}
 PGFPlots: reading {wykresy/Y_90.txt}
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--37
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--37
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--39
 
  []
 
@@ -1396,7 +1401,7 @@ public/pl/plr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr8.pfb>
 MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/pl/plti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-su
 per/sfrm1095.pfb>
-Output written on sprawozdanie_szablon.pdf (8 pages, 148287 bytes).
+Output written on sprawozdanie_szablon.pdf (8 pages, 148234 bytes).
 PDF statistics:
  85 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
