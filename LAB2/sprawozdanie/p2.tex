@@ -1,0 +1,30 @@
+\chapter{Punkt 2}
+
+
+
+\begin{figure}[ht]
+	\centering
+		
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=5in,
+	xmin=0,xmax=350,ymin=31,ymax=36,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,green] file {wykresy/zadanie2_Z10.txt};
+	\addplot[const plot,red] file {wykresy/zadanie2_Z20.txt};
+	\addplot[const plot,blue] file {wykresy/zadanie2_Z30.txt};
+	\legend{$Z=\num{10}$,$Z=\num{20}$,$Z=\num{30}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Odpowiedzi skokowe toru zak³ócenie-wyjœcie procesu dla trzech ró¿nych zmian sygna³u zak³ócaj¹cego}
+	\label{odpWeWy}
+\end{figure}
+
+Czy w³aœciwoœci statyczne mo¿na okresliæ jako (w przybli¿eniu) liniowe?
+
