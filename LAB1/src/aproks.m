@@ -26,7 +26,7 @@ end
 hold on
 
  stairs(y)
- nazwa = strcat('funkcja_aproksymuj¹ca.txt');
+ nazwa = strcat('funkcja_aproksymujaca.txt');
 savePlot(1:1:350,y,nazwa);
 e = OdpSkok' - y;
 E=(norm(e))^2;
