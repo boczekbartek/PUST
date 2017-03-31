@@ -1,0 +1,73 @@
+%LAB3
+\chapter{Punkt 2}
+\begin{comment}
+W³aœciwoœci statyczne obiektu mo¿na uznaæ za w przybli¿eniu liniowe, gdy¿ mo¿emy zauwa¿yæ, ¿e skoki wyjœcia s¹ proporcjonalne do skoków zak³ócenia. (skok Y dla $Z_{skok}=\num{10}$ jest ok 2 razy mniejszy ni¿ skok Y dla $Z_{skok}=\num{20}$). Mo¿emy zatem obliczyæ wzmocnienie statyczne, które jest równe: $K_{stat}=0,1465$.
+\end{comment}
+
+Narysowaæ otrzymane przebiegi na jednym rysunku. Czy
+w³aœciwoœci statyczne obiektu mo¿na okreœliæ jako (w przybli¿eniu) liniowe? Jeœli tak
+– wyznaczyæ wzmocnienie statyczne procesu.
+
+%\begin{comment}
+\begin{figure}[ht]
+	\centering
+		
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=5in,
+	xmin=0,xmax=350,ymin=31,ymax=36,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,green] file {wykresy/przykladowe/zadanie2_Z10.txt};
+	\addplot[const plot,red] file {wykresy/przykladowe/zadanie2_Z20.txt};
+	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie2_Z30.txt};
+	\legend{$G1_{\mathrm{skok}}=\num{00,00}$,$G1_{\mathrm{skok}}=\num{00,00}$,$G1_{\mathrm{skok}}=\num{00,00}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Skroœne odpowiedzi skokowe procesu dla trzech ró¿nych zmian sygna³u steruj¹cego G1 rozpoczynaj¹c z punktu pracy – pomiar na T3}
+	\label{odpWeWy}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=5in,
+	xmin=0,xmax=350,ymin=31,ymax=36,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,green] file {wykresy/przykladowe/zadanie2_Z10.txt};
+	\addplot[const plot,red] file {wykresy/przykladowe/zadanie2_Z20.txt};
+	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie2_Z30.txt};
+	\legend{$G2_{\mathrm{skok}}=\num{00,00}$,$G2_{\mathrm{skok}}=\num{00,00}$,$G2_{\mathrm{skok}}=\num{00,00}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Skroœne odpowiedzi skokowe procesu dla trzech ró¿nych zmian sygna³u steruj¹cego G2 rozpoczynaj¹c z punktu pracy – pomiar na T1}
+	\label{odpWeWy}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\input{./p2_char_stat_1}
+	\caption{Charakterystyka statyczna procesu $T1(G1,G2)$}
+	\label{Z2c}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\input{./p2_char_stat_3}
+	\caption{Charakterystyka statyczna procesu $T3(G1,G2)$}
+	\label{Z2c}
+\end{figure}
+%\end{comment}

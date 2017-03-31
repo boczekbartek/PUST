@@ -1,0 +1,85 @@
+%LAB3
+\chapter{Punkt 5}
+
+Dla dwóch skoków amplitudy sygna?u warto?ci zadanej dostrojone zosta?y algorytmy DMC oraz PID. Podczas dostrajania wykorzystany zosta? optymalizator $ga$, a nast?pnie zosta?y naniesione drobne r?czne poprawki. Dla obydwu algorytmów jako wspó?czynnik jako?ci zosta? wykorzystany b??d ?redniokwadratowy.\\\\
+Nastawy DMC:\\
+$D=\num{300}$; $N=\num{130}$; $N_u=\num{6}$; $\lambda=\num{0.01}$;\\
+B??d: $E = \num{3269,5}$.\\\\
+Nastawy PID:\\
+$K=\num{14,307542}$; $T_i=\num{38,320299}$; $T_d=\num{6,677860}$; $T_s=\num{0,5}$. B??d: $E = \num{2699,8}$.\\\\
+Nastawy te powinny by? dostrojone na rzeczywistym obiekcie, co wynika z pewnych niedok?adno?ci modelu.
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	xmin=0,xmax=1000,ymin=30,ymax=41,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_Y.txt};
+	\addplot[const plot,red, densely dashed] file {wykresy/przykladowe/zadanie5_PID_Yzad.txt};
+	\legend{$Y$,$Y^{zad}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	xmin=0,xmax=1000,ymin=0,ymax=110,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_U.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Odpowied? dla dwóch skoków sygna?u zadanego - regulacja PID}
+	\label{bezPomZak}
+\end{figure}
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	xmin=0,xmax=1000,ymin=30,ymax=41,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_DMC_Y.txt};
+	\addplot[const plot,red, densely dashed] file {wykresy/przykladowe/zadanie5_DMC_Yzad.txt};
+	\legend{$Y$,$Y^{zad}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	xmin=0,xmax=1000,ymin=0,ymax=110,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_DMC_U.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Odpowied? dla dwóch skoków sygna?u zadanego - regulacja DMC}
+	\label{bezPomZak}
+\end{figure}
