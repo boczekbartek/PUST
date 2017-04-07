@@ -1,0 +1,96 @@
+%PROJ3
+\chapter{Punkt 2}
+%s^{i,j} - ite wyjúcie pod wp≥ywem jotego wejúcia
+
+UzasadniÊ wybÛr parametrÛw optymalizacji.
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=3.4in,
+	xmin=0,xmax=320,ymin=-0.1,ymax=0.2,
+	xlabel={$k$},
+	ylabel={$s^{\mathrm{1,1}}$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/przykladowe/zadanie2_sz.txt};
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Odpowiedü skokowa wyjúcia 1 przy skoku wejúcia 1}
+	\label{odpskokUdmc3}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=3.4in,
+	xmin=0,xmax=320,ymin=-0.1,ymax=0.2,
+	xlabel={$k$},
+	ylabel={$s^{\mathrm{1,2}}$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/przykladowe/zadanie2_sz.txt};
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Odpowiedü skokowa wyjúcia 1 przy skoku wejúcia 2}
+	\label{odpskokUdmc3}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=3.4in,
+	xmin=0,xmax=320,ymin=-0.1,ymax=0.2,
+	xlabel={$k$},
+	ylabel={$s^{\mathrm{2,1}}$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/przykladowe/zadanie2_sz.txt};
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Odpowiedü skokowa wyjúcia 2 przy skoku wejúcia 1}
+	\label{odpskokUdmc3}
+\end{figure}
+
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=3.4in,
+	xmin=0,xmax=320,ymin=-0.1,ymax=0.2,
+	xlabel={$k$},
+	ylabel={$s^{\mathrm{2,2}}$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/przykladowe/zadanie2_sz.txt};
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Odpowiedü skokowa wyjúcia 2 przy skoku wejúcia 2}
+	\label{odpskokUdmc3}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\input{./p2_char_stat_1}
+	\caption{Charakterystyka statyczna procesu $y_1(u_1,u_2)$}
+	\label{Z2c}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\input{./p2_char_stat_3}
+	\caption{Charakterystyka statyczna procesu $y_2(u_1,u_2)$}
+	\label{Z2c}
+\end{figure}

@@ -1,4 +1,4 @@
-%LAB3
+%PROJ3
 \chapter{Punkt 5}
 
 Dla dwóch skoków amplitudy sygna³u wartoœci zadanej dostrojone zosta³y algorytmy DMC oraz PID. Podczas dostrajania wykorzystany zosta³
@@ -20,14 +20,30 @@ Nastawy te powinny byæ dostrojone na rzeczywistym obiekcie, co wynika z pewnych 
 	width=4.667in,
 	height=1.8in,
 	xmin=0,xmax=1000,ymin=30,ymax=41,
-	xlabel={$k$},
-	ylabel={$Y$},
+	%xlabel={$k$},
+	ylabel={$Y1$},
 	legend pos=north east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
 	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_Y.txt};
 	\addplot[const plot,red, densely dashed] file {wykresy/przykladowe/zadanie5_PID_Yzad.txt};
-	\legend{$Y$,$Y^{zad}$}
+	\legend{$Y1$,$Y1^{zad}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+		\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	xmin=0,xmax=1000,ymin=30,ymax=41,
+	%xlabel={$k$},
+	ylabel={$Y2$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_Y.txt};
+	\addplot[const plot,red, densely dashed] file {wykresy/przykladowe/zadanie5_PID_Yzad.txt};
+	\legend{$Y2$,$Y2^{zad}$}
 	\end{axis}
 	\end{tikzpicture}
 	
@@ -36,8 +52,22 @@ Nastawy te powinny byæ dostrojone na rzeczywistym obiekcie, co wynika z pewnych 
 	width=4.667in,
 	height=1.8in,
 	xmin=0,xmax=1000,ymin=0,ymax=110,
-	xlabel={$k$},
-	ylabel={$U$},
+	%xlabel={$k$},
+	ylabel={$U1$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_U.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+		\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	xmin=0,xmax=1000,ymin=0,ymax=110,
+%	xlabel={$k$},
+	ylabel={$U2$},
 	legend pos=south east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
@@ -48,7 +78,6 @@ Nastawy te powinny byæ dostrojone na rzeczywistym obiekcie, co wynika z pewnych 
 	\caption{OdpowiedŸ dla dwóch skoków sygna³u zadanego - regulacja PID}
 	\label{bezPomZak}
 \end{figure}
-\FloatBarrier
 
 \begin{figure}[h!]
 	\centering
@@ -58,14 +87,30 @@ Nastawy te powinny byæ dostrojone na rzeczywistym obiekcie, co wynika z pewnych 
 	width=4.667in,
 	height=1.8in,
 	xmin=0,xmax=1000,ymin=30,ymax=41,
-	xlabel={$k$},
-	ylabel={$Y$},
+	%xlabel={$k$},
+	ylabel={$Y1$},
 	legend pos=north east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_DMC_Y.txt};
-	\addplot[const plot,red, densely dashed] file {wykresy/przykladowe/zadanie5_DMC_Yzad.txt};
-	\legend{$Y$,$Y^{zad}$}
+	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_Y.txt};
+	\addplot[const plot,red, densely dashed] file {wykresy/przykladowe/zadanie5_PID_Yzad.txt};
+	\legend{$Y1$,$Y1^{zad}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	xmin=0,xmax=1000,ymin=30,ymax=41,
+	%xlabel={$k$},
+	ylabel={$Y2$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_Y.txt};
+	\addplot[const plot,red, densely dashed] file {wykresy/przykladowe/zadanie5_PID_Yzad.txt};
+	\legend{$Y2$,$Y2^{zad}$}
 	\end{axis}
 	\end{tikzpicture}
 	
@@ -74,12 +119,26 @@ Nastawy te powinny byæ dostrojone na rzeczywistym obiekcie, co wynika z pewnych 
 	width=4.667in,
 	height=1.8in,
 	xmin=0,xmax=1000,ymin=0,ymax=110,
-	xlabel={$k$},
-	ylabel={$U$},
+	%xlabel={$k$},
+	ylabel={$U1$},
 	legend pos=south east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_DMC_U.txt};
+	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_U.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	xmin=0,xmax=1000,ymin=0,ymax=110,
+	%	xlabel={$k$},
+	ylabel={$U2$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_U.txt};
 	\end{axis}
 	\end{tikzpicture}
 	
