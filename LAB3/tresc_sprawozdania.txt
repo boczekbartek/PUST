@@ -1,0 +1,14 @@
+1. Y1pp = 33.75, Y3pp = 36.62; U1pp = 31, U2pp = 36;
+2. Dla  G2=50 Y1 = 35.7
+	G2=70 Y1 = 36.6
+	G2=90 Y1 = 37.7
+
+	G1=50 Y3 = 36.5
+	G1=70 Y3 = 37.5
+	G1=90 Y3 = 38.5
+
+W³aœciwoœci statyczne s¹ w przybli¿eniu liniowe. Kstat1 = 0,05; Kstat2 = 0,05;
+
+char stat wykres??? nie wiem
+
+3. (tu wykresy Y1, Y3 po skokach jednego i drugiego G) pattern: odp_skok_Yx_Gy_50.txt
