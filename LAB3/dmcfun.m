@@ -1,9 +1,5 @@
-clear all;
+function [ E ] = dmcfun( param )
 tmp = load('odp_skok.mat');
-
-addpath('F:\SerialCommunication'); % add a path to the functions
-initSerialControl COM17 % initialise com port
-
 clear u;
 clear U1;
 clear U2;
@@ -13,16 +9,22 @@ D=200;
 nu=2;
 ny=2;
  
+%Macierz odopowiedzi skokowych
 for i=1:400
     S(i)={[tmp.s11(i) tmp.s12(i); tmp.s31(i) tmp.s32(i)]};
 end
    
-N=80; Nu=30; lambda1=0.1; lambda2=1;
+%Parametry dobrane eksperymentalnie
+N=param(1); Nu=param(2); lambda1=param(3); lambda2=1;
  
-U1pp=31;
-U2pp=36;
-Y1pp=33.75;
-Y2pp=36.62; 
+%Punkty pracy
+U1pp=0;
+U2pp=0;
+Y1pp=0;
+Y2pp=0;
+ 
+%Inicjalizacja macierzy i wektorów
+ 
 %Macierz M
 for i=1:Nu
     M(i:N,i)=S(1:N-i+1);
@@ -94,21 +96,21 @@ for i=1:Nu
 end
  
  
-n=400; %Okres symulacji
+n=1600; %Okres symulacji
 U1(1:n)=U1pp;
 U2(1:n)=U2pp;
 Y1(1:n)=Y1pp;
 Y2(1:n)=Y2pp;
 Y1_zad(1:14)=Y1pp;
-Y1_zad(15:400)=50;
-% Y1_zad(401:800)=1;
-% Y1_zad(801:1200)=1.5;
-% Y1_zad(1201:1600)=0.5;
+Y1_zad(15:400)=1;
+Y1_zad(401:800)=1;
+Y1_zad(801:1200)=1.5;
+Y1_zad(1201:1600)=0.5;
 Y2_zad(1:14)=Y2pp;
-Y2_zad(15:400)=50;
-% Y2_zad(401:800)=0.5;
-% Y2_zad(801:1200)=1;
-% Y2_zad(1201:1600)=1.5;
+Y2_zad(15:400)=1;
+Y2_zad(401:800)=0.5;
+Y2_zad(801:1200)=1;
+Y2_zad(1201:1600)=1.5;
 u1=U1-U1pp;
 u2=U2-U2pp;
 y1_zad=Y1_zad-Y1pp;
@@ -119,9 +121,8 @@ Ey=zeros(2,n);
 Eu=zeros(1,n);
  
 for k=13:n
-    k
-    [Y1(k),Y2(k)]=MinimalWorkingExample(U1(k-1),U2(k-1));
-    
+    Y1(k)=symulacja_Y1(Y1(k-1),Y1(k-2),U1(k-11),U1(k-12),U2(k-11),U2(k-12));
+    Y2(k)=symulacja_Y3(Y2(k-1),Y2(k-2),U1(k-11),U1(k-12),U2(k-11),U2(k-12));
     y1(k)=Y1(k)-Y1pp;
     y2(k)=Y2(k)-Y2pp;
     Ey(1,k)=y1_zad(k)-y1(k);
@@ -173,14 +174,41 @@ for k=13:n
     U1(k)=u1(k)+U1pp;  
     U2(k)=u2(k)+U2pp;
    
-    if U1(k)>100
-        U1(k)=100;
-    end
-    if U2(k)>100
-        U2(k)=100;
-    end
  
     Lambda_tmp = cell2mat(Lambda);
     dU_tmp = cell2mat(dU_mimo);
-    Eu(k) = dU_tmp'*Lambda_tmp*dU_tmp; 
+    Eu(k) = dU_tmp'*Lambda_tmp*dU_tmp; %Mno¿enie Mp*dUp
 end
+ 
+ 
+EY=norm(Ey)^2
+EU=norm(Eu)^2
+E=EY+EU;
+ 
+figure;
+subplot(2,2,1);
+stairs(U1);
+title('u(k)');
+xlabel('k');
+ylabel('u');
+subplot(2,2,3);
+stairs(Y1);
+title('Y(k) i Y_z_a_d');
+hold on;
+stairs(Y1_zad, 'r');
+xlabel('k');
+legend('y','y_z_a_d','Location','southeast');
+subplot(2,2,2);
+stairs(U2);
+title('u(k)');
+xlabel('k');
+ylabel('u');
+subplot(2,2,4);
+stairs(Y2);
+title('Y(k) i Y_z_a_d');
+hold on;
+stairs(Y2_zad,'r');
+xlabel('k');
+legend('y','y_z_a_d','Location','southeast');
+end
+

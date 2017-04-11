@@ -1,3 +1,26 @@
+
+
+ALKA WYKRESY Z PIDA TUTAJ
+
+1. Y1pp = 33.75, Y3pp = 36.62; U1pp = 31, U2pp = 36;
+2. Dla  G2=50 Y1 = 35.7
+	G2=70 Y1 = 36.6
+	G2=90 Y1 = 37.7
+
+	G1=50 Y3 = 36.5
+	G1=70 Y3 = 37.5
+	G1=90 Y3 = 38.5
+
+W³aœciwoœci statyczne s¹ w przybli¿eniu liniowe. Kstat1 = 0,05; Kstat2 = 0,05;
+
+char stat wykres??? nie wiem
+
+3. (tu wykresy Y1, Y3 po skokach jednego i drugiego G) pattern: odp_skok_Yx_Gy_50.txt
+Korzystaj¹æ z aproksymacji algorytmem 'ga' otrzymaliœmy aproksymacje odpowiedzi skokowych:
+(ty wykresy patter: aproks_odp_skok_Yx_Gy.txt). Parametry zosta³y dobrane na podstawie
+minimalizacji b³êdu œredniokwadratowego. (Wykresy tak jak w poleceniu wszystko jest w .txt)
+
+5
 Zadanie 5
 Do wyznaczania nastaw regulatora PID wykorzystaliœmy model obiektu. Model ten stworzyliœmy wykorzystuj¹c wyliczone w punkcie 3
 aproksymacje odpowiedzi skokowych cz³onami inercyjnymi drugiego rzêdu z opóŸnieniem.
@@ -22,5 +45,9 @@ K2=23.557519; Ti2=65.026976; Td2=8.987056; Ts=0.5
 Poni¿ej zosta³y przedstawione przebiegi uzyskane podczas symulacji:
 
 Nastêpnie wyznaczone parametry u¿yliœmy podczas eksperymentów na rzeczywistym obiekcie, co da³o dobre rezultaty w jakoœci sterowania:
+ Przyk³adowy przebieg sygna³u wyjœciowego przy regulacji PID z uwzglêdnieniem ograniczeñ sterowania, Yzad = 50;
+(tu wykres Y1 i Y3 pid)
 
-ALKA WYKRESY Z PIDA TUTAJ
+Przyk³adowy przebieg sygna³u wyjœciowego przy regulacji DMC z uwzglêdnieniem ograniczeñ sterowania, Yzad = 50;
+(tu wykres Y1 i Y3 dmc)
+
