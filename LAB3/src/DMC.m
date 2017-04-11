@@ -23,51 +23,50 @@ U1pp=31;
 U2pp=36;
 Y1pp=33.75;
 Y2pp=36.62; 
-%Macierz M
+
 for i=1:Nu
     M(i:N,i)=S(1:N-i+1);
     M(1:i-1,i)={[0 0;0 0]};
 end
  
-%Macierz Mp
 for i=1:(D-1)
     for j=1:N
         Mp{j,i}=S{j+i}-S{i};
     end
 end
  
-%Macierz Lambd
 for i=1:Nu
     for j=1:Nu
         if i==j
-            Lambda{i,j}=[lambda1 0; 0 lambda2];
+            lambda{i,j}=[lambda1 0; 0 lambda2];
         else
-            Lambda{i,j}=[0 0; 0 0];
+            lambda{i,j}=[0 0; 0 0];
         end
     end
 end
- 
-%Macierz K
+
 Mt=M';
 Mt_tmp = cell2mat(Mt);
 M_tmp = cell2mat(M);
+
 for i=1:Nu
     size(i)=2;
 end
-Temp_M = mat2cell(Mt_tmp*M_tmp,size,size); %Mno¿emie M'*M
+Temp_M = mat2cell(Mt_tmp*M_tmp,size,size);
 for i=1:Nu
     for j=1:Nu
-        A{i,j}=Temp_M{i,j}+Lambda{i,j}; %Dodanie Lambdy
+        A{i,j}=Temp_M{i,j}+lambda{i,j}; 
     end
 end
+
 A_tmp = cell2mat(A);
-A_odwrocone = mat2cell(A_tmp^(-1),size,size);%Odwrócenie macierzy
+A_odwrocone = mat2cell(A_tmp^(-1),size,size);
 A_odwrocone_tmp = cell2mat(A_odwrocone);
+
 for i=1:N
     size2(i)=2;
 end
-K = mat2cell(A_odwrocone_tmp*Mt_tmp,size,size2);%Przemno¿enie przez M'
- 
+K = mat2cell(A_odwrocone_tmp*Mt_tmp,size,size2);
  
 dup=zeros(2,1);
 for i=1:D-1
@@ -94,7 +93,7 @@ for i=1:Nu
 end
  
  
-n=400; %Okres symulacji
+n=400;
 U1(1:n)=U1pp;
 U2(1:n)=U2pp;
 Y1(1:n)=Y1pp;
@@ -142,22 +141,23 @@ for k=13:n
     end
    
    
-    %Wyliczanie Y0
     Mp_tmp = cell2mat(Mp);
     dUp_tmp = cell2mat(dUp_mimo);
-    Temp_Y0 = mat2cell(Mp_tmp*dUp_tmp,size2,[1]); %Mno¿enie Mp*dUp
+    Temp_Y0 = mat2cell(Mp_tmp*dUp_tmp,size2,[1]);
+    
+    
     for i=1:N
-        Y0{i,1}=Y_mimo{i,1}+Temp_Y0{i,1}; %Dodawanie wyniku mno¿enia i Y
+        Y0{i,1}=Y_mimo{i,1}+Temp_Y0{i,1}; 
     end
  
-   
     %Wyliczanie dU
     for i=1:N
-        Temp_Y_zad{i,1}=Y_zad_mimo{i,1}-Y0{i,1}; %Odemowanie Y0 od Y zadanego
+        Temp_Y_zad{i,1}=Y_zad_mimo{i,1}-Y0{i,1}; 
     end
+    
     K_tmp = cell2mat(K);
     Y_zad_tmp = cell2mat(Temp_Y_zad);
-    dU_mimo = mat2cell(K_tmp *Y_zad_tmp,size,[1]); %Mno¿enie Mp*dUp
+    dU_mimo = mat2cell(K_tmp *Y_zad_tmp,size,[1]);
    
  
     du=dU_mimo{1};
@@ -179,8 +179,15 @@ for k=13:n
     if U2(k)>100
         U2(k)=100;
     end
+    if U1(k)<0
+        U1(k)=0;
+    end
+    if U2(k)<0
+        U2(k)=0;
+    end
  
-    Lambda_tmp = cell2mat(Lambda);
+    Lambda_tmp = cell2mat(lambda);
     dU_tmp = cell2mat(dU_mimo);
     Eu(k) = dU_tmp'*Lambda_tmp*dU_tmp; 
+    
 end
