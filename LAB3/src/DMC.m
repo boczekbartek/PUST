@@ -4,7 +4,6 @@ tmp = load('odp_skok.mat');
 addpath('F:\SerialCommunication'); % add a path to the functions
 initSerialControl COM17 % initialise com port
 
-
 clear u;
 clear U1;
 clear U2;
@@ -14,22 +13,16 @@ D=200;
 nu=2;
 ny=2;
  
-%Macierz odopowiedzi skokowych
 for i=1:400
     S(i)={[tmp.s11(i) tmp.s12(i); tmp.s31(i) tmp.s32(i)]};
 end
    
-%Parametry dobrane eksperymentalnie
 N=80; Nu=30; lambda1=0.1; lambda2=1;
  
-%Punkty pracy
 U1pp=31;
 U2pp=36;
 Y1pp=33.75;
-Y2pp=36.62;
- 
-%Inicjalizacja macierzy i wektorów
- 
+Y2pp=36.62; 
 %Macierz M
 for i=1:Nu
     M(i:N,i)=S(1:N-i+1);
@@ -127,8 +120,6 @@ Eu=zeros(1,n);
  
 for k=13:n
     k
-    %Y1(k)=symulacja_Y1(Y1(k-1),Y1(k-2),U1(k-11),U1(k-12),U2(k-11),U2(k-12));
-    %Y2(k)=symulacja_Y3(Y2(k-1),Y2(k-2),U1(k-11),U1(k-12),U2(k-11),U2(k-12));
     [Y1(k),Y2(k)]=MinimalWorkingExample(U1(k-1),U2(k-1));
     
     y1(k)=Y1(k)-Y1pp;
@@ -182,39 +173,14 @@ for k=13:n
     U1(k)=u1(k)+U1pp;  
     U2(k)=u2(k)+U2pp;
    
+    if U1(k)>100
+        U1(k)=100;
+    end
+    if U2(k)>100
+        U2(k)=100;
+    end
  
     Lambda_tmp = cell2mat(Lambda);
     dU_tmp = cell2mat(dU_mimo);
-    Eu(k) = dU_tmp'*Lambda_tmp*dU_tmp; %Mno¿enie Mp*dUp
+    Eu(k) = dU_tmp'*Lambda_tmp*dU_tmp; 
 end
- 
-%  
-% EY=norm(Ey)^2
-% EU=norm(Eu)^2
-% E=EY+EU;
- 
-figure;
-subplot(2,2,1);
-stairs(U1);
-title('u(k)');
-xlabel('k');
-ylabel('u');
-subplot(2,2,3);
-stairs(Y1);
-title('Y(k) i Y_z_a_d');
-hold on;
-stairs(Y1_zad, 'r');
-xlabel('k');
-legend('y','y_z_a_d','Location','southeast');
-subplot(2,2,2);
-stairs(U2);
-title('u(k)');
-xlabel('k');
-ylabel('u');
-subplot(2,2,4);
-stairs(Y2);
-title('Y(k) i Y_z_a_d');
-hold on;
-stairs(Y2_zad,'r');
-xlabel('k');
-legend('y','y_z_a_d','Location','southeast');

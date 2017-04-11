@@ -10,9 +10,9 @@ u(1:3)=0;
 u(4:400)=1;
 close all
 tmp = load('6.mat');
-Yskok = tmp.Y1_G1_70;
-Ypp=ones(1,400)*tmp.Y1pp;
-OdpSkok = (Yskok(1:400)-Ypp)/(70-tmp.U1pp);
+Yskok = tmp.Y3_G2_70;
+Ypp=ones(1,400)*tmp.Y3pp;
+OdpSkok = (Yskok(1:400)-Ypp)/(70-tmp.U2pp);
 
 % nazwa = strcat('odp_skokowa.txt');
 % savePlot(1:1:350,OdpSkok,nazwa);

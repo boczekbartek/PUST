@@ -12,3 +12,14 @@ W³aœciwoœci statyczne s¹ w przybli¿eniu liniowe. Kstat1 = 0,05; Kstat2 = 0,05;
 char stat wykres??? nie wiem
 
 3. (tu wykresy Y1, Y3 po skokach jednego i drugiego G) pattern: odp_skok_Yx_Gy_50.txt
+Korzystaj¹æ z aproksymacji algorytmem 'ga' otrzymaliœmy aproksymacje odpowiedzi skokowych:
+(ty wykresy patter: aproks_odp_skok_Yx_Gy.txt). Parametry zosta³y dobrane na podstawie
+minimalizacji b³êdu œredniokwadratowego. (Wykresy tak jak w poleceniu wszystko jest w .txt)
+
+4. Przyk³adowy przebieg sygna³u wyjœciowego przy regulacji PID z uwzglêdnieniem ograniczeñ sterowania, Yzad = 50;
+(tu wykres Y1 i Y3 pid)
+
+Przyk³adowy przebieg sygna³u wyjœciowego przy regulacji DMC z uwzglêdnieniem ograniczeñ sterowania, Yzad = 50;
+(tu wykres Y1 i Y3 dmc)
+
+5. 
