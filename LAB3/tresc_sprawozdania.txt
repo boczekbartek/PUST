@@ -1,7 +1,3 @@
-
-
-ALKA WYKRESY Z PIDA TUTAJ
-
 1. Y1pp = 33.75, Y3pp = 36.62; U1pp = 31, U2pp = 36;
 2. Dla  G2=50 Y1 = 35.7
 	G2=70 Y1 = 36.6
@@ -44,10 +40,18 @@ K2=23.557519; Ti2=65.026976; Td2=8.987056; Ts=0.5
 
 Poni¿ej zosta³y przedstawione przebiegi uzyskane podczas symulacji:
 
+
+wykresy zadanie5_model*
+
 Nastêpnie wyznaczone parametry u¿yliœmy podczas eksperymentów na rzeczywistym obiekcie, co da³o dobre rezultaty w jakoœci sterowania:
+
+
  Przyk³adowy przebieg sygna³u wyjœciowego przy regulacji PID z uwzglêdnieniem ograniczeñ sterowania, Yzad = 50;
 (tu wykres Y1 i Y3 pid)
+
+ALKA WYKRESY Z PIDA TUTAJ
 
 Przyk³adowy przebieg sygna³u wyjœciowego przy regulacji DMC z uwzglêdnieniem ograniczeñ sterowania, Yzad = 50;
 (tu wykres Y1 i Y3 dmc)
 
+ALKA WYKRESY Z PIDA TUTAJ

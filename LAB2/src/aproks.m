@@ -1,5 +1,5 @@
 function [a1,a2,b1,b2] = aproks(X)
-wykresy = 0;
+wykresy = 1;
 T1=X(1);
 T2=X(2);
 K=X(3);

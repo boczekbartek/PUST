@@ -1,14 +1,17 @@
-% clear all;
-% lb = [0.01,1,0.01];
-% ub = [Inf,Inf,Inf];
-% [param,fval,exitflag] = ga(@PIDfun,3,[],[],[],[],lb,ub,[],[]);
-% fprintf('PID: \nK=%f; Ti=%f; Td=%f; Ts=0.5;\n', param)
-
 clear all;
-lb = [1,1,0.01];
-ub = [130,130,Inf];
-[param,fval,exitflag] = ga(@dmcfun,3,[-1 1 0],[0],[],[],lb,ub,[],[1 2]);
-fprintf('DMC: \nN=%f; Nu=%f; lambda=%f;\n', param)
+lb = [0 0 0 0 0 0 ];
+ub = [5 15 3 3 7 3];
+param = ga(@pidfun,6,[],[],[],[],lb,[],[],[])
+fprintf('PID: \nK1=%f; Ti1=%f; Td1=%f; Ts=0.5;\n K2=%f; Ti2=%f; Td2=%f; Ts=0.5;\n', param)
+%  param = fmincon(@pidfun,[2 3 2 2 2 2],[],[],[],[],[0 0 0 0 0 0],[]);
+%  fprintf('PID: \nK1=%f; Ti1=%f; Td1=%f; Ts=0.5;\n K2=%f; Ti2=%f; Td2=%f; Ts=0.5;\n', param)
+pidfun(param)
+
+% clear all;
+% lb = [1,1,0.01];
+% ub = [130,130,Inf];
+% [param,fval,exitflag] = ga(@dmcfun,3,[-1 1 0],[0],[],[],lb,ub,[],[1 2]);
+% fprintf('DMC: \nN=%f; Nu=%f; lambda=%f;\n', param)
 
 % options = gaoptimset('StallGenLimit', 100, 'PopulationSize', 300, 'StallTimeLimit', 80);
 % 
