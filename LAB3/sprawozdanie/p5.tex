@@ -1,16 +1,30 @@
 %LAB3
 \chapter{Punkt 5}
 
-Dla dwóch skoków amplitudy sygna³u wartoœci zadanej dostrojone zosta³y algorytmy DMC oraz PID. Podczas dostrajania wykorzystany zosta³
-optymalizator \verb+ga+, a nastêpnie zosta³y naniesione drobne rêczne poprawki. Dla obydwu algorytmów jako wspó³czynnik jakoœci zosta³ 
-wykorzystany b³¹d œredniokwadratowy.\\\\
 
-Nastawy DMC:\\
-$D=\num{300}$; $N=\num{130}$; $N_u=\num{6}$; $\lambda=\num{0.01}$;\\
-B³¹d: $E = \num{3269,5}$.\\\\
-Nastawy PID:\\
-$K=\num{14,307542}$; $T_i=\num{38,320299}$; $T_d=\num{6,677860}$; $T_s=\num{0,5}$. B³¹d: $E = \num{2699,8}$.\\\\
-Nastawy te powinny byæ dostrojone na rzeczywistym obiekcie, co wynika z pewnych niedok³adnoœci modelu.
+
+Do wyznaczania nastaw regulatora PID wykorzystaliœmy model obiektu. Model ten stworzyliœmy wykorzystuj¹c wyliczone w punkcie 3
+aproksymacje odpowiedzi skokowych cz³onami inercyjnymi drugiego rzêdu z opóŸnieniem.
+Model ten zosta³ wyznaczony na podstawie wzoru:\\
+\begin{equation}
+\begin{aligned}
+y_1(k) = &a_1^1y_1(k-1) + a_1^2y_1(k-2) + \\       
++ &b_1^{1,1}u_1(k-T^{\mathrm{D}1}_1-1) + b_1^{1,2}u_1(k-T^{\mathrm{D}1}_1-2) + \\
++ &b_1^{2,1}u_2(k-T^{\mathrm{D}2}_1-1) + b_1^{2,2}u_2(k-T^{\mathrm{D}2}_1-2) \\
+y_2(k) = &a_2^1y_1(k-1) + a_2^2y_1(k-2) + \\       
++ &b_2^{1,1}u_1(k-T^{\mathrm{D}1}_2-1) + b_2^{1,2}u_1(k-T^{\mathrm{D}1}_2-2) + \\
++ &b_2^{2,1}u_2(k-T^{\mathrm{D}2}_2-1) + b_2^{2,2}u_2(k-T^{\mathrm{D}2}_2-2) \\
+\end{aligned}
+\label{eq:mod}
+\end{equation}
+
+Nastêpnie za pomoc¹ optymalizatora \verb|ga|, dla kilku skoków wartoœci zadanej, zosta³y wyznaczone nastawy regulatora PID dla modelu.\\
+Uzyskane nastawy to:\\
+$K1=\num{98,507776}; T_i1=\num{49,555644}; T_d1=\num{2,916919}; T_s=\num{0,5}$\\
+$K2=\num{23,557519}; T_i2=\num{65,026976}; T_d2=\num{8,987056}; T_s=\num{0,5}$\\\\
+
+Poni¿ej zosta³y przedstawione przebiegi uzyskane podczas symulacji:
+
 
 \begin{figure}[h!]
 	\centering
@@ -19,15 +33,16 @@ Nastawy te powinny byæ dostrojone na rzeczywistym obiekcie, co wynika z pewnych 
 	\begin{axis}[
 	width=4.667in,
 	height=1.8in,
-	xmin=0,xmax=1000,ymin=30,ymax=41,
+	xmin=0,xmax=385,ymin=30,ymax=55,
 	xlabel={$k$},
 	ylabel={$Y$},
 	legend pos=north east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_Y.txt};
-	\addplot[const plot,red, densely dashed] file {wykresy/przykladowe/zadanie5_PID_Yzad.txt};
-	\legend{$Y$,$Y^{zad}$}
+	\addplot[const plot,blue] file {wykresy/zadanie5/dmc_y1_40.txt};
+	\addplot[const plot,green] file {wykresy/zadanie5/dmc_y1_45.txt};
+	\addplot[const plot,red] file {wykresy/zadanie5/dmc_y1_50.txt};
+	\legend{$40$,$45$, $50$}
 	\end{axis}
 	\end{tikzpicture}
 	
@@ -35,21 +50,31 @@ Nastawy te powinny byæ dostrojone na rzeczywistym obiekcie, co wynika z pewnych 
 	\begin{axis}[
 	width=4.667in,
 	height=1.8in,
-	xmin=0,xmax=1000,ymin=0,ymax=110,
+	xmin=0,xmax=385,ymin=0,ymax=110,
 	xlabel={$k$},
 	ylabel={$U$},
 	legend pos=south east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_U.txt};
+	\addplot[const plot,blue] file {wykresy/zadanie5/dmc_u1_40.txt};
+	\addplot[const plot,green] file {wykresy/zadanie5/dmc_u1_45.txt};
+	\addplot[const plot,red] file {wykresy/zadanie5/dmc_u1_50.txt};
 	\end{axis}
 	\end{tikzpicture}
 	
-	\caption{OdpowiedŸ dla dwóch skoków sygna³u zadanego - regulacja PID}
+	\caption{//TODO}
 	\label{bezPomZak}
 \end{figure}
 \FloatBarrier
 
+\begin{figure}
+	Nastêpnie wyznaczone parametry u¿yliœmy podczas eksperymentów na rzeczywistym obiekcie, co da³o dobre rezultaty w jakoœci sterowania:
+	
+	
+	Przyk³adowy przebieg sygna³u wyjœciowego przy regulacji PID z uwzglêdnieniem ograniczeñ sterowania, Yzad = 50;
+\end{figure}
+
+
 \begin{figure}[h!]
 	\centering
 	
@@ -57,32 +82,19 @@ Nastawy te powinny byæ dostrojone na rzeczywistym obiekcie, co wynika z pewnych 
 	\begin{axis}[
 	width=4.667in,
 	height=1.8in,
-	xmin=0,xmax=1000,ymin=30,ymax=41,
+	xmin=0,xmax=500,ymin=30,ymax=55,
 	xlabel={$k$},
 	ylabel={$Y$},
 	legend pos=north east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_DMC_Y.txt};
-	\addplot[const plot,red, densely dashed] file {wykresy/przykladowe/zadanie5_DMC_Yzad.txt};
-	\legend{$Y$,$Y^{zad}$}
+	\addplot[const plot,blue] file {wykresy/zadanie5/pid_y1_50.txt};
+	\addplot[const plot,green] file {wykresy/zadanie5/pid_y3_50.txt};
+	\legend{y1, y3}
 	\end{axis}
 	\end{tikzpicture}
 	
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=4.667in,
-	height=1.8in,
-	xmin=0,xmax=1000,ymin=0,ymax=110,
-	xlabel={$k$},
-	ylabel={$U$},
-	legend pos=south east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_DMC_U.txt};
-	\end{axis}
-	\end{tikzpicture}
 	
-	\caption{OdpowiedŸ dla dwóch skoków sygna³u zadanego - regulacja DMC}
+	\caption{//TODO}
 	\label{bezPomZak}
 \end{figure}

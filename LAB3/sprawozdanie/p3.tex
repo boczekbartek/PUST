@@ -2,64 +2,8 @@
 \chapter{Punkt 3}
 %s^{i,j} - ite wyjœcie pod wp³ywem jotego wejœcia
 
-Uzasadniæ wybór parametrów optymalizacji.
+Korzystaj¹c z aproksymacji algorytmem \verb|ga| otrzymaliœmy aproksymacje odpowiedzi skokowych jak poni¿ej. Parametry zosta³y dobrane na podstawie minimalizacji b³êdu œredniokwadratowego.
 
-\begin{figure}[ht]
-	\centering
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=5.0in,
-	height=3.4in,
-	xmin=0,xmax=320,ymin=-0.1,ymax=0.2,
-	xlabel={$k$},
-	ylabel={$s^{\mathrm{1,1}}$},
-	legend pos=south east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,cyan] file {wykresy/przykladowe/zadanie3_sz.txt};
-	\end{axis}
-	\end{tikzpicture}
-	\caption{OdpowiedŸ skokowa wyjœcia 1 przy skoku wejœcia 1}
-	\label{odpskokUdmc3}
-\end{figure}
-
-\begin{figure}[ht]
-	\centering
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=5.0in,
-	height=3.4in,
-	xmin=0,xmax=320,ymin=-0.1,ymax=0.2,
-	xlabel={$k$},
-	ylabel={$s^{\mathrm{1,2}}$},
-	legend pos=south east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,cyan] file {wykresy/przykladowe/zadanie3_sz.txt};
-	\end{axis}
-	\end{tikzpicture}
-	\caption{OdpowiedŸ skokowa wyjœcia 1 przy skoku wejœcia 2}
-	\label{odpskokUdmc3}
-\end{figure}
-
-\begin{figure}[ht]
-	\centering
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=5.0in,
-	height=3.4in,
-	xmin=0,xmax=320,ymin=-0.1,ymax=0.2,
-	xlabel={$k$},
-	ylabel={$s^{\mathrm{2,1}}$},
-	legend pos=south east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,cyan] file {wykresy/przykladowe/zadanie3_sz.txt};
-	\end{axis}
-	\end{tikzpicture}
-	\caption{OdpowiedŸ skokowa wyjœcia 2 przy skoku wejœcia 1}
-	\label{odpskokUdmc3}
-\end{figure}
 
 
 \begin{figure}[ht]
@@ -68,37 +12,18 @@ Uzasadniæ wybór parametrów optymalizacji.
 	\begin{axis}[
 	width=5.0in,
 	height=3.4in,
-	xmin=0,xmax=320,ymin=-0.1,ymax=0.2,
-	xlabel={$k$},
-	ylabel={$s^{\mathrm{2,2}}$},
-	legend pos=south east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,cyan] file {wykresy/przykladowe/zadanie3_sz.txt};
-	\end{axis}
-	\end{tikzpicture}
-	\caption{OdpowiedŸ skokowa wyjœcia 2 przy skoku wejœcia 2}
-	\label{odpskokUdmc3}
-\end{figure}
-
-\begin{figure}[ht]
-	\centering
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=5.0in,
-	height=3.4in,
-	xmin=0,xmax=320,ymin=-0.01,ymax=0.4,
+	xmin=0,xmax=350,ymin=-0.01,ymax=0.4,
 	xlabel={$k$},
 	ylabel={$Y$},
 	legend pos=south east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,red] file {wykresy/przykladowe/zadanie3_s.txt};
-	\addplot[cyan] file {wykresy/przykladowe/zadanie3_saproks.txt};
+	\addplot[const plot,red] file {wykresy/zadanie3/odpowiedzskokowa_T1_G1.txt};
+	\addplot[cyan] file {wykresy/zadanie3/funkcja_aproksymujaca_T1_G1.txt};
 	\legend{orygina³,aproksymacja}
 	\end{axis}
 	\end{tikzpicture}
-	\caption{Porównanie odpowiedzi skokowej (wyjœcia 1 przy skoku wejœcia 1) i aproksymowanej}
+	\caption{Porównanie odpowiedzi skokowej (T1 - G1) i aproksymowanej}
 	\label{odpskokUdmc4}
 \end{figure}
 
@@ -108,18 +33,18 @@ Uzasadniæ wybór parametrów optymalizacji.
 	\begin{axis}[
 	width=5.0in,
 	height=3.4in,
-	xmin=0,xmax=320,ymin=-0.01,ymax=0.4,
+	xmin=0,xmax=350,ymin=-0.01,ymax=0.1,
 	xlabel={$k$},
 	ylabel={$Y$},
 	legend pos=south east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,red] file {wykresy/przykladowe/zadanie3_s.txt};
-	\addplot[cyan] file {wykresy/przykladowe/zadanie3_saproks.txt};
+	\addplot[const plot,red] file {wykresy/zadanie3/odpowiedzskokowa_T1_G2.txt};
+	\addplot[cyan] file {wykresy/zadanie3/funkcja_aproksymujaca_T1_G2.txt};
 	\legend{orygina³,aproksymacja}
 	\end{axis}
 	\end{tikzpicture}
-	\caption{Porównanie odpowiedzi skokowej (wyjœcia 1 przy skoku wejœcia 2) i aproksymowanej}
+	\caption{Porównanie odpowiedzi skokowej (T1 - G2) i aproksymowanej}
 	\label{odpskokUdmc4}
 \end{figure}
 
@@ -129,18 +54,18 @@ Uzasadniæ wybór parametrów optymalizacji.
 	\begin{axis}[
 	width=5.0in,
 	height=3.4in,
-	xmin=0,xmax=320,ymin=-0.01,ymax=0.4,
+	xmin=0,xmax=350,ymin=-0.01,ymax=0.1,
 	xlabel={$k$},
 	ylabel={$Y$},
 	legend pos=south east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,red] file {wykresy/przykladowe/zadanie3_s.txt};
-	\addplot[cyan] file {wykresy/przykladowe/zadanie3_saproks.txt};
+	\addplot[const plot,red] file {wykresy/zadanie3/odpowiedzskokowa_T3_G1.txt};
+	\addplot[cyan] file {wykresy/zadanie3/funkcja_aproksymujaca_T3_G1.txt};
 	\legend{orygina³,aproksymacja}
 	\end{axis}
 	\end{tikzpicture}
-	\caption{Porównanie odpowiedzi skokowej (wyjœcia 2 przy skoku wejœcia 1) i aproksymowanej}
+	\caption{Porównanie odpowiedzi skokowej (T3 - G1) i aproksymowanej}
 	\label{odpskokUdmc4}
 \end{figure}
 
@@ -150,17 +75,18 @@ Uzasadniæ wybór parametrów optymalizacji.
 	\begin{axis}[
 	width=5.0in,
 	height=3.4in,
-	xmin=0,xmax=320,ymin=-0.01,ymax=0.4,
+	xmin=0,xmax=350,ymin=-0.01,ymax=0.3,
 	xlabel={$k$},
 	ylabel={$Y$},
 	legend pos=south east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,red] file {wykresy/przykladowe/zadanie3_s.txt};
-	\addplot[cyan] file {wykresy/przykladowe/zadanie3_saproks.txt};
+	\addplot[const plot,red] file {wykresy/zadanie3/odpowiedzskokowa_T3_G2.txt};
+	\addplot[cyan] file {wykresy/zadanie3/funkcja_aproksymujaca_T3_G2.txt};
 	\legend{orygina³,aproksymacja}
 	\end{axis}
 	\end{tikzpicture}
-	\caption{Porównanie odpowiedzi skokowej (wyjœcia 2 przy skoku wejœcia 2) i aproksymowanej}
+	\caption{Porównanie odpowiedzi skokowej (T3 - G2) i aproksymowanej}
 	\label{odpskokUdmc4}
 \end{figure}
+
