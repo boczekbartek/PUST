@@ -17,9 +17,20 @@ Korzystaj¹æ z aproksymacji algorytmem 'ga' otrzymaliœmy aproksymacje odpowiedzi 
 minimalizacji b³êdu œredniokwadratowego. (Wykresy tak jak w poleceniu wszystko jest w .txt)
 
 4. Przyk³adowy przebieg sygna³u wyjœciowego przy regulacji PID z uwzglêdnieniem ograniczeñ sterowania, Yzad = 50;
-(tu wykres Y1 i Y3 pid)
+(tu wykres Y1 i Y3 pid 50)
 
 Przyk³adowy przebieg sygna³u wyjœciowego przy regulacji DMC z uwzglêdnieniem ograniczeñ sterowania, Yzad = 50;
-(tu wykres Y1 i Y3 dmc)
+(tu wykres Y1 i Y3 dmc 50)
 
-5. 
+5. Przy skokach wartoœci zadanej z Ypp do 40, 45 i 50 stopni, metod¹ eksperymentaln¹ dobraliœmy nastawy regulatora PID:
+reg 1:
+K1 = 20; Ti1=40; Td1=15; Ts=2; 
+reg 2:
+K2 = 14.3; Ti2=38.32; Td2=6.67; Ts=0.3;
+
+Regulator DMC:
+D=200; N=80; Nu=30; lambda1=0.1; lambda2=1;
+
+(tu wykresy)
+
+
