@@ -1,0 +1,26 @@
+Zadanie 5
+Do wyznaczania nastaw regulatora PID wykorzystaliœmy model obiektu. Model ten stworzyliœmy wykorzystuj¹c wyliczone w punkcie 3
+aproksymacje odpowiedzi skokowych cz³onami inercyjnymi drugiego rzêdu z opóŸnieniem.
+Model ten zosta³ wyznaczony na podstawie wzoru:
+\begin{equation}
+\begin{aligned}
+y_1(k) = &a_1^1y_1(k-1) + a_1^2y_1(k-2) + \\       
+       + &b_1^{1,1}u_1(k-T^{\mathrm{D}1}_1-1) + b_1^{1,2}u_1(k-T^{\mathrm{D}1}_1-2) + \\
+       + &b_1^{2,1}u_2(k-T^{\mathrm{D}2}_1-1) + b_1^{2,2}u_2(k-T^{\mathrm{D}2}_1-2) \\
+y_2(k) = &a_2^1y_1(k-1) + a_2^2y_1(k-2) + \\       
+       + &b_2^{1,1}u_1(k-T^{\mathrm{D}1}_2-1) + b_2^{1,2}u_1(k-T^{\mathrm{D}1}_2-2) + \\
+       + &b_2^{2,1}u_2(k-T^{\mathrm{D}2}_2-1) + b_2^{2,2}u_2(k-T^{\mathrm{D}2}_2-2) \\
+\end{aligned}
+\label{eq:mod}
+\end{equation}
+
+Nastêpnie za pomoc¹ optymalizatora ga, dla kilku skoków wartoœci zadanej, zosta³y wyznaczone nastawy regulatora PID dla modelu.
+Uzyskane nastawy to:
+K1=98.507776; Ti1=49.555644; Td1=2.916919; Ts=0.5
+K2=23.557519; Ti2=65.026976; Td2=8.987056; Ts=0.5
+
+Poni¿ej zosta³y przedstawione przebiegi uzyskane podczas symulacji:
+
+Nastêpnie wyznaczone parametry u¿yliœmy podczas eksperymentów na rzeczywistym obiekcie, co da³o dobre rezultaty w jakoœci sterowania:
+
+ALKA WYKRESY Z PIDA TUTAJ
