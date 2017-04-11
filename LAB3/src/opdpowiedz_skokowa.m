@@ -1,14 +1,11 @@
-Zpp = 0;
-U(1:10)=31;
-U(11:350)=50;
-Upp=31;
-Ypp = 31.5;
-n = 350;
-s= zeros(1,350);
+U(1:3)=U1pp;
+U(4:400)=70;
+n = 400;
+s_y1_g1= zeros(1,n);
 for k = 21:n
-    s(k-20) = (Y_u50(k)-Ypp)/(U(k)-Upp);
+    s_y1_g1(k-20) = (Y1_G1_70(k)-Y1pp)/(U(k)-U1pp);
 end
 
 
-s = s(1:320);
-stairs(s)
+s_y1_g1 = s_y1_g1(1:379);
+stairs(s_y1_g1)
