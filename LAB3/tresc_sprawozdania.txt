@@ -1,13 +1,16 @@
 1. Y1pp = 33.75, Y3pp = 36.62; U1pp = 31, U2pp = 36;
-2. Dla  G2=50 Y1 = 35.7
-	G2=70 Y1 = 36.6
-	G2=90 Y1 = 37.7
+2. Dla  G2=50 T1 = 35.7
+	G2=70 T1 = 36.6
+	G2=90 T1 = 37.7
 
-	G1=50 Y3 = 36.5
-	G1=70 Y3 = 37.5
-	G1=90 Y3 = 38.5
+	G1=50 T3 = 36.5
+	G1=70 T3 = 37.5
+	G1=90 T3 = 38.5
 
-W³aœciwoœci statyczne s¹ w przybli¿eniu liniowe. Kstat1 = 0,05; Kstat2 = 0,05;
+na jednym wykresie zadanie2_pomT3_sygG1_*
+na jednym wykresie zadanie2_pomT1_sygG1_*
+
+W³aœciwoœci statyczne s¹ w przybli¿eniu liniowe. KstatG2T1 = 0,05; KstatG1T3 = 0,05;
 
 char stat wykres??? nie wiem
 
