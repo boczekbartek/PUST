@@ -36,6 +36,7 @@ Nastawy dobrane za pomoc¹ ga:
 
 K1=0.110346; Ti1=7.651625; Td1=1.748742; Ts=0.5;
 K2=0.050791; Ti2=4.007075; Td2=2.908946; Ts=0.5;
+E = 391.8534
 
 DMC
 Nastawy:
