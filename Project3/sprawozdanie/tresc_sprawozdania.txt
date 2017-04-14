@@ -1,4 +1,7 @@
+Zadanie 3
+Dla lepszej czytelno¿ci wykresów skok jednostowy sterowania nast¿puje w chwili k=6, co mo¿na zaobserwowa¿ na poni¿szych przebiegach.
 
+Zadanie 5
 PID:
 Wersja 1:  uchyb pierwszego wyjœcia oddzia³uje na pierwszy sygna³ steruj¹cy, uchyb drugiego wyjœcia oddzia³uje na drugi sygna³ steruj¹cy
 
