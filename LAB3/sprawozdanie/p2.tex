@@ -4,9 +4,17 @@
 W³aœciwoœci statyczne obiektu mo¿na uznaæ za w przybli¿eniu liniowe, gdy¿ mo¿emy zauwa¿yæ, ¿e skoki wyjœcia s¹ proporcjonalne do skoków zak³ócenia. (skok Y dla $Z_{skok}=\num{10}$ jest ok 2 razy mniejszy ni¿ skok Y dla $Z_{skok}=\num{20}$). Mo¿emy zatem obliczyæ wzmocnienie statyczne, które jest równe: $K_{stat}=0,1465$.
 \end{comment}
 
-Narysowaæ otrzymane przebiegi na jednym rysunku. Czy
-w³aœciwoœci statyczne obiektu mo¿na okreœliæ jako (w przybli¿eniu) liniowe? Jeœli tak
-– wyznaczyæ wzmocnienie statyczne procesu.
+
+$G2=50,  Y1 = \num{35,7}$\\
+$G2=70,  Y1 = \num{36,6}$\\
+$G2=90,  Y1 = \num{37,7}$\\\\
+
+$G1=50,  Y1 = \num{36,5}$\\
+$G1=70,  Y1 = \num{37,5}$\\
+$G1=90,  Y1 = \num{38,5}$\\\\
+
+
+W³aœciwoœci statyczne s¹ w przybli¿eniu liniowe. $K_{statG2T1} = \num{0,05}; K_{statG1T3} = \num{0,05}$;
 
 %\begin{comment}
 \begin{figure}[ht]
@@ -16,16 +24,16 @@ w³aœciwoœci statyczne obiektu mo¿na okreœliæ jako (w przybli¿eniu) liniowe? Jeœl
 	\begin{axis}[
 	width=4.667in,
 	height=5in,
-	xmin=0,xmax=350,ymin=31,ymax=36,
+	xmin=0,xmax=400,ymin=35,ymax=39,
 	xlabel={$k$},
 	ylabel={$Y$},
 	legend pos=south east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,green] file {wykresy/przykladowe/zadanie2_Z10.txt};
-	\addplot[const plot,red] file {wykresy/przykladowe/zadanie2_Z20.txt};
-	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie2_Z30.txt};
-	\legend{$G1_{\mathrm{skok}}=\num{00,00}$,$G1_{\mathrm{skok}}=\num{00,00}$,$G1_{\mathrm{skok}}=\num{00,00}$}
+	\addplot[const plot,green] file {wykresy/zadanie2_pomT3_sygG1_50.txt};
+	\addplot[const plot,red] file {wykresy/zadanie2_pomT3_sygG1_70.txt};
+	\addplot[const plot,blue] file {wykresy/zadanie2_pomT3_sygG1_90.txt};
+	\legend{$G1_{\mathrm{skok}}=\num{50}$,$G1_{\mathrm{skok}}=\num{70}$,$G1_{\mathrm{skok}}=\num{90}$}
 	\end{axis}
 	\end{tikzpicture}
 	
@@ -36,27 +44,30 @@ w³aœciwoœci statyczne obiektu mo¿na okreœliæ jako (w przybli¿eniu) liniowe? Jeœl
 \begin{figure}[ht]
 	\centering
 	
-	\begin{tikzpicture}
+		\begin{tikzpicture}
 	\begin{axis}[
 	width=4.667in,
 	height=5in,
-	xmin=0,xmax=350,ymin=31,ymax=36,
+	xmin=0,xmax=400,ymin=34,ymax=39,
 	xlabel={$k$},
 	ylabel={$Y$},
 	legend pos=south east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,green] file {wykresy/przykladowe/zadanie2_Z10.txt};
-	\addplot[const plot,red] file {wykresy/przykladowe/zadanie2_Z20.txt};
-	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie2_Z30.txt};
-	\legend{$G2_{\mathrm{skok}}=\num{00,00}$,$G2_{\mathrm{skok}}=\num{00,00}$,$G2_{\mathrm{skok}}=\num{00,00}$}
+	\addplot[const plot,green] file {wykresy/zadanie2_pomT1_sygG2_50.txt};
+	\addplot[const plot,red] file {wykresy/zadanie2_pomT1_sygG2_70.txt};
+	\addplot[const plot,blue] file {wykresy/zadanie2_pomT1_sygG2_90.txt};
+	\legend{$G1_{\mathrm{skok}}=\num{50}$,$G1_{\mathrm{skok}}=\num{70}$,$G1_{\mathrm{skok}}=\num{90}$}
 	\end{axis}
 	\end{tikzpicture}
 	
+	
+	
+	
 	\caption{Skroœne odpowiedzi skokowe procesu dla trzech ró¿nych zmian sygna³u steruj¹cego G2 rozpoczynaj¹c z punktu pracy – pomiar na T1}
-	\label{odpWeWy}
+	\label{odpWsrefsfeWy}
 \end{figure}
-
+\begin{comment}
 \begin{figure}[ht]
 	\centering
 	\input{./p2_char_stat_1}
@@ -70,4 +81,4 @@ w³aœciwoœci statyczne obiektu mo¿na okreœliæ jako (w przybli¿eniu) liniowe? Jeœl
 	\caption{Charakterystyka statyczna procesu $T3(G1,G2)$}
 	\label{Z2c}
 \end{figure}
-%\end{comment}
+\end{comment}
