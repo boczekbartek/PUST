@@ -1,6 +1,10 @@
 %PROJ3
 \chapter{Punkt 5}
 
+Oznaczenia pod wykresami:\\
+V1 - uchyb pierwszego wyjœcia oddzia³uje na pierwszy sygna³ sterujacy,uchyb drugiego wyjscia oddzia³uje na drugi sygna³ steruj¹cy\\
+V2 - uchyb pierwszego wyjœcia oddzia³uje na drugi sygna³ sterujacy, uchyb drugiego wyjscia oddzia³uje na pierwszy sygna³ steruj¹cy\\
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%V1
 \begin{figure}[ht]
 	\centering
@@ -20,7 +24,21 @@
 	\end{axis}
 	\end{tikzpicture}
 	
-	\caption{Sygna³ wyjœciowy $y_1$ dla V1 (CO TO??)}
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=7.0in,
+	height=2.4in,
+	xmin=0,xmax=1600,ymin=-2,ymax=2,
+	xlabel={$k$},
+	ylabel={$e_1$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie5_PID_V1_E1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Sygna³ wyjœciowy $y_1$ wraz z b³êdem dla V1}
 	\label{odpskokUdmc3}
 \end{figure}
 
@@ -42,7 +60,21 @@
 	\end{axis}
 	\end{tikzpicture}
 	
-	\caption{Sygna³ wyjœciowy $y_1$ dla V1 (CO TO??)}
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=7.0in,
+	height=2.4in,
+	xmin=0,xmax=1600,ymin=-2,ymax=2,
+	xlabel={$k$},
+	ylabel={$e_2$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie5_PID_V1_E2.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Sygna³ wyjœciowy $y_2$ wraz z b³êdem dla V1}
 	\label{odpskokUdmc3}
 \end{figure}
 
@@ -62,7 +94,7 @@
 	\end{axis}
 	\end{tikzpicture}
 	
-	\caption{Sygna³ wejœciowy $u_1$ dla V1 (CO TO??)}
+	\caption{Sygna³ wejœciowy $u_1$ dla V1}
 	\label{odpskokUdmc3}
 \end{figure}
 
@@ -85,49 +117,11 @@
 	\end{axis}
 	\end{tikzpicture}
 	
-	\caption{Sygna³ wejœciowy $u_2$ dla V1 (CO TO??)}
+	\caption{Sygna³ wejœciowy $u_2$ dla V1}
 	\label{odpskokUdmc3}
 \end{figure}
 
-\begin{figure}[ht]
-	\centering
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=7.0in,
-	height=2.4in,
-	xmin=0,xmax=1600,ymin=-2,ymax=2,
-	xlabel={$k$},
-	ylabel={$e_1$},
-	legend pos=south east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,cyan] file {wykresy/zadanie5_PID_V1_E1.txt};
-	\end{axis}
-	\end{tikzpicture}
-	
-	\caption{$e_1$ dla V1 (CO TO??)}
-	\label{odpskokUdmc3}
-\end{figure}
 
-\begin{figure}[ht]
-	\centering
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=7.0in,
-	height=2.4in,
-	xmin=0,xmax=1600,ymin=-2,ymax=2,
-	xlabel={$k$},
-	ylabel={$e_2$},
-	legend pos=south east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,cyan] file {wykresy/zadanie5_PID_V1_E2.txt};
-	\end{axis}
-	\end{tikzpicture}
-	
-	\caption{$e_2$ dla V1 (CO TO??)}
-	\label{odpskokUdmc3}
-\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%V2
 
@@ -149,7 +143,21 @@
 	\end{axis}
 	\end{tikzpicture}
 	
-	\caption{Sygna³ wyjœciowy $y_1$ dla V2 (CO TO??)}
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=7.0in,
+	height=2.4in,
+	xmin=0,xmax=1600,ymin=-2,ymax=2,
+	xlabel={$k$},
+	ylabel={$e_1$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie5_PID_V2_E1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Sygna³ wyjœciowy $y_1$ wraz z b³êdem dla V2}
 	\label{odpskokUdmc3}
 \end{figure}
 
@@ -171,9 +179,27 @@
 	\end{axis}
 	\end{tikzpicture}
 	
-	\caption{Sygna³ wyjœciowy $y_1$ dla V2 (CO TO??)}
+		\begin{tikzpicture}
+	\begin{axis}[
+	width=7.0in,
+	height=2.4in,
+	xmin=0,xmax=1600,ymin=-2,ymax=2,
+	xlabel={$k$},
+	ylabel={$e_2$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie5_PID_V2_E2.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Sygna³ wyjœciowy $y_2$ i b³¹d dla V2}
 	\label{odpskokUdmc3}
 \end{figure}
+
+
+
+
 
 \begin{figure}[ht]
 	\centering
@@ -191,7 +217,7 @@
 	\end{axis}
 	\end{tikzpicture}
 	
-	\caption{Sygna³ wejœciowy $u_1$ dla V2 (CO TO??)}
+	\caption{Sygna³ wejœciowy $u_1$ dla V2}
 	\label{odpskokUdmc3}
 \end{figure}
 
@@ -214,46 +240,8 @@
 	\end{axis}
 	\end{tikzpicture}
 	
-	\caption{Sygna³ wejœciowy $u_2$ dla V2 (CO TO??)}
+	\caption{Sygna³ wejœciowy $u_2$ dla V2}
 	\label{odpskokUdmc3}
 \end{figure}
 
-\begin{figure}[ht]
-	\centering
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=7.0in,
-	height=2.4in,
-	xmin=0,xmax=1600,ymin=-2,ymax=2,
-	xlabel={$k$},
-	ylabel={$e_1$},
-	legend pos=south east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,cyan] file {wykresy/zadanie5_PID_V2_E1.txt};
-	\end{axis}
-	\end{tikzpicture}
-	
-	\caption{$e_1$ dla V2 (CO TO??)}
-	\label{odpskokUdmc3}
-\end{figure}
 
-\begin{figure}[ht]
-	\centering
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=7.0in,
-	height=2.4in,
-	xmin=0,xmax=1600,ymin=-2,ymax=2,
-	xlabel={$k$},
-	ylabel={$e_2$},
-	legend pos=south east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,cyan] file {wykresy/zadanie5_PID_V2_E2.txt};
-	\end{axis}
-	\end{tikzpicture}
-	
-	\caption{$e_2$ dla V2 (CO TO??)}
-	\label{odpskokUdmc3}
-\end{figure}

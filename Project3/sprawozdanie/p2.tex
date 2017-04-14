@@ -1,6 +1,313 @@
 %PROJ3
 \chapter{Punkt 2}
-%s^{i,j} - ite wyjœcie pod wp³ywem jotego wejœcia
 
-Uzasadniæ wybór parametrów optymalizacji.	
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=1.4in,
+	xmin=0,xmax=500,ymin=-0.5,ymax=3,
+	xlabel={$k$},
+	ylabel={$y_1$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie2_przypadek1=_y1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=1.4in,
+	xmin=0,xmax=500,ymin=-0.5,ymax=1.5,
+	xlabel={$k$},
+	ylabel={$y_2$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie2_przypadek1=_y2.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=1.4in,
+	xmin=0,xmax=500,ymin=0,ymax=2,
+	xlabel={$k$},
+	ylabel={$u_1$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie2_przypadek1=_u1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=1.4in,
+	xmin=0,xmax=500,ymin=-1,ymax=1,
+	xlabel={$k$},
+	ylabel={$u_2$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie2_przypadek1=_u2.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Przypadek 1 ////TODO}
+	\label{odpskokUdmc3}
+\end{figure}
 
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=1.4in,
+	xmin=0,xmax=500,ymin=0,ymax=2,
+	xlabel={$k$},
+	ylabel={$y_1$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie2_przypadek2=_y1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=1.4in,
+	xmin=0,xmax=500,ymin=-0.5,ymax=3,
+	xlabel={$k$},
+	ylabel={$y_2$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie2_przypadek2=_y2.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=1.4in,
+	xmin=0,xmax=500,ymin=-1,ymax=1,
+	xlabel={$k$},
+	ylabel={$u_1$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie2_przypadek2=_u1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=1.4in,
+	xmin=0,xmax=500,ymin=0,ymax=2,
+	xlabel={$k$},
+	ylabel={$u_2$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie2_przypadek2=_u2.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Przypadek 2 ////TODO}
+	\label{odpskokUdmc3}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=1.4in,
+	xmin=0,xmax=500,ymin=-0.5,ymax=5,
+	xlabel={$k$},
+	ylabel={$y_1$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie2_przypadek3=_y1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=1.4in,
+	xmin=0,xmax=500,ymin=-0.5,ymax=4,
+	xlabel={$k$},
+	ylabel={$y_2$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie2_przypadek3=_y2.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=1.4in,
+	xmin=0,xmax=500,ymin=-0.0,ymax=2,
+	xlabel={$k$},
+	ylabel={$u_1$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie2_przypadek3=_u1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=1.4in,
+	xmin=0,xmax=500,ymin=0,ymax=2,
+	xlabel={$k$},
+	ylabel={$u_2$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie2_przypadek3=_u2.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Przypadek 3 ////TODO}
+	\label{odpskokUdmc3}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=1.4in,
+	xmin=0,xmax=500,ymin=-1,ymax=0,
+	xlabel={$k$},
+	ylabel={$y_1$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie2_przypadek4=_y1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=1.4in,
+	xmin=0,xmax=500,ymin=-0.5,ymax=2,
+	xlabel={$k$},
+	ylabel={$y_2$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie2_przypadek4=_y2.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=1.4in,
+	xmin=0,xmax=500,ymin=-0.0,ymax=-2,
+	xlabel={$k$},
+	ylabel={$u_1$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie2_przypadek4=_u1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=1.4in,
+	xmin=0,xmax=500,ymin=0,ymax=2,
+	xlabel={$k$},
+	ylabel={$u_2$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie2_przypadek4=_u2.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Przypadek 4 ////TODO}
+	\label{odpskokUdmc3}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=1.4in,
+	xmin=0,xmax=500,ymin=-0,ymax=1,
+	xlabel={$k$},
+	ylabel={$y_1$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie2_przypadek5=_y1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=1.4in,
+	xmin=0,xmax=500,ymin=-2,ymax=0,
+	xlabel={$k$},
+	ylabel={$y_2$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie2_przypadek5=_y2.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=1.4in,
+	xmin=0,xmax=500,ymin=-0.0,ymax=2,
+	xlabel={$k$},
+	ylabel={$u_1$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie2_przypadek5=_u1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=1.4in,
+	xmin=0,xmax=500,ymin=-2,ymax=0,
+	xlabel={$k$},
+	ylabel={$u_2$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie2_przypadek5=_u2.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Przypadek 5 ////TODO}
+	\label{odpskokUdmc3}
+\end{figure}
