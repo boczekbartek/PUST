@@ -130,7 +130,7 @@ for k=9:n
     Y2(k)=symulacja_obiektu10y2(U1(k-6),U1(k-7),U2(k-5),U2(k-6),Y2(k-1),Y2(k-2));
     
     %Szum pomiarowy, 0-brak, 1-wystêpuje
-    szum_pom=1;
+    szum_pom=0;
     if szum_pom==1
         Y1_szum(k)=Y1(k);
         Y2_szum(k)=Y2(k);
@@ -139,7 +139,7 @@ for k=9:n
     end   
     
     %Zak³ócenia addatywne sygna³ów wyjœciowych, 0-brak, 1-wystêpuje
-    zaklocenia_add=0;
+    zaklocenia_add=1;
     if zaklocenia_add==1
         Y1(k)=Y1(k)+zaklocenia(k);
         Y2(k)=Y2(k)+zaklocenia(k);
