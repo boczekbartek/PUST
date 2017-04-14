@@ -33,5 +33,12 @@ to samo
 DMC
 
 
+Zadanie 7
+Szum addytywny zosta³ wygenerowany jako jendnostowe skoki dodawane do pomiaru sygna³u wyjœciowego. Mo¿emy je obserwowaæ na poni¿szych wykresach. Mo¿emy zauwa¿yæ, ¿e dostrojone wczeœniej regulatory dobrze radz¹ sobie ze stabilizacj¹ zak³óceñ, nie wpadaj¹ w dragania. 
+Poni¿ej, jako przyk³¹d zosta³ przedstawiony wykres dla regulatora PID w wersji 1.
+PID E = E1 + E2 = 590.4457
 
+wykres dla PID V1
+
+Oraz dla regulatora DMC:
 

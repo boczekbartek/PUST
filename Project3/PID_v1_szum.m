@@ -8,11 +8,14 @@ U1pp=0;
 U2pp=0;
 Y1pp=0;
 Y2pp=0;
-szum(1:1600) = 0
-snr = 50;
-szum1 = awgn(szum,snr);
-
-szum2 = awgn(szum,snr);
+szum1(1:1600) = 0
+szum1(101) = 1
+szum1(500) = -0.5
+szum1(1300) = 0.3
+szum2(1:1600) = 0
+szum2(301) = -0.5
+szum2(800) = 1
+szum2(1100) = 0.2
 figure;
 plot(szum1)
 hold on
@@ -106,25 +109,25 @@ E1=(norm(e1))^2; %Wskaünik jakoúci regulacji
 E2=(norm(e2))^2; %Wskaünik jakoúci regulacji
 E = E1 + E2
 
-nazwa = strcat('sprawozdanie/wykresy/zadanie6_PID_V1_E1_snr_50.txt');
+nazwa = strcat('sprawozdanie/wykresy/zadanie7_PID_V1_E1.txt');
 savePlot(1:1:1600,e1,nazwa);
-nazwa = strcat('sprawozdanie/wykresy/zadanie6_PID_V1_E2_snr_50.txt');
+nazwa = strcat('sprawozdanie/wykresy/zadanie7_PID_V1_E2.txt');
 savePlot(1:1:1600,e2,nazwa);
-nazwa = strcat('sprawozdanie/wykresy/zadanie6_PID_V1_U1_snr_50.txt');
+nazwa = strcat('sprawozdanie/wykresy/zadanie7_PID_V1_U1.txt');
 savePlot(1:1:1600,U1,nazwa);
-nazwa = strcat('sprawozdanie/wykresy/zadanie6_PID_V1_Y1_zad_snr_50.txt');
+nazwa = strcat('sprawozdanie/wykresy/zadanie7_PID_V1_Y1.txt');
 savePlot(1:1:1600,Y1_zad,nazwa);
-nazwa = strcat('sprawozdanie/wykresy/zadanie6_PID_V1_Y1_snr_50.txt');
+nazwa = strcat('sprawozdanie/wykresy/zadanie7_PID_V1_Y1.txt');
 savePlot(1:1:1600,Y1,nazwa);
-nazwa = strcat('sprawozdanie/wykresy/zadanie6_PID_V1_U2_snr_50.txt');
+nazwa = strcat('sprawozdanie/wykresy/zadanie7_PID_V1_U2.txt');
 savePlot(1:1:1600,U2,nazwa);
-nazwa = strcat('sprawozdanie/wykresy/zadanie6_PID_V1_Y2_zad_snr_50.txt');
+nazwa = strcat('sprawozdanie/wykresy/zadanie7_PID_V1_Y2_zad.txt');
 savePlot(1:1:1600,Y2_zad,nazwa);
-nazwa = strcat('sprawozdanie/wykresy/zadanie6_PID_V1_Y2_snr_50.txt');
+nazwa = strcat('sprawozdanie/wykresy/zadanie7_PID_V1_Y2.txt');
 savePlot(1:1:1600,Y2,nazwa);
-nazwa = strcat('sprawozdanie/wykresy/zadanie6_PID_V1_zaszumienie_Y1_snr_50.txt');
+nazwa = strcat('sprawozdanie/wykresy/zadanie7_PID_V1_zaszumienie_Y1.txt');
 savePlot(1:1:1600,szum1,nazwa);
-nazwa = strcat('sprawozdanie/wykresy/zadanie6_PID_V1_zaszumienie_Y2_snr_50.txt');
+nazwa = strcat('sprawozdanie/wykresy/zadanie7_PID_V1_zaszumienie_Y2.txt');
 savePlot(1:1:1600,szum2,nazwa);
 figure;
 subplot(2,2,1);
