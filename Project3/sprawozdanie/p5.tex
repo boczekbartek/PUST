@@ -1,147 +1,259 @@
 %PROJ3
 \chapter{Punkt 5}
 
-Dla dwóch skoków amplitudy sygna³u wartoœci zadanej dostrojone zosta³y algorytmy DMC oraz PID. Podczas dostrajania wykorzystany zosta³
-optymalizator \verb+ga+, a nastêpnie zosta³y naniesione drobne rêczne poprawki. Dla obydwu algorytmów jako wspó³czynnik jakoœci zosta³ 
-wykorzystany b³¹d œredniokwadratowy.\\\\
-
-Nastawy DMC:\\
-$D=\num{300}$; $N=\num{130}$; $N_u=\num{6}$; $\lambda=\num{0.01}$;\\
-B³¹d: $E = \num{3269,5}$.\\\\
-Nastawy PID:\\
-$K=\num{14,307542}$; $T_i=\num{38,320299}$; $T_d=\num{6,677860}$; $T_s=\num{0,5}$. B³¹d: $E = \num{2699,8}$.\\\\
-Nastawy te powinny byæ dostrojone na rzeczywistym obiekcie, co wynika z pewnych niedok³adnoœci modelu.
-
-\begin{figure}[h!]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%V1
+\begin{figure}[ht]
 	\centering
-	
 	\begin{tikzpicture}
 	\begin{axis}[
-	width=4.667in,
-	height=1.8in,
-	xmin=0,xmax=1000,ymin=30,ymax=41,
-	%xlabel={$k$},
-	ylabel={$Y1$},
-	legend pos=north east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_Y.txt};
-	\addplot[const plot,red, densely dashed] file {wykresy/przykladowe/zadanie5_PID_Yzad.txt};
-	\legend{$Y1$,$Y1^{zad}$}
-	\end{axis}
-	\end{tikzpicture}
-	
-		\begin{tikzpicture}
-	\begin{axis}[
-	width=4.667in,
-	height=1.8in,
-	xmin=0,xmax=1000,ymin=30,ymax=41,
-	%xlabel={$k$},
-	ylabel={$Y2$},
-	legend pos=north east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_Y.txt};
-	\addplot[const plot,red, densely dashed] file {wykresy/przykladowe/zadanie5_PID_Yzad.txt};
-	\legend{$Y2$,$Y2^{zad}$}
-	\end{axis}
-	\end{tikzpicture}
-	
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=4.667in,
-	height=1.8in,
-	xmin=0,xmax=1000,ymin=0,ymax=110,
-	%xlabel={$k$},
-	ylabel={$U1$},
+	width=7.0in,
+	height=2.4in,
+	xmin=0,xmax=1600,ymin=-1,ymax=4,
+	xlabel={$k$},
+	ylabel={$y_1$},
 	legend pos=south east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_U.txt};
+	\addplot[const plot,red, densely dashed] file {wykresy/zadanie5_PID_V1_Y1_zad.txt};
+	\addplot[const plot,cyan] file {wykresy/zadanie5_PID_V1_Y1.txt};
+	\legend{$y_1^{zad}$, $y_1$}
 	\end{axis}
 	\end{tikzpicture}
 	
-		\begin{tikzpicture}
-	\begin{axis}[
-	width=4.667in,
-	height=1.8in,
-	xmin=0,xmax=1000,ymin=0,ymax=110,
-%	xlabel={$k$},
-	ylabel={$U2$},
-	legend pos=south east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_U.txt};
-	\end{axis}
-	\end{tikzpicture}
-	
-	\caption{OdpowiedŸ dla dwóch skoków sygna³u zadanego - regulacja PID}
-	\label{bezPomZak}
+	\caption{Sygna³ wyjœciowy $y_1$ dla V1 (CO TO??)}
+	\label{odpskokUdmc3}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[ht]
 	\centering
-	
 	\begin{tikzpicture}
 	\begin{axis}[
-	width=4.667in,
-	height=1.8in,
-	xmin=0,xmax=1000,ymin=30,ymax=41,
-	%xlabel={$k$},
-	ylabel={$Y1$},
-	legend pos=north east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_Y.txt};
-	\addplot[const plot,red, densely dashed] file {wykresy/przykladowe/zadanie5_PID_Yzad.txt};
-	\legend{$Y1$,$Y1^{zad}$}
-	\end{axis}
-	\end{tikzpicture}
-	
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=4.667in,
-	height=1.8in,
-	xmin=0,xmax=1000,ymin=30,ymax=41,
-	%xlabel={$k$},
-	ylabel={$Y2$},
-	legend pos=north east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_Y.txt};
-	\addplot[const plot,red, densely dashed] file {wykresy/przykladowe/zadanie5_PID_Yzad.txt};
-	\legend{$Y2$,$Y2^{zad}$}
-	\end{axis}
-	\end{tikzpicture}
-	
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=4.667in,
-	height=1.8in,
-	xmin=0,xmax=1000,ymin=0,ymax=110,
-	%xlabel={$k$},
-	ylabel={$U1$},
+	width=7.0in,
+	height=2.4in,
+	xmin=0,xmax=1600,ymin=-1,ymax=4,
+	xlabel={$k$},
+	ylabel={$y_2$},
 	legend pos=south east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_U.txt};
+	\addplot[const plot,red, densely dashed] file {wykresy/zadanie5_PID_V1_Y2_zad.txt};
+	\addplot[const plot,cyan] file {wykresy/zadanie5_PID_V1_Y2.txt};
+	\legend{$y_2^{zad}$, $y_2$}
 	\end{axis}
 	\end{tikzpicture}
 	
+	\caption{Sygna³ wyjœciowy $y_1$ dla V1 (CO TO??)}
+	\label{odpskokUdmc3}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
 	\begin{tikzpicture}
 	\begin{axis}[
-	width=4.667in,
-	height=1.8in,
-	xmin=0,xmax=1000,ymin=0,ymax=110,
-	%	xlabel={$k$},
-	ylabel={$U2$},
+	width=7.0in,
+	height=2.4in,
+	xmin=0,xmax=1600,ymin=-5,ymax=5,
+	xlabel={$k$},
+	ylabel={$u_1$},
 	legend pos=south east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_U.txt};
+	\addplot[const plot,cyan] file {wykresy/zadanie5_PID_V1_U1.txt};
 	\end{axis}
 	\end{tikzpicture}
 	
-	\caption{OdpowiedŸ dla dwóch skoków sygna³u zadanego - regulacja DMC}
-	\label{bezPomZak}
+	\caption{Sygna³ wejœciowy $u_1$ dla V1 (CO TO??)}
+	\label{odpskokUdmc3}
+\end{figure}
+
+
+
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=7.0in,
+	height=2.4in,
+	xmin=0,xmax=1600,ymin=-2,ymax=2,
+	xlabel={$k$},
+	ylabel={$u_2$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie5_PID_V1_U2.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Sygna³ wejœciowy $u_2$ dla V1 (CO TO??)}
+	\label{odpskokUdmc3}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=7.0in,
+	height=2.4in,
+	xmin=0,xmax=1600,ymin=-2,ymax=2,
+	xlabel={$k$},
+	ylabel={$e_1$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie5_PID_V1_E1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{$e_1$ dla V1 (CO TO??)}
+	\label{odpskokUdmc3}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=7.0in,
+	height=2.4in,
+	xmin=0,xmax=1600,ymin=-2,ymax=2,
+	xlabel={$k$},
+	ylabel={$e_2$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie5_PID_V1_E2.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{$e_2$ dla V1 (CO TO??)}
+	\label{odpskokUdmc3}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%V2
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=7.0in,
+	height=2.4in,
+	xmin=0,xmax=1600,ymin=-1,ymax=4,
+	xlabel={$k$},
+	ylabel={$y_1$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,red, densely dashed] file {wykresy/zadanie5_PID_V1_Y1_zad.txt};
+	\addplot[const plot,cyan] file {wykresy/zadanie5_PID_V2_Y1.txt};
+	\legend{$y_1^{zad}$, $y_1$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Sygna³ wyjœciowy $y_1$ dla V2 (CO TO??)}
+	\label{odpskokUdmc3}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=7.0in,
+	height=2.4in,
+	xmin=0,xmax=1600,ymin=-1,ymax=4,
+	xlabel={$k$},
+	ylabel={$y_2$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,red, densely dashed] file {wykresy/zadanie5_PID_V1_Y2_zad.txt};
+	\addplot[const plot,cyan] file {wykresy/zadanie5_PID_V2_Y2.txt};
+	\legend{$y_2^{zad}$, $y_2$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Sygna³ wyjœciowy $y_1$ dla V2 (CO TO??)}
+	\label{odpskokUdmc3}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=7.0in,
+	height=2.4in,
+	xmin=0,xmax=1600,ymin=-5,ymax=5,
+	xlabel={$k$},
+	ylabel={$u_1$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie5_PID_V2_U1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Sygna³ wejœciowy $u_1$ dla V2 (CO TO??)}
+	\label{odpskokUdmc3}
+\end{figure}
+
+
+
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=7.0in,
+	height=2.4in,
+	xmin=0,xmax=1600,ymin=-2,ymax=2,
+	xlabel={$k$},
+	ylabel={$u_2$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie5_PID_V2_U2.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Sygna³ wejœciowy $u_2$ dla V2 (CO TO??)}
+	\label{odpskokUdmc3}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=7.0in,
+	height=2.4in,
+	xmin=0,xmax=1600,ymin=-2,ymax=2,
+	xlabel={$k$},
+	ylabel={$e_1$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie5_PID_V2_E1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{$e_1$ dla V2 (CO TO??)}
+	\label{odpskokUdmc3}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=7.0in,
+	height=2.4in,
+	xmin=0,xmax=1600,ymin=-2,ymax=2,
+	xlabel={$k$},
+	ylabel={$e_2$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie5_PID_V2_E2.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{$e_2$ dla V2 (CO TO??)}
+	\label{odpskokUdmc3}
 \end{figure}
