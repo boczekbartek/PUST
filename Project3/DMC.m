@@ -100,15 +100,17 @@ Y2(1:n)=Y2pp;
 Y1_szum(1:n)=Y1pp;
 Y2_szum(1:n)=Y2pp;
 Y1_zad(1:14)=Y1pp;
-Y1_zad(15:400)=2;
+Y1_zad(15:n)=1;
 Y1_zad(401:800)=3;
-Y1_zad(801:1200)=4;
-Y1_zad(1201:1600)=5;
+Y1_zad(801:1200)=1.5;
+Y1_zad(1201:1600)=0.5;
+
+
 Y2_zad(1:14)=Y2pp;
-Y2_zad(15:400)=2;
-Y2_zad(401:800)=3;
-Y2_zad(801:1200)=4;
-Y2_zad(1201:1600)=5;
+Y2_zad(15:n)=1;
+Y2_zad(501:800)=0.5;
+Y2_zad(901:1200)=1;
+Y2_zad(1301:1600)=1.5;
 
 u1=U1-U1pp;
 u2=U2-U2pp;
@@ -120,7 +122,7 @@ y2(1:n)=0;
 Ey=zeros(2,n);
 Eu=zeros(1,n);
 
-szum=wgn(1,n,-40); %(-60) niewielki, (-50) œredni, (-40) znaczny
+szum=wgn(1,n,-60); %(-60) niewielki, (-50) œredni, (-40) znaczny
 zaklocenia(1:n)=0.5; % 0.01 niewielkie, 0.1 œrednie, 0.5 du¿e
 
 for k=9:n
