@@ -16,3 +16,22 @@ E = 97.4793
 
 
 Wersja 2: uchyb pierwszego wyjœcia oddzia³uje na drugi sygna³ steruj¹cy, uchyb drugiego wyjœcia oddzia³uje na pierwszy sygna³ steruj¹cy
+
+Zadanie 6
+Poniary zosta¿y zaszumione szumem bia¿ym generowanym przez funkcj¿ awgn, z parametrem SNR(Signal to Noice Ratio), który jest skal¿ wielko¿ci szumu (im SNR mniejszy, tym sygna¿ bardziej zaszumiony).
+Ponie¿ej zosta¿y przedstawione wykresy odpowiednio dla regulatora PID i DMC z nastawami dobranymi w poprzednim podpunkcie. Mo¿emy zauwa¿y¿, ¿e regulatory PID w wersji 1 oraz DMC bardzo dobrze daj¿ sobie rad¿ z szumem pomiarowym, szczególnie gdy nie jest on du¿y.
+Troch¿ gorzej poradzi¿ sobie PID z "zamienionymi" sygna¿ami, co mo¿e wynika¿ z jego ogólnej niestabilno¿ci i ¿rednich rezultatów w regulacji.
+wykresy Dla SNR = 75:
+dla 50
+dla 35
+dla PID v1
+
+to samo
+PID v2
+
+to samo
+DMC
+
+
+
+
