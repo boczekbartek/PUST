@@ -22,11 +22,14 @@ y2(1:500)=0;
     s_y1_u1(k-5) = y1(k);
     s_y2_u1(k-5) = y2(k);
  end
- nazwa = strcat('sprawozdanie/wykresy/zadanie3_odpSkok_s_y1_u1.txt');
- savePlot(1:1:n-5,s_y1_u1,nazwa);
-  nazwa = strcat('sprawozdanie/wykresy/zadanie3_odpSkok_s_y2_u1.txt');
- savePlot(1:1:n-5,s_y2_u1,nazwa);
- 
+%  nazwa = strcat('sprawozdanie/wykresy/zadanie3_odpSkok_s_y1_u1.txt');
+%  savePlot(1:1:n-5,s_y1_u1,nazwa);
+%   nazwa = strcat('sprawozdanie/wykresy/zadanie3_odpSkok_s_y2_u1.txt');
+%  savePlot(1:1:n-5,s_y2_u1,nazwa);
+%  nazwa = strcat('sprawozdanie/wykresy/zadanie3_u1_skok_na_u1.txt');
+%  savePlot(1:1:n-5,u1,nazwa);
+%  nazwa = strcat('sprawozdanie/wykresy/zadanie3_u2_skok_na_u1.txt');
+%  savePlot(1:1:n-5,u2,nazwa);
  figure
  stairs(s_y1_u1)
  hold on
@@ -48,10 +51,14 @@ y2(1:500)=0;
     s_y1_u2(k-5) = y1(k);
     s_y2_u2(k-5) = y2(k);
   end
-  nazwa = strcat('sprawozdanie/wykresy/zadanie3_odpSkok_s_y1_u2.txt');
- savePlot(1:1:n-5,s_y1_u2,nazwa);
-  nazwa = strcat('sprawozdanie/wykresy/zadanie3_odpSkok_s_y2_u2.txt');
- savePlot(1:1:n-5,s_y2_u2,nazwa);
+%     nazwa = strcat('sprawozdanie/wykresy/zadanie3_u1_skok_na_u2.txt');
+%  savePlot(1:1:n-5,u1,nazwa);
+%  nazwa = strcat('sprawozdanie/wykresy/zadanie3_u2_skok_na_u2.txt');
+%  savePlot(1:1:n-5,u2,nazwa);
+%   nazwa = strcat('sprawozdanie/wykresy/zadanie3_odpSkok_s_y1_u2.txt');
+%  savePlot(1:1:n-5,s_y1_u2,nazwa);
+%   nazwa = strcat('sprawozdanie/wykresy/zadanie3_odpSkok_s_y2_u2.txt');
+%  savePlot(1:1:n-5,s_y2_u2,nazwa);
   
  figure
  stairs(s_y1_u2)
