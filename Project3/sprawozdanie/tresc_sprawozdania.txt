@@ -11,6 +11,7 @@ KstatY1_U1 = 2.4947
 KstatY1_U2 = 1.7970
 KstatY2_U1 = 2.7886
 KstatY2_U2 =2.7886 
+W³aœciwoœci dynamiczne obiektu to opóŸnienie (wynosz¹ce Ts=8), a tak¿e stabilnoœæ, któr¹ mo¿emy zaobserwowaæ poprzez to, ¿e gdy obiekt na obiekt dzia³aj¹ sta³e sygna³y steruj¹ce, po pewnym czasie stabilizuj¹ siê jego wyjœcia.
 
 Zadanie 3
 Dla lepszej czytelno¿ci wykresów skok jednostowy sterowania nast¿puje w chwili k=6, co mo¿na zaobserwowa¿ na poni¿szych przebiegach.
