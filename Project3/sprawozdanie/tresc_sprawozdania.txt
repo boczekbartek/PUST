@@ -32,6 +32,19 @@ E = 97.4793
 
 Wersja 2: uchyb pierwszego wyjœcia oddzia³uje na drugi sygna³ steruj¹cy, uchyb drugiego wyjœcia oddzia³uje na pierwszy sygna³ steruj¹cy
 
+Nastawy dobrane za pomoc¹ ga:
+
+K1=0.110346; Ti1=7.651625; Td1=1.748742; Ts=0.5;
+K2=0.050791; Ti2=4.007075; Td2=2.908946; Ts=0.5;
+
+DMC
+Nastawy:
+D = 135; N=80; Nu=6; lambda1=1; lambda2=1; 
+
+Wniosek:
+Widaæ, ¿e regulator DMC najszybiciej stabilizuje proces, w porz¹dku jest równie¿ PID w wersji 1, natomiast PID z "zamienionymi" sygna³ami (wersja 2) nie daje zadowalaj¹cyh rezultatów
+
+
 Zadanie 6
 Poniary zosta¿y zaszumione szumem bia¿ym generowanym przez funkcj¿ awgn, z parametrem SNR(Signal to Noice Ratio), który jest skal¿ wielko¿ci szumu (im SNR mniejszy, tym sygna¿ bardziej zaszumiony).
 Ponie¿ej zosta¿y przedstawione wykresy odpowiednio dla regulatora PID i DMC z nastawami dobranymi w poprzednim podpunkcie. Mo¿emy zauwa¿y¿, ¿e regulatory PID w wersji 1 oraz DMC bardzo dobrze daj¿ sobie rad¿ z szumem pomiarowym, szczególnie gdy nie jest on du¿y.
