@@ -1,3 +1,17 @@
+Zadanie 2
+Poni¿ej zosta³y przedstawione przebiegi sygna³ów dla kilku kombinacji skoków sygna³u steruj¹cego na wejœciach 1 i 2.
+
+Mo¿emy zaobserwowaæ, ¿e obiekt ma w³aœciwoœci statyczne, o czym œwiadcz¹ poni¿sze charakterystyki statyczne:
+y1(u1,u2)
+wykres surf zadanie2_y1u1u2.txt
+y2(u1,u2)
+wykres surf zadanie2_y2u1u2.txt
+Poniewa¿ obiekt ma w³aœciwoœci statyczne mo¿emy obliczyæ wzmocnienia statyczne dla ka¿dego z torów wejœcie-wyjœcie:
+KstatY1_U1 = 2.4947
+KstatY1_U2 = 1.7970
+KstatY2_U1 = 2.7886
+KstatY2_U2 =2.7886 
+
 Zadanie 3
 Dla lepszej czytelno¿ci wykresów skok jednostowy sterowania nast¿puje w chwili k=6, co mo¿na zaobserwowa¿ na poni¿szych przebiegach.
 

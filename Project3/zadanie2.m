@@ -19,24 +19,24 @@ figure;
         y2(k)=symulacja_obiektu10y2(u1(k-5),u1(k-6),u2(k-4),u2(k-5),y2(k-1),y2(k-2));
     end
     
-    subplot(2,1,1)
-    stairs(y1)
-    subplot(2,1,2)
-    stairs(y2)
-    figure
-    subplot(2,1,1)
-    stairs(u1)
-    subplot(2,1,2)
-    stairs(u2)
+%     subplot(2,1,1)
+%     stairs(y1)
+%     subplot(2,1,2)
+%     stairs(y2)
+%     figure
+%     subplot(2,1,1)
+%     stairs(u1)
+%     subplot(2,1,2)
+%     stairs(u2)
     
-nazwa = strcat('sprawozdanie/wykresy/zadanie2_przypadek5=_y1.txt');
-savePlot(1:1:n,y1,nazwa);
-nazwa = strcat('sprawozdanie/wykresy/zadanie2_przypadek5=_y2.txt');
-savePlot(1:1:n,y2,nazwa);
-nazwa = strcat('sprawozdanie/wykresy/zadanie2_przypadek5=_u1.txt');
-savePlot(1:1:n,u1,nazwa);
-nazwa = strcat('sprawozdanie/wykresy/zadanie2_przypadek5=_u2.txt');
-savePlot(1:1:n,u2,nazwa);
+% nazwa = strcat('sprawozdanie/wykresy/zadanie2_przypadek5=_y1.txt');
+% savePlot(1:1:n,y1,nazwa);
+% nazwa = strcat('sprawozdanie/wykresy/zadanie2_przypadek5=_y2.txt');
+% savePlot(1:1:n,y2,nazwa);
+% nazwa = strcat('sprawozdanie/wykresy/zadanie2_przypadek5=_u1.txt');
+% savePlot(1:1:n,u1,nazwa);
+% nazwa = strcat('sprawozdanie/wykresy/zadanie2_przypadek5=_u2.txt');
+% savePlot(1:1:n,u2,nazwa);
 % 
 % 
 % title('odpowiedzi skokowe dla Y')
@@ -66,47 +66,74 @@ savePlot(1:1:n,u2,nazwa);
 % legend('skok Z do 0,2','skok Z do 0,5','skok Z do 0,9','skok Z do 1,3');
 % hold off;
 % 
-% Us(1:41) = 0;
-% Zs(1:41) = 0;
-% Ys(1:41,1:41) = 0;
-% for i = 1:41
-%     Us(i) = 0 - 0.5 + (i-1)*(1/40);
-%     for j = 1:41
-%         Zs(j) = 0 - 0.5 + (j-1)*(1/40);
-%         U(1:10) = 0;
-%         U(10:n) = Us(i);
-%         Z(10:n) = Zs(j);
-%         for k = 8:n
-%             Y(k)=symulacja_obiektu6y(U(k-6),U(k-7),Z(k-3),Z(k-4),Y(k-1),Y(k-2));
-%         end
-%         Ys(i,j) = Y(n);
-%     end
-% end
-% KstatU=(Ys(41,1)-Ys(40,1))/(Us(41)-Us(40))
-% KstatZ=(Ys(1,41)-Ys(1,40))/(Zs(41)-Zs(40))
-% figure
-% size(Us)
-% size(Zs)
-% size(Ys)
-% surf(Us,Zs,Ys)
+
+U1s(1:41) = 0;
+U2s(1:41) = 0;
+Ys1(1:41,1:41) = 0;
+Ys2(1:41,1:41) = 0;
+
+for i = 1:41
+    U1s(i) = 0 - 0.5 + (i-1)*(1/40);
+    for j = 1:41
+        U2s(j) = 0 - 0.5 + (j-1)*(1/40);
+        u1(1:10) = 0;
+        u1(10:n) = U1s(i);
+        u2(10:n) = U2s(j);
+        
+        for k = 9:n
+            y1(k)=symulacja_obiektu10y1(u1(k-7),u1(k-8),u2(k-3),u2(k-4),y1(k-1),y1(k-2));
+            y2(k)=symulacja_obiektu10y2(u1(k-5),u1(k-6),u2(k-4),u2(k-5),y2(k-1),y2(k-2));
+        end
+        
+        Ys1(i,j) = y1(n);
+        Ys2(i,j) = y2(n);
+
+    end
+end
+
+KstatY1_U1=(Ys1(41,1)-Ys1(40,1))/(U1s(41)-U1s(40))
+KstatY1_U2=(Ys1(1,41)-Ys1(1,40))/(U2s(41)-U2s(40))
+KstatY2_U1=(Ys2(1,41)-Ys2(1,40))/(U1s(41)-U1s(40))
+KstatY2_U2=(Ys2(1,41)-Ys2(1,40))/(U2s(41)-U2s(40))
+
+figure
+
+surf(U1s,U2s,Ys1)
+tab=zeros(41*41,4);
+i = 1;
+for x=1:size(U1s')
+    for y =1:size(U2s')
+        tab(i,:) = [U1s(x) U2s(y) Ys1(x,y) Ys1(x,y)];
+        i = i+1;
+    end
+end
+
+dane = fopen('sprawozdanie/wykresy/zadanie2_y1u1u2.txt','wt');
+
+for i=1:41*41
+    fprintf(dane,'%f\t%f\t%f\t%f\\\\ \n', tab(i,1),tab(i,2),tab(i,3),tab(i,4));
+end
+fclose(dane);
+figure 
+surf(U1s,U2s,Ys2)
 % 
 % 
 % %eksport danych dla Latexa
-% tab=zeros(41*41,4);
-% i = 1;
-% for x=1:size(Us')
-%     for y =1:size(Zs')
-%         tab(i,:) = [Us(x) Zs(y) Ys(x,y) Ys(x,y)];
-%         i = i+1;
-%     end
-% end
-% 
-% dane = fopen('../wykresy/surf.txt','wt');
-% 
-% for i=1:41*41
-%     fprintf(dane,'%f\t%f\t%f\t%f\\\\ \n', tab(i,1),tab(i,2),tab(i,3),tab(i,4));
-% end
-% fclose(dane);
+tab=zeros(41*41,4);
+i = 1;
+for x=1:size(U1s')
+    for y =1:size(U2s')
+        tab(i,:) = [U1s(x) U2s(y) Ys2(x,y) Ys2(x,y)];
+        i = i+1;
+    end
+end
+
+dane = fopen('sprawozdanie/wykresy/zadanie2_y2u1u2.txt','wt');
+
+for i=1:41*41
+    fprintf(dane,'%f\t%f\t%f\t%f\\\\ \n', tab(i,1),tab(i,2),tab(i,3),tab(i,4));
+end
+fclose(dane);
 % 
 % %
 % % %Wzmocnienie statyczne jako wspó³czynnik a - nachylenie prostej bêd¹cej
