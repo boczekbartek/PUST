@@ -1,0 +1,15 @@
+
+PID:
+Wersja 1:  uchyb pierwszego wyjœcia oddzia³uje na pierwszy sygna³ steruj¹cy, uchyb drugiego wyjœcia oddzia³uje na drugi sygna³ steruj¹cy
+
+Nastawy dobrane za pomoc¹ optymalizatora ga:
+
+ K1=1.228038; Ti1=11.602531; Td1=1.166250; Ts=0.5;
+ K2=0.851927; Ti2=9.777445; Td2=0.842038; Ts=0.5;
+
+Na za³¹czonych przebiegach widaæ, ¿e wyjœcia obiektu bardzo szybko siê stabilizuj¹.
+B³¹d uzyskany podczas regulacji z powy¿szymi nastawami dla wartoœci zadanej przedstawionej na wykresach.
+E = 97.4793
+
+
+Wersja 2: uchyb pierwszego wyjœcia oddzia³uje na drugi sygna³ steruj¹cy, uchyb drugiego wyjœcia oddzia³uje na pierwszy sygna³ steruj¹cy
