@@ -1,9 +1,31 @@
 %PROJ3
 \chapter{Punkt 5}
+PID:\\\
+Wersja 1 (V1):  uchyb pierwszego wyjœcia oddzia³uje na pierwszy sygna³ steruj¹cy, uchyb drugiego wyjœcia oddzia³uje na drugi sygna³ steruj¹cy\\\\
 
-Oznaczenia pod wykresami:\\
-V1 - uchyb pierwszego wyjœcia oddzia³uje na pierwszy sygna³ sterujacy,uchyb drugiego wyjscia oddzia³uje na drugi sygna³ steruj¹cy\\
-V2 - uchyb pierwszego wyjœcia oddzia³uje na drugi sygna³ sterujacy, uchyb drugiego wyjscia oddzia³uje na pierwszy sygna³ steruj¹cy\\
+Nastawy dobrane za pomoc¹ optymalizatora ga:\\
+
+$K1=\num{1,228038}$; $Ti1=\num{11.602531}$; $Td1=\num{1,166250}$; $Ts=\num{0,5}$;\\
+$K2=\num{0,851927}$; $Ti2=\num{9,777445}$; $Td2=\num{0,842038}$; $Ts=\num{0,5}$;\\\\
+
+Na za³¹czonych przebiegach widaæ, ¿e wyjœcia obiektu bardzo szybko siê stabilizuj¹.
+B³¹d uzyskany podczas regulacji z powy¿szymi nastawami dla wartoœci zadanej przedstawionej na wykresach.\\
+E = \num{97,4793}
+
+
+Wersja 2 (V2): uchyb pierwszego wyjœcia oddzia³uje na drugi sygna³ steruj¹cy, uchyb drugiego wyjœcia oddzia³uje na pierwszy sygna³ steruj¹cy\\\\
+
+Nastawy dobrane za pomoc¹ ga:\\
+
+K1=0.110346; Ti1=7.651625; Td1=1.748742; Ts=0.5;\\
+K2=0.050791; Ti2=4.007075; Td2=2.908946; Ts=0.5;\\\\
+
+DMC\\\\
+Nastawy:\\
+D = 135; N=80; Nu=6; lambda1=1; lambda2=1; \\\\
+
+Wniosek:
+Widaæ, ¿e regulator DMC najszybiciej stabilizuje proces, w porz¹dku jest równie¿ PID w wersji 1, natomiast PID z "zamienionymi" sygna³ami (wersja 2) nie daje zadowalaj¹cyh rezultatów
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%V1
 \begin{figure}[ht]

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  14 APR 2017 22:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  15 APR 2017 00:05
 entering extended mode
 **./sprawozdanie_proj3.tex
 (sprawozdanie_proj3.tex
@@ -1107,6 +1107,33 @@ LaTeX Warning: Unused global option(s):
 
 (sprawozdanie_proj3.aux
 
+LaTeX Warning: Label `Z2c' multiply defined.
+
+
+LaTeX Warning: Label `odpskokUdmc3' multiply defined.
+
+
+LaTeX Warning: Label `odpskokUdmc3' multiply defined.
+
+
+LaTeX Warning: Label `odpskokUdmc3' multiply defined.
+
+
+LaTeX Warning: Label `odpskokUdmc3' multiply defined.
+
+
+LaTeX Warning: Label `odpskokUdmc3' multiply defined.
+
+
+LaTeX Warning: Label `odpskokssvsvdmc3' multiply defined.
+
+
+LaTeX Warning: Label `odpskokssvsvdmc3' multiply defined.
+
+
+LaTeX Warning: Label `odpskokssvsvdmc3' multiply defined.
+
+
 LaTeX Warning: Label `odpskokUdmc3' multiply defined.
 
 
@@ -1122,25 +1149,52 @@ LaTeX Warning: Label `odpskokUdmc3' multiply defined.
 LaTeX Warning: Label `odpskokUdmc3' multiply defined.
 
 
-LaTeX Warning: Label `odpskokssvsvdmc3' multiply defined.
+LaTeX Warning: Label `odpskokUdmc3' multiply defined.
 
 
-LaTeX Warning: Label `odpskokssvsvdmc3' multiply defined.
+LaTeX Warning: Label `odpskokUdmc3' multiply defined.
 
 
-LaTeX Warning: Label `odpskokssvsvdmc3' multiply defined.
+LaTeX Warning: Label `odpskokUdmc3' multiply defined.
 
 
-LaTeX Warning: Label `odpskokssvsvdmc3' multiply defined.
+LaTeX Warning: Label `odpskokUdmc3' multiply defined.
 
 
-LaTeX Warning: Label `odpskokssvsvdmc3' multiply defined.
+LaTeX Warning: Label `odpskokUdmc3' multiply defined.
 
 
-LaTeX Warning: Label `odpskokssvsvdmc3' multiply defined.
+LaTeX Warning: Label `odpskokUdmc3' multiply defined.
 
 
-LaTeX Warning: Label `odpskokssvsvdmc3' multiply defined.
+LaTeX Warning: Label `odpskokUdmc3' multiply defined.
+
+
+LaTeX Warning: Label `odpskokUdmc3' multiply defined.
+
+
+LaTeX Warning: Label `odpskokUdmc3' multiply defined.
+
+
+LaTeX Warning: Label `odpskokUdmc3' multiply defined.
+
+
+LaTeX Warning: Label `odpskokUdmc3' multiply defined.
+
+
+LaTeX Warning: Label `odpskokUdmc3' multiply defined.
+
+
+LaTeX Warning: Label `odpskokUdmc3' multiply defined.
+
+
+LaTeX Warning: Label `odpskokUdmc3' multiply defined.
+
+
+LaTeX Warning: Label `odpskokUdmc3' multiply defined.
+
+
+LaTeX Warning: Label `odpskokUdmc3' multiply defined.
 
 
 LaTeX Warning: Label `odpskokUdmc3' multiply defined.
@@ -1382,6 +1436,7 @@ PGFPlots: reading {wykresy/zadanie1_u2.txt}
 
 ]
 Rozdzia\PlPrIeC {\l } 2.
+(p2_char_stat_1.tex) (p2_char_stat_3.tex)
 PGFPlots: reading {wykresy/zadanie2_przypadek1=_y1.txt}
 PGFPlots: reading {wykresy/zadanie2_przypadek1=_y2.txt}
 PGFPlots: reading {wykresy/zadanie2_przypadek1=_u1.txt}
@@ -1398,14 +1453,15 @@ PGFPlots: reading {wykresy/zadanie2_przypadek4=_y1.txt}
 PGFPlots: reading {wykresy/zadanie2_przypadek4=_y2.txt}
 PGFPlots: reading {wykresy/zadanie2_przypadek4=_u1.txt}
 
+
 Package pgfplots Warning: Axis range for axis y is approximately empty; enlargi
-ng it (it is [0.0:-2.0000000000]) on input line 232.
+ng it (it is [0.0:-2.0000000000]) on input line 263.
 
  [warning /pgfplots/warning/approx empty range enlarged]
 
 Package pgfplots Warning: Tick computation for direction y failed; there are al
 ways too few tick labels (try min ticks has already been advanced to 18) on inp
-ut line 232.
+ut line 263.
 
  [warning /pgfplots/warning/tick computation failed]
 PGFPlots: reading {wykresy/zadanie2_przypadek4=_u2.txt}
@@ -1415,130 +1471,499 @@ PGFPlots: reading {wykresy/zadanie2_przypadek5=_u1.txt}
 PGFPlots: reading {wykresy/zadanie2_przypadek5=_u2.txt}
 ) (p3.tex [3
 
-] [4] [5] [6] [7]
+] [4] [5] [6] [7] [8] [9]
 Rozdzia\PlPrIeC {\l } 3.
 PGFPlots: reading {wykresy/zadanie3_odpSkok_s_y1_u1.txt}
 PGFPlots: reading {wykresy/zadanie3_odpSkok_s_y1_u2.txt}
 PGFPlots: reading {wykresy/zadanie3_odpSkok_s_y2_u1.txt}
 PGFPlots: reading {wykresy/zadanie3_odpSkok_s_y2_u2.txt}
-PGFPlots: reading {wykresy/zadanie3_u1_skok_na_u1.txt}
-PGFPlots: reading {wykresy/zadanie3_u1_skok_na_u2.txt}
-PGFPlots: reading {wykresy/zadanie3_u2_skok_na_u1.txt}
-PGFPlots: reading {wykresy/zadanie3_u2_skok_na_u2.txt}
-) (p5.tex [8
+) (p4.tex [10
 
-] [9] [10] [11]
+] [11]
 Rozdzia\PlPrIeC {\l } 4.
+) (p5.tex [12
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--7
+]
+Rozdzia\PlPrIeC {\l } 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--26
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--26
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--26
 
  []
 
 PGFPlots: reading {wykresy/zadanie5_PID_V1_Y1_zad.txt}
 PGFPlots: reading {wykresy/zadanie5_PID_V1_Y1.txt}
 
-Overfull \hbox (58.93565pt too wide) in paragraph at lines 25--26
+Overfull \hbox (58.93565pt too wide) in paragraph at lines 47--48
  [][] 
  []
 
 PGFPlots: reading {wykresy/zadanie5_PID_V1_E1.txt}
 
-Overfull \hbox (58.71342pt too wide) in paragraph at lines 39--40
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 61--62
  [][] 
  []
 
 PGFPlots: reading {wykresy/zadanie5_PID_V1_Y2_zad.txt}
 PGFPlots: reading {wykresy/zadanie5_PID_V1_Y2.txt}
 
-Overfull \hbox (58.93565pt too wide) in paragraph at lines 61--62
+Overfull \hbox (58.93565pt too wide) in paragraph at lines 83--84
  [][] 
  []
 
 PGFPlots: reading {wykresy/zadanie5_PID_V1_E2.txt}
 
-Overfull \hbox (58.71342pt too wide) in paragraph at lines 75--76
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 97--98
  [][] 
  []
 
 PGFPlots: reading {wykresy/zadanie5_PID_V1_U1.txt}
 
-Overfull \hbox (58.71342pt too wide) in paragraph at lines 95--96
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 117--118
  [][] 
  []
 
 PGFPlots: reading {wykresy/zadanie5_PID_V1_U2.txt}
 
-Overfull \hbox (58.71342pt too wide) in paragraph at lines 118--119
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 140--141
  [][] 
  []
 
 PGFPlots: reading {wykresy/zadanie5_PID_V1_Y1_zad.txt}
 PGFPlots: reading {wykresy/zadanie5_PID_V2_Y1.txt}
 
-Overfull \hbox (58.93565pt too wide) in paragraph at lines 144--145
+Overfull \hbox (58.93565pt too wide) in paragraph at lines 166--167
  [][] 
  []
 
 PGFPlots: reading {wykresy/zadanie5_PID_V2_E1.txt}
 
-Overfull \hbox (58.71342pt too wide) in paragraph at lines 158--159
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 180--181
  [][] 
  []
 
 PGFPlots: reading {wykresy/zadanie5_PID_V1_Y2_zad.txt}
 PGFPlots: reading {wykresy/zadanie5_PID_V2_Y2.txt}
 
-Overfull \hbox (58.93565pt too wide) in paragraph at lines 180--181
+Overfull \hbox (58.93565pt too wide) in paragraph at lines 202--203
  [][] 
  []
 
 PGFPlots: reading {wykresy/zadanie5_PID_V2_E2.txt}
 
-Overfull \hbox (58.71342pt too wide) in paragraph at lines 194--195
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 216--217
  [][] 
  []
 
 PGFPlots: reading {wykresy/zadanie5_PID_V2_U1.txt}
 
-Overfull \hbox (58.71342pt too wide) in paragraph at lines 218--219
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 240--241
  [][] 
  []
 
 PGFPlots: reading {wykresy/zadanie5_PID_V2_U2.txt}
 
-Overfull \hbox (58.71342pt too wide) in paragraph at lines 241--242
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 263--264
  [][] 
  []
 
-) [12
+) (p6.tex [13
 
-] [13] [14] [15] [16] (sprawozdanie_proj3.aux)
+] [14] [15] [16] [17] [18]
+Rozdzia\PlPrIeC {\l } 6.
+PGFPlots: reading {wykresy/zadanie6_PID_V1_zaszumienie_Y1_snr_35.txt}
+
+Overfull \hbox (59.10829pt too wide) in paragraph at lines 28--29
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V1_Y1_zad_snr_35.txt}
+PGFPlots: reading {wykresy/zadanie6_PID_V1_Y1_snr_35.txt}
+
+Overfull \hbox (58.93565pt too wide) in paragraph at lines 44--45
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V1_E1_snr_35.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 58--59
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V1_zaszumienie_Y2_snr_35.txt}
+
+Overfull \hbox (59.10829pt too wide) in paragraph at lines 79--80
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V1_Y2_zad_snr_35.txt}
+PGFPlots: reading {wykresy/zadanie6_PID_V1_Y2_snr_35.txt}
+
+Overfull \hbox (58.93565pt too wide) in paragraph at lines 95--96
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V1_E2_snr_35.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 109--110
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V1_U1_snr_35.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 130--131
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V1_U2_snr_35.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 145--146
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V1_zaszumienie_Y1_snr_50.txt}
+
+Overfull \hbox (59.10829pt too wide) in paragraph at lines 167--168
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V1_Y1_zad_snr_50.txt}
+PGFPlots: reading {wykresy/zadanie6_PID_V1_Y1_snr_50.txt}
+
+Overfull \hbox (58.93565pt too wide) in paragraph at lines 183--184
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V1_E1_snr_50.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 197--198
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V1_zaszumienie_Y2_snr_50.txt}
+
+Overfull \hbox (59.10829pt too wide) in paragraph at lines 218--219
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V1_Y2_zad_snr_50.txt}
+PGFPlots: reading {wykresy/zadanie6_PID_V1_Y2_snr_50.txt}
+
+Overfull \hbox (58.93565pt too wide) in paragraph at lines 234--235
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V1_E2_snr_50.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 248--249
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V1_U1_snr_50.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 269--270
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V1_U2_snr_50.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 284--285
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V1_zaszumienie_Y1_snr_75.txt}
+
+Overfull \hbox (59.10829pt too wide) in paragraph at lines 307--308
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V1_Y1_zad_snr_75.txt}
+PGFPlots: reading {wykresy/zadanie6_PID_V1_Y1_snr_75.txt}
+
+Overfull \hbox (58.93565pt too wide) in paragraph at lines 323--324
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V1_E1_snr_75.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 337--338
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V1_zaszumienie_Y2_snr_75.txt}
+
+Overfull \hbox (59.10829pt too wide) in paragraph at lines 358--359
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V1_Y2_zad_snr_75.txt}
+PGFPlots: reading {wykresy/zadanie6_PID_V1_Y2_snr_75.txt}
+
+Overfull \hbox (58.93565pt too wide) in paragraph at lines 374--375
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V1_E2_snr_75.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 388--389
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V1_U1_snr_75.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 408--409
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V1_U2_snr_75.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 423--424
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V2_zaszumienie_Y1_snr_75.txt}
+
+Overfull \hbox (59.10829pt too wide) in paragraph at lines 446--447
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V2_Y1_zad_snr_75.txt}
+PGFPlots: reading {wykresy/zadanie6_PID_V2_Y1_snr_75.txt}
+
+Overfull \hbox (58.93565pt too wide) in paragraph at lines 462--463
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V2_E1_snr_75.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 476--477
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V2_zaszumienie_Y2_snr_75.txt}
+
+Overfull \hbox (59.10829pt too wide) in paragraph at lines 497--498
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V2_Y2_zad_snr_75.txt}
+PGFPlots: reading {wykresy/zadanie6_PID_V2_Y2_snr_75.txt}
+
+Overfull \hbox (58.93565pt too wide) in paragraph at lines 513--514
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V2_E2_snr_75.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 527--528
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V2_U1_snr_75.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 548--549
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_PID_V2_U2_snr_75.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 563--564
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_dmc_Y1_szum_minus_50.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 587--588
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_dmc_Y2_szum_minus_50.txt}
+
+Overfull \hbox (58.93565pt too wide) in paragraph at lines 609--610
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_dmc_U2_szum_minus_50.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 632--633
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_dmc_U1_szum_minus_50.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 647--648
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_dmc_Y1_szum_minus_60.txt}
+
+Overfull \hbox (58.93565pt too wide) in paragraph at lines 672--673
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_dmc_Y2_szum_minus_60.txt}
+
+Overfull \hbox (58.93565pt too wide) in paragraph at lines 696--697
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_dmc_U2_szum_minus_60.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 719--720
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie6_dmc_U1_szum_minus_60.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 734--735
+ [][] 
+ []
+
+) (p7.tex [19
+
+] [20] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31]
+[32] [33] [34]
+Rozdzia\PlPrIeC {\l } 7.
+PGFPlots: reading {wykresy/zadanie7_PID_V1_zaszumienie_Y1.txt}
+
+Overfull \hbox (59.10829pt too wide) in paragraph at lines 23--24
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie7_PID_V1_Y1_zad.txt}
+PGFPlots: reading {wykresy/zadanie7_PID_V1_Y1.txt}
+
+Overfull \hbox (58.93565pt too wide) in paragraph at lines 39--40
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie7_PID_V1_E1.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 53--54
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie7_PID_V1_zaszumienie_Y2.txt}
+
+Overfull \hbox (59.10829pt too wide) in paragraph at lines 74--75
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie7_PID_V1_Y2_zad.txt}
+PGFPlots: reading {wykresy/zadanie7_PID_V1_Y2.txt}
+
+Overfull \hbox (58.93565pt too wide) in paragraph at lines 90--91
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie7_PID_V1_E2.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 104--105
+ [][] 
+ []
+
+[35
+
+]
+PGFPlots: reading {wykresy/zadanie7_PID_V1_U1.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 125--126
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie7_PID_V1_U2.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 140--141
+ [][] 
+ []
+
+) [36] [37] (sprawozdanie_proj3.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 37013 strings out of 493329
- 887603 string characters out of 3139066
- 22576491 words of memory out of 25523207
- 39919 multiletter control sequences out of 15000+200000
+ 42452 strings out of 493329
+ 1005683 string characters out of 3139066
+ 25341605 words of memory out of 28288321
+ 45289 multiletter control sequences out of 15000+200000
  24139 words of font info for 72 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,19n,100p,10392b,2120s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Program Files/Mi
-KTeX 2.9/fonts/enc/dvips/pl/plit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvi
-ps/pl/plrm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}<C:/Pro
+ 73i,19n,100p,10392b,9346s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}{C:/Program Files/Mi
+KTeX 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvi
+ps/pl/plit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.enc}<C:/Pro
 gram Files/MiKTeX 2.9/fonts/type1/public/pl/plbx10.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/pl/plbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/pl/plmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi7.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/pl/plr10.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/public/pl/plr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/p
-lr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/pl/plti10.pfb>
-Output written on sprawozdanie_proj3.pdf (17 pages, 375489 bytes).
+lr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy7.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/pl/plti10.pfb>
+Output written on sprawozdanie_proj3.pdf (38 pages, 1374436 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
+ 177 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

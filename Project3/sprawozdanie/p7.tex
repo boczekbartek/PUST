@@ -1,3 +1,150 @@
 %PROJ3
 \chapter{Punkt 7}
 
+Szum addytywny zosta³ wygenerowany jako jendnostowe skoki dodawane do pomiaru sygna³u wyjœciowego. Mo¿emy je obserwowaæ na poni¿szych wykresach. Mo¿emy zauwa¿yæ, ¿e dostrojone wczeœniej regulatory dobrze radz¹ sobie ze stabilizacj¹ zak³óceñ, nie wpadaj¹ w dragania. 
+Poni¿ej, jako przyk³¹d zosta³ przedstawiony wykres dla regulatora PID w wersji 1.\\
+e = $e_1$ + $e_2$ = \num{590,4457}
+
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=7.0in,
+	height=2.4in,
+	xmin=0,xmax=1600,ymin=-2,ymax=2,
+	xlabel={$k$},
+	ylabel={$zaszumienie$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie7_PID_V1_zaszumienie_Y1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=7.0in,
+	height=2.4in,
+	xmin=0,xmax=1600,ymin=-1,ymax=4,
+	xlabel={$k$},
+	ylabel={$y_1$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,red, densely dashed] file {wykresy/zadanie7_PID_V1_Y1_zad.txt};
+	\addplot[const plot,cyan] file {wykresy/zadanie7_PID_V1_Y1.txt};
+	\legend{$y_1^{zad}$, $y_1$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=7.0in,
+	height=2.4in,
+	xmin=0,xmax=1600,ymin=-5,ymax=3,
+	xlabel={$k$},
+	ylabel={$e_1$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie7_PID_V1_E1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{//TODO}
+	\label{odpskokUdmc3}
+\end{figure}
+
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=7.0in,
+	height=2.4in,
+	xmin=0,xmax=1600,ymin=-2,ymax=2,
+	xlabel={$k$},
+	ylabel={$zaszumienie$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie7_PID_V1_zaszumienie_Y2.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=7.0in,
+	height=2.4in,
+	xmin=0,xmax=1600,ymin=-1,ymax=4,
+	xlabel={$k$},
+	ylabel={$y_2$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,red, densely dashed] file {wykresy/zadanie7_PID_V1_Y2_zad.txt};
+	\addplot[const plot,cyan] file {wykresy/zadanie7_PID_V1_Y2.txt};
+	\legend{$y_2^{zad}$, $y_2$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=7.0in,
+	height=2.4in,
+	xmin=0,xmax=1600,ymin=-3,ymax=2,
+	xlabel={$k$},
+	ylabel={$e_2$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie7_PID_V1_E2.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{$y_2$}
+	\label{odpskokUdmc3}
+\end{figure}
+
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=7.0in,
+	height=2.4in,
+	xmin=0,xmax=1600,ymin=-6,ymax=5,
+	xlabel={$k$},
+	ylabel={$u_1$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie7_PID_V1_U1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=7.0in,
+	height=2.4in,
+	xmin=0,xmax=1600,ymin=-2,ymax=5,
+	xlabel={$k$},
+	ylabel={$u_2$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie7_PID_V1_U2.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{///TODO}
+	\label{odpskokUdmc3}
+\end{figure}
+
+
+\begin{figure}
+	Oraz dla regulatora DMC:
+\end{figure}
+
