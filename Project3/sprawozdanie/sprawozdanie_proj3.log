@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  7 APR 2017 08:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  14 APR 2017 18:37
 entering extended mode
 **./sprawozdanie_proj3.tex
 (sprawozdanie_proj3.tex
@@ -1116,10 +1116,13 @@ LaTeX Warning: Label `odpskokUdmc3' multiply defined.
 LaTeX Warning: Label `odpskokUdmc3' multiply defined.
 
 
-LaTeX Warning: Label `Z2c' multiply defined.
+LaTeX Warning: Label `odpskokUdmc3' multiply defined.
 
 
-LaTeX Warning: Label `bezPomZak' multiply defined.
+LaTeX Warning: Label `odpskokUdmc3' multiply defined.
+
+
+LaTeX Warning: Label `odpskokUdmc3' multiply defined.
 
 )
 \openout1 = `sprawozdanie_proj3.aux'.
@@ -1329,100 +1332,119 @@ LaTeX Font Info:    External font `plex10' loaded for size
 
 ]
 Rozdzia\PlPrIeC {\l } 1.
-) (p2.tex [2
+PGFPlots: reading {wykresy/zadanie1_y1.txt}
+PGFPlots: reading {wykresy/zadanie1_y2.txt}
+PGFPlots: reading {wykresy/zadanie1_u1.txt}
+PGFPlots: reading {wykresy/zadanie1_u2.txt}
+) (p5.tex [2
 
 ]
 Rozdzia\PlPrIeC {\l } 2.
-PGFPlots: reading {wykresy/przykladowe/zadanie2_sz.txt}
-PGFPlots: reading {wykresy/przykladowe/zadanie2_sz.txt}
-PGFPlots: reading {wykresy/przykladowe/zadanie2_sz.txt}
-PGFPlots: reading {wykresy/przykladowe/zadanie2_sz.txt}
-(p2_char_stat_1.tex) (p2_char_stat_3.tex)) (p3.tex [3
+PGFPlots: reading {wykresy/zadanie5_PID_V1_Y1_zad.txt}
+PGFPlots: reading {wykresy/zadanie5_PID_V1_Y1.txt}
 
-] [4] [5]
-Rozdzia\PlPrIeC {\l } 3.
-PGFPlots: reading {wykresy/przykladowe/zadanie3_sz.txt}
-PGFPlots: reading {wykresy/przykladowe/zadanie3_sz.txt}
-PGFPlots: reading {wykresy/przykladowe/zadanie3_sz.txt}
-PGFPlots: reading {wykresy/przykladowe/zadanie3_sz.txt}
-) (p4.tex [6
-
-] [7]
-Rozdzia\PlPrIeC {\l } 4.
-) (p5.tex [8
-
-]
-Rozdzia\PlPrIeC {\l } 5.
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--7
-
+Overfull \hbox (58.93565pt too wide) in paragraph at lines 21--22
+ [][] 
  []
 
+PGFPlots: reading {wykresy/zadanie5_PID_V1_Y2_zad.txt}
+PGFPlots: reading {wykresy/zadanie5_PID_V1_Y2.txt}
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--7
-
+Overfull \hbox (58.93565pt too wide) in paragraph at lines 43--44
+ [][] 
  []
 
+PGFPlots: reading {wykresy/zadanie5_PID_V1_U1.txt}
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--14
-
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 63--64
+ [][] 
  []
 
+PGFPlots: reading {wykresy/zadanie5_PID_V1_U2.txt}
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--14
-
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 86--87
+ [][] 
  []
 
-PGFPlots: reading {wykresy/przykladowe/zadanie5_PID_Y.txt}
-PGFPlots: reading {wykresy/przykladowe/zadanie5_PID_Yzad.txt}
-PGFPlots: reading {wykresy/przykladowe/zadanie5_PID_Y.txt}
-PGFPlots: reading {wykresy/przykladowe/zadanie5_PID_Yzad.txt}
-PGFPlots: reading {wykresy/przykladowe/zadanie5_PID_U.txt}
-PGFPlots: reading {wykresy/przykladowe/zadanie5_PID_U.txt}
+PGFPlots: reading {wykresy/zadanie5_PID_V1_E1.txt}
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 106--107
+ [][] 
+ []
 
-PGFPlots: reading {wykresy/przykladowe/zadanie5_PID_Y.txt}
-PGFPlots: reading {wykresy/przykladowe/zadanie5_PID_Yzad.txt}
-PGFPlots: reading {wykresy/przykladowe/zadanie5_PID_Y.txt}
-PGFPlots: reading {wykresy/przykladowe/zadanie5_PID_Yzad.txt}
-PGFPlots: reading {wykresy/przykladowe/zadanie5_PID_U.txt}
-PGFPlots: reading {wykresy/przykladowe/zadanie5_PID_U.txt}
+PGFPlots: reading {wykresy/zadanie5_PID_V1_E2.txt}
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 126--127
+ [][] 
+ []
 
-) [9
+PGFPlots: reading {wykresy/zadanie5_PID_V1_Y1_zad.txt}
+PGFPlots: reading {wykresy/zadanie5_PID_V2_Y1.txt}
 
-] [10] [11] (sprawozdanie_proj3.aux)
+Overfull \hbox (58.93565pt too wide) in paragraph at lines 150--151
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie5_PID_V1_Y2_zad.txt}
+PGFPlots: reading {wykresy/zadanie5_PID_V2_Y2.txt}
+
+Overfull \hbox (58.93565pt too wide) in paragraph at lines 172--173
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie5_PID_V2_U1.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 192--193
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie5_PID_V2_U2.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 215--216
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie5_PID_V2_E1.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 235--236
+ [][] 
+ []
+
+PGFPlots: reading {wykresy/zadanie5_PID_V2_E2.txt}
+
+Overfull \hbox (58.71342pt too wide) in paragraph at lines 255--256
+ [][] 
+ []
+
+) [3
+
+] [4] [5] [6] [7] (sprawozdanie_proj3.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 41018 strings out of 493329
- 982962 string characters out of 3139066
- 23033480 words of memory out of 25980196
- 43956 multiletter control sequences out of 15000+200000
+ 36807 strings out of 493329
+ 883669 string characters out of 3139066
+ 22569320 words of memory out of 25516036
+ 39747 multiletter control sequences out of 15000+200000
  24139 words of font info for 72 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,19n,100p,10392b,9338s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/pltt.enc}{C:/Program Files/Mi
-KTeX 2.9/fonts/enc/dvips/pl/plit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvi
-ps/pl/plmi.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.enc}{C:/Pro
-gram Files/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}<C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/pl/plbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/pl/plbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi10.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi7.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/pl/plr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr6
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr7.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/pl/plr8.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/pl/plsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/
-plsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plti10.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/pl/pltt10.pfb>
-Output written on sprawozdanie_proj3.pdf (12 pages, 296932 bytes).
+ 62i,19n,100p,10392b,2120s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plit.enc}{C:/Program Files/Mi
+KTeX 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvi
+ps/pl/plrm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}<C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/pl/plbx10.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/pl/plmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi7.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/pl/plr10.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/pl/plr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/p
+lr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/pl/plti10.pfb>
+Output written on sprawozdanie_proj3.pdf (8 pages, 282175 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
+ 76 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
