@@ -1,0 +1,80 @@
+%LAB4
+\chapter{Punkt 3}
+
+Paramatry cz³onu inercyjnego drugiego rzêdu z opóŸnieniem zosta³y dobrane w wyniku minimalizacji œredniokwadratowego b³êdu z u¿yciem optymalizatora $ga$.\\\\ Dla odpowiedzi $s$ parametry te wynosz¹: $T_1 =  \num{0,0555}$; $T_2 = \num{118,9431}$; $K = \num{0,3926}$ $T_d = \num{10}$.\\\\
+Natomiast dla odpowiedzi $s^z$: $T_1 = \num{54,5808}$; $T_2 = \num{60,8558}$; $K=\num{0,14}$;  $T_d = \num{10}$.
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=2.4in,
+	xmin=0,xmax=320,ymin=-0.01,ymax=0.4,
+	xlabel={$k$},
+	ylabel={$s$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie3_s.txt};
+	\end{axis}
+	\end{tikzpicture}
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=2.4in,
+	xmin=0,xmax=320,ymin=-0.1,ymax=0.2,
+	xlabel={$k$},
+	ylabel={$s^{\mathrm{z}}$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie3_sz.txt};
+	\end{axis}
+	\end{tikzpicture}
+	\caption{OdpowiedŸ skokowa przy skoku sygna³u steruj¹cego (góra) oraz zak³ócaj¹cego (dó³)}
+	\label{odpskokUdmc3}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=2.4in,
+	xmin=0,xmax=320,ymin=-0.01,ymax=0.4,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,red] file {wykresy/zadanie3_s.txt};
+	\addplot[cyan] file {wykresy/zadanie3_saproks.txt};
+	\legend{orygina³,aproksymacja}
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Porównanie odpowiedzi skokowej oryginalnej i aproksymowanej dla skoku sygna³u steruj¹cego}
+	\label{odpskokUdmc4}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=2.4in,
+	xmin=0,xmax=320,ymin=-0.1,ymax=0.2,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,red] file {wykresy/zadanie3_sz.txt};
+	\addplot[cyan] file {wykresy/zadanie3_szaproks.txt};
+	\legend{orygina³,aproksymacja}
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Porównanie odpowiedzi skokowej oryginalnej i aproksymowanej dla skoku sygna³u zak³ócenia}
+	\label{odpskokUdmc1}
+\end{figure}
+

@@ -267,3 +267,73 @@ Widaæ, ¿e regulator DMC najszybiciej stabilizuje proces, w porz¹dku jest równie¿
 \end{figure}
 
 
+%%%%%%errata
+\begin{figure}
+	DMC:\\
+	B³¹d e = $\num{1077,52}$
+\end{figure}
+
+
+\begin{figure}[ht]
+	\centering
+	
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=1.4in,
+	xmin=0,xmax=1600,ymin=-0.5,ymax=5,
+	xlabel={$k$},
+	ylabel={$y_1$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie5_dmc_Y1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=1.4in,
+	xmin=0,xmax=1600,ymin=-0.5,ymax=5,
+	xlabel={$k$},
+	ylabel={$y_2$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie5_dmc_Y2.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=1.4in,
+	xmin=0,xmax=1600,ymin=-5,ymax=5,
+	xlabel={$k$},
+	ylabel={$u_1$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie5_dmc_U1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=1.4in,
+	xmin=0,xmax=1600,ymin=-5,ymax=5,
+	xlabel={$k$},
+	ylabel={$u_2$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie5_dmc_U2.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{DMC}
+	\label{odpskokUdsrfsrfmc3}
+\end{figure}

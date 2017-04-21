@@ -1,0 +1,60 @@
+%LAB4
+\chapter{Punkt 5}
+
+
+ Podczas labolatorium uda³o nam siê wykonaæ symulacjê jedynie dla przypadku z pomiarem zak³ócenia, jednak nasze teorytyczne doœwiadczenia na projekcie pokaza³y, ¿e pomiar zak³ócenia znacznie poprawia jakoœæ regulacji, a co za tym idzie mo¿emy siê spodziewaæ, ¿e uzyskany przez nas wynik jest lepszy ni¿ ten, który uzyskalibyœmy bez pomiaru zak³ócenia. Nastawy regulatora DMC jakich u¿yliœmy podczas symulacji: $D=\num{110}$; $N=\num{130}$; $N_u=\num{6}$; $\lambda=\num{2}$; $D_z=\num{50}$;
+
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.2in,
+	xmin=0,xmax=700,ymin=31,ymax=42,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie5pomiarY.txt};
+	\addplot[const plot,red, densely dashed] file {wykresy/zadanie5pomiarYzad.txt};
+	\legend{$Y$,$Y^{zad}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.2in,
+	xmin=0,xmax=700,ymin=3,ymax=74,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie5pomiarU.txt};
+	\end{axis}
+	\end{tikzpicture}
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.1in,
+	xmin=0,xmax=700,ymin=0,ymax=40,
+	xlabel={$k$},
+	ylabel={$Z$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie5pomiarZ.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+	\caption{Przebiegi sygna³ów regulatora DMC przy skokowej zmianie sygna³u zak³ócaj¹cego}
+	\label{bezPomZak}
+\end{figure}
+\FloatBarrier
+
+
