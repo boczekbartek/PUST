@@ -7,21 +7,24 @@
 		
 	\begin{tikzpicture}
 	\begin{axis}[
+	enlargelimits=false,
 	width=4.667in,
 	height=5in,
-	xmin=0,xmax=350,ymin=31,ymax=36,
+	%xmin=0,xmax=350,ymin=31,ymax=36,
 	xlabel={$k$},
 	ylabel={$Y$},
 	legend pos=south east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,green] file {wykresy/przykladowe/zadanie2_Z10.txt};
+	\addplot[const plot,green] file {wykresy/zadanie2_skok40.txt};
 	\addplot[const plot,red] file {wykresy/przykladowe/zadanie2_Z20.txt};
 	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie2_Z30.txt};
-	\legend{$Z_{\mathrm{skok}}=\num{10}$,$Z_{\mathrm{skok}}=\num{20}$,$Z_{\mathrm{skok}}=\num{30}$}
+	\addplot[const plot,magenta] file {wykresy/przykladowe/zadanie2_Z30.txt};
+	\addplot[const plot,cyan] file {wykresy/przykladowe/zadanie2_Z30.txt};
+	\legend{$G1_{\mathrm{skok}}=\num{40}$,$G1_{\mathrm{skok}}=\num{45}$,$G1_{\mathrm{skok}}=\num{50}$,$G1_{\mathrm{skok}}=\num{55}$,$G1_{\mathrm{skok}}=\num{50}$}
 	\end{axis}
 	\end{tikzpicture}
 	
-	\caption{Odpowiedzi skokowe toru zak³ócenie-wyjœcie procesu dla trzech ró¿nych zmian sygna³u zak³ócaj¹cego}
-	\label{odpWeWy}
+	\caption{Odpowiedzi skokowe procesu dla piêciu ró¿nych zmian sygna³u steruj¹cego}
+	\label{odpWeWysef}
 \end{figure}

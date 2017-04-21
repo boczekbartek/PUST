@@ -1,3 +1,23 @@
-%LAB4
+%LAB3
 \chapter{Punkt 1 }
 
+pnkt pracy: u=35, y=35
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=1.4in,
+	xmin=0,xmax=300,ymin=32,ymax=34,
+	xlabel={$k$},
+	ylabel={$y$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie1_Ypp.txt};
+	\end{axis}
+	\end{tikzpicture}
+
+	\caption{Punkt pracy}
+	\label{odpskokUdmc3}
+\end{figure}

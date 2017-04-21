@@ -2,7 +2,7 @@
 \chapter{Punkt 5}
 
 
- Podczas labolatorium uda³o nam siê wykonaæ symulacjê jedynie dla przypadku z pomiarem zak³ócenia, jednak nasze teorytyczne doœwiadczenia na projekcie pokaza³y, ¿e pomiar zak³ócenia znacznie poprawia jakoœæ regulacji, a co za tym idzie mo¿emy siê spodziewaæ, ¿e uzyskany przez nas wynik jest lepszy ni¿ ten, który uzyskalibyœmy bez pomiaru zak³ócenia. Nastawy regulatora DMC jakich u¿yliœmy podczas symulacji: $D=\num{110}$; $N=\num{130}$; $N_u=\num{6}$; $\lambda=\num{2}$; $D_z=\num{50}$;
+
 
 
 \begin{figure}[h!]
@@ -11,50 +11,253 @@
 	\begin{tikzpicture}
 	\begin{axis}[
 	width=4.667in,
-	height=1.2in,
-	xmin=0,xmax=700,ymin=31,ymax=42,
+	height=1.8in,
+	xmin=0,xmax=1600,ymin=-0.5,ymax=3,
 	xlabel={$k$},
-	ylabel={$Y$},
-	legend pos=south east,
+	ylabel={$Y1$},
+	legend pos=north east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,blue] file {wykresy/zadanie5pomiarY.txt};
-	\addplot[const plot,red, densely dashed] file {wykresy/zadanie5pomiarYzad.txt};
-	\legend{$Y$,$Y^{zad}$}
+	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_model_Y1.txt};
+	\addplot[red] file {wykresy/przykladowe/zadanie5_PID_model_Y1_zad.txt};
+	\legend{$Y1$, $Y1_{zad}$}
 	\end{axis}
 	\end{tikzpicture}
 	
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=4.667in,
-	height=1.2in,
-	xmin=0,xmax=700,ymin=3,ymax=74,
-	xlabel={$k$},
-	ylabel={$U$},
-	legend pos=south east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,blue] file {wykresy/zadanie5pomiarU.txt};
-	\end{axis}
-	\end{tikzpicture}
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=4.667in,
-	height=1.1in,
-	xmin=0,xmax=700,ymin=0,ymax=40,
-	xlabel={$k$},
-	ylabel={$Z$},
-	legend pos=south east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,blue] file {wykresy/zadanie5pomiarZ.txt};
-	\end{axis}
-	\end{tikzpicture}
-	
-	
-	\caption{Przebiegi sygna³ów regulatora DMC przy skokowej zmianie sygna³u zak³ócaj¹cego}
+	\caption{Wyjœcia}
 	\label{bezPomZak}
 \end{figure}
 \FloatBarrier
 
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	xmin=0,xmax=1600,ymin=-100,ymax=110,
+	xlabel={$k$},
+	ylabel={$U1$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_model_U1.txt};
+	\end{axis}
+	\end{tikzpicture}
 
+	\caption{Sygna³y steruj¹ce}
+	\label{bezPomZak}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	xmin=0,xmax=1600,ymin=-1.1,ymax=1.5,
+	xlabel={$k$},
+	ylabel={$e1$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_model_e1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{B³êdy}
+	\label{bezPomZak}
+\end{figure}
+
+
+
+\begin{figure}[h!]
+	Nastêpnie wyznaczone parametry u¿yliœmy podczas eksperymentów na rzeczywistym obiekcie, co da³o dobre rezultaty w jakoœci sterowania:
+	
+\end{figure}
+
+
+
+\begin{figure}
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	xmin=0,xmax=385,ymin=32,ymax=41,
+	xlabel={$k$},
+	ylabel={$y1$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/przykladowe/dmc_y1_40.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	xmin=0,xmax=385,ymin=0,ymax=100,
+	xlabel={$k$},
+	ylabel={$u1$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/przykladowe/dmc_u1_40.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Regulacja DMC przy $Y_{zad}=40$}
+	\label{bezPomZak}
+	
+\end{figure}
+
+\begin{figure}
+	B³¹d dla regulatora DMC przy skoku do 40:\\
+	b³¹d1=$\num{5212,7}$\\
+	b³¹d2=$\num{502,70}$
+\end{figure}
+
+
+\begin{figure}
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	xmin=0,xmax=385,ymin=32,ymax=50,
+	xlabel={$k$},
+	ylabel={$y1$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/przykladowe/dmc_y1_45.txt};
+	\end{axis}
+	\end{tikzpicture}
+		
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	xmin=0,xmax=385,ymin=0,ymax=100,
+	xlabel={$k$},
+	ylabel={$u1$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/przykladowe/dmc_u1_45.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Regulacja DMC przy $Y_{zad}=45$}
+	\label{bezPomZak}
+	
+\end{figure}
+
+
+
+\begin{figure}
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	xmin=0,xmax=385,ymin=32,ymax=55,
+	xlabel={$k$},
+	ylabel={$y1$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/przykladowe/dmc_y1_50.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	xmin=0,xmax=385,ymin=0,ymax=100,
+	xlabel={$k$},
+	ylabel={$u1$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/przykladowe/dmc_u1_50.txt};
+	\end{axis}
+	\end{tikzpicture}
+		
+	\caption{Regulacja DMC przy $Y_{zad}=50$}
+	\label{bezPomZak}
+	
+\end{figure}
+
+
+
+
+
+\begin{figure}
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	xmin=0,xmax=385,ymin=32,ymax=55,
+	xlabel={$k$},
+	ylabel={$y1$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/przykladowe/pid_y1_40.txt};
+	\end{axis}
+	\end{tikzpicture}
+		
+	
+	\caption{Regulacja PID przy $Y_{zad}=40$}
+	\label{bezPomZak}
+	
+\end{figure}
+
+
+\begin{figure}
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	xmin=0,xmax=385,ymin=32,ymax=55,
+	xlabel={$k$},
+	ylabel={$y1$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/przykladowe/pid_y1_45.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+	\caption{Regulacja PID przy $Y_{zad}=45$}
+	\label{bezPomZak}
+	
+\end{figure}
+
+
+
+\begin{figure}
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	xmin=0,xmax=385,ymin=32,ymax=55,
+	xlabel={$k$},
+	ylabel={$y1$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/przykladowe/pid_y1_50.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+	\caption{Regulacja PID przy $Y_{zad}=50$}
+	\label{bezPomZak}
+	
+\end{figure}

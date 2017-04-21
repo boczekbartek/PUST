@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  26 MAR 2017 22:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  21 APR 2017 10:51
 entering extended mode
-**./sprawozdanie_szablon.tex
-(sprawozdanie_szablon.tex
+**./sprawozdanie-lab4.tex
+(sprawozdanie-lab4.tex
 LaTeX2e <2017/01/01> patch level 3
 Babel <3.9r> and hyphenation patterns for 76 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\mwcls\mwrep.cls"
@@ -1099,12 +1099,36 @@ Package: gensymb 2003/07/02 v1.0 (WaS)
 LaTeX Warning: Unused global option(s):
     [twosides].
 
-(sprawozdanie_szablon.aux
+(sprawozdanie-lab4.aux
+
+LaTeX Warning: Label `odpskokUdmc4' multiply defined.
+
+
+LaTeX Warning: Label `bezPomZak' multiply defined.
+
+
+LaTeX Warning: Label `bezPomZak' multiply defined.
+
+
+LaTeX Warning: Label `bezPomZak' multiply defined.
+
+
+LaTeX Warning: Label `bezPomZak' multiply defined.
+
+
+LaTeX Warning: Label `bezPomZak' multiply defined.
+
+
+LaTeX Warning: Label `bezPomZak' multiply defined.
+
+
+LaTeX Warning: Label `bezPomZak' multiply defined.
+
 
 LaTeX Warning: Label `bezPomZak' multiply defined.
 
 )
-\openout1 = `sprawozdanie_szablon.aux'.
+\openout1 = `sprawozdanie-lab4.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
 LaTeX Font Info:    ... okay on input line 88.
@@ -1296,7 +1320,7 @@ LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 88.
 File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 ) [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] (sprawozdanie_szablon.toc
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] (sprawozdanie-lab4.toc
 LaTeX Font Info:    External font `plex10' loaded for size
 (Font)              <10> on input line 1.
 LaTeX Font Info:    External font `plex10' loaded for size
@@ -1305,86 +1329,77 @@ LaTeX Font Info:    External font `plex10' loaded for size
 (Font)              <5> on input line 1.
 )
 \tf@toc=\write4
-\openout4 = `sprawozdanie_szablon.toc'.
+\openout4 = `sprawozdanie-lab4.toc'.
 
- (p1.tex
-[1
+ (p1.tex [1
 
 ]
 Rozdzia\PlPrIeC {\l } 1.
+PGFPlots: reading {wykresy/zadanie1_Ypp.txt}
 ) (p2.tex [2
 
 ]
 Rozdzia\PlPrIeC {\l } 2.
-PGFPlots: reading {wykresy/zadanie2_Z10.txt}
-PGFPlots: reading {wykresy/zadanie2_Z20.txt}
-PGFPlots: reading {wykresy/zadanie2_Z30.txt}
+PGFPlots: reading {wykresy/zadanie2_skok40.txt}
+PGFPlots: reading {wykresy/przykladowe/zadanie2_Z20.txt}
+PGFPlots: reading {wykresy/przykladowe/zadanie2_Z30.txt}
+PGFPlots: reading {wykresy/przykladowe/zadanie2_Z30.txt}
+PGFPlots: reading {wykresy/przykladowe/zadanie2_Z30.txt}
 ) (p3.tex [3
 
 ]
 Rozdzia\PlPrIeC {\l } 3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--6
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--6
-
- []
-
-PGFPlots: reading {wykresy/zadanie3_s.txt}
-PGFPlots: reading {wykresy/zadanie3_sz.txt}
-PGFPlots: reading {wykresy/zadanie3_s.txt}
-PGFPlots: reading {wykresy/zadanie3_saproks.txt}
-PGFPlots: reading {wykresy/zadanie3_sz.txt}
-PGFPlots: reading {wykresy/zadanie3_szaproks.txt}
-) (p4.tex [4
-
-] [5]
-Rozdzia\PlPrIeC {\l } 4.
-PGFPlots: reading {wykresy/zadanie4_Y.txt}
-PGFPlots: reading {wykresy/zadanie4_Yzad.txt}
-PGFPlots: reading {wykresy/zadanie4_U.txt}
-) (p5.tex [6
+PGFPlots: reading {wykresy/przykladowe/odpowiedzskokowa_T1_G1.txt}
+PGFPlots: reading {wykresy/przykladowe/odpowiedzskokowa_T1_G1.txt}
+PGFPlots: reading {wykresy/przykladowe/funkcja_aproksymujaca_T1_G1.txt}
+) (p5.tex [4
 
 ]
-Rozdzia\PlPrIeC {\l } 5.
-PGFPlots: reading {wykresy/zadanie5pomiarY.txt}
-PGFPlots: reading {wykresy/zadanie5pomiarYzad.txt}
-PGFPlots: reading {wykresy/zadanie5pomiarU.txt}
-PGFPlots: reading {wykresy/zadanie5pomiarZ.txt}
-) [7
+Rozdzia\PlPrIeC {\l } 4.
+PGFPlots: reading {wykresy/przykladowe/zadanie5_PID_model_Y1.txt}
+PGFPlots: reading {wykresy/przykladowe/zadanie5_PID_model_Y1_zad.txt}
+PGFPlots: reading {wykresy/przykladowe/zadanie5_PID_model_U1.txt}
+PGFPlots: reading {wykresy/przykladowe/zadanie5_PID_model_e1.txt}
+PGFPlots: reading {wykresy/przykladowe/dmc_y1_40.txt}
+PGFPlots: reading {wykresy/przykladowe/dmc_u1_40.txt}
+PGFPlots: reading {wykresy/przykladowe/dmc_y1_45.txt}
+PGFPlots: reading {wykresy/przykladowe/dmc_u1_45.txt}
+PGFPlots: reading {wykresy/przykladowe/dmc_y1_50.txt}
+PGFPlots: reading {wykresy/przykladowe/dmc_u1_50.txt}
+PGFPlots: reading {wykresy/przykladowe/pid_y1_40.txt}
+PGFPlots: reading {wykresy/przykladowe/pid_y1_45.txt}
+PGFPlots: reading {wykresy/przykladowe/pid_y1_50.txt}
+) [5
 
-] (sprawozdanie_szablon.aux)
+] [6] [7] [8] (sprawozdanie-lab4.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 36762 strings out of 493329
- 882736 string characters out of 3139066
- 21254688 words of memory out of 24201404
- 39699 multiletter control sequences out of 15000+200000
+ 36792 strings out of 493329
+ 883297 string characters out of 3139066
+ 21655517 words of memory out of 24602233
+ 39726 multiletter control sequences out of 15000+200000
  24139 words of font info for 72 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,22n,100p,10394b,2162s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Program Files/Mi
-KTeX 2.9/fonts/enc/dvips/pl/plit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvi
-ps/pl/plms.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.enc}{C:/Pro
-gram Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/pl/plbx10.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/pl/plbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/p
-l/plmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi7.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/pl/plr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/pl/plr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr8.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/pl/plti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/cm-super/sfrm1095.pfb>
-Output written on sprawozdanie_szablon.pdf (8 pages, 129646 bytes).
+ 62i,22n,100p,10391b,2159s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plit.enc}{C:/Program Files/Mi
+KTeX 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvi
+ps/pl/plrm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}<C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/pl/plbx10.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/pl/plmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi7.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/pl/plr10.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/pl/plr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/p
+lr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr8.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/pl/plsy6.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/pl/plsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/pl/plti10.pfb>
+Output written on sprawozdanie-lab4.pdf (9 pages, 177696 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
+ 87 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
