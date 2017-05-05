@@ -1,15 +1,17 @@
 close all;
 clear all;
 
-reg = 5;
+reg = 2;
 
-addpath('F:\SerialCommunication'); % add a path to the functions
-initSerialControl COM4 % initialise com port
+addpath('C:\SerialCommunication'); % add a path to the functions
+initSerialControl COM3 % initialise com port
 
 %uznajemy ze D = N = Nu dla uproszczenia. mozna dodac recznie inne wartosci
 %trapezoidalna funkcja przynależności bo najprostsza i nie jest powiedziane ze nie mozna jej uzyc
 %jak czegoś nie rozumiesz to lepsze komentarze są w pidzie
 
+Ypp = 35;
+Upp= 35
 if reg == 1
     trapu = [-1 -0.9 0.9 1];
     D = {50};
@@ -17,8 +19,8 @@ if reg == 1
 elseif reg == 2
     trapu = [-1 -0.9 0.2 0.3;...
             0.2 0.3 0.9 1];
-    D = {30, 50};
-    lambda = {222, 335};
+    D = {300, 300};
+    lambda = {0.159035, 31.528399};
 elseif reg == 3
     trapu = [-1 -0.9 0.1 0.2;...
             0.1 0.2 0.5 0.6;...
@@ -45,23 +47,29 @@ end
 N = D;
 Nu = D;
 
-trapy = arrayfun(@stat_val,trapu); %przypisanie konkretnych granic Y
+trapy = arrayfun(@char_stat,trapu); %przypisanie konkretnych granic Y
 trapy(1,1:2)=-inf; %rozszerzenie granic koncowych do nieskonczonosci
 trapy(end,3:4)=inf;
 
 s = cell(1, reg);
 
-for i = 1:reg
-    s{i} = get_step_resp(trapu(i,2),trapu(i,3)); %zastapic wczytaniem z
-end                                              %pliku na laboratorium
+% for i = 1:reg
+%     s{i} = get_step_resp(trapu(i,2),trapu(i,3)); %zastapic wczytaniem z
+% end                                              %pliku na laboratorium
 						%dodaj tu odpowiedzi skokowe z workspace
-
-
+tmp = load('ostateczny.mat');
+od = tmp.T1_zad2_skok_40_2;
+s1 = (od(1:400)-Ypp)/(40-Upp);
+s{1} =s1;
+tmp = load('ostateczny.mat');
+od = tmp.T1_zad2_skok_90_2;
+s2 = (od(1:400)-Ypp)/(90-Upp);
+s{2} = s2;
 n = 1000;
-Yzad(1:n) = 0;  
-Yzad(21:n) = 7;
-Yzad(201:n)= -0.2;  
-Yzad(401:n)= 2; 
+Yzad(1:n) = Ypp;  
+Yzad(10:n) = Ypp+15;
+Yzad(500:n)= Ypp+5;  
+Yzad(800:n)= Ypp+1; 
 Yzad(601:n)=4.2; 
 Yzad(801:n)=0.5;
 U(1:n) = 0; 
@@ -125,7 +133,10 @@ end
 du = cell(1,reg);
 
 for k=21:n %podmien na komunikacje z obiektem
-   Y(k)=symulacja_obiektu4y(U(k-5), U(k-6), Y(k-1), Y(k-2)); 
+   k
+   measurements = readMeasurements(1:7);
+   Y(k) = measurements(1);
+%    Y(k)=symulacja_obiektu4y(U(k-5), U(k-6), Y(k-1), Y(k-2)); 
    
    e=Yzad(k)-Y(k); %uchyb
    err = err + e^2;
@@ -139,38 +150,36 @@ for k=21:n %podmien na komunikacje z obiektem
         mi{i} = trapmf(Y(k),trapy(i,:)); %trapezowa funkcja przynaleznosci
         U(k) = U(k) + mi{i}*dup{i}(1);
    end
+    disp([k, U(k), Y(k), Yzad(k), err]); % process measurements
+
+    sendControls([ 1, 2, 3, 4, 5, 6], ... send for these elements
+    [50, 0, 0, 0, U(k), 0]);  % new corresponding control values
+
    
    
    
-   if U(k)>1 %ograniczenia na min/max sygnalu sterowania
-       U(k) = 1;
+   if U(k)>100 %ograniczenia na min/max sygnalu sterowania
+       U(k) = 100;
    end
-   if U(k)<-1
-       U(k) = -1;
+   if U(k)<-100
+       U(k) = -100;
    end
-   
+    waitForNewIteration();
 end
 
 err
 
-figure('Position',  [403 246 820 420]);
-title('obiekt z regulatorem PID');
-subplot('Position', [0.1 0.12 0.8 0.15]);
-stairs(U);
-ylabel('u'); 
-xlabel('k');
-decimal_comma(gca, 'XY');
-subplot('Position', [0.1 0.37 0.8 0.6]);
-plot(Y);
-ylabel('y'); 
-decimal_comma(gca, 'XY');
-hold on; 
-stairs(Yzad,':');
+% figure('Position',  [403 246 820 420]);
+% title('obiekt z regulatorem PID');
+% subplot('Position', [0.1 0.12 0.8 0.15]);
+% stairs(U);
+% ylabel('u'); 
+% xlabel('k');
+% decimal_comma(gca, 'XY');
+% subplot('Position', [0.1 0.37 0.8 0.6]);
+% plot(Y);
+% ylabel('y'); 
+% decimal_comma(gca, 'XY');
+% hold on; 
+% stairs(Yzad,':');
 
-%funkcja zwracajaca wartosc y charakterystyki statycznej dla zadanego u
-function y = stat_val(u) %tu podmienic na nasz workspace
-    load stat.mat
-    if (u>=-1 && u<=1)
-        y = Ys( int8((u+1)*50 + 1) );
-    end
-end

@@ -1,8 +1,8 @@
 close all;
 clear all;
 
-addpath('F:\SerialCommunication'); % add a path to the functions
-initSerialControl COM4 % initialise com port
+addpath('C:\SerialCommunication'); % add a path to the functions
+initSerialControl COM3 % initialise com port
 
 %trap - parametry trapezoidalnych funkcji przynaleznosci, kolejno a b c d
 %(wejscia), latwiej odczytac z wykresu w wierszach. Liczba wierszy - liczba
@@ -13,16 +13,16 @@ reg = 1;
 
 if reg == 1
     trapu = [-1 -1 1 1];
-    K = 0.179027601957906;
-    Ti = 3.704713046081166;
-    Td = 1.071891045104810;
+    K = 0.287945;
+    Ti =1.818577;
+    Td = 0.01;
 elseif reg == 2
     trapu = [-1 -1 0.2 0.3;...
     0.2 0.3 1 1];
-
-    K = [0.479881301349376 0.124587984682865];
-    Ti = [1.381567530175739 4.181803394572416];
-    Td = [1.415368606139710 0.874266044528476];
+   
+    K = [0.287945 0.294661;];
+    Ti = [1.818577 1.863138];
+    Td = [0.01 0.010002];
 elseif reg == 3
     trapu = [-1 -1 0.1 0.2;...
     0.1 0.2 0.5 0.6;...
@@ -55,7 +55,7 @@ elseif reg == 5
     0.023282995886553 0.802408171164555];
 end
 
-trapy = arrayfun(@stat_val,trapu); %przypisanie konkretnych granic Y
+trapy = arrayfun(@char_stat,trapu); %przypisanie konkretnych granic Y
 trapy(1,1:2)=-inf; %rozszerzenie granic koncowych do nieskonczonosci
 trapy(end,3:4)=inf;
 
@@ -71,15 +71,15 @@ trapy(end,3:4)=inf;
 % end
 
 
-n = 1000;
-Ypp = 32.31;
-Upp = 30;
+n = 1600;
+Ypp = 35;
+Upp = 35;
 Yzad(1:n) = Ypp + 0;
-Yzad(21:n) = Ypp + 7;
-Yzad(201:n) = Ypp - 0.2;
-Yzad(401:n) = Ypp + 2;
-Yzad(601:n) = Ypp + 4.2;
-Yzad(801:n) = Ypp + 0.5;
+Yzad(21:n) = Ypp + 10;
+Yzad(801:n) = Ypp - 6;
+Yzad(12000:n) = Ypp + 2;
+% Yzad(351:n) = Ypp - 1.2;
+% Yzad(451:n) = Ypp + 0.5;
 U(1:n) = Upp;
 Y(1:n) = Ypp;
 err = 0;
@@ -92,6 +92,7 @@ mi = zeros(1,size(trapu,1)); %init wspolczynnikow przynaleznosci
 
 %glowna petla PID
 for k=3:n
+    k
     measurements = readMeasurements(1:7);
     Y(k) = measurements(1);
 
@@ -118,20 +119,20 @@ for k=3:n
     sendControls([ 1, 2, 3, 4, 5, 6], ... send for these elements
     [50, 0, 0, 0, U(k), 0]);  % new corresponding control values
 
-    figure('Position',  [403 246 820 420]);
-    %title('PID z parametrami eksperymentalnymi, err=19.68');
-    subplot('Position', [0.1 0.12 0.8 0.15]);
-    stairs(U);
-    ylabel('u');
-    xlabel('k');
-    decimal_comma(gca, 'XY');
-    subplot('Position', [0.1 0.37 0.8 0.6]);
-    plot(Y);
-    ylabel('y');
-    hold on;
-    stairs(Yzad,':');
-    decimal_comma(gca, 'XY');
-    pause(0.01);
+%     figure('Position',  [403 246 820 420]);
+%     %title('PID z parametrami eksperymentalnymi, err=19.68');
+%     subplot('Position', [0.1 0.12 0.8 0.15]);
+%     stairs(U);
+%     ylabel('u');
+%     xlabel('k');
+%     decimal_comma(gca, 'XY');
+%     subplot('Position', [0.1 0.37 0.8 0.6]);
+%     plot(Y);
+%     ylabel('y');
+%     hold on;
+%     stairs(Yzad,':');
+%     decimal_comma(gca, 'XY');
+%     pause(0.01);
     %% synchronising with the control process
     waitForNewIteration(); % wait for new batch of measurements to be ready
 end;
@@ -139,11 +140,11 @@ end;
 err = sum(e.^2)
 
 
-%funkcja zwracajaca wartosc y charakterystyki statycznej dla zadanego u
-function y = stat_val(u)
-load stat.mat
-if (u>=-1 && u<=1)
-        y = Ys( int8((u+1)*50 + 1) );
-    end
-end
+% %funkcja zwracajaca wartosc y charakterystyki statycznej dla zadanego u
+% function y = stat_val(u)
+% load stat.mat
+% if (u>=-1 && u<=1)
+%         y = Ys( int8((u+1)*50 + 1) );
+%     end
+% end
 
