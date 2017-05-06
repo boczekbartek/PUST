@@ -24,14 +24,6 @@
 	\end{axis}
 	\end{tikzpicture}
 	
-	\caption{Wyjœcia}
-	\label{bezPomZak}
-\end{figure}
-\FloatBarrier
-
-\begin{figure}[h!]
-	\centering
-	
 	\begin{tikzpicture}
 	\begin{axis}[
 	width=4.667in,
@@ -45,13 +37,6 @@
 	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_model_U1.txt};
 	\end{axis}
 	\end{tikzpicture}
-
-	\caption{Sygna³y steruj¹ce}
-	\label{bezPomZak}
-\end{figure}
-
-\begin{figure}[h!]
-	\centering
 	
 	\begin{tikzpicture}
 	\begin{axis}[
@@ -67,9 +52,9 @@
 	\end{axis}
 	\end{tikzpicture}
 	
-	\caption{B³êdy}
-	\label{bezPomZak}
+	\caption{Przebiegi sygna³ów}
 \end{figure}
+\FloatBarrier
 
 
 
@@ -85,7 +70,8 @@
 	\begin{axis}[
 	width=4.667in,
 	height=1.8in,
-	xmin=0,xmax=385,ymin=32,ymax=41,
+	enlargelimits=false,
+	%xmin=0,xmax=385,ymin=32,ymax=41,
 	xlabel={$k$},
 	ylabel={$y1$},
 	legend pos=north east,
@@ -99,7 +85,8 @@
 	\begin{axis}[
 	width=4.667in,
 	height=1.8in,
-	xmin=0,xmax=385,ymin=0,ymax=100,
+	enlargelimits=false,
+	%xmin=0,xmax=385,ymin=0,ymax=100,
 	xlabel={$k$},
 	ylabel={$u1$},
 	legend pos=north east,
@@ -114,150 +101,3 @@
 	
 \end{figure}
 
-\begin{figure}
-	B³¹d dla regulatora DMC przy skoku do 40:\\
-	b³¹d1=$\num{5212,7}$\\
-	b³¹d2=$\num{502,70}$
-\end{figure}
-
-
-\begin{figure}
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=4.667in,
-	height=1.8in,
-	xmin=0,xmax=385,ymin=32,ymax=50,
-	xlabel={$k$},
-	ylabel={$y1$},
-	legend pos=north east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/dmc_y1_45.txt};
-	\end{axis}
-	\end{tikzpicture}
-		
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=4.667in,
-	height=1.8in,
-	xmin=0,xmax=385,ymin=0,ymax=100,
-	xlabel={$k$},
-	ylabel={$u1$},
-	legend pos=north east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/dmc_u1_45.txt};
-	\end{axis}
-	\end{tikzpicture}
-	
-	\caption{Regulacja DMC przy $Y_{zad}=45$}
-	\label{bezPomZak}
-	
-\end{figure}
-
-
-
-\begin{figure}
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=4.667in,
-	height=1.8in,
-	xmin=0,xmax=385,ymin=32,ymax=55,
-	xlabel={$k$},
-	ylabel={$y1$},
-	legend pos=north east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/dmc_y1_50.txt};
-	\end{axis}
-	\end{tikzpicture}
-	
-	
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=4.667in,
-	height=1.8in,
-	xmin=0,xmax=385,ymin=0,ymax=100,
-	xlabel={$k$},
-	ylabel={$u1$},
-	legend pos=north east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/dmc_u1_50.txt};
-	\end{axis}
-	\end{tikzpicture}
-		
-	\caption{Regulacja DMC przy $Y_{zad}=50$}
-	\label{bezPomZak}
-	
-\end{figure}
-
-
-
-
-
-\begin{figure}
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=4.667in,
-	height=1.8in,
-	xmin=0,xmax=385,ymin=32,ymax=55,
-	xlabel={$k$},
-	ylabel={$y1$},
-	legend pos=north east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/pid_y1_40.txt};
-	\end{axis}
-	\end{tikzpicture}
-		
-	
-	\caption{Regulacja PID przy $Y_{zad}=40$}
-	\label{bezPomZak}
-	
-\end{figure}
-
-
-\begin{figure}
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=4.667in,
-	height=1.8in,
-	xmin=0,xmax=385,ymin=32,ymax=55,
-	xlabel={$k$},
-	ylabel={$y1$},
-	legend pos=north east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/pid_y1_45.txt};
-	\end{axis}
-	\end{tikzpicture}
-	
-	
-	\caption{Regulacja PID przy $Y_{zad}=45$}
-	\label{bezPomZak}
-	
-\end{figure}
-
-
-
-\begin{figure}
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=4.667in,
-	height=1.8in,
-	xmin=0,xmax=385,ymin=32,ymax=55,
-	xlabel={$k$},
-	ylabel={$y1$},
-	legend pos=north east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/pid_y1_50.txt};
-	\end{axis}
-	\end{tikzpicture}
-	
-	
-	\caption{Regulacja PID przy $Y_{zad}=50$}
-	\label{bezPomZak}
-	
-\end{figure}

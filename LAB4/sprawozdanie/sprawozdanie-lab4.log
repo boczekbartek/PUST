@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  21 APR 2017 10:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  6 MAY 2017 15:28
 entering extended mode
 **./sprawozdanie-lab4.tex
 (sprawozdanie-lab4.tex
@@ -1095,61 +1095,39 @@ Package: placeins 2005/04/18  v 2.2
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\was\gensymb.sty"
 Package: gensymb 2003/07/02 v1.0 (WaS)
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks44
+\verbatim@line=\toks45
+\verbatim@in@stream=\read4
+)
 
 LaTeX Warning: Unused global option(s):
     [twosides].
 
-(sprawozdanie-lab4.aux
-
-LaTeX Warning: Label `odpskokUdmc4' multiply defined.
-
-
-LaTeX Warning: Label `bezPomZak' multiply defined.
-
-
-LaTeX Warning: Label `bezPomZak' multiply defined.
-
-
-LaTeX Warning: Label `bezPomZak' multiply defined.
-
-
-LaTeX Warning: Label `bezPomZak' multiply defined.
-
-
-LaTeX Warning: Label `bezPomZak' multiply defined.
-
-
-LaTeX Warning: Label `bezPomZak' multiply defined.
-
-
-LaTeX Warning: Label `bezPomZak' multiply defined.
-
-
-LaTeX Warning: Label `bezPomZak' multiply defined.
-
-)
+(sprawozdanie-lab4.aux)
 \openout1 = `sprawozdanie-lab4.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 88.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 88.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 89.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 89.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    ... okay on input line 89.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1192,12 +1170,12 @@ LaTeX Font Info:    ... okay on input line 88.
 \scratchbox=\box67
 \nofMPsegments=\count280
 \nofMParguments=\count281
-\everyMPshowfont=\toks44
+\everyMPshowfont=\toks46
 \MPscratchCnt=\count282
 \MPscratchDim=\dimen301
 \MPnumerator=\count283
 \makeMPintoPDFobject=\count284
-\everyMPtoPDFconversion=\toks45
+\everyMPtoPDFconversion=\toks47
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -1245,7 +1223,7 @@ ABD: EveryShipout initializing macros
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.14} into 
 your preamble.
- on input line 88.
+ on input line 89.
 
 \c@lstlisting=\count285
 
@@ -1258,62 +1236,62 @@ File: siunitx-abbreviations.cfg 2017/03/06 v2.7e siunitx: Abbreviated units
 )
 \symgns@font=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/cmr/m/n --> TS1/cmr/bx/n on input line 88.
-Package gensymb Info: Math companion symbols declared on input line 88.
-LaTeX Info: Redefining \degree on input line 88.
-LaTeX Info: Redefining \celsius on input line 88.
+(Font)                  TS1/cmr/m/n --> TS1/cmr/bx/n on input line 89.
+Package gensymb Info: Math companion symbols declared on input line 89.
+LaTeX Info: Redefining \degree on input line 89.
+LaTeX Info: Redefining \celsius on input line 89.
 Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
-erthousand on input line 88.
-LaTeX Info: Redefining \ohm on input line 88.
-Package gensymb Info: Using \textohm for \ohm on input line 88.
-LaTeX Info: Redefining \micro on input line 88.
-Package gensymb Info: Using \textmu for \micro on input line 88.
+erthousand on input line 89.
+LaTeX Info: Redefining \ohm on input line 89.
+Package gensymb Info: Using \textohm for \ohm on input line 89.
+LaTeX Info: Redefining \micro on input line 89.
+Package gensymb Info: Using \textmu for \micro on input line 89.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\siunitx\siunitx-binary.cfg"
 File: siunitx-binary.cfg 2017/03/06 v2.7e siunitx: Binary units
 )
 \c__siunitx_mathsf_int=\count286
-LaTeX Font Info:    Try loading font information for OML+plm on input line 88.
+LaTeX Font Info:    Try loading font information for OML+plm on input line 89.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\polski\omlplm.fd"
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMS+plsy on input line 88.
+LaTeX Font Info:    Try loading font information for OMS+plsy on input line 89.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\polski\omsplsy.fd"
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMX+plex on input line 88.
+LaTeX Font Info:    Try loading font information for OMX+plex on input line 89.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\polski\omxplex.fd"
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10.95> on input line 88.
+(Font)              <10.95> on input line 89.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <8> on input line 88.
+(Font)              <8> on input line 89.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <6> on input line 88.
-LaTeX Font Info:    Try loading font information for U+msa on input line 88.
+(Font)              <6> on input line 89.
+LaTeX Font Info:    Try loading font information for U+msa on input line 89.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 88.
+LaTeX Font Info:    Try loading font information for U+msb on input line 89.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OT4+cmss on input line 88.
+LaTeX Font Info:    Try loading font information for OT4+cmss on input line 89.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\polski\ot4cmss.fd"
 File: ot4cmss.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 \c__siunitx_mathtt_int=\count287
-LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 88.
+LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 89.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\polski\ot4cmtt.fd"
@@ -1335,71 +1313,71 @@ LaTeX Font Info:    External font `plex10' loaded for size
 
 ]
 Rozdzia\PlPrIeC {\l } 1.
-PGFPlots: reading {wykresy/zadanie1_Ypp.txt}
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+PGFPlots: reading {wykresy/zadanie1.txt}
 ) (p2.tex [2
 
 ]
 Rozdzia\PlPrIeC {\l } 2.
-PGFPlots: reading {wykresy/zadanie2_skok40.txt}
-PGFPlots: reading {wykresy/przykladowe/zadanie2_Z20.txt}
-PGFPlots: reading {wykresy/przykladowe/zadanie2_Z30.txt}
-PGFPlots: reading {wykresy/przykladowe/zadanie2_Z30.txt}
-PGFPlots: reading {wykresy/przykladowe/zadanie2_Z30.txt}
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--14
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--14
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--14
+
+ []
+
+PGFPlots: reading {wykresy/zadanie2_skok_40.txt}
+PGFPlots: reading {wykresy/zadanie2_skok_45.txt}
+PGFPlots: reading {wykresy/zadanie2_skok_50.txt}
+PGFPlots: reading {wykresy/zadanie2_skok_60.txt}
+PGFPlots: reading {wykresy/zadanie2_skok_70.txt}
+PGFPlots: reading {wykresy/zadanie2_skok_80.txt}
+PGFPlots: reading {wykresy/zadanie2_skok_90.txt}
 ) (p3.tex [3
 
-]
+] [4]
 Rozdzia\PlPrIeC {\l } 3.
-PGFPlots: reading {wykresy/przykladowe/odpowiedzskokowa_T1_G1.txt}
-PGFPlots: reading {wykresy/przykladowe/odpowiedzskokowa_T1_G1.txt}
-PGFPlots: reading {wykresy/przykladowe/funkcja_aproksymujaca_T1_G1.txt}
-) (p5.tex [4
-
-]
-Rozdzia\PlPrIeC {\l } 4.
-PGFPlots: reading {wykresy/przykladowe/zadanie5_PID_model_Y1.txt}
-PGFPlots: reading {wykresy/przykladowe/zadanie5_PID_model_Y1_zad.txt}
-PGFPlots: reading {wykresy/przykladowe/zadanie5_PID_model_U1.txt}
-PGFPlots: reading {wykresy/przykladowe/zadanie5_PID_model_e1.txt}
-PGFPlots: reading {wykresy/przykladowe/dmc_y1_40.txt}
-PGFPlots: reading {wykresy/przykladowe/dmc_u1_40.txt}
-PGFPlots: reading {wykresy/przykladowe/dmc_y1_45.txt}
-PGFPlots: reading {wykresy/przykladowe/dmc_u1_45.txt}
-PGFPlots: reading {wykresy/przykladowe/dmc_y1_50.txt}
-PGFPlots: reading {wykresy/przykladowe/dmc_u1_50.txt}
-PGFPlots: reading {wykresy/przykladowe/pid_y1_40.txt}
-PGFPlots: reading {wykresy/przykladowe/pid_y1_45.txt}
-PGFPlots: reading {wykresy/przykladowe/pid_y1_50.txt}
 ) [5
 
-] [6] [7] [8] (sprawozdanie-lab4.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+] (sprawozdanie-lab4.aux) ) 
 Here is how much of TeX's memory you used:
- 36792 strings out of 493329
- 883297 string characters out of 3139066
- 21655517 words of memory out of 24602233
- 39726 multiletter control sequences out of 15000+200000
+ 36704 strings out of 493329
+ 881664 string characters out of 3139066
+ 21313625 words of memory out of 24260341
+ 39651 multiletter control sequences out of 15000+200000
  24139 words of font info for 72 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,22n,100p,10391b,2159s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plit.enc}{C:/Program Files/Mi
-KTeX 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvi
-ps/pl/plrm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}<C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/pl/plbx10.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/pl/plmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi7.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/pl/plr10.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/pl/plr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/p
-lr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr8.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/pl/plsy6.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/pl/plsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/pl/plti10.pfb>
-Output written on sprawozdanie-lab4.pdf (9 pages, 178804 bytes).
+ 62i,22n,100p,10391b,2153s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plrm
+.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plit.enc}{C:/Program Files
+/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/
+dvips/pl/plmi.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-supe
+r-ts1.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/pltt.enc}<C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/pl/plbx10.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/pl/plbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/pl/plmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi7.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/pl/plr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/pl/plr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr8.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/pl/plti10.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/pl/pltt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+cm-super/sfrm1000.pfb>
+Output written on sprawozdanie-lab4.pdf (6 pages, 97029 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
+ 78 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
