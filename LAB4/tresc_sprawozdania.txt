@@ -1,0 +1,53 @@
+*****Zadanie 1*******
+Komunikacja z obiektem grzej¹co-ch³odz¹cym przebiega poprzez port szeregowy. Uda³o nam siê skomunikowaæ ze œrodowiskiem z pomoc¹ funckji readMeasurements oraz
+sendControls dostarczonymi w pakiecie labolatoryjnym, wysy³anie sygna³ów steruj¹cych do wiatraczka, grza³ki oraz odczyt pomiarów z czujników znajduj¹cych siê na obiekcie
+przebiega³ pomyœlnie. Wartoœci, którymi bêdziemy sterowaæ w tym æwiczeniu to W1 - 1 paramert funkcji sendControls, oraz G1 - 5 parametr. Pomiarem nas interesuj¹cym bêdzie pierwsza wartoœæ
+w wektorze zwracanym przez readMeasurements, czyli pomiar temperatury T1.
+
+Wyznaczanie punktu pracy:
+wys³aliœmy sta³¹ wartoœæ sterowania Upp = 35% oraz zmierzyliœmy wartoœæ wyjœcia. Wiatraczek W1 (cecha œrodowiska) zosta³ ustawiony na W1 = 50% obrotów maksymalnych.
+
+Poni¿ej przedstawiony zosta³ przebieg eksperymentu:
+
+(wykres zadanie1.txt oœ x->k, y->T1)
+
+
+Na wykresie mo¿emy zaobserwowaæ, ¿e wartoœæ temperatury T1 (wyjœcia obiektu) stabilizuje sie na wartoœci 33.25*C.
+Zatem mo¿emy stwierdziæ, ¿e punkt pracy obiektu to:
+Ypp = 33.25
+Upp = 35
+
+
+*****Zadanie 2*******
+W tym eksperymencie wyznaczaliœmy odpowiedzi skokowe dla piêciu ró¿nych zmian sygna³u struj¹cego G1 rozpoczyn¹j¹c z punktu pracy. Niestety, zanim zaczêliœmy pomiary, w labolatorium zaczê³o œwieciæ s³once
+i punkt pracy naszego obiektu przesun¹³ siê do wartoœci Upp=35, Ypp=35 i aby ujednoliciæ wyniki to w³aœnie dla niego zebraliœmy odpowiedzi skokowe dla wszystkich skoków sygna³u steruj¹cego.
+Wykonane przez nas skoki sygna³u to:
+1) 35 -> 40
+2) 35 -> 45
+3) 35 -> 50
+4) 35 -> 60 
+5) 35 -> 70
+6) 35 -> 80
+7) 35 -> 90
+
+Wykonaliœmy wiêcej pomiarów by lepiej móc zaobserwowaæ punkt przegiêcia charakterystyki statycznej obiektu.
+Wynik pomiarów zosta³y przedstawione na poniŸszym wykresie zbiorczym:
+
+(na jednym wykresie wszyskie zadanie2_skok*)
+
+W³aœciwoœci statycznych tego obiektu nie mo¿emy okreœliæ jako w przybli¿eniu liniowe. Jako dowód mó¿na podaæ charakterystykê statyczn¹ obiektu,
+na której doskonale widaæ, ¿e charakterystyka obiektu jest z³o¿ona z dwóch liniowcyh czêœci, których przegiêcie nastêpuje w okolicach punktu (Ypp,Upp) = (50,50)
+
+
+
+
+
+
+
+
+
+
+Parametry pida zosta³y dobrane z optymalizacji ga, socyluje bo jest to obikt nieliniowy jednak zbiega do wartoœci zadanej
+
+nastawy dmc 1 N=5.000000; Nu=1.000000; lambda=0.159035;
+nastawy dla dmc 2 N=71.000000; Nu=71.000000; lambda=31.528399;
