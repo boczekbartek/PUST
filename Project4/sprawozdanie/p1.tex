@@ -11,22 +11,17 @@ Punkt pracy jest poprawny, obiekt nie zmienia swojego stanu przy podaniu $U_{pp}
 	\begin{axis}[
 	width=5.0in,
 	height=3.4in,
-	xmin=0,xmax=300,ymin=32,ymax=34,
+	enlargelimits=false,
+	%xmin=0,xmax=300,ymin=32,ymax=34,
 	xlabel={$k$},
-	ylabel={$T1$},
+	ylabel={$Y$},
 	legend pos=south east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,cyan] file {wykresy/zadanie1.txt};
+	\addplot[const plot,cyan] file {../wykresy/zad1.txt};
 	\end{axis}
 	\end{tikzpicture}
 
 	\caption{Punkt pracy}
-	
-\end{figure}
-
-\begin{figure}
-	Na wykresie mo¿emy zaobserwowaæ, ¿e wartoœæ temperatury T1 (wyjœcia obiektu) stabilizuje sie na wartoœci $\num{33,25}\degree$C.
-	Zatem mo¿emy stwierdziæ, ¿e punkt pracy obiektu to: ($U_{pp}$; $Y_{pp}$) = ($\num{35}$; $\num{33,25}$).
 	
 \end{figure}
