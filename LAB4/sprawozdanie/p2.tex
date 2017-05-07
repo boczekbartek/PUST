@@ -56,6 +56,33 @@ Wyniki pomiarów zosta³y przedstawione na poni¿szym wykresie zbiorczym:
 
 
 \begin{figure}
-W³aœciwoœci statycznych tego obiektu nie mo¿emy okreœliæ jako w przybli¿eniu liniowe. Jako dowód mo¿na podaæ charakterystykê statyczn¹ obiektu, na której doskonale widaæ, ¿e charakterystyka obiektu jest z³o¿ona z dwóch liniowych czêœci, których przegiêcie nastêpuje w okolicach punktu ($U_{pp}$; $Y_{pp}$) = ($\num{50}$; $\num{50}$).
+W³aœciwoœci statycznych tego obiektu nie mo¿emy okreœliæ jako w przybli¿eniu liniowe. Jako dowód mo¿na podaæ charakterystykê statyczn¹ obiektu, na której doskonale widaæ, ¿e charakterystyka obiektu jest z³o¿ona z dwóch liniowych czêœci, których przegiêcie nastêpuje w okolicach punktu ($X_{przeg}$; $Y_{przeg}$) = ($\num{50}$; $\num{42}$).
+	
+\end{figure}
+
+
+
+
+
+\begin{figure}[ht]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=4.667in,
+	height=5in,
+	%xmin=0,xmax=350
+	ymin=37,ymax=52,
+	xlabel={$U$},
+	ylabel={$Y$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,green] file {wykresy/zadanie2_charakterystyka_statyczna.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Charakterystyka statyczna}
 	
 \end{figure}
