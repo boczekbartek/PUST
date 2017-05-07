@@ -99,8 +99,8 @@ dla drugiej czêœci charakterystyki:
 
 
 *********Zadanie 5****
-W tym zadaniu wykonaliœmy eksperyment z uzyciem pierwszego regulatora PID obliczonego w zadaniu poprzednim. Niestety, w zwi¹zku z nieliniowoœci¹ obiektu, regulacja nie daje zadowalaj¹cych rezultatów. Regulator PID to regulator liniowy, który mo¿na zastosowaæ jedynie do 
-obiektów o charakterystyce liniowej.
+W tym zadaniu wykonaliœmy eksperyment z uzyciem pierwszego regulatora PID obliczonego w zadaniu poprzednim. Niestety, w zwi¹zku z nieliniowoœci¹ obiektu, regulacja nie daje zadowalaj¹cych rezultatów. Wyjœcie obiektu oscyluje i nie zbiega do wartoœci zadanej. Regulator PID to regulator liniowy, który mo¿na zastosowaæ jedynie do 
+obiektów o charakterystyce liniowej. Najprawdopodobniej obiekt wpada w oscylacje w momencie przechodzenia przez nieliniow¹ czêœæ charaktertystyki statycznej.
 
 W zwi¹zku z ograniczeniem czasowym zajêæ labolatoryjnych oraz d³ugim czasem stabilizacji obiektu po skoku sterowania (ok 300s), zdecydowaliœmy siê zastosowaæ mniej skoków sterowania ni¿ zalecane by³o w poleceniu.  
 
@@ -109,3 +109,18 @@ B³¹d skumulowany w tym przypadku wyniós³:3.7624e+03
 
 
 *****Zadanie 6*******
+W tym zadaniu wykorzystliœmy technikê regulacji rozmytej. Wykonaliœmy eksperymenty dla 2 lokalnych regulatorów PID i 2 lokalnych regulatorów DMC. Parametry lokalnych regulatorów dobraliœmy takie jak s¹ przedstawione w zadaniu 4, czyli na podstawie modelowania oraz symulacji liniowych kawa³ków charakterystyki statycznej.
+
+
+Na poni¿ej zamieszczonych przebiegach widaæ (dla PID), ¿e regulacja przebiega znacznie lepiej, ni¿ przy zastosowaniu klasycznemgo (liniowego) podejœcia. Regulator oscyluje du¿o mniej i zbiega do wartoœci zadanej. Lepsze wyniki regulacji mo¿na równie¿ stwierdziæ bo wykresie przedstawiaj¹cym b³¹d. Niestety podczas labolatorium nie uda³o nam siê zastosowaæ 3 lub 4 regulatorów lokalnych,
+lecz po doœwiadczeniach na projekcie mo¿emy stwierdziæ, ¿e regulacja zapewne by³aby du¿o lepsza, co wynika z tego, ¿e w punkcie przegiêcia istnieje równie¿ nieliniowoœæ, z któr¹ nie radz¹ sobie tylko 2 regulatory.
+
+(wykresy PID 2 reg)
+
+Przebiegi regulacji DMC dla 2 regulatorów lokalnych równie¿ s¹ dosyæ zadowalaj¹ce, sygna³ wyjœciowy zbiega do wartoœci zadanej. Przy zastosowaniu wiêkszej liczby regulatorów, oraz wykonaniu kliku eksperymentów na rzeczywistym obiekcie w celu dobrania optymalnych nastaw prawdopodobnie uda³oby siê polepszyæ rezultaty regulacji.
+
+(wykresy dla DMC)
+
+
+
+
