@@ -39,7 +39,7 @@ switch reg
     Td=[1.167918512492445 1.313379515549692 1.154836703669959 0.964582475205146 0.946642218471555];
 end
 
-fun_przyn_y = arrayfun(@char_stat_fun,fun_przyn_u); %map trapu => charstatfun
+fun_przyn_y = arrayfun(@char_stat_fun,fun_przyn_u); %map fun_przyn_u => charstatfun
 
 n = 1000;
 Yzad(1:n) = 0;
@@ -63,7 +63,7 @@ for k=21:n
      e(k)=Yzad(k)-Y(k);
 
      for i = 1:reg
-        mi(i) = trapmf(Y(k),fun_przyn_y(i,:)); %przynaleznosc aktualnego Y(k)
+        mi(i) = trapmf(Y(k),fun_przyn_y(i,:));
      end
      du = sum(mi.*(r2*e(k-2)+r1*e(k-1)+r0*e(k)));
 
