@@ -65,8 +65,34 @@ Rezultaty, które uda³o nam siê uzyskaæ zosta³y przedstawione na poni¿szych wykre
 (odp_skokowa_skok_90 i funkcja_aproksymu¹ca_90 na jednym wykresie)
 
 
+******Zadanie 4******
+Zimplementowaliœmy algorytmy do regulacji PID i DMC.
+W tym punkcie warto dodaæ, ¿e przed przyst¹pieniem do eksperymentów na rzeczywistym obiekcie stworzyliœmy jego model na podstawie jego odpowiedzi skokowych. 
+Dziêki temu mogliœmy go symulowaæ w œrodowisku Matlab i tutaj te¿ ustaliæ optymalne parametry algorytmów regulacji.
+
+Do celów symulacyjnych przygotowaliœmy dwa modele naszego obiektu:
+Pierwszy wykorzystuj¹c otrzyman¹ w zadaniu 3 aproksymacjê odpowiedzi skokowej dla pierwszej z liniowych czêsci charakterystyki statycznej (czyli dla 0 < U < 50) oraz drugi na drugiej liniowej czeœci tej¿e charakterystyki (50 <= U < 100).
+
+Nastêpnie wyznaczyliœmy korzystaj¹c z optymalizatora ga (ograniczenia lb = [0.01,1,0.01]; ub = [50,50,50]) a nastênie eksperymentalnie dostrajaj¹c parametry algorytmów PID i DMC ka¿dego z liniowych przedzia³ów charakterystyki statycznej.
+Otrzymane rezultaty:
+dla przedzia³u u nale¿y do (0:50)
+PID:
+	K=0.14661; Ti=1.63138; Td=0.010002;
+DMC:
+	
+dla przedzia³u u nale¿y do (50:100) 
+PID:
+	K=0.194661; Ti=1.53138; Td=0.010002;
+DMC:
+	
 
 
+
+
+ 
+
+
+Parametry te wyliczaliœmy przy pomoca optymalizatora ga. 
 
 
 
@@ -74,4 +100,4 @@ Rezultaty, które uda³o nam siê uzyskaæ zosta³y przedstawione na poni¿szych wykre
 Parametry pida zosta³y dobrane z optymalizacji ga, socyluje bo jest to obikt nieliniowy jednak zbiega do wartoœci zadanej
 
 nastawy dmc 1 N=5.000000; Nu=1.000000; lambda=0.159035;
-nastawy dla dmc 2 N=71.000000; Nu=71.000000; lambda=31.528399;
+nastawy dmc 2 N=71.000000; Nu=71.000000; lambda=31.528399;
