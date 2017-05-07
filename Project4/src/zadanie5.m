@@ -65,7 +65,7 @@ elseif reg == 6
         2.901953866871270 0.555888832486690 4.443456315431565];
 end
 
-trapy = arrayfun(@y,trapu); %przypisanie konkretnych granic Y
+trapy = arrayfun(@char_stat_fun,trapu); %przypisanie konkretnych granic Y
 trapy(1,1:2)=-inf; %rozszerzenie granic koncowych do nieskonczonosci
 trapy(end,3:4)=inf;
 
@@ -83,11 +83,11 @@ trapy(end,3:4)=inf;
 
 n = 1000;
 Yzad(1:n) = 0;
-Yzad(21:n) = 7;
+Yzad(21:n) = -1;
 Yzad(201:n)= -0.2;
-Yzad(401:n)= 2;
-Yzad(601:n)=4.2;
-Yzad(801:n)=0.5;
+Yzad(401:n)= -2;
+Yzad(601:n)=0.08;
+Yzad(801:n)=-1.5;
 U(1:n) = 0;
 Y(1:n) = 0;
 err = 0;
@@ -100,7 +100,7 @@ mi = zeros(1,size(trapu,1)); %init wspolczynnikow przynaleznosci
 
 %glowna petla PID
 for k=21:n
-     Y(k)=symulacja_obiektu4y(U(k-5), U(k-6), Y(k-1), Y(k-2));
+     Y(k)=symulacja_obiektu10y(U(k-5), U(k-6), Y(k-1), Y(k-2));
      e(k)=Yzad(k)-Y(k); %blad wyjscia
 
      for i = 1:size(trapu,1)
@@ -125,12 +125,16 @@ subplot('Position', [0.1 0.12 0.8 0.15]);
 stairs(U);
 ylabel('u');
 xlabel('k');
-decimal_comma(gca, 'XY');
 subplot('Position', [0.1 0.37 0.8 0.6]);
 plot(Y);
 ylabel('y');
 hold on;
 stairs(Yzad,':');
-decimal_comma(gca, 'XY');
 
 %funkcja zwracajaca wartosc y charakterystyki statycznej dla zadanego u
+% function y = stat_val(u)
+%     load stat.mat
+%     if (u>=-1 && u<=1)
+%         y = Ys( int8((u+1)*50 + 1) );
+%     end
+% end
