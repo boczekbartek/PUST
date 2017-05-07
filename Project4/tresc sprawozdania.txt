@@ -1,0 +1,21 @@
+1. Punkt pracy jest poprawny, obiekt nie zmienia swojego stanu przy podaniu Upp.
+2. Wykresy subploty (zad2odpowiedzskokowa) dla roznych skokow na jednym rysunku wszystko;(odpal skrypt zadanie2 ¿eby zobaczyæ jak to ma wygl¹daæ)
+   wykres char_stat
+   W³aœciwoœci statyczne obiektu nie s¹ w ca³oœciowym ujêciu- wzglêdem dziedziny U - liniowe.
+   Charakterystyka statyczna to z³o¿enie dwóch prostych, pierwszej szybko rosn¹cej, drugiej bardzo wolno, niemal stale, z punktem przegiêcia w okolicach -0.1(u)
+   W³aœciwoœci dynamiczne obiektu: uk³ad jest stabilny, ma opóŸnienie w iloœci 5 chwil k, ma jedn¹ lub dwie inercje; wszystkie te cechy dynamiczne mo¿na uznaæ za w przybli¿eniu liniowe.
+3 i 4. Symulacja trwa 1000 chwil. Skoki:
+- k=21, yzad = -1
+- k=201, yzad = -2
+- k=401, yzad = -0.1
+- k=601, yzad = -2
+- k=801, yzad = -1
+
+PID: b³¹d E = 133.2526, parametry: K=0.17; Ti=3.5; Td=1.1;
+DMC: b³¹d E = 236.8488, parametry: D=N=Nu=50; lambda=250;
+Parametry dobrane eksperymentalnie.
+
+Widzimy ¿e dla skoków wartoœci zadanej zawieraj¹cych siê w pierwszej, szybszej czêœci charakterystyki statycznej
+regulatory dzia³aj¹ du¿o lepiej ni¿ w przypadku skoków zawieraj¹cych siê w drugiej, bardzo wolnej czêœci charakterystyki. 
+200 chwil k to za ma³o aby obiekt osi¹gn¹³ wartoœæ zadan¹ podczas gdy osi¹gniêcie "szybszej" wartoœci zadanej zajmuje mu kilkadziesi¹t chwil.
+Strojenie liniowego regulatora w tym przypadku przy pomocy optymalizatorów zapewne da³oby lepszy efekt, ale nadal nieliniowoœæ obiektu mocno by "dokucza³a".

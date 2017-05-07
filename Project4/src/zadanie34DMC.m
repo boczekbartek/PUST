@@ -15,7 +15,7 @@ end
 Yzad(1:n) = 0;
 Yzad(21:n) = -1;
 Yzad(201:n)= -2;
-Yzad(401:n)= -1;
+Yzad(401:n)= 0.1;
 Yzad(601:n)=-2;
 Yzad(801:n)=-1;
 U(1:n) = 0;

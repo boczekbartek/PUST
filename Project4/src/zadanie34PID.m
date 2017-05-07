@@ -1,12 +1,10 @@
 clear all
 
-
-%__init__():
 n = 1000;
 Yzad(1:n) = 0;
 Yzad(21:n) = -1;
 Yzad(201:n)= -2;
-Yzad(401:n)= -1;
+Yzad(401:n)= 0.1;
 Yzad(601:n)=-2;
 Yzad(801:n)=-1;
 U(1:n) = 0;
@@ -43,10 +41,13 @@ err = sum(e.^2)
 figure('Position',  [403 246 820 420]);
 subplot('Position', [0.1 0.12 0.8 0.15]);
 stairs(U);
+
 ylabel('u');
 xlabel('k');
 subplot('Position', [0.1 0.37 0.8 0.6]);
 stairs(Y);
+savePlot(1:n,U,'zad34pid_U.txt');
+savePlot(1:n,Y,'zad34pid_Y.txt');
 ylabel('y');
 hold on;
 stairs(Yzad,':');
