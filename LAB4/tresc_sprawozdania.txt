@@ -41,6 +41,28 @@ na której doskonale widaæ, ¿e charakterystyka obiektu jest z³o¿ona z dwóch linio
 (wykres zadanie2_charakterystyka_statyczna, oœ x U, oœ y Y)
 
 
+****Zadanie 3********
+Obliczyliœmy dwie odpowiedzi skokowe, odpowiednio dla dwóch skoków odpowiadaj¹cym dwóm liniowym czêsciom charakterystyki statycznej. 
+Pierwszy to skok sterowania U z 35%->50% (gdy¿ w³aœnie w punkcie 50 jest przegiêcie charakterystyki statycznej), drugi z 35%->90%.
+Skoki zosta³y przeskalowane, tak aby mog³y byæ uznane za odpowiedŸ skokow¹, czyli odpowiedŸ obiektu na skok jednostkowy. 
+
+Nastêpnym krokiem, by³a aproksymacja uzyskanych wczeœniej odpowiedzi skokowych cz³onem inercyjnym drugiego rzêdu z opóŸnieniem.
+Parametry T1, T2 oraz K tego cz³ony wyznaczone zaosta³y za pomoc¹ optymalizatora ga. Jako, ¿e jest on optymalizatorem niedeterministycznym (nie daje przy ka¿dym uruchomieniu takich samych rezultatów),
+kilka razy powtarzaliœmy nasze eksperymenty oraz ocenialiœmy wizualnie ( na wykresach) jakoœæ dopasowania funkcji aproksymuj¹cej do obliczonej odpowiedzi skokowej.
+Okaza³o siê, ¿e bardzo dobre rezultaty udawa³o siê uzyskaæ nie podaj¹c optymalizatorowi ¿adnych ograniczeñ, dlatego te¿ nie zdecydowaliœmy siê na tego typu kroki.
+
+Parametry cz³onu inercyjnego drugiego rzêdu z opóŸnieniem wyznaczone przy pomocy optymalizatora:
+dla odpowiedzi skokowej obliczonej dla skoku sterowania do wartoœci 50%:
+T1=14.875560; T2=77.388071; K=0.461244;
+
+dla odpowiedzi skokowej obliczonej dla skoku sterowania do wartoœci 90%:
+T1=13.342281; T2=76.979432; K=0.286991;
+ 
+Rezultaty, które uda³o nam siê uzyskaæ zosta³y przedstawione na poni¿szych wykresach:
+
+(odp_skokowa_skok_50 i funkcja_aproksymu¹ca_50 na jendym wykresie)
+
+(odp_skokowa_skok_90 i funkcja_aproksymu¹ca_90 na jednym wykresie)
 
 
 
