@@ -36,7 +36,9 @@ Wynik pomiarów zosta³y przedstawione na poniŸszym wykresie zbiorczym:
 (na jednym wykresie wszyskie zadanie2_skok*)
 
 W³aœciwoœci statycznych tego obiektu nie mo¿emy okreœliæ jako w przybli¿eniu liniowe. Jako dowód mó¿na podaæ charakterystykê statyczn¹ obiektu,
-na której doskonale widaæ, ¿e charakterystyka obiektu jest z³o¿ona z dwóch liniowcyh czêœci, których przegiêcie nastêpuje w okolicach punktu (Ypp,Upp) = (50,50)
+na której doskonale widaæ, ¿e charakterystyka obiektu jest z³o¿ona z dwóch liniowcyh czêœci, których przegiêcie nastêpuje w okolicach punktu (Xprzegiecia,Yprzegiecia) = (50,42)
+
+(wykres zadanie2_charakterystyka_statyczna, oœ x U, oœ y Y)
 
 
 
