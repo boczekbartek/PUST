@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  7 MAY 2017 16:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  7 MAY 2017 18:53
 entering extended mode
 **./sprawozdanie-lab4.tex
 (sprawozdanie-lab4.tex
@@ -1386,9 +1386,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--18
  []
 
 PGFPlots: reading {wykresy/odp_skokowa_skok_50.txt}
-PGFPlots: reading {wykresy/zadanie3_funkcja_aproksymujaca_skok_50.txt}
+PGFPlots: reading {wykresy/funkcja_aproksymujaca_skok_50.txt}
 PGFPlots: reading {wykresy/odp_skokowa_skok_90.txt}
-PGFPlots: reading {wykresy/zadanie3_funkcja_aproksymujaca_skok_90.txt}
+PGFPlots: reading {wykresy/funkcja_aproksymujaca_skok_90.txt}
 ) (p4.tex [6
 
 ] [7]
@@ -1438,14 +1438,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--29
 
  []
 
-) [8
+PGFPlots: reading {wykresy/zadanie4_PID_Y.txt}
+PGFPlots: reading {wykresy/zadanie4_PID_Yzad.txt}
+PGFPlots: reading {wykresy/zadanie4_PID_U.txt}
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+PGFPlots: reading {wykresy/zadanie4_PID1_Y.txt}
+PGFPlots: reading {wykresy/zadanie4_PID1_Yzad.txt}
+PGFPlots: reading {wykresy/zadanie4_PID1_U.txt}
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+PGFPlots: reading {wykresy/zadanie4_PID2_Y.txt}
+PGFPlots: reading {wykresy/zadanie4_PID2_Yzad.txt}
+PGFPlots: reading {wykresy/zadanie4_PID2_U.txt}
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (p5.tex [8
+
+] [9] [10]
+Rozdzia\PlPrIeC {\l } 5.
+PGFPlots: reading {wykresy/zadanie5_PID_Y.txt}
+PGFPlots: reading {wykresy/zadanie5_PID_Yzad.txt}
+PGFPlots: reading {wykresy/zadanie5_PID_U.txt}
+PGFPlots: reading {wykresy/zadanie5_PIDreg_Y.txt}
+PGFPlots: reading {wykresy/zadanie5_PIDreg_Yzad.txt}
+PGFPlots: reading {wykresy/zadanie5_PIDreg_U.txt}
+) (p6.tex [11
+
+]
+Rozdzia\PlPrIeC {\l } 6.
+PGFPlots: reading {wykresy/zadanie6_2reg_PID_Y.txt}
+PGFPlots: reading {wykresy/zadanie6_2reg_PID_Yzad.txt}
+PGFPlots: reading {wykresy/zadanie6_2reg_PID_U.txt}
+) [12
 
 ] (sprawozdanie-lab4.aux) ) 
 Here is how much of TeX's memory you used:
- 36747 strings out of 493329
- 882550 string characters out of 3139066
- 21313620 words of memory out of 24260336
- 39686 multiletter control sequences out of 15000+200000
+ 36915 strings out of 493329
+ 885590 string characters out of 3139066
+ 21702469 words of memory out of 24649185
+ 39830 multiletter control sequences out of 15000+200000
  24139 words of font info for 72 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,22n,100p,10391b,2153s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1464,9 +1499,9 @@ fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/pl/plti10.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/pl/pltt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
 cm-super/sfrm1000.pfb>
-Output written on sprawozdanie-lab4.pdf (9 pages, 124382 bytes).
+Output written on sprawozdanie-lab4.pdf (13 pages, 281436 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
+ 102 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

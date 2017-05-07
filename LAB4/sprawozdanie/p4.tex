@@ -28,3 +28,129 @@ DMC:\\
 N=$\num{0}$; $N_u$=$\num{0}$; $\lambda$=$\num{0}$\\\\
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!TODO - podmien wartosci DMC
+
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=30,ymax=42,
+	xlabel={$k$},
+	ylabel={$Y=$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie4_PID_Y.txt};
+	\addplot[red] file {wykresy/zadanie4_PID_Yzad.txt};
+	\legend{$Y$, $Y_{zad}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=34,ymax=46,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie4_PID_U.txt};
+	\legend{$U$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Sygna³y}
+\end{figure}
+
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=30,ymax=42,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie4_PID1_Y.txt};
+	\addplot[red] file {wykresy/zadanie4_PID1_Yzad.txt};
+	\legend{$Y$, $Y_{zad}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=34,ymax=46,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie4_PID1_U.txt};
+	\legend{$U$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Sygna³y1}
+\end{figure}
+
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=30,ymax=42,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie4_PID2_Y.txt};
+	\addplot[red] file {wykresy/zadanie4_PID2_Yzad.txt};
+	\legend{$Y$, $Y_{zad}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=34,ymax=46,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie4_PID2_U.txt};
+	\legend{$U$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Sygna³y2}
+\end{figure}
