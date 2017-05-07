@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  6 MAY 2017 15:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  7 MAY 2017 16:36
 entering extended mode
 **./sprawozdanie-lab4.tex
 (sprawozdanie-lab4.tex
@@ -1345,18 +1345,107 @@ PGFPlots: reading {wykresy/zadanie2_skok_60.txt}
 PGFPlots: reading {wykresy/zadanie2_skok_70.txt}
 PGFPlots: reading {wykresy/zadanie2_skok_80.txt}
 PGFPlots: reading {wykresy/zadanie2_skok_90.txt}
+PGFPlots: reading {wykresy/zadanie2_charakterystyka_statyczna.txt}
 ) (p3.tex [3
 
-] [4]
+] [4] [5]
 Rozdzia\PlPrIeC {\l } 3.
-) [5
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--18
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--18
+
+ []
+
+PGFPlots: reading {wykresy/odp_skokowa_skok_50.txt}
+PGFPlots: reading {wykresy/zadanie3_funkcja_aproksymujaca_skok_50.txt}
+PGFPlots: reading {wykresy/odp_skokowa_skok_90.txt}
+PGFPlots: reading {wykresy/zadanie3_funkcja_aproksymujaca_skok_90.txt}
+) (p4.tex [6
+
+] [7]
+Rozdzia\PlPrIeC {\l } 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--29
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--29
+
+ []
+
+) [8
 
 ] (sprawozdanie-lab4.aux) ) 
 Here is how much of TeX's memory you used:
- 36704 strings out of 493329
- 881664 string characters out of 3139066
- 21313625 words of memory out of 24260341
- 39651 multiletter control sequences out of 15000+200000
+ 36747 strings out of 493329
+ 882550 string characters out of 3139066
+ 21313620 words of memory out of 24260336
+ 39686 multiletter control sequences out of 15000+200000
  24139 words of font info for 72 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,22n,100p,10391b,2153s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1375,9 +1464,9 @@ fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/pl/plti10.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/pl/pltt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
 cm-super/sfrm1000.pfb>
-Output written on sprawozdanie-lab4.pdf (6 pages, 97029 bytes).
+Output written on sprawozdanie-lab4.pdf (9 pages, 124382 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
+ 89 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

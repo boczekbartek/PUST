@@ -1,8 +1,30 @@
 %LAB4
 \chapter{Punkt 4}
 
-Uwzglêdniaj¹c ograniczenia sygna³ów steruj¹cych $\num{0} \leq G1(k) \leq \num{100}$\\ 
-Dobrane nastawy regulatora DMC wynosz¹: $D=\num{110}$; $N=\num{130}$; $N_u=\num{6}$; $\lambda={1,8}$;
 
-//TODO CZEMU TAKIE NASTAWY??
 
+Zaimplementowaliœmy algorytmy do regulacji PID i DMC.
+W tym punkcie warto dodaæ, ¿e przed przyst¹pieniem do eksperymentów na rzeczywistym obiekcie stworzyliœmy jego model na podstawie jego odpowiedzi skokowych. 
+Dziêki temu mogliœmy go symulowaæ w œrodowisku Matlab i tutaj te¿ ustaliæ optymalne parametry algorytmów regulacji.\\
+
+Do celów symulacyjnych przygotowaliœmy dwa modele naszego obiektu - pierwszy wykorzystuj¹c otrzyman¹ w zadaniu 3 aproksymacjê odpowiedzi skokowej dla pierwszej z liniowych czêsci charakterystyki statycznej (czyli dla  $\num{0} \leq U \leq \num{50}$) oraz drugi na drugiej liniowej czeœci tej¿e charakterystyki ( $\num{50} \leq U \leq \num{100}$).\\\\
+
+Nastêpnie wyznaczyliœmy korzystaj¹c z optymalizatora
+ \verb|ga|
+(ograniczenia lb=[$\num{0,01}$;$\num{1}$;$\num{0,01}$]; 
+ub = [$\num{50}$;$\num{50}$;$\num{50}$]) a nastênie eksperymentalnie dostrajaj¹c parametry algorytmów PID i DMC ka¿dego z liniowych przedzia³ów charakterystyki statycznej. Otrzymane rezultaty:\\\\
+
+dla przedzia³u  $\num{0} \leq U \leq \num{50}$:\\
+PID:\\
+K=$\num{0,14661}$; $T_i$=$\num{1,63138}$; $T_d$=$\num{0,010002}$;\\
+DMC:\\
+N=$\num{0}$; $N_u$=$\num{0}$; $\lambda=\num{0}$\\\\
+
+
+dla przedzia³u $\num{50} \leq U \leq \num{100}$:\\
+PID:\\
+K=$\num{0,194661}$; $T_i$=$\num{1,53138}$; $T_d$=$\num{0,010002}$;\\
+DMC:\\
+N=$\num{0}$; $N_u$=$\num{0}$; $\lambda$=$\num{0}$\\\\
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!TODO - podmien wartosci DMC
