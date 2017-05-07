@@ -12,19 +12,186 @@ Do celów symulacyjnych przygotowaliœmy dwa modele naszego obiektu - pierwszy wyk
 Nastêpnie wyznaczyliœmy korzystaj¹c z optymalizatora
  \verb|ga|
 (ograniczenia lb=[$\num{0,01}$;$\num{1}$;$\num{0,01}$]; 
-ub = [$\num{50}$;$\num{50}$;$\num{50}$]) a nastênie eksperymentalnie dostrajaj¹c parametry algorytmów PID i DMC ka¿dego z liniowych przedzia³ów charakterystyki statycznej. Otrzymane rezultaty:\\\\
+ub = [$\num{50}$;$\num{50}$;$\num{50}$]) a nastêpnie eksperymentalnie dostrajaj¹c parametry algorytmów PID i DMC ka¿dego z liniowych przedzia³ów charakterystyki statycznej. Otrzymane rezultaty:\\\\
 
 dla przedzia³u  $\num{0} \leq U \leq \num{50}$:\\
 PID:\\
 K=$\num{0,14661}$; $T_i$=$\num{1,63138}$; $T_d$=$\num{0,010002}$;\\
 DMC:\\
-N=$\num{0}$; $N_u$=$\num{0}$; $\lambda=\num{0}$\\\\
+N=$\num{30}$; $N_u$=$\num{10}$; $\lambda=\num{2,4}$\\\\
 
 
 dla przedzia³u $\num{50} \leq U \leq \num{100}$:\\
 PID:\\
 K=$\num{0,194661}$; $T_i$=$\num{1,53138}$; $T_d$=$\num{0,010002}$;\\
 DMC:\\
-N=$\num{0}$; $N_u$=$\num{0}$; $\lambda$=$\num{0}$\\\\
+N=$\num{40}$; $N_u$=$\num{32}$; $\lambda$=$\num{6,86402}$\\\\
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!TODO - podmien wartosci DMC
+Jakoœæ regulacji ocenialiœmy na podstawie symulacji przebiegów regulacji z wykorzystaniem konkretnych modeli dla kilku skoków wartoœci zadanej. Oto otrzymane rezultaty:\\\\
+
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=30,ymax=42,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie4_PID1_Y.txt};
+	\addplot[red] file {wykresy/zadanie4_PID1_Yzad.txt};
+	\legend{$Y$, $Y_{zad}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=34,ymax=46,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie4_PID1_U.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Przebiegi symulacji dla regulatora PID dla pierwszej liniowej czêœci charakterystyki statycznej}
+\end{figure}
+
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=30,ymax=42,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie4_PID2_Y.txt};
+	\addplot[red] file {wykresy/zadanie4_PID2_Yzad.txt};
+	\legend{$Y$, $Y_{zad}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=34,ymax=46,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie4_PID2_U.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Przebiegi symulacji dla regulatora PID dla drugiej liniowej czêœci charakterystyki statycznej}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%DMC
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=30,ymax=42,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie4_DMC1_Y.txt};
+	\addplot[red] file {wykresy/zadanie4_DMC1_Yzad.txt};
+	\legend{$Y$, $Y_{zad}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	xmin=0,xmax=1000,
+	ymin=30,ymax=42,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie4_DMC1_U.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Przebiegi symulacji dla regulatora DMC dla pierwszej liniowej czêœci charakterystyki statycznej}
+\end{figure}
+
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=30,ymax=42,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie4_DMC2_Y.txt};
+	\addplot[red] file {wykresy/zadanie4_DMC2_Yzad.txt};
+	\legend{$Y$, $Y_{zad}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	xmin=0,xmax=1000,
+	ymin=30,ymax=42,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie4_DMC2_U.txt};
+	\legend{$U$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Przebiegi symulacji dla regulatora DMC dla drugiej liniowej czêœci charakterystyki statycznej}
+\end{figure}
+

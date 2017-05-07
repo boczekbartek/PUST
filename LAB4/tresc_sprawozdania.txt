@@ -41,6 +41,8 @@ na której doskonale widaæ, ¿e charakterystyka obiektu jest z³o¿ona z dwóch linio
 (wykres zadanie2_charakterystyka_statyczna, oœ x U, oœ y Y)
 
 
+Nie mo¿na obliczyæ wzmocnienia statycznego dla nieliniowego procesu.
+
 ****Zadanie 3********
 Obliczyliœmy dwie odpowiedzi skokowe, odpowiednio dla dwóch skoków odpowiadaj¹cym dwóm liniowym czêsciom charakterystyki statycznej. 
 Pierwszy to skok sterowania U z 35%->50% (gdy¿ w³aœnie w punkcie 50 jest przegiêcie charakterystyki statycznej), drugi z 35%->90%.
@@ -75,29 +77,50 @@ Pierwszy wykorzystuj¹c otrzyman¹ w zadaniu 3 aproksymacjê odpowiedzi skokowej dl
 
 Nastêpnie wyznaczyliœmy korzystaj¹c z optymalizatora ga (ograniczenia lb = [0.01,1,0.01]; ub = [50,50,50]) a nastênie eksperymentalnie dostrajaj¹c parametry algorytmów PID i DMC ka¿dego z liniowych przedzia³ów charakterystyki statycznej.
 Otrzymane rezultaty:
-dla przedzia³u u nale¿y do (0:50)
+dla pierwszej czêsci charakterystyki
 PID:
 	K=0.14661; Ti=1.63138; Td=0.010002;
 DMC:
-	
-dla przedzia³u u nale¿y do (50:100) 
+	N=30.000000; Nu=10.000000; lambda=2.4;
+dla drugiej czêœci charakterystyki 
 PID:
 	K=0.194661; Ti=1.53138; Td=0.010002;
 DMC:
+	N=40.000000; Nu=32.000000; lambda=6.86402;
 	
+Jakoœc regulacji ocenialiœmy na podstawie symulacji przebiegów regulacji z wykorzystanie konkretnych modeli dla kilku skoków wartoœci zadanej. Oto otrzymane rezultaty:
+dla pierwszej czêsci charakterystyki:
+
+(wykresy zadanie4_PID1_Y/Yzad na jednym, ponie¿ej zadanie4PID1_U)
+
+dla drugiej czêœci charakterystyki:
+
+(wykresy zadanie4_PID2_Y/Yzad na jednym, ponie¿ej zadanie4PID1_U) 
+
+
+*********Zadanie 5****
+W tym zadaniu wykonaliœmy eksperyment z uzyciem pierwszego regulatora PID obliczonego w zadaniu poprzednim. Niestety, w zwi¹zku z nieliniowoœci¹ obiektu, regulacja nie daje zadowalaj¹cych rezultatów. Wyjœcie obiektu oscyluje i nie zbiega do wartoœci zadanej. Regulator PID to regulator liniowy, który mo¿na zastosowaæ jedynie do 
+obiektów o charakterystyce liniowej. Najprawdopodobniej obiekt wpada w oscylacje w momencie przechodzenia przez nieliniow¹ czêœæ charaktertystyki statycznej.
+
+W zwi¹zku z ograniczeniem czasowym zajêæ labolatoryjnych oraz d³ugim czasem stabilizacji obiektu po skoku sterowania (ok 300s), zdecydowaliœmy siê zastosowaæ mniej skoków sterowania ni¿ zalecane by³o w poleceniu.  
+
+B³¹d skumulowany w tym przypadku wyniós³:3.7624e+03
+
+
+
+*****Zadanie 6*******
+W tym zadaniu wykorzystliœmy technikê regulacji rozmytej. Wykonaliœmy eksperymenty dla 2 lokalnych regulatorów PID i 2 lokalnych regulatorów DMC. Parametry lokalnych regulatorów dobraliœmy takie jak s¹ przedstawione w zadaniu 4, czyli na podstawie modelowania oraz symulacji liniowych kawa³ków charakterystyki statycznej.
+
+
+Na poni¿ej zamieszczonych przebiegach widaæ (dla PID), ¿e regulacja przebiega znacznie lepiej, ni¿ przy zastosowaniu klasycznemgo (liniowego) podejœcia. Regulator oscyluje du¿o mniej i zbiega do wartoœci zadanej. Lepsze wyniki regulacji mo¿na równie¿ stwierdziæ bo wykresie przedstawiaj¹cym b³¹d. Niestety podczas labolatorium nie uda³o nam siê zastosowaæ 3 lub 4 regulatorów lokalnych,
+lecz po doœwiadczeniach na projekcie mo¿emy stwierdziæ, ¿e regulacja zapewne by³aby du¿o lepsza, co wynika z tego, ¿e w punkcie przegiêcia istnieje równie¿ nieliniowoœæ, z któr¹ nie radz¹ sobie tylko 2 regulatory.
+
+(wykresy PID 2 reg)
+
+Przebiegi regulacji DMC dla 2 regulatorów lokalnych równie¿ s¹ dosyæ zadowalaj¹ce, sygna³ wyjœciowy zbiega do wartoœci zadanej. Przy zastosowaniu wiêkszej liczby regulatorów, oraz wykonaniu kliku eksperymentów na rzeczywistym obiekcie w celu dobrania optymalnych nastaw prawdopodobnie uda³oby siê polepszyæ rezultaty regulacji.
+
+(wykresy dla DMC)
 
 
 
 
- 
-
-
-Parametry te wyliczaliœmy przy pomoca optymalizatora ga. 
-
-
-
-
-Parametry pida zosta³y dobrane z optymalizacji ga, socyluje bo jest to obikt nieliniowy jednak zbiega do wartoœci zadanej
-
-nastawy dmc 1 N=5.000000; Nu=1.000000; lambda=0.159035;
-nastawy dmc 2 N=71.000000; Nu=71.000000; lambda=31.528399;

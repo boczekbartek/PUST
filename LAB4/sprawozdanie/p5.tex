@@ -1,8 +1,12 @@
 %LAB4
 \chapter{Punkt 5}
 
+W tym zadaniu wykonaliœmy eksperyment z uzyciem pierwszego regulatora PID obliczonego w zadaniu poprzednim. Niestety, w zwi¹zku z nieliniowoœci¹ obiektu, regulacja nie daje zadowalaj¹cych rezultatów. Regulator PID to regulator liniowy, który mo¿na zastosowaæ jedynie do 
+obiektów o charakterystyce liniowej.\\
 
+W zwi¹zku z ograniczeniem czasowym zajêæ labolatoryjnych oraz d³ugim czasem stabilizacji obiektu po skoku sterowania (oko³o 300 sekund), zdecydowaliœmy siê zastosowaæ mniej skoków sterowania ni¿ zalecane by³o w poleceniu.  
 
+B³¹d skumulowany w tym przypadku wyniós³: $\num{3762,4}$\\\\
 
 
 \begin{figure}[h!]
@@ -12,72 +16,17 @@
 	\begin{axis}[
 	width=4.667in,
 	height=1.8in,
-	xmin=0,xmax=1600,ymin=-0.5,ymax=3,
-	xlabel={$k$},
-	ylabel={$Y1$},
-	legend pos=north east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_model_Y1.txt};
-	\addplot[red] file {wykresy/przykladowe/zadanie5_PID_model_Y1_zad.txt};
-	\legend{$Y1$, $Y1_{zad}$}
-	\end{axis}
-	\end{tikzpicture}
-	
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=4.667in,
-	height=1.8in,
-	xmin=0,xmax=1600,ymin=-100,ymax=110,
-	xlabel={$k$},
-	ylabel={$U1$},
-	legend pos=north east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_model_U1.txt};
-	\end{axis}
-	\end{tikzpicture}
-	
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=4.667in,
-	height=1.8in,
-	xmin=0,xmax=1600,ymin=-1.1,ymax=1.5,
-	xlabel={$k$},
-	ylabel={$e1$},
-	legend pos=north east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/zadanie5_PID_model_e1.txt};
-	\end{axis}
-	\end{tikzpicture}
-	
-	\caption{Przebiegi sygna³ów}
-\end{figure}
-\FloatBarrier
-
-
-
-\begin{figure}[h!]
-	Nastêpnie wyznaczone parametry u¿yliœmy podczas eksperymentów na rzeczywistym obiekcie, co da³o dobre rezultaty w jakoœci sterowania:
-	
-\end{figure}
-
-
-
-\begin{figure}
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=4.667in,
-	height=1.8in,
 	enlargelimits=false,
-	%xmin=0,xmax=385,ymin=32,ymax=41,
+	%xmin=0,xmax=1600,
+	ymin=25,ymax=55,
 	xlabel={$k$},
-	ylabel={$y1$},
+	ylabel={$Y$},
 	legend pos=north east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/dmc_y1_40.txt};
+	\addplot[const plot,blue] file {wykresy/zadanie5_PID_Y.txt};
+	\addplot[red] file {wykresy/zadanie5_PID_Yzad.txt};
+	\legend{$Y$, $Y_{zad}$}
 	\end{axis}
 	\end{tikzpicture}
 	
@@ -86,18 +35,32 @@
 	width=4.667in,
 	height=1.8in,
 	enlargelimits=false,
-	%xmin=0,xmax=385,ymin=0,ymax=100,
+	%xmin=0,xmax=1600,
+	ymin=-5,ymax=105,
 	xlabel={$k$},
-	ylabel={$u1$},
+	ylabel={$U$},
 	legend pos=north east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,blue] file {wykresy/przykladowe/dmc_u1_40.txt};
+	\addplot[const plot,blue] file {wykresy/zadanie5_PID_U.txt};
 	\end{axis}
 	\end{tikzpicture}
 	
-	\caption{Regulacja DMC przy $Y_{zad}=40$}
-	\label{bezPomZak}
+		\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	xmin=0,xmax=1050,
+	ymin=-5,ymax=20,
+	xlabel={$k$},
+	ylabel={$E$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {wykresy/zadanie5_PID_blad.txt};
+	\end{axis}
+	\end{tikzpicture}
 	
+	\caption{Przebiegi sygna³ów uzyskanych podczas eksperymentu na rzeczywistym obiekcie w przypadku zastosowania 1 regulatora PID}
 \end{figure}
-
