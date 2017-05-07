@@ -1,64 +1,102 @@
 %PROJ4
-\chapter{Punkt 3}
+\chapter{Punkt 3 i 4}
 
-Obliczyliœmy dwie odpowiedzi skokowe, odpowiednio dla dwóch skoków odpowiadaj¹cym dwóm liniowym czêsciom charakterystyki statycznej. Pierwszy to skok sterowania U z $\num{35}\% \rightarrow \num{50}\%$ (gdy¿ w³aœnie w punkcie $\num{50}$ jest przegiêcie charakterystyki statycznej), drugi z $\num{35}\% \rightarrow \num{90}\%$.
-Skoki zosta³y przeskalowane, tak aby mog³y byæ uznane za odpowiedŸ skokow¹, czyli odpowiedŸ obiektu na skok jednostkowy.\\ 
+Symulacja trwa 1000 chwil. Skoki:\\
+- k=21, yzad = -1\\
+- k=201, yzad = -2\\
+- k=401, yzad = -0,1\\
+- k=601, yzad = -2\\
+- k=801, yzad = -1\\\\
 
-Nastêpnym krokiem by³a aproksymacja uzyskanych wczeœniej odpowiedzi skokowych cz³onem inercyjnym drugiego rzêdu z opóŸnieniem.
-Parametry T1, T2 oraz K tego cz³ony wyznaczone zosta³y za pomoc¹ optymalizatora \verb|ga|. Jako, ¿e jest on optymalizatorem niedeterministycznym (nie daje przy ka¿dym uruchomieniu takich samych rezultatów),
-kilka razy powtarzaliœmy nasze eksperymenty oraz ocenialiœmy wizualnie (na wykresach) jakoœæ dopasowania funkcji aproksymuj¹cej do obliczonej odpowiedzi skokowej.
-Okaza³o siê, ¿e bardzo dobre rezultaty udawa³o siê uzyskaæ nie podaj¹c optymalizatorowi ¿adnych ograniczeñ, dlatego te¿ nie zdecydowaliœmy siê na tego typu kroki.\\\\
+PID: b³¹d E = 133,2526, parametry: K=0,17; Ti=3,5; Td=1,1;\\
+DMC: b³¹d E = 236.8488, parametry: D=N=Nu=50; lambda=250;\\
+Parametry dobrane eksperymentalnie.\\\\
 
-Parametry cz³onu inercyjnego drugiego rzêdu z opóŸnieniem wyznaczone przy pomocy optymalizatora:
-dla odpowiedzi skokowej obliczonej dla skoku sterowania do wartoœci $\num{50}\%$:\\
-$T1=\num{14,875560};\\    T2=\num{77,388071};\\    K=\num{0,461244}$;\\\\
+Widzimy ¿e dla skoków wartoœci zadanej zawieraj¹cych siê w pierwszej, szybszej czêœci charakterystyki statycznej
+regulatory dzia³aj¹ du¿o lepiej ni¿ w przypadku skoków zawieraj¹cych siê w drugiej, bardzo wolnej czêœci charakterystyki. 
+200 chwil k to za ma³o aby obiekt osi¹gn¹³ wartoœæ zadan¹ podczas gdy osi¹gniêcie "szybszej" wartoœci zadanej zajmuje mu kilkadziesi¹t chwil.\\
+Strojenie liniowego regulatora w tym przypadku przy pomocy optymalizatorów zapewne da³oby lepszy efekt, ale nadal nieliniowoœæ obiektu mocno by "dokucza³a" i nie by³aby to tak dobra regulacja jak w przypadku obiektu liniowego.\\
 
-dla odpowiedzi skokowej obliczonej dla skoku sterowania do wartoœci $\num{90}\%$:\\
-$T1=\num{13,342281};\\    T2=\num{76,79432};\\    K=\num{0,286991}$;\\\\
 
-Rezultaty, które uda³o nam siê uzyskaæ zosta³y przedstawione na poni¿szych wykresach:
-
-\begin{figure}[ht]
+\begin{figure}[h!]
 	\centering
+	
 	\begin{tikzpicture}
 	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
 	enlargelimits=false,
-	width=5.0in,
-	height=3.4in,
-	%xmin=0,xmax=350,
-	ymin=-0.05,ymax=0.5,
+	%xmin=0,xmax=1600,
+	%ymin=-0.5,ymax=1,
 	xlabel={$k$},
 	ylabel={$Y$},
-	legend pos=south east,
+	legend pos=north east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,red] file {wykresy/odp_skokowa_skok_50.txt};
-	\addplot[cyan] file {wykresy/funkcja_aproksymujaca_skok_50.txt};
-	\legend{orygina³,aproksymacja}
+	\addplot[const plot,blue] file {../wykresy/zad34pid_Y.txt};
+	\addplot[red] file {../wykresy/yzad.txt};
+	\legend{$Y$, $Y_{zad}$}
 	\end{axis}
 	\end{tikzpicture}
-	\caption{Porównanie odpowiedzi skokowej i jej aproksymacji przy skoku sterowania do wartoœci 50\%}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	%ymin=-0.5,ymax=1,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {../wykresy/zad34pid_U.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+	\caption{Przebiegi sygna³ów dla PID}
 \end{figure}
 
 
-\begin{figure}[ht]
+\begin{figure}[h!]
 	\centering
+	
 	\begin{tikzpicture}
 	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
 	enlargelimits=false,
-	width=5.0in,
-	height=3.4in,
-	%xmin=0,xmax=350,
-	ymin=-0.05,ymax=0.5,
+	%xmin=0,xmax=1600,
+	%ymin=-0.5,ymax=1,
 	xlabel={$k$},
 	ylabel={$Y$},
-	legend pos=south east,
+	legend pos=north east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,red] file {wykresy/odp_skokowa_skok_90.txt};
-	\addplot[cyan] file {wykresy/funkcja_aproksymujaca_skok_90.txt};
-	\legend{orygina³,aproksymacja}
+	\addplot[const plot,blue] file {../wykresy/zad34dmc_Y.txt};
+	\addplot[red] file {../wykresy/yzad.txt};
+	\legend{$Y$, $Y_{zad}$}
 	\end{axis}
 	\end{tikzpicture}
-	\caption{Porównanie odpowiedzi skokowej i jej aproksymacji przy skoku sterowania do wartoœci 90\%}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	%ymin=-5,ymax=105,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {../wykresy/zad34dmc_U.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+	\caption{Przebiegi sygna³ów dla DMC}
 \end{figure}
