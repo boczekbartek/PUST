@@ -18,4 +18,16 @@ Parametry dobrane eksperymentalnie.
 Widzimy ¿e dla skoków wartoœci zadanej zawieraj¹cych siê w pierwszej, szybszej czêœci charakterystyki statycznej
 regulatory dzia³aj¹ du¿o lepiej ni¿ w przypadku skoków zawieraj¹cych siê w drugiej, bardzo wolnej czêœci charakterystyki. 
 200 chwil k to za ma³o aby obiekt osi¹gn¹³ wartoœæ zadan¹ podczas gdy osi¹gniêcie "szybszej" wartoœci zadanej zajmuje mu kilkadziesi¹t chwil.
-Strojenie liniowego regulatora w tym przypadku przy pomocy optymalizatorów zapewne da³oby lepszy efekt, ale nadal nieliniowoœæ obiektu mocno by "dokucza³a".
+Strojenie liniowego regulatora w tym przypadku przy pomocy optymalizatorów zapewne da³oby lepszy efekt, ale nadal nieliniowoœæ obiektu mocno by "dokucza³a" i nie by³aby to tak dobra regulacja jak w przypadku obiektu liniowego.
+
+5. Rozmyty PID:
+b³êdy: 1 regulator E = 159.1203
+	2 regulatory E = 126.4950
+	3 regulatory E = 129.3428
+	4 regulatory E = 121.9314
+	5 regulatorów E = 126.6583
+We wszystkich przypadkach poza pierwszym jakoœæ regulacji jest lepsza zarówno pod wzglêdem wskaŸnika E jak i jakoœci przebiegów.
+Regulatory rozmyte dobrze sobie radz¹ z nieliniowoœci¹ obiektu, drobne wachania b³êdu wzglêdem liczby regulatorów lokalnych wynikaj¹
+z niedok³adnego podzielenia dziedziny U pomiêdzy funkcje przynale¿noœci. 
+Rozmyty regulator z jednym regulatorem lokalnym kiepsko radzi sobie z wolniejsz¹ czêœci¹ charakterystyki statycznej obiektu;
+200 chwil k ledwo wystarcza aby obiekt osi¹gn¹³ wartoœæ zadan¹. Dobieranie parametrów regulatorów lokalnych odby³o siê przy pomocy optymalizatora 'ga'.

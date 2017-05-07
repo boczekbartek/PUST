@@ -17,3 +17,5 @@ ylabel('u');
 subplot('Position', [0.1 0.37 0.8 0.6]);
 stairs(Y);
 ylabel('y');
+savePlot(1:n,U,strcat('zad1.txt'));
+savePlot(1:n,Y,strcat('zad1.txt'));

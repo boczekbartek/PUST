@@ -41,7 +41,6 @@ err = sum(e.^2)
 figure('Position',  [403 246 820 420]);
 subplot('Position', [0.1 0.12 0.8 0.15]);
 stairs(U);
-
 ylabel('u');
 xlabel('k');
 subplot('Position', [0.1 0.37 0.8 0.6]);
