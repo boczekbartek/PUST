@@ -41,6 +41,8 @@ na której doskonale widaæ, ¿e charakterystyka obiektu jest z³o¿ona z dwóch linio
 (wykres zadanie2_charakterystyka_statyczna, oœ x U, oœ y Y)
 
 
+Nie mo¿na obliczyæ wzmocnienia statycznego dla nieliniowego procesu.
+
 ****Zadanie 3********
 Obliczyliœmy dwie odpowiedzi skokowe, odpowiednio dla dwóch skoków odpowiadaj¹cym dwóm liniowym czêsciom charakterystyki statycznej. 
 Pierwszy to skok sterowania U z 35%->50% (gdy¿ w³aœnie w punkcie 50 jest przegiêcie charakterystyki statycznej), drugi z 35%->90%.
@@ -96,18 +98,14 @@ dla drugiej czêœci charakterystyki:
 (wykresy zadanie4_PID2_Y/Yzad na jednym, ponie¿ej zadanie4PID1_U) 
 
 
+*********Zadanie 5****
+W tym zadaniu wykonaliœmy eksperyment z uzyciem pierwszego regulatora PID obliczonego w zadaniu poprzednim. Niestety, w zwi¹zku z nieliniowoœci¹ obiektu, regulacja nie daje zadowalaj¹cych rezultatów. Regulator PID to regulator liniowy, który mo¿na zastosowaæ jedynie do 
+obiektów o charakterystyce liniowej.
+
+W zwi¹zku z ograniczeniem czasowym zajêæ labolatoryjnych oraz d³ugim czasem stabilizacji obiektu po skoku sterowania (ok 300s), zdecydowaliœmy siê zastosowaæ mniej skoków sterowania ni¿ zalecane by³o w poleceniu.  
+
+B³¹d skumulowany w tym przypadku wyniós³:3.7624e+03
 
 
 
-
-
-
-
-
-
-
-
-Parametry pida zosta³y dobrane z optymalizacji ga, socyluje bo jest to obikt nieliniowy jednak zbiega do wartoœci zadanej
-
-nastawy dmc 1 N=5.000000; Nu=1.000000; lambda=0.159035;
-nastawy dmc 2 N=71.000000; Nu=71.000000; lambda=31.528399;
+*****Zadanie 6*******
