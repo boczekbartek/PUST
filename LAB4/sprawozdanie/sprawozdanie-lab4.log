@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  7 MAY 2017 20:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  7 MAY 2017 21:14
 entering extended mode
 **./sprawozdanie-lab4.tex
 (sprawozdanie-lab4.tex
@@ -1508,43 +1508,43 @@ PGFPlots: reading {wykresy/zadanie6_2reg_PID_Y.txt}
 PGFPlots: reading {wykresy/zadanie6_2reg_PID_Yzad.txt}
 PGFPlots: reading {wykresy/zadanie6_2reg_PID_U.txt}
 PGFPlots: reading {wykresy/zadanie6_PID_2reg_blad.txt}
+) (p7.tex [12
+
+]
+Rozdzia\PlPrIeC {\l } 7.
 PGFPlots: reading {wykresy/zadanie6_DMC_2reg_Y.txt}
 PGFPlots: reading {wykresy/zadanie6_DMC_2reg_Yzad.txt}
 PGFPlots: reading {wykresy/zadanie6_DMC_2reg_U.txt}
 PGFPlots: reading {wykresy/zadanie6_DMC_2reg_blad.txt}
+) [13
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) [12
-
-] [13] (sprawozdanie-lab4.aux) ) 
+] (sprawozdanie-lab4.aux) ) 
 Here is how much of TeX's memory you used:
- 36929 strings out of 493329
- 885855 string characters out of 3139066
- 21698082 words of memory out of 24644798
- 39838 multiletter control sequences out of 15000+200000
+ 36930 strings out of 493329
+ 885836 string characters out of 3139066
+ 21698094 words of memory out of 24644810
+ 39836 multiletter control sequences out of 15000+200000
  24139 words of font info for 72 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,22n,100p,10391b,2153s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl
-/plms.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.enc}{C:/Program 
-Files/MiKTeX 2.9/fonts/enc/dvips/pl/plit.enc}{C:/Program Files/MiKTeX 2.9/fonts
-/enc/dvips/pl/plmi.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm
--super-ts1.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/pltt.enc}<C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/pl/plbx10.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/pl/plmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi7.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/pl/plr10.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/pl/plr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/p
-lr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/pl/plti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/pl/pltt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm
-1000.pfb>
-Output written on sprawozdanie-lab4.pdf (14 pages, 338869 bytes).
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plrm
+.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plit.enc}{C:/Program Files
+/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/
+dvips/pl/plmi.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-supe
+r-ts1.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/pltt.enc}<C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/pl/plbx10.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/pl/plbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/pl/plmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi7.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/pl/plr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/pl/plr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr8.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/pl/plti10.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/pl/pltt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+cm-super/sfrm1000.pfb>
+Output written on sprawozdanie-lab4.pdf (14 pages, 336776 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
+ 105 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

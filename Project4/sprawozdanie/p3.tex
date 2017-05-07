@@ -1,0 +1,64 @@
+%PROJ4
+\chapter{Punkt 3}
+
+Obliczyliœmy dwie odpowiedzi skokowe, odpowiednio dla dwóch skoków odpowiadaj¹cym dwóm liniowym czêsciom charakterystyki statycznej. Pierwszy to skok sterowania U z $\num{35}\% \rightarrow \num{50}\%$ (gdy¿ w³aœnie w punkcie $\num{50}$ jest przegiêcie charakterystyki statycznej), drugi z $\num{35}\% \rightarrow \num{90}\%$.
+Skoki zosta³y przeskalowane, tak aby mog³y byæ uznane za odpowiedŸ skokow¹, czyli odpowiedŸ obiektu na skok jednostkowy.\\ 
+
+Nastêpnym krokiem by³a aproksymacja uzyskanych wczeœniej odpowiedzi skokowych cz³onem inercyjnym drugiego rzêdu z opóŸnieniem.
+Parametry T1, T2 oraz K tego cz³ony wyznaczone zosta³y za pomoc¹ optymalizatora \verb|ga|. Jako, ¿e jest on optymalizatorem niedeterministycznym (nie daje przy ka¿dym uruchomieniu takich samych rezultatów),
+kilka razy powtarzaliœmy nasze eksperymenty oraz ocenialiœmy wizualnie (na wykresach) jakoœæ dopasowania funkcji aproksymuj¹cej do obliczonej odpowiedzi skokowej.
+Okaza³o siê, ¿e bardzo dobre rezultaty udawa³o siê uzyskaæ nie podaj¹c optymalizatorowi ¿adnych ograniczeñ, dlatego te¿ nie zdecydowaliœmy siê na tego typu kroki.\\\\
+
+Parametry cz³onu inercyjnego drugiego rzêdu z opóŸnieniem wyznaczone przy pomocy optymalizatora:
+dla odpowiedzi skokowej obliczonej dla skoku sterowania do wartoœci $\num{50}\%$:\\
+$T1=\num{14,875560};\\    T2=\num{77,388071};\\    K=\num{0,461244}$;\\\\
+
+dla odpowiedzi skokowej obliczonej dla skoku sterowania do wartoœci $\num{90}\%$:\\
+$T1=\num{13,342281};\\    T2=\num{76,79432};\\    K=\num{0,286991}$;\\\\
+
+Rezultaty, które uda³o nam siê uzyskaæ zosta³y przedstawione na poni¿szych wykresach:
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=5.0in,
+	height=3.4in,
+	%xmin=0,xmax=350,
+	ymin=-0.05,ymax=0.5,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,red] file {wykresy/odp_skokowa_skok_50.txt};
+	\addplot[cyan] file {wykresy/funkcja_aproksymujaca_skok_50.txt};
+	\legend{orygina³,aproksymacja}
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Porównanie odpowiedzi skokowej i jej aproksymacji przy skoku sterowania do wartoœci 50\%}
+\end{figure}
+
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=5.0in,
+	height=3.4in,
+	%xmin=0,xmax=350,
+	ymin=-0.05,ymax=0.5,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,red] file {wykresy/odp_skokowa_skok_90.txt};
+	\addplot[cyan] file {wykresy/funkcja_aproksymujaca_skok_90.txt};
+	\legend{orygina³,aproksymacja}
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Porównanie odpowiedzi skokowej i jej aproksymacji przy skoku sterowania do wartoœci 90\%}
+\end{figure}
