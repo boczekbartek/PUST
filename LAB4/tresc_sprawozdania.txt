@@ -75,24 +75,34 @@ Pierwszy wykorzystuj¹c otrzyman¹ w zadaniu 3 aproksymacjê odpowiedzi skokowej dl
 
 Nastêpnie wyznaczyliœmy korzystaj¹c z optymalizatora ga (ograniczenia lb = [0.01,1,0.01]; ub = [50,50,50]) a nastênie eksperymentalnie dostrajaj¹c parametry algorytmów PID i DMC ka¿dego z liniowych przedzia³ów charakterystyki statycznej.
 Otrzymane rezultaty:
-dla przedzia³u u nale¿y do (0:50)
+dla pierwszej czêsci charakterystyki
 PID:
 	K=0.14661; Ti=1.63138; Td=0.010002;
 DMC:
-	
-dla przedzia³u u nale¿y do (50:100) 
+	N=30.000000; Nu=10.000000; lambda=2.4;
+dla drugiej czêœci charakterystyki 
 PID:
 	K=0.194661; Ti=1.53138; Td=0.010002;
 DMC:
+	N=40.000000; Nu=32.000000; lambda=6.86402;
 	
+Jakoœc regulacji ocenialiœmy na podstawie symulacji przebiegów regulacji z wykorzystanie konkretnych modeli dla kilku skoków wartoœci zadanej. Oto otrzymane rezultaty:
+dla pierwszej czêsci charakterystyki:
+
+(wykresy zadanie4_PID1_Y/Yzad na jednym, ponie¿ej zadanie4PID1_U)
+
+dla drugiej czêœci charakterystyki:
+
+(wykresy zadanie4_PID2_Y/Yzad na jednym, ponie¿ej zadanie4PID1_U) 
 
 
 
 
- 
 
 
-Parametry te wyliczaliœmy przy pomoca optymalizatora ga. 
+
+
+
 
 
 
