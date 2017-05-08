@@ -1,16 +1,18 @@
 %PROJ4
 \chapter{Punkt 5}
+Rozmyty regulator PID:\\\\
+b³êdy: 1 regulator E = $\num{159,1203}$\\
+2 regulatory E = $\num{126,4950}$\\
+3 regulatory E = $\num{129,3428}$\\
+4 regulatory E = $\num{121,9314}$\\
+5 regulatorów E = $\num{126,6583}$\\\\
 
-b³êdy: 1 regulator E = 159,1203\\
-2 regulatory E = 126,4950\\
-3 regulatory E = 129,3428\\
-4 regulatory E = 121,9314\\
-5 regulatorów E = 126,6583\\\\
 We wszystkich przypadkach poza pierwszym jakoœæ regulacji jest lepsza zarówno pod wzglêdem wskaŸnika E jak i jakoœci przebiegów.
 Regulatory rozmyte dobrze sobie radz¹ z nieliniowoœci¹ obiektu, drobne wahania b³êdu wzglêdem liczby regulatorów lokalnych wynikaj¹
 z niedok³adnego podzielenia dziedziny U pomiêdzy funkcje przynale¿noœci. 
 Rozmyty regulator z jednym regulatorem lokalnym kiepsko radzi sobie z wolniejsz¹ czêœci¹ charakterystyki statycznej obiektu;
-200 chwil k ledwo wystarcza aby obiekt osi¹gn¹³ wartoœæ zadan¹. Dobieranie parametrów regulatorów lokalnych odby³o siê przy pomocy optymalizatora 'ga'.
+200 chwil k ledwo wystarcza aby obiekt osi¹gn¹³ wartoœæ zadan¹. Dobieranie parametrów regulatorów lokalnych odby³o siê przy pomocy optymalizatora 'ga'. Dodaliœmy ograniczenia kostkowe na ka¿dy parametr
+0 < param < 50; i uœredniliœmy kilka wyników optymalizatora poniewa¿ jest to algorytm niedeterministyczny i za ka¿dym razem dawa³ inny wynik.
 
 
 \begin{figure}[h!]
