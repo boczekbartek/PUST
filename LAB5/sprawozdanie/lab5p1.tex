@@ -1,0 +1,37 @@
+%LAB3
+\chapter{Punkt 1 }
+
+Komunikacja z obiektem grzej¹co-ch³odz¹cym przebiega poprzez port szeregowy. Uda³o nam siê skomunikowaæ ze œrodowiskiem za pomoc¹ funkcji \verb|readMeasurements| oraz \verb|sendControls| dostarczonymi w pakiecie laboratoryjnym. Wysy³anie sygna³ów steruj¹cych do wiatraczka, grza³ki oraz odczyt pomiarów z czujników znajduj¹cych siê na obiekcie
+przebiega³ pomyœlnie. Wartoœci, którymi bêdziemy sterowaæ w tym æwiczeniu to W1 - 1 paramert funkcji \verb|sendControls|, oraz G1 - 5 parametr. Pomiarem nas interesuj¹cym bêdzie pierwsza wartoœæ
+w wektorze zwracanym przez \verb|readMeasurements|, czyli pomiar temperatury T1.
+
+Wyznaczanie punktu pracy:\\
+wys³aliœmy sta³¹ wartoœæ sterowania $U_{pp} = \num{35}\%$ oraz zmierzyliœmy wartoœæ wyjœcia. Wiatraczek W1 (cecha œrodowiska) zosta³ ustawiony na $W1 = \num{50}\%$ obrotów maksymalnych.\\
+
+Poni¿ej przedstawiony zosta³ przebieg eksperymentu:
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=5.0in,
+	height=3.4in,
+	xmin=0,xmax=300,ymin=32,ymax=34,
+	xlabel={$k$},
+	ylabel={$T1$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie1.txt};
+	\end{axis}
+	\end{tikzpicture}
+
+	\caption{Punkt pracy}
+	
+\end{figure}
+
+\begin{figure}
+	Na wykresie mo¿emy zaobserwowaæ, ¿e wartoœæ temperatury T1 (wyjœcia obiektu) stabilizuje sie na wartoœci $\num{33,25}\degree$C.
+	Zatem mo¿emy stwierdziæ, ¿e punkt pracy obiektu to: ($U_{pp}$; $Y_{pp}$) = ($\num{35}$; $\num{33,25}$).
+	
+\end{figure}
