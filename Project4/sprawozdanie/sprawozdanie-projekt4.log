@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  7 MAY 2017 22:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  8 MAY 2017 17:56
 entering extended mode
 **./sprawozdanie-projekt4.tex
 (sprawozdanie-projekt4.tex
@@ -1385,28 +1385,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--14
  []
 
 PGFPlots: reading {../wykresy/zad5_Y_1_reg.txt}
-PGFPlots: reading {../wykresy/yzad.txt}
+PGFPlots: reading {../wykresy/yzad5.txt}
 PGFPlots: reading {../wykresy/zad5_U_1_reg.txt}
 PGFPlots: reading {../wykresy/zad5_Y_2_reg.txt}
-PGFPlots: reading {../wykresy/yzad.txt}
+PGFPlots: reading {../wykresy/yzad5.txt}
 PGFPlots: reading {../wykresy/zad5_U_2_reg.txt}
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 PGFPlots: reading {../wykresy/zad5_Y_3_reg.txt}
-PGFPlots: reading {../wykresy/yzad.txt}
+PGFPlots: reading {../wykresy/yzad5.txt}
 PGFPlots: reading {../wykresy/zad5_U_3_reg.txt}
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 PGFPlots: reading {../wykresy/zad5_Y_4_reg.txt}
-PGFPlots: reading {../wykresy/yzad.txt}
+PGFPlots: reading {../wykresy/yzad5.txt}
 PGFPlots: reading {../wykresy/zad5_U_4_reg.txt}
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 PGFPlots: reading {../wykresy/zad5_Y_5_reg.txt}
-PGFPlots: reading {../wykresy/yzad.txt}
+PGFPlots: reading {../wykresy/yzad5.txt}
 PGFPlots: reading {../wykresy/zad5_U_5_reg.txt}
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1415,10 +1415,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ] [8] [9] (sprawozdanie-projekt4.aux) ) 
 Here is how much of TeX's memory you used:
- 36865 strings out of 493329
- 884753 string characters out of 3139066
- 21799326 words of memory out of 24746042
- 39790 multiletter control sequences out of 15000+200000
+ 36869 strings out of 493329
+ 884807 string characters out of 3139066
+ 21803468 words of memory out of 24750184
+ 39793 multiletter control sequences out of 15000+200000
  24139 words of font info for 72 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,22n,100p,10395b,2161s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1434,7 +1434,7 @@ pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr8.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/pl/plsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl
 /plti10.pfb>
-Output written on sprawozdanie-projekt4.pdf (10 pages, 242381 bytes).
+Output written on sprawozdanie-projekt4.pdf (10 pages, 241923 bytes).
 PDF statistics:
  82 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
