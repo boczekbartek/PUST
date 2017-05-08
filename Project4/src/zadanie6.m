@@ -5,25 +5,25 @@ switch reg
     case 1
     fun_przyn_u = [-1 -0.9 0.9 1];
     D = {50};
-    lambda = {900}; 
+    lambda = {570}; 
     case 2
     fun_przyn_u = [-1 -0.8 -0.2 0;...
             -0.2 0 0.8 1];
     D = {40, 50};
-    lambda = {100, 100};
+    lambda = {500, 10};
     case 3
     fun_przyn_u = [-1 -0.9 -0.5 -0.4;...
             -0.5 -0.4 0.1 0.2;...
             0.1 0.2 0.9 1];
     D = {30, 40, 50};
-    lambda = {100, 100, 100};
+    lambda = {800, 30, 10};
     case 4
     fun_przyn_u = [-1 -0.9 -0.7 -0.6;...
             -0.7 -0.6 -0.3 -0.2;...
             -0.3 -0.2 -0.1 0;...
             -0.1 0 0.9 1];
     D = {30, 30, 40, 50};
-    lambda = {100, 1000, 100, 100};
+    lambda = {100, 50, 10, 10};
     case 5
     fun_przyn_u = [-1 -0.9 -0.6 -0.5;...
             -0.6 -0.5 -0.4 -0.35;...
@@ -31,7 +31,7 @@ switch reg
             -0.2 -0.15 0 0.1;...
             0 0.1 0.9 1];
     D = {30, 30, 40, 40, 50};
-    lambda = {50, 50, 100, 100, 50};
+    lambda = {10, 10, 10, 500, 10};
 end
 
 fun_przyn_y = arrayfun(@char_stat_fun,fun_przyn_u);  %map fun_przyn_u => charstatfun
@@ -129,15 +129,15 @@ end
 err
 
 
-figure('Position',  [403 246 820 420]);
-subplot('Position', [0.1 0.12 0.8 0.15]);
-stairs(U);
-ylabel('u'); 
-xlabel('k');
-subplot('Position', [0.1 0.37 0.8 0.6]);
-stairs(Y);
-ylabel('y'); 
-hold on; 
-stairs(Yzad,':');
-savePlot(1:n,U,'zad6_U_5_reg.txt');
-savePlot(1:n,Y,'zad6_Y_5_reg.txt');
+% figure('Position',  [403 246 820 420]);
+% subplot('Position', [0.1 0.12 0.8 0.15]);
+% stairs(U);
+% ylabel('u'); 
+% xlabel('k');
+% subplot('Position', [0.1 0.37 0.8 0.6]);
+% stairs(Y);
+% ylabel('y'); 
+% hold on; 
+% stairs(Yzad,':');
+savePlot(1:1000,U,'zad7_U_5_reg.txt');
+savePlot(1:1000,Y,'zad7_Y_5_reg.txt');

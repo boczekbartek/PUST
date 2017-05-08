@@ -43,4 +43,16 @@ b³edy:  1 regulator E = 179.4611
 Podobnie jak w poprzednim przypadku, regulacja rozmyta daje znacznie lepsze efekty pod wzglêdem jakoœciowym i iloœciowym; w ka¿dym przypadku b³¹d E jest znacznie mniejszy w porównaniu do regulacji liniowej.
 Ponownie, wachania b³êdu wzglêdem regulatorów lokalnych wynikaj¹ z dobrania 'na oko'(eksperymentalnego) parametrów funkcji przynale¿noœci oraz parametrów lambda, jednak tak jak siê mo¿na spodziewaæ, najlepszy wynik da³ regulator z piêcioma regulatorami lokalnymi.
 
+7. Rozmyty DMC z ró¿nymi lambdami:
+
+b³êdy:  1 regulator E = 165.7639 parametry lambda = {570}
+	2 regulatory E = 181.5727 parametry lambda = {500, 10}
+	3 regulatory E = 162.3975 parametry lambda = {800, 30, 10}
+	4 regulatory E = 129.4927 parametry lambda = {100, 50, 10, 10}
+	5 regulatorów E = 113.2183 parametry lambda = {10, 10, 10, 500, 10}
+Staraj¹c siê osi¹gn¹æ kompromis pomiêdzy minimalizacj¹ b³êdu E, a jakoœci¹ przebiegów, osi¹gnêliœmy metod¹ eksperymentaln¹ nastepuj¹ce rezultaty:
+W tym przypadku korelacja b³êdu i jakoœci regulacji a liczb¹ regulatorów jest wyraŸna i zgodna z oczekiwaniami. Poza pierwszym przypadkiem, b³¹d maleje, a jakoœæ regulacji roœnie wraz ze wzrostem liczby regulatorów lokalnych.
+(Tu lej wodê jak chcesz)
+
+
 
