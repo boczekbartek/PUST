@@ -1,11 +1,16 @@
 %PROJ4
 \chapter{Punkt 6}
 
-W tym zadaniu wykorzystaliœmy technikê regulacji rozmytej. Wykonaliœmy eksperymenty dla 2 lokalnych regulatorów PID i 2 lokalnych regulatorów DMC. Parametry lokalnych regulatorów dobraliœmy takie jak s¹ przedstawione w zadaniu 4, czyli na podstawie modelowania oraz symulacji liniowych kawa³ków charakterystyki statycznej.\\
+Rozmyty regulator DMC:\\\\
+b³edy:  \\
+1 regulator E = $\num{ 179,4611}$\\
+2 regulatory E = $\num{148,1608}$\\
+3 regulatory E = $\num{149,4896}$\\
+4 regulatory E = $\num{147,9031}$\\
+5 regulatorów E = $\num{134,2346}$\\\\
 
-
-Na poni¿ej zamieszczonych przebiegach widaæ (dla PID), ¿e regulacja przebiega znacznie lepiej, ni¿ przy zastosowaniu klasycznemgo (liniowego) podejœcia. Regulator oscyluje du¿o mniej i zbiega do wartoœci zadanej. Lepsze wyniki regulacji mo¿na równie¿ stwierdziæ bo wykresie przedstawiaj¹cym b³¹d. Niestety podczas labolatorium nie uda³o nam siê zastosowaæ 3 lub 4 regulatorów lokalnych,
-lecz po doœwiadczeniach na projekcie mo¿emy stwierdziæ, ¿e regulacja zapewne by³aby du¿o lepsza, co wynika z tego, ¿e w punkcie przegiêcia istnieje równie¿ nieliniowoœæ, z któr¹ nie radz¹ sobie tylko 2 regulatory.
+Podobnie jak w poprzednim przypadku, regulacja rozmyta daje znacznie lepsze efekty pod wzglêdem jakoœciowym i iloœciowym; w ka¿dym przypadku b³¹d E jest znacznie mniejszy w porównaniu do regulacji liniowej.
+Ponownie, wachania b³êdu wzglêdem regulatorów lokalnych wynikaj¹ z dobrania 'na oko'(eksperymentalnego) parametrów funkcji przynale¿noœci oraz parametrów $\lambda$, jednak tak jak siê mo¿na spodziewaæ, najlepszy wynik da³ regulator z piêcioma regulatorami lokalnymi.
 
 
 \begin{figure}[h!]
@@ -17,14 +22,14 @@ lecz po doœwiadczeniach na projekcie mo¿emy stwierdziæ, ¿e regulacja zapewne by³
 	height=1.8in,
 	enlargelimits=false,
 	%xmin=0,xmax=1600,
-	ymin=25,ymax=55,
+	ymin=-2.5,ymax=0.5,
 	xlabel={$k$},
 	ylabel={$Y$},
 	legend pos=north east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,blue] file {wykresy/zadanie6_2reg_PID_Y.txt};
-	\addplot[red] file {wykresy/zadanie6_2reg_PID_Yzad.txt};
+	\addplot[const plot,blue] file {../wykresy/zad6_y_1_reg.txt};
+	\addplot[red] file {../wykresy/yzad5.txt};
 	\legend{$Y$, $Y_{zad}$}
 	\end{axis}
 	\end{tikzpicture}
@@ -35,37 +40,18 @@ lecz po doœwiadczeniach na projekcie mo¿emy stwierdziæ, ¿e regulacja zapewne by³
 	height=1.8in,
 	enlargelimits=false,
 	%xmin=0,xmax=1600,
-	ymin=-5,ymax=105,
+	ymin=-1.5,ymax=1.5,
 	xlabel={$k$},
 	ylabel={$U$},
 	legend pos=north east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,blue] file {wykresy/zadanie6_2reg_PID_U.txt};
+	\addplot[const plot,blue] file {../wykresy/zad6_U_1_reg.txt};
 	\end{axis}
 	\end{tikzpicture}
 	
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=4.667in,
-	height=1.8in,
-	enlargelimits=false,
-	%xmin=0,xmax=1600,
-	ymin=-5,ymax=20,
-	xlabel={$k$},
-	ylabel={$E$},
-	legend pos=north east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,blue] file {wykresy/zadanie6_PID_2reg_blad.txt};
-	\end{axis}
-	\end{tikzpicture}
 	
-	\caption{Przebiegi sygna³ów uzyskanych podczas eksperymentu na rzeczywistym obiekcie w przypadku zastosowania dwóch regulatorów PID}
-\end{figure}
-
-\begin{figure}
-	Przebiegi regulacji DMC dla 2 regulatorów lokalnych równie¿ s¹ dosyæ zadowalaj¹ce, sygna³ wyjœciowy zbiega do wartoœci zadanej. Przy zastosowaniu wiêkszej liczby regulatorów, oraz wykonaniu kliku eksperymentów na rzeczywistym obiekcie w celu dobrania optymalnych nastaw prawdopodobnie uda³oby siê polepszyæ rezultaty regulacji.
+	\caption{Przebiegi sygna³ów dla 1 regulatora}
 \end{figure}
 
 \begin{figure}[h!]
@@ -77,14 +63,14 @@ lecz po doœwiadczeniach na projekcie mo¿emy stwierdziæ, ¿e regulacja zapewne by³
 	height=1.8in,
 	enlargelimits=false,
 	%xmin=0,xmax=1600,
-	ymin=-10,ymax=60,
+	ymin=-2.5,ymax=0.5,
 	xlabel={$k$},
 	ylabel={$Y$},
 	legend pos=north east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,blue] file {wykresy/zadanie6_DMC_2reg_Y.txt};
-	\addplot[red] file {wykresy/zadanie6_DMC_2reg_Yzad.txt};
+	\addplot[const plot,blue] file {../wykresy/zad6_y_2_reg.txt};
+	\addplot[red] file {../wykresy/yzad5.txt};
 	\legend{$Y$, $Y_{zad}$}
 	\end{axis}
 	\end{tikzpicture}
@@ -95,13 +81,38 @@ lecz po doœwiadczeniach na projekcie mo¿emy stwierdziæ, ¿e regulacja zapewne by³
 	height=1.8in,
 	enlargelimits=false,
 	%xmin=0,xmax=1600,
-	ymin=-150,ymax=100,
+	ymin=-1.5,ymax=1.5,
 	xlabel={$k$},
 	ylabel={$U$},
 	legend pos=north east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,blue] file {wykresy/zadanie6_DMC_2reg_U.txt};
+	\addplot[const plot,blue] file {../wykresy/zad6_U_2_reg.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+	\caption{Przebiegi sygna³ów dla 2 regulatorów}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=-2.5,ymax=0.5,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {../wykresy/zad6_y_3_reg.txt};
+	\addplot[red] file {../wykresy/yzad5.txt};
+	\legend{$Y$, $Y_{zad}$}
 	\end{axis}
 	\end{tikzpicture}
 	
@@ -111,15 +122,99 @@ lecz po doœwiadczeniach na projekcie mo¿emy stwierdziæ, ¿e regulacja zapewne by³
 	height=1.8in,
 	enlargelimits=false,
 	%xmin=0,xmax=1600,
-	ymin=-5,ymax=40,
+	ymin=-1.5,ymax=1.5,
 	xlabel={$k$},
-	ylabel={$E$},
+	ylabel={$U$},
 	legend pos=north east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,blue] file {wykresy/zadanie6_DMC_2reg_blad.txt};
+	\addplot[const plot,blue] file {../wykresy/zad6_U_3_reg.txt};
 	\end{axis}
 	\end{tikzpicture}
 	
-	\caption{Przebiegi sygna³ów uzyskanych podczas eksperymentu na rzeczywistym obiekcie w przypadku zastosowania dwóch regulatorów DMC}
+	
+	\caption{Przebiegi sygna³ów dla 3 regulatorów}
 \end{figure}
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=-2.5,ymax=0.5,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {../wykresy/zad6_y_4_reg.txt};
+	\addplot[red] file {../wykresy/yzad5.txt};
+	\legend{$Y$, $Y_{zad}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=-1.5,ymax=1.5,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {../wykresy/zad6_U_4_reg.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+	\caption{Przebiegi sygna³ów dla 4 regulatorów}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=-2.5,ymax=0.5,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {../wykresy/zad6_y_5_reg.txt};
+	\addplot[red] file {../wykresy/yzad5.txt};
+	\legend{$Y$, $Y_{zad}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=-1.5,ymax=1.5,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {../wykresy/zad6_U_5_reg.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+	\caption{Przebiegi sygna³ów dla 5 regulatorów}
+\end{figure}
+
