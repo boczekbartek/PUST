@@ -1,4 +1,223 @@
 %PROJ4
 \chapter{Punkt 7}
 
+Rozmyty regulator DMC z ró¿nymi parametrami $\lambda$:\\
+1 regulator: $\lambda$ = {570}\\
+2 regulatory: $\lambda$ = {500, 10}\\
+3 regulatory: $\lambda$ = {800, 30, 10}\\
+4 regulatory: $\lambda$ = {100, 50, 10, 10}\\
+5 regulatorów: $\lambda$ = {10, 10, 10, 500, 10}\\\\
+Staraj¹c siê osi¹gn¹æ kompromis pomiêdzy minimalizacj¹ b³êdu E, a jakoœci¹ przebiegów, osi¹gnêliœmy metod¹ eksperymentaln¹ nastepuj¹ce rezultaty:
 
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=-3,ymax=0.5,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {../wykresy/zad7_y_1_reg.txt};
+	\addplot[red] file {../wykresy/yzad5.txt};
+	\legend{$Y$, $Y_{zad}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=-1.5,ymax=1.5,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {../wykresy/zad7_U_1_reg.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+	\caption{Przebiegi sygna³ów dla 1 regulatora, b³¹d E = $\num{165,7639}$}
+\end{figure}
+
+
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=-2.5,ymax=0.5,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {../wykresy/zad7_y_2_reg.txt};
+	\addplot[red] file {../wykresy/yzad5.txt};
+	\legend{$Y$, $Y_{zad}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=-1.5,ymax=1.5,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {../wykresy/zad7_U_2_reg.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+	\caption{Przebiegi sygna³ów dla 2 regulatorów, b³¹d E = $\num{181,5727}$}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=-3,ymax=0.5,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {../wykresy/zad7_y_3_reg.txt};
+	\addplot[red] file {../wykresy/yzad5.txt};
+	\legend{$Y$, $Y_{zad}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=-1.5,ymax=1.5,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {../wykresy/zad7_U_3_reg.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+	\caption{Przebiegi sygna³ów dla 3 regulatorów, b³¹d E = $\num{162,3975}$}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=-2.5,ymax=0.5,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {../wykresy/zad7_y_4_reg.txt};
+	\addplot[red] file {../wykresy/yzad5.txt};
+	\legend{$Y$, $Y_{zad}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=-1.5,ymax=1.5,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {../wykresy/zad7_U_4_reg.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+	\caption{Przebiegi sygna³ów dla 4 regulatorów, b³¹d E = $\num{129,4927}$}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=-2.5,ymax=0.5,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {../wykresy/zad7_y_5_reg.txt};
+	\addplot[red] file {../wykresy/yzad5.txt};
+	\legend{$Y$, $Y_{zad}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=-1.5,ymax=1.5,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {../wykresy/zad7_U_5_reg.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+	\caption{Przebiegi sygna³ów dla 5 regulatorów, b³¹d E = $\num{113,2183}$}
+\end{figure}
+
+
+\begin{figure}
+	W tym przypadku korelacja b³êdu i jakoœci regulacji a liczb¹ regulatorów jest wyraŸna i zgodna z oczekiwaniami. Poza pierwszym przypadkiem, b³¹d maleje, a jakoœæ regulacji roœnie wraz ze wzrostem liczby regulatorów lokalnych.
+\end{figure}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  8 MAY 2017 20:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  8 MAY 2017 21:45
 entering extended mode
 **./sprawozdanie-projekt4.tex
 (sprawozdanie-projekt4.tex
@@ -1380,17 +1380,12 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 ] [6]
 Rozdzia\PlPrIeC {\l } 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--9
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--9
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3--9
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
@@ -1426,17 +1421,12 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 ] [8] [9]
 Rozdzia\PlPrIeC {\l } 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--11
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--11
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--11
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
 
@@ -1467,14 +1457,50 @@ PGFPlots: reading {../wykresy/zad6_U_5_reg.txt}
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [10
+) (p7.tex [10
 
-] [11] [12] (sprawozdanie-projekt4.aux) ) 
+] [11] [12]
+Rozdzia\PlPrIeC {\l } 6.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--11
+
+ []
+
+PGFPlots: reading {../wykresy/zad7_y_1_reg.txt}
+PGFPlots: reading {../wykresy/yzad5.txt}
+PGFPlots: reading {../wykresy/zad7_U_1_reg.txt}
+PGFPlots: reading {../wykresy/zad7_y_2_reg.txt}
+PGFPlots: reading {../wykresy/yzad5.txt}
+PGFPlots: reading {../wykresy/zad7_U_2_reg.txt}
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+PGFPlots: reading {../wykresy/zad7_y_3_reg.txt}
+PGFPlots: reading {../wykresy/yzad5.txt}
+PGFPlots: reading {../wykresy/zad7_U_3_reg.txt}
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+PGFPlots: reading {../wykresy/zad7_y_4_reg.txt}
+PGFPlots: reading {../wykresy/yzad5.txt}
+PGFPlots: reading {../wykresy/zad7_U_4_reg.txt}
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+PGFPlots: reading {../wykresy/zad7_y_5_reg.txt}
+PGFPlots: reading {../wykresy/yzad5.txt}
+PGFPlots: reading {../wykresy/zad7_U_5_reg.txt}
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [13
+
+] [14] [15] (sprawozdanie-projekt4.aux) ) 
 Here is how much of TeX's memory you used:
- 36972 strings out of 493329
- 886651 string characters out of 3139066
- 21807754 words of memory out of 24754470
- 39883 multiletter control sequences out of 15000+200000
+ 37075 strings out of 493329
+ 888495 string characters out of 3139066
+ 21810487 words of memory out of 24757203
+ 39973 multiletter control sequences out of 15000+200000
  24139 words of font info for 72 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,22n,100p,10395b,2161s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1490,9 +1516,9 @@ pe1/public/pl/plmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr1
 iles/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Program Files/MiKTeX 2.9/f
 onts/type1/public/pl/plsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
 pl/plti10.pfb>
-Output written on sprawozdanie-projekt4.pdf (13 pages, 362800 bytes).
+Output written on sprawozdanie-projekt4.pdf (16 pages, 482528 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
+ 101 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

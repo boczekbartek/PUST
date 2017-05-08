@@ -8,13 +8,13 @@ Symulacja trwa 1000 chwil. Skoki:\\
 - k=601, $y_{zad}$ = -2\\
 - k=801, $y_{zad}$ = -1\\\\
 
-PID: b³¹d E = 133,2526, parametry: K=0,17; $T_i$=3,5; $T_d$=1,1;\\
-DMC: b³¹d E = 236,8488, parametry: D=N=$N_u$=50; $\lambda$=250;\\
+PID, parametry: K=0,17; $T_i$=3,5; $T_d$=1,1;\\
+DMC, parametry: D=N=$N_u$=50; $\lambda$=250;\\
 Parametry dobrane eksperymentalnie.\\\\
 
-Widzimy ¿e dla skoków wartoœci zadanej zawieraj¹cych siê w pierwszej, szybszej czêœci charakterystyki statycznej
+Widzimy, ¿e dla skoków wartoœci zadanej zawieraj¹cych siê w pierwszej, szybszej czêœci charakterystyki statycznej
 regulatory dzia³aj¹ du¿o lepiej ni¿ w przypadku skoków zawieraj¹cych siê w drugiej, bardzo wolnej czêœci charakterystyki. 
-200 chwil k to za ma³o aby obiekt osi¹gn¹³ wartoœæ zadan¹ podczas gdy osi¹gniêcie "szybszej" wartoœci zadanej zajmuje mu kilkadziesi¹t chwil.\\
+200 chwil k to za ma³o, aby obiekt osi¹gn¹³ wartoœæ zadan¹ podczas gdy osi¹gniêcie "szybszej" wartoœci zadanej zajmuje mu kilkadziesi¹t chwil.\\
 Strojenie liniowego regulatora w tym przypadku przy pomocy optymalizatorów zapewne da³oby lepszy efekt, ale nadal nieliniowoœæ obiektu mocno by "dokucza³a" i nie by³aby to tak dobra regulacja jak w przypadku obiektu liniowego.\\
 
 
@@ -56,7 +56,7 @@ Strojenie liniowego regulatora w tym przypadku przy pomocy optymalizatorów zapew
 	\end{tikzpicture}
 	
 	
-	\caption{Przebiegi sygna³ów dla PID}
+	\caption{Przebiegi sygna³ów dla PID, b³¹d E = $\num{133,2526}$ }
 \end{figure}
 
 
@@ -98,5 +98,5 @@ Strojenie liniowego regulatora w tym przypadku przy pomocy optymalizatorów zapew
 	\end{tikzpicture}
 	
 	
-	\caption{Przebiegi sygna³ów dla DMC}
+	\caption{Przebiegi sygna³ów dla DMC, b³¹d E = $\num{236,8488}$}
 \end{figure}
