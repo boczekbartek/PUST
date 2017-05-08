@@ -1,6 +1,6 @@
 clear all;
 %trapezowa funkcja przynale¿noœci
-reg = 1;
+reg = 5;
 switch reg
     case 1
     fun_przyn_u = [-1 -0.9 0.9 1];
