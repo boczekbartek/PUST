@@ -2,14 +2,14 @@
 \chapter{Punkt 3 i 4}
 
 Symulacja trwa 1000 chwil. Skoki:\\
-- k=21, yzad = -1\\
-- k=201, yzad = -2\\
-- k=401, yzad = -0,1\\
-- k=601, yzad = -2\\
-- k=801, yzad = -1\\\\
+- k=21, $y_{zad}$ = -1\\
+- k=201, $y_{zad}$ = -2\\
+- k=401, $y_{zad}$ = -0,1\\
+- k=601, $y_{zad}$ = -2\\
+- k=801, $y_{zad}$ = -1\\\\
 
-PID: b³¹d E = 133,2526, parametry: K=0,17; Ti=3,5; Td=1,1;\\
-DMC: b³¹d E = 236.8488, parametry: D=N=Nu=50; lambda=250;\\
+PID: b³¹d E = 133,2526, parametry: K=0,17; $T_i$=3,5; $T_d$=1,1;\\
+DMC: b³¹d E = 236,8488, parametry: D=N=$N_u$=50; $\lambda$=250;\\
 Parametry dobrane eksperymentalnie.\\\\
 
 Widzimy ¿e dla skoków wartoœci zadanej zawieraj¹cych siê w pierwszej, szybszej czêœci charakterystyki statycznej
@@ -27,7 +27,7 @@ Strojenie liniowego regulatora w tym przypadku przy pomocy optymalizatorów zapew
 	height=1.8in,
 	enlargelimits=false,
 	%xmin=0,xmax=1600,
-	%ymin=-0.5,ymax=1,
+	ymin=-2.5,ymax=0.5,
 	xlabel={$k$},
 	ylabel={$Y$},
 	legend pos=north east,
@@ -45,7 +45,7 @@ Strojenie liniowego regulatora w tym przypadku przy pomocy optymalizatorów zapew
 	height=1.8in,
 	enlargelimits=false,
 	%xmin=0,xmax=1600,
-	%ymin=-0.5,ymax=1,
+	ymin=-1.5,ymax=0.5,
 	xlabel={$k$},
 	ylabel={$U$},
 	legend pos=north east,
@@ -69,7 +69,7 @@ Strojenie liniowego regulatora w tym przypadku przy pomocy optymalizatorów zapew
 	height=1.8in,
 	enlargelimits=false,
 	%xmin=0,xmax=1600,
-	%ymin=-0.5,ymax=1,
+	ymin=-2.5,ymax=0.5,
 	xlabel={$k$},
 	ylabel={$Y$},
 	legend pos=north east,
@@ -87,7 +87,7 @@ Strojenie liniowego regulatora w tym przypadku przy pomocy optymalizatorów zapew
 	height=1.8in,
 	enlargelimits=false,
 	%xmin=0,xmax=1600,
-	%ymin=-5,ymax=105,
+	ymin=-1.5,ymax=0.5,
 	xlabel={$k$},
 	ylabel={$U$},
 	legend pos=north east,
