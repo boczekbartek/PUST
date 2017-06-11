@@ -1,36 +1,36 @@
 Zadanie 1
 
-Uda³o nam siê skomunikowaæ sterownik z obiektem grzej¹co-ch³odz¹cym oraz oprogramowanie GxWorks3. Opis rejestrów sterownika:
-Grza³ki:
-D100 - T1   (Y1) -> pomiar temperatury na grza³ce 1 (np wartoœæ 2300 oznacza 23 st C)
-D102 - T3   (Y2) -> pomiar temperatury na grza³ce 3
+UdaÅ‚o nam siÄ™ skomunikowaÄ‡ sterownik z obiektem grzejÄ…co-chÅ‚odzÄ…cym oraz oprogramowanie GxWorks3. Opis rejestrÃ³w sterownika:
+GrzaÅ‚ki:
+D100 - T1   (Y1) -> pomiar temperatury na grzaÅ‚ce G1 (np wartoÅ›Ä‡ 2300 oznacza 23 st C)
+D102 - T3   (Y2) -> pomiar temperatury na grzaÅ‚ce G2
 
-D114 - G1   (U1) -> sygna³ steruj¹cy grza³k¹ G1 ( 0 - 1000 => 0-100%)
-D115 - G2   (U2) -> sygna³ steruj¹cy grza³k¹ G2 
+D114 - G1   (U1) -> sygnaÅ‚ sterujÄ…cy grzaÅ‚kÄ… G1 ( 0 - 1000 => 0-100%)
+D115 - G2   (U2) -> sygnaÅ‚ sterujÄ…cy grzaÅ‚kÄ… G2 
 
 Wiatraczki:
-D110 - W1   -> sygna³ steruj¹cy wiatraczka W1   ( 0 - 1000 => 0-100%)
-D111 - W2   -> sygna³ steruj¹cy wiatraczka W2
+D110 - W1   -> sygnaÅ‚ sterujÄ…cy wiatraczka W1   ( 0 - 1000 => 0-100%)
+D111 - W2   -> sygnaÅ‚ sterujÄ…cy wiatraczka W2
 
-Aby ustaliæ punkt pracy wyprowadziliœmy obiekt z równowagi a nastêpnie podaliœmy mu sta³e sterowanie na obie grza³ki, przy wiatraczkach ustawionych na 50% mocy.
-Wartoœci sterowania:
+Aby ustaliÄ‡ punkt pracy wyprowadziliÅ›my obiekt z rÃ³wnowagi a nastÄ™pnie podaliÅ›my mu staÅ‚e sterowanie na obie grzaÅ‚ki, przy wiatraczkach ustawionych na 50% mocy.
+WartoÅ›ci sterowania:
 G1 = 35 %
 G2 = 40 %
 
-Poni¿ej przedstawiony jest przebieg eksperymentu:
+PoniÅ¼ej przedstawiony jest przebieg eksperymentu:
 
 pliki: zadanie1_Y1/Y2 na jednym wykresie
 pliki: zadanie1_U1/U2 na jednym wykresie
 
-Jak widaæ wartoœci temperatur w punkcie pracy prezentuj¹ siê nastêpuj¹co:
+Jak widaÄ‡ wartoÅ›ci temperatur w punkcie pracy prezentujÄ… siÄ™ nastÄ™pujÄ…co:
 Y1 = 39 st C
 Y2 = 42,5 st C
 
 Zadanie 2
-Na sterowniku zaimplementowaliœmy zabezpieczenie obiektu przed uszkodzeniem.
-Jeœli odczyt z czujnika T1 > 150 st C ( czyli w rejestrze D100 > 15000) wy³¹czana jest grza³ka 1,czyli do rejestru
+Na sterowniku zaimplementowaliÅ›my zabezpieczenie obiektu przed uszkodzeniem.
+JeÅ›li odczyt z czujnika T1 > 150 st C ( czyli w rejestrze D100 > 15000) wyÅ‚Ä…czana jest grzaÅ‚ka 1,czyli do rejestru
 D114 jest wpisywane 0.  
-Analogicznie dla czujnika T1 oraz grza³ki G2.
+Analogicznie dla czujnika T1 oraz grzaÅ‚ki G2.
 
 Zadanie 3
 
@@ -38,12 +38,12 @@ Nastawy PID:
 (takie jak na labolatorium 3)
 K1 = 1,228038; Ti1 = 11,602531; Td1 = 1,166250; Ts = 0,5; K2 = 0,851927; Ti2 = 9,777445; Td2 = 0,842038; Ts = 0,5;
 
-W algorytmie zosta³y u¿yte wczeœniej wyliczone w Matlabie paramtry RR12, RR10, RR10
-RR22, RR21, RR20, tak aby zwolniæ sterownik z obliczeñ i proœciæ implementacjê.
+W algorytmie zostaÅ‚y uÅ¼yte wczeÅ›niej wyliczone w Matlabie paramtry RR12, RR10, RR10
+RR22, RR21, RR20, tak aby zwolniÄ‡ sterownik z obliczeÅ„ i proÅ›ciÄ‡ implementacjÄ™.
 
 Implementacja na sterowniku wraz z zabezpieczeniem opisanym w zadaniu 2.
 
-//reg PID w domyœle
+//reg PID w domyÅ›le
 AWARIAY1 := FALSE;
 AWARIAY2 := FALSE;
 YZAD1 := 4000;
@@ -116,8 +116,8 @@ END_IF;
 D114 := REAL_TO_INT(UU1);
 D115 := REAL_TO_INT(UU2);
 
-Na poni¿szych wykresach mo¿emy zaobserwowaæ dzia³anie regulatora dla wartoœci zadnej
-dla obu temperatur, T1 oraz T3 = 50 st C. Pocz¹tkowy stan wynosi³ ok. T1 = T3 = 25 st C.
+Na poniÅ¼szych wykresach moÅ¼emy zaobserwowaÄ‡ dziaÅ‚anie regulatora dla wartoÅ›ci zadnej
+dla obu temperatur, T1 oraz T3 = 50 st C. PoczÄ…tkowy stan wynosiÅ‚ ok. T1 = T3 = 25 st C.
 
 wykres zadanie3_Y1/Y2/Y1zad/Y2zad na jednym
 wykres zadanie3_U1/U2 na drugim
@@ -126,42 +126,42 @@ Zadanie 5
 
 Obrazek Zadanie5.jpg
 
-Zaprojektowaliœmy prosty interfejs u¿ytkownika do monitorowania stanowiska grzej¹co ch³odz¹cego.
+ZaprojektowaliÅ›my prosty interfejs uÅ¼ytkownika do monitorowania stanowiska grzejÄ…co chÅ‚odzÄ…cego.
 Od lewej: 
-Kolor ró¿owy Y1 -> pomiar temperatury T1, zakres: (0 st C - pusty s³upek, 100 st C - pe³ny s³upek) 
-Kolor ró¿owy Y1ZAD -> wartoœc zadane temperatury T1 zakres jw.
-Kolor zielony Y2 -> pomiar temperatury T3, zakres: (0 st C - pusty s³upek, 100 st C - pe³ny s³upek) 
-Kolor zileony Y2ZAD -> wartoœc zadane temperatury T2 zakres jw.
-Kolor ¿ó³ty U1 -> wartoœc sterowania podana na grza³kê G1, zakres (0 % - pusty s³upek, 100 % - pe³ny s³upek)
-Kolor ¿ó³ty U2 -> wartoœc sterowania podana na grza³kê G2, zakres (0 % - pusty s³upek, 100 % - pe³ny s³upek)
+Kolor rÃ³Å¼owy Y1 -> pomiar temperatury T1, zakres: (0 st C - pusty sÅ‚upek, 100 st C - peÅ‚ny sÅ‚upek) 
+Kolor rÃ³Å¼owy Y1ZAD -> wartoÅ›c zadane temperatury T1 zakres jw.
+Kolor zielony Y2 -> pomiar temperatury T3, zakres: (0 st C - pusty sÅ‚upek, 100 st C - peÅ‚ny sÅ‚upek) 
+Kolor zileony Y2ZAD -> wartoÅ›c zadane temperatury T2 zakres jw.
+Kolor Å¼Ã³Å‚ty U1 -> wartoÅ›c sterowania podana na grzaÅ‚kÄ™ G1, zakres (0 % - pusty sÅ‚upek, 100 % - peÅ‚ny sÅ‚upek)
+Kolor Å¼Ã³Å‚ty U2 -> wartoÅ›c sterowania podana na grzaÅ‚kÄ™ G2, zakres (0 % - pusty sÅ‚upek, 100 % - peÅ‚ny sÅ‚upek)
 
-Panel jest dostêpny po wciœniêcu po prawej stronie przycisku MENU, a nastêpnie przycisku PID.
+Panel jest dostÄ™pny po wciÅ›niÄ™cu po prawej stronie przycisku MENU, a nastÄ™pnie przycisku PID.
 
 Zadanie 7
-Uda³o nam siê skonfigurowaæ po³¹czenie obiekty Inteco -> serwomechanizmu ze sterwonikiem.
+UdaÅ‚o nam siÄ™ skonfigurowaÄ‡ poÅ‚Ä…czenie obiekty Inteco -> serwomechanizmu ze sterwonikiem.
 
-Konfiguracjê oparliœmy o tablekê wejœæ i wyjœc zamieszczon¹ na stronie przedmiotu jak i przedstawion¹ poni¿ej:
+KonfiguracjÄ™ oparliÅ›my o tablekÄ™ wejÅ›Ä‡ i wyjÅ›c zamieszczonÄ… na stronie przedmiotu jak i przedstawionÄ… poniÅ¼ej:
 AIN1
-Potentiometer Analogowy sygna³ pomiarowy z potencjometru
-(zadajnik po³o¿enia, prêdkoœci k¹towej itp.).
-AIN2 - Tacho Analogowy sygna³ pomiarowy prêdkoœci obrotowej z tachopr¹dnicy.
+Potentiometer Analogowy sygnaÅ‚ pomiarowy z potencjometru
+(zadajnik poÅ‚oÅ¼enia, prÄ™dkoÅ›ci kÄ…towej itp.).
+AIN2 - Tacho Analogowy sygnaÅ‚ pomiarowy prÄ™dkoÅ›ci obrotowej z tachoprÄ…dnicy.
 X2  - Therm Flaga limitu temperatury.
-X1 - EncB1 Enkoder inkrementalny, fala B, oœ pozioma.
-X0 - EncA1 Enkoder inkrementalny, fala A, oœ pozioma.
+X1 - EncB1 Enkoder inkrementalny, fala B, oÅ› pozioma.
+X0 - EncA1 Enkoder inkrementalny, fala A, oÅ› pozioma.
 
-PWM  - Sygna³ steruj¹cy typu PWM dla silnika DC.
-Y0  - Zalecana czêstotliwoœæ tego sygna³u mieœci siê w przedziale (5-15) kHz.
-Y1  - Brake Sygna³ zatrzymuj¹cy pracê silnika DC.
-Y2  - Dir0 Sygna³ zmiany kierunku obrotów silnika DC.
+PWM  - SygnaÅ‚ sterujÄ…cy typu PWM dla silnika DC.
+Y0  - Zalecana czÄ™stotliwoÅ›Ä‡ tego sygnaÅ‚u mieÅ›ci siÄ™ w przedziale (5-15) kHz.
+Y1  - Brake SygnaÅ‚ zatrzymujÄ…cy pracÄ™ silnika DC.
+Y2  - Dir0 SygnaÅ‚ zmiany kierunku obrotÃ³w silnika DC.
 
-Wymagane by³o równie¿ dodanie wejœcia analogowego w zak³adce Module Configuration. Postêpuj¹c zgodnie
-z punktem 3.9 pliku "Laboratorium 5 – instrukcja do obiektów Inteco" uda³o nam siê pod³¹czyæ obiekt.
+Wymagane byÅ‚o rÃ³wnieÅ¼ dodanie wejÅ›cia analogowego w zakÅ‚adce Module Configuration. PostÄ™pujÄ…c zgodnie
+z punktem 3.9 pliku "Laboratorium 5 â€“ instrukcja do obiektÃ³w Inteco" udaÅ‚o nam siÄ™ podÅ‚Ä…czyÄ‡ obiekt.
 
-Nastêpnie skonfigurowaliœmy wejœcie licznikowe - pomiar czestotliwoœci oraz PWM dla wejœæ Y0 -> sterowanie tachopr¹dnicy, Y1 -> sygna³ hamuj¹cy, równie¿ w sposób opisany w instrukcji.
+NastÄ™pnie skonfigurowaliÅ›my wejÅ›cie licznikowe - pomiar czestotliwoÅ›ci oraz PWM dla wejÅ›Ä‡ Y0 -> sterowanie tachoprÄ…dnicy, Y1 -> sygnaÅ‚ hamujÄ…cy, rÃ³wnieÅ¼ w sposÃ³b opisany w instrukcji.
 
-Wy³¹czaj¹c hamowanie ( podanie 0 na pole EN bloczka PWM dla Y1) oraz manipuluj¹c wartoœci¹ parametru K100 bloczka 
-PWM dla Y0 uda³o nam siê wprawiæ w ruch elementy obrotowe serwa.
+WyÅ‚Ä…czajÄ…c hamowanie ( podanie 0 na pole EN bloczka PWM dla Y1) oraz manipulujÄ…c wartoÅ›ciÄ… parametru K100 bloczka 
+PWM dla Y0 udaÅ‚o nam siÄ™ wprawiÄ‡ w ruch elementy obrotowe serwa.
 
-Dowodem na ten fakt jest za³¹czony do sprawozdanie film.
+Dowodem na ten fakt jest zaÅ‚Ä…czony do sprawozdanie film.
 
 
