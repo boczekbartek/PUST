@@ -122,6 +122,17 @@ dla obu temperatur, T1 oraz T3 = 50 st C. Pocz¹tkowy stan wynosi³ ok. T1 = T3 = 
 wykres zadanie3_Y1/Y2/Y1zad/Y2zad na jednym
 wykres zadanie3_U1/U2 na drugim
 
+Zadanie 5
 
+Obrazek Zadanie5.jpg
 
+Zaprojektowaliœmy prosty interfejs u¿ytkownika do monitorowania stanowiska grzej¹co ch³odz¹cego.
+Od lewej: 
+Kolor ró¿owy Y1 -> pomiar temperatury T1, zakres: (0 st C - pusty s³upek, 100 st C - pe³ny s³upek) 
+Kolor ró¿owy Y1ZAD -> wartoœc zadane temperatury T1 zakres jw.
+Kolor zielony Y2 -> pomiar temperatury T3, zakres: (0 st C - pusty s³upek, 100 st C - pe³ny s³upek) 
+Kolor zileony Y2ZAD -> wartoœc zadane temperatury T2 zakres jw.
+Kolor ¿ó³ty U1 -> wartoœc sterowania podana na grza³kê G1, zakres (0 % - pusty s³upek, 100 % - pe³ny s³upek)
+Kolor ¿ó³ty U2 -> wartoœc sterowania podana na grza³kê G2, zakres (0 % - pusty s³upek, 100 % - pe³ny s³upek)
 
+Panel jest dostêpny po wciœniêcu po prawej stronie przycisku MENU, a nastêpnie przycisku PID.
