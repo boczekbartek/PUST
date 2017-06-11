@@ -68,23 +68,23 @@ savePlot(1:czas,yzad(2,:),'zad4_Yzad2_e1_na_u3_e3_na_u2_e2_na_u1.txt');
 savePlot(1:czas,yzad(3,:),'zad4_Yzad3_e1_na_u3_e3_na_u2_e2_na_u1.txt');
     
 savePlot(0,0,sprintf('zad4_blad_E_%f_e1_na_u3_e3_na_u2_e2_na_u1.txt',E));
-
-
+% 
+% 
 % subplot(231)
 % plot(u(regs(1),:));
-% title({['Nastawy regulatora PID:K = ', num2str(K(1)), ', Ti = ', num2str(Ti(1)),', Td = ',num2str(Td(1))]});
+% title({['Nastawy PID:K = ', num2str(K(1)), ', Ti = ', num2str(Ti(1)),', Td = ',num2str(Td(1))]});
 % xlabel('k')
 % ylabel(sprintf('u%d(k)',regs(1)))
 %    
 % subplot(232)
 % plot(u(regs(2),:));
-% title({['Nastawy regulatora PID:K = ', num2str(K(2)), ', Ti = ', num2str(Ti(2)),', Td = ',num2str(Td(2))]});
+% title({['Nastawy PID:K = ', num2str(K(2)), ', Ti = ', num2str(Ti(2)),', Td = ',num2str(Td(2))]});
 % xlabel('k')
 % ylabel(sprintf('u%d(k)',regs(2)))
 %     
 % subplot(233)
 % plot(u(regs(3),:));
-% title({['Nastawy regulatora PID:K = ', num2str(K(3)), ', Ti = ', num2str(Ti(3)),', Td = ',num2str(Td(3))]});
+% title({['Nastawy PID:K = ', num2str(K(3)), ', Ti = ', num2str(Ti(3)),', Td = ',num2str(Td(3))]});
 % xlabel('k')
 % ylabel(sprintf('u%d(k)',regs(3)))
 %     
