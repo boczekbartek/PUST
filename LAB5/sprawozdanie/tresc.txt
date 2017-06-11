@@ -136,3 +136,32 @@ Kolor ¿ó³ty U1 -> wartoœc sterowania podana na grza³kê G1, zakres (0 % - pusty s
 Kolor ¿ó³ty U2 -> wartoœc sterowania podana na grza³kê G2, zakres (0 % - pusty s³upek, 100 % - pe³ny s³upek)
 
 Panel jest dostêpny po wciœniêcu po prawej stronie przycisku MENU, a nastêpnie przycisku PID.
+
+Zadanie 7
+Uda³o nam siê skonfigurowaæ po³¹czenie obiekty Inteco -> serwomechanizmu ze sterwonikiem.
+
+Konfiguracjê oparliœmy o tablekê wejœæ i wyjœc zamieszczon¹ na stronie przedmiotu jak i przedstawion¹ poni¿ej:
+AIN1
+Potentiometer Analogowy sygna³ pomiarowy z potencjometru
+(zadajnik po³o¿enia, prêdkoœci k¹towej itp.).
+AIN2 - Tacho Analogowy sygna³ pomiarowy prêdkoœci obrotowej z tachopr¹dnicy.
+X2  - Therm Flaga limitu temperatury.
+X1 - EncB1 Enkoder inkrementalny, fala B, oœ pozioma.
+X0 - EncA1 Enkoder inkrementalny, fala A, oœ pozioma.
+
+PWM  - Sygna³ steruj¹cy typu PWM dla silnika DC.
+Y0  - Zalecana czêstotliwoœæ tego sygna³u mieœci siê w przedziale (5-15) kHz.
+Y1  - Brake Sygna³ zatrzymuj¹cy pracê silnika DC.
+Y2  - Dir0 Sygna³ zmiany kierunku obrotów silnika DC.
+
+Wymagane by³o równie¿ dodanie wejœcia analogowego w zak³adce Module Configuration. Postêpuj¹c zgodnie
+z punktem 3.9 pliku "Laboratorium 5 – instrukcja do obiektów Inteco" uda³o nam siê pod³¹czyæ obiekt.
+
+Nastêpnie skonfigurowaliœmy wejœcie licznikowe - pomiar czestotliwoœci oraz PWM dla wejœæ Y0 -> sterowanie tachopr¹dnicy, Y1 -> sygna³ hamuj¹cy, równie¿ w sposób opisany w instrukcji.
+
+Wy³¹czaj¹c hamowanie ( podanie 0 na pole EN bloczka PWM dla Y1) oraz manipuluj¹c wartoœci¹ parametru K100 bloczka 
+PWM dla Y0 uda³o nam siê wprawiæ w ruch elementy obrotowe serwa.
+
+Dowodem na ten fakt jest za³¹czony do sprawozdanie film.
+
+
