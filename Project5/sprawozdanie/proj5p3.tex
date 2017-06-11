@@ -2,8 +2,7 @@
 \chapter{Punkt 3, 4 oraz 5}
 
 \begin{figure}
-	e1 na u1, e2 na u2, e3 na u3\\
-	b³¹d E = \num{17,188697}
+
 	
 \end{figure}
 
@@ -28,13 +27,30 @@
 	\end{axis}
 	\end{tikzpicture}
 	
+		\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=4.667in,
+	height=1.5in,
+	%xmin=0,xmax=350
+	%ymin=-0.1,ymax=2.0,
+	xlabel={$k$},
+	ylabel={$U1$},
+	legend pos=south east,
+	]
+	\addplot[const plot,blue] file {wykresy/zad345pid/zad4_U1_e1_na_u1_e2_na_u2_e3_na_u3.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+	
 	\begin{tikzpicture}
 	\begin{axis}[
 	enlargelimits=false,
 	width=4.667in,
 	height=2in,
 	%xmin=0,xmax=350
-	%ymin=-0.1,ymax=2.0,
+	ymin=-1,ymax=12,
 	xlabel={$k$},
 	ylabel={$Y2$},
 	legend pos=south east,
@@ -45,6 +61,22 @@
 		$Y2_{zad}$,}
 	\end{axis}
 	\end{tikzpicture}
+	\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=4.667in,
+	height=1.5in,
+	%xmin=0,xmax=350
+	%ymin=-0.1,ymax=2.0,
+	xlabel={$k$},
+	ylabel={$U2$},
+	legend pos=south east,
+	]
+	\addplot[const plot,blue] file {wykresy/zad345pid/zad4_U2_e1_na_u1_e2_na_u2_e3_na_u3.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
 	
 	\begin{tikzpicture}
 	\begin{axis}[
@@ -63,9 +95,27 @@
 		$Y3_{zad}$,}
 	\end{axis}
 	\end{tikzpicture}
+	\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=4.667in,
+	height=1.5in,
+	%xmin=0,xmax=350
+	%ymin=-0.1,ymax=2.0,
+	xlabel={$k$},
+	ylabel={$U3$},
+	legend pos=south east,
+	]
+	\addplot[const plot,blue] file {wykresy/zad345pid/zad4_U3_e1_na_u1_e2_na_u2_e3_na_u3.txt};
+	\end{axis}
+	\end{tikzpicture}
 	
-	\caption{Sygna³y wyjœciowe, e1 na u1, e2 na u2, e3 na u3}
+	\caption{PID - Sygna³y procesu, oddzia³ywanie e1 na u1, e2 na u2, e3 na u3, b³¹d E = $\num{17,188697}$}
 \end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{figure}
 	\centering
@@ -78,27 +128,68 @@
 	%xmin=0,xmax=350
 	%ymin=-0.1,ymax=2.0,
 	xlabel={$k$},
+	ylabel={$Y1$},
+	legend pos=south east,
+	]
+	\addplot[const plot,blue] file {wykresy/zad345pid/zad4_Y1_e1_na_u3_e2_na_u2_e3_na_u1.txt};
+	\addplot[const plot,red] file {wykresy/zad345pid/zad4_Yzad1_e1_na_u3_e2_na_u2_e3_na_u1.txt};
+	\legend{$Y1$,
+		$Y1_{zad}$,}
+	\end{axis}
+	\end{tikzpicture}
+		\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=4.667in,
+	height=1.5in,
+	%xmin=0,xmax=350
+	%ymin=-0.1,ymax=2.0,
+	xlabel={$k$},
 	ylabel={$U1$},
 	legend pos=south east,
 	]
-	\addplot[const plot,blue] file {wykresy/zad345pid/zad4_U1_e1_na_u1_e2_na_u2_e3_na_u3.txt};
+	\addplot[const plot,blue] file {wykresy/zad345pid/zad4_U1_e1_na_u3_e2_na_u2_e3_na_u1.txt};
 	\end{axis}
 	\end{tikzpicture}
+	
+	
+	
 	
 	\begin{tikzpicture}
 	\begin{axis}[
 	enlargelimits=false,
 	width=4.667in,
 	height=2in,
+	%xmin=0,xmax=350
+	ymin=-1,ymax=12,
+	xlabel={$k$},
+	ylabel={$Y2$},
+	legend pos=south east,
+	]
+	\addplot[const plot,blue] file {wykresy/zad345pid/zad4_Y2_e1_na_u3_e2_na_u2_e3_na_u1.txt};
+	\addplot[const plot,red] file {wykresy/zad345pid/zad4_Yzad2_e1_na_u3_e2_na_u2_e3_na_u1.txt};
+	\legend{$Y2$,
+		$Y2_{zad}$,}
+	\end{axis}
+	\end{tikzpicture}
+		\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=4.667in,
+	height=1.5in,
 	%xmin=0,xmax=350
 	%ymin=-0.1,ymax=2.0,
 	xlabel={$k$},
 	ylabel={$U2$},
 	legend pos=south east,
 	]
-	\addplot[const plot,blue] file {wykresy/zad345pid/zad4_U2_e1_na_u1_e2_na_u2_e3_na_u3.txt};
+	\addplot[const plot,blue] file {wykresy/zad345pid/zad4_U2_e1_na_u3_e2_na_u2_e3_na_u1.txt};
 	\end{axis}
 	\end{tikzpicture}
+	
+	
+	
+	
 	
 	\begin{tikzpicture}
 	\begin{axis}[
@@ -108,13 +199,256 @@
 	%xmin=0,xmax=350
 	%ymin=-0.1,ymax=2.0,
 	xlabel={$k$},
+	ylabel={$Y3$},
+	legend pos=south east,
+	]
+	\addplot[const plot,blue] file {wykresy/zad345pid/zad4_Y3_e1_na_u3_e2_na_u2_e3_na_u1.txt};
+	\addplot[const plot,red] file {wykresy/zad345pid/zad4_Yzad3_e1_na_u3_e2_na_u2_e3_na_u1.txt};
+	\legend{$Y3$,
+		$Y3_{zad}$,}
+	\end{axis}
+	\end{tikzpicture}
+		\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=4.667in,
+	height=1.5in,
+	%xmin=0,xmax=350
+	%ymin=-0.1,ymax=2.0,
+	xlabel={$k$},
 	ylabel={$U3$},
 	legend pos=south east,
 	]
-	\addplot[const plot,blue] file {wykresy/zad345pid/zad4_U3_e1_na_u1_e2_na_u2_e3_na_u3.txt};
+	\addplot[const plot,blue] file {wykresy/zad345pid/zad4_U3_e1_na_u3_e2_na_u2_e3_na_u1.txt};
 	\end{axis}
 	\end{tikzpicture}
 	
-	\caption{Sygna³y wejœciowe, e1 na u1, e2 na u2, e3 na u3}
+	\caption{PID - Sygna³y procesu, oddzia³ywanie: e1 na u3, e2 na u2, e3 na u1, b³¹d E = $\num{965,867074}$}
+\end{figure}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{figure}
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=4.667in,
+	height=2in,
+	%xmin=0,xmax=350
+	%ymin=-0.1,ymax=2.0,
+	xlabel={$k$},
+	ylabel={$Y1$},
+	legend pos=south east,
+	]
+	\addplot[const plot,blue] file {wykresy/zad345pid/zad4_Y1_e1_na_u3_e3_na_u2_e2_na_u1.txt};
+	\addplot[const plot,red] file {wykresy/zad345pid/zad4_Yzad1_e1_na_u3_e3_na_u2_e2_na_u1.txt};
+	\legend{$Y1$,
+		$Y1_{zad}$,}
+	\end{axis}
+	\end{tikzpicture}
+		\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=4.667in,
+	height=1.5in,
+	%xmin=0,xmax=350
+	%ymin=-0.1,ymax=2.0,
+	xlabel={$k$},
+	ylabel={$U1$},
+	legend pos=south east,
+	]
+	\addplot[const plot,blue] file {wykresy/zad345pid/zad4_U1_e1_na_u3_e3_na_u2_e2_na_u1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=4.667in,
+	height=2in,
+	%xmin=0,xmax=350
+	%ymin=-0.1,ymax=2.0,
+	xlabel={$k$},
+	ylabel={$Y2$},
+	legend pos=south east,
+	]
+	\addplot[const plot,blue] file {wykresy/zad345pid/zad4_Y2_e1_na_u3_e3_na_u2_e2_na_u1.txt};
+	\addplot[const plot,red] file {wykresy/zad345pid/zad4_Yzad2_e1_na_u3_e3_na_u2_e2_na_u1.txt};
+	\legend{$Y2$,
+		$Y2_{zad}$,}
+	\end{axis}
+	\end{tikzpicture}
+		\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=4.667in,
+	height=1.5in,
+	%xmin=0,xmax=350
+	%ymin=-0.1,ymax=2.0,
+	xlabel={$k$},
+	ylabel={$U2$},
+	legend pos=south east,
+	]
+	\addplot[const plot,blue] file {wykresy/zad345pid/zad4_U2_e1_na_u3_e3_na_u2_e2_na_u1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=4.667in,
+	height=2in,
+	%xmin=0,xmax=350
+	%ymin=-0.1,ymax=2.0,
+	xlabel={$k$},
+	ylabel={$Y3$},
+	legend pos=south east,
+	]
+	\addplot[const plot,blue] file {wykresy/zad345pid/zad4_Y3_e1_na_u3_e3_na_u2_e2_na_u1.txt};
+	\addplot[const plot,red] file {wykresy/zad345pid/zad4_Yzad3_e1_na_u3_e3_na_u2_e2_na_u1.txt};
+	\legend{$Y3$,
+		$Y3_{zad}$,}
+	\end{axis}
+	\end{tikzpicture}
+		\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=4.667in,
+	height=1.5in,
+	%xmin=0,xmax=350
+	%ymin=-0.1,ymax=2.0,
+	xlabel={$k$},
+	ylabel={$U3$},
+	legend pos=south east,
+	]
+	\addplot[const plot,blue] file {wykresy/zad345pid/zad4_U3_e1_na_u3_e3_na_u2_e2_na_u1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{PID - Sygna³y procesu, oddzia³ywanie: e1 na u3, e3 na u2, e2 na u1, b³¹d E = $\num{5006,339140}$}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}
+
+\end{figure}
+
+\begin{figure}
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=4.667in,
+	height=2in,
+	%xmin=0,xmax=350
+	ymin=-1,ymax=11,
+	xlabel={$k$},
+	ylabel={$Y1$},
+	legend pos=south east,
+	]
+	\addplot[const plot,blue] file {wykresy/zad345dmc/zad4_Y1.txt};
+	\addplot[const plot,red] file {wykresy/zad345dmc/zad4_Yzad1.txt};
+	\legend{$Y1$,
+		$Y1_{zad}$,}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=4.667in,
+	height=1.5in,
+	%xmin=0,xmax=350
+	%ymin=-0.1,ymax=2.0,
+	xlabel={$k$},
+	ylabel={$U1$},
+	legend pos=south east,
+	]
+	\addplot[const plot,blue] file {wykresy/zad345dmc/zad4dmc_U1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=4.667in,
+	height=2in,
+	%xmin=0,xmax=350
+	ymin=-1,ymax=11,
+	xlabel={$k$},
+	ylabel={$Y2$},
+	legend pos=south east,
+	]
+	\addplot[const plot,blue] file {wykresy/zad345dmc/zad4_Y2.txt};
+	\addplot[const plot,red] file {wykresy/zad345dmc/zad4_Yzad2.txt};
+	\legend{$Y2$,
+		$Y2_{zad}$,}
+	\end{axis}
+	\end{tikzpicture}
+	\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=4.667in,
+	height=1.5in,
+	%xmin=0,xmax=350
+	%ymin=-0.1,ymax=2.0,
+	xlabel={$k$},
+	ylabel={$U2$},
+	legend pos=south east,
+	]
+	\addplot[const plot,blue] file {wykresy/zad345dmc/zad4dmc_U2.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=4.667in,
+	height=2in,
+	%xmin=0,xmax=350
+	%ymin=-0.1,ymax=2.0,
+	ymin=-1,
+	xlabel={$k$},
+	ylabel={$Y3$},
+	legend pos=south east,
+	]
+	\addplot[const plot,blue] file {wykresy/zad345dmc/zad4_Y3.txt};
+	\addplot[const plot,red] file {wykresy/zad345dmc/zad4_Yzad3.txt};
+	\legend{$Y3$,
+		$Y3_{zad}$,}
+	\end{axis}
+	\end{tikzpicture}
+	\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=4.667in,
+	height=1.5in,
+	%xmin=0,xmax=350
+	%ymin=-0.1,ymax=2.0,
+	xlabel={$k$},
+	ylabel={$U3$},
+	legend pos=south east,
+	]
+	\addplot[const plot,blue] file {wykresy/zad345dmc/zad4dmc_U3.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{DMC - Sygna³y procesu, b³¹d E = $\num{375,535682}$}
 \end{figure}
 

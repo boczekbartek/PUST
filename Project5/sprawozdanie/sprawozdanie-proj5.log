@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  11 JUN 2017 20:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  11 JUN 2017 22:26
 entering extended mode
 **./sprawozdanie-proj5.tex
 (sprawozdanie-proj5.tex
@@ -1355,40 +1355,93 @@ Rozdzia\PlPrIeC {\l } 3.
 PGFPlots: reading {wykresy/zad345pid/zad4_Y1_e1_na_u1_e2_na_u2_e3_na_u3.txt}
 PGFPlots: reading {wykresy/zad345pid/zad4_Yzad1_e1_na_u1_e2_na_u2_e3_na_u3.txt}
 
+PGFPlots: reading {wykresy/zad345pid/zad4_U1_e1_na_u1_e2_na_u2_e3_na_u3.txt}
 PGFPlots: reading {wykresy/zad345pid/zad4_Y2_e1_na_u1_e2_na_u2_e3_na_u3.txt}
 PGFPlots: reading {wykresy/zad345pid/zad4_Yzad2_e1_na_u1_e2_na_u2_e3_na_u3.txt}
 
+PGFPlots: reading {wykresy/zad345pid/zad4_U2_e1_na_u1_e2_na_u2_e3_na_u3.txt}
 PGFPlots: reading {wykresy/zad345pid/zad4_Y3_e1_na_u1_e2_na_u2_e3_na_u3.txt}
 PGFPlots: reading {wykresy/zad345pid/zad4_Yzad3_e1_na_u1_e2_na_u2_e3_na_u3.txt}
 
-PGFPlots: reading {wykresy/zad345pid/zad4_U1_e1_na_u1_e2_na_u2_e3_na_u3.txt}
-PGFPlots: reading {wykresy/zad345pid/zad4_U2_e1_na_u1_e2_na_u2_e3_na_u3.txt}
 PGFPlots: reading {wykresy/zad345pid/zad4_U3_e1_na_u1_e2_na_u2_e3_na_u3.txt}
-) [6
+PGFPlots: reading {wykresy/zad345pid/zad4_Y1_e1_na_u3_e2_na_u2_e3_na_u1.txt}
+PGFPlots: reading {wykresy/zad345pid/zad4_Yzad1_e1_na_u3_e2_na_u2_e3_na_u1.txt}
 
-] [7] (sprawozdanie-proj5.aux) ) 
+PGFPlots: reading {wykresy/zad345pid/zad4_U1_e1_na_u3_e2_na_u2_e3_na_u1.txt}
+PGFPlots: reading {wykresy/zad345pid/zad4_Y2_e1_na_u3_e2_na_u2_e3_na_u1.txt}
+PGFPlots: reading {wykresy/zad345pid/zad4_Yzad2_e1_na_u3_e2_na_u2_e3_na_u1.txt}
+
+PGFPlots: reading {wykresy/zad345pid/zad4_U2_e1_na_u3_e2_na_u2_e3_na_u1.txt}
+PGFPlots: reading {wykresy/zad345pid/zad4_Y3_e1_na_u3_e2_na_u2_e3_na_u1.txt}
+PGFPlots: reading {wykresy/zad345pid/zad4_Yzad3_e1_na_u3_e2_na_u2_e3_na_u1.txt}
+
+PGFPlots: reading {wykresy/zad345pid/zad4_U3_e1_na_u3_e2_na_u2_e3_na_u1.txt}
+PGFPlots: reading {wykresy/zad345pid/zad4_Y1_e1_na_u3_e3_na_u2_e2_na_u1.txt}
+PGFPlots: reading {wykresy/zad345pid/zad4_Yzad1_e1_na_u3_e3_na_u2_e2_na_u1.txt}
+
+PGFPlots: reading {wykresy/zad345pid/zad4_U1_e1_na_u3_e3_na_u2_e2_na_u1.txt}
+PGFPlots: reading {wykresy/zad345pid/zad4_Y2_e1_na_u3_e3_na_u2_e2_na_u1.txt}
+PGFPlots: reading {wykresy/zad345pid/zad4_Yzad2_e1_na_u3_e3_na_u2_e2_na_u1.txt}
+
+PGFPlots: reading {wykresy/zad345pid/zad4_U2_e1_na_u3_e3_na_u2_e2_na_u1.txt}
+PGFPlots: reading {wykresy/zad345pid/zad4_Y3_e1_na_u3_e3_na_u2_e2_na_u1.txt}
+PGFPlots: reading {wykresy/zad345pid/zad4_Yzad3_e1_na_u3_e3_na_u2_e2_na_u1.txt}
+
+PGFPlots: reading {wykresy/zad345pid/zad4_U3_e1_na_u3_e3_na_u2_e2_na_u1.txt}
+PGFPlots: reading {wykresy/zad345dmc/zad4_Y1.txt}
+PGFPlots: reading {wykresy/zad345dmc/zad4_Yzad1.txt}
+PGFPlots: reading {wykresy/zad345dmc/zad4dmc_U1.txt}
+PGFPlots: reading {wykresy/zad345dmc/zad4_Y2.txt}
+PGFPlots: reading {wykresy/zad345dmc/zad4_Yzad2.txt}
+PGFPlots: reading {wykresy/zad345dmc/zad4dmc_U2.txt}
+PGFPlots: reading {wykresy/zad345dmc/zad4_Y3.txt}
+PGFPlots: reading {wykresy/zad345dmc/zad4_Yzad3.txt}
+PGFPlots: reading {wykresy/zad345dmc/zad4dmc_U3.txt}
+
+LaTeX Warning: Float too large for page by 3.82619pt on input line 453.
+
+) (proj5p6.tex [6
+
+] [7] [8] [9] [10] [11]
+Rozdzia\PlPrIeC {\l } 4.
+PGFPlots: reading {wykresy/zad6/zad6_Y1.txt}
+PGFPlots: reading {wykresy/zad6/zad6_Yzad1.txt}
+PGFPlots: reading {wykresy/zad6/zad6dmc_U1.txt}
+PGFPlots: reading {wykresy/zad6/zad6_Y2.txt}
+PGFPlots: reading {wykresy/zad6/zad6_Yzad2.txt}
+PGFPlots: reading {wykresy/zad6/zad6dmc_U2.txt}
+PGFPlots: reading {wykresy/zad6/zad6_Y3.txt}
+PGFPlots: reading {wykresy/zad6/zad6_Yzad3.txt}
+PGFPlots: reading {wykresy/zad6/zad6dmc_U3.txt}
+
+LaTeX Warning: Float too large for page by 3.82619pt on input line 113.
+
+) [12
+
+] [13] (sprawozdanie-proj5.aux) ) 
 Here is how much of TeX's memory you used:
- 36818 strings out of 493329
- 883891 string characters out of 3139066
- 21575165 words of memory out of 24521881
- 39748 multiletter control sequences out of 15000+200000
+ 37075 strings out of 493329
+ 888847 string characters out of 3139066
+ 22654034 words of memory out of 25600750
+ 39964 multiletter control sequences out of 15000+200000
  24139 words of font info for 72 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,19n,100p,10392b,2120s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl
-/plmi.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plit.enc}{C:/Program 
-Files/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}{C:/Program Files/MiKTeX 2.9/fonts
-/enc/dvips/pl/plrm.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plbx1
-0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/pl/plmi10.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/pl/plmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/pl/plmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr10.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr8.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/pl/plti10.pfb>
-Output written on sprawozdanie-proj5.pdf (8 pages, 153324 bytes).
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/p
+l/plrm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}{C:/Program
+ Files/MiKTeX 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Program Files/MiKTeX 2.9/font
+s/enc/dvips/pl/plit.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plbx
+10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/pl/plmi10.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/pl/plmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/pl/plmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr10.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr6.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/pl/plr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/pl/plsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy8.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plti10.pfb>
+Output written on sprawozdanie-proj5.pdf (14 pages, 439671 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
+ 99 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
