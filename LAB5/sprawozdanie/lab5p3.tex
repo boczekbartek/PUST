@@ -1,43 +1,94 @@
 %LAB4
 \chapter{Punkt 3}
 
-Obliczyliœmy dwie odpowiedzi skokowe, odpowiednio dla dwóch skoków odpowiadaj¹cym dwóm liniowym czêsciom charakterystyki statycznej. Pierwszy to skok sterowania U z $\num{35}\% \rightarrow \num{50}\%$ (gdy¿ w³aœnie w punkcie $\num{50}$ jest przegiêcie charakterystyki statycznej), drugi z $\num{35}\% \rightarrow \num{90}\%$.
-Skoki zosta³y przeskalowane, tak aby mog³y byæ uznane za odpowiedŸ skokow¹, czyli odpowiedŸ obiektu na skok jednostkowy.\\ 
+Nastawy PID:\\
+(takie jak na labolatorium 3) 	
+$K1=\num{1,228038}; T_i1=\num{11,602531}; T_d1=\num{1,166250}; T_s=\num{0,5}$\\
+$K2=\num{0,851927}; T_i2=\num{9,777445}; T_d2=\num{0,842038}; T_s=\num{0,5}$\\\\
 
-Nastêpnym krokiem by³a aproksymacja uzyskanych wczeœniej odpowiedzi skokowych cz³onem inercyjnym drugiego rzêdu z opóŸnieniem.
-Parametry T1, T2 oraz K tego cz³ony wyznaczone zosta³y za pomoc¹ optymalizatora \verb|ga|. Jako, ¿e jest on optymalizatorem niedeterministycznym (nie daje przy ka¿dym uruchomieniu takich samych rezultatów),
-kilka razy powtarzaliœmy nasze eksperymenty oraz ocenialiœmy wizualnie (na wykresach) jakoœæ dopasowania funkcji aproksymuj¹cej do obliczonej odpowiedzi skokowej.
-Okaza³o siê, ¿e bardzo dobre rezultaty udawa³o siê uzyskaæ nie podaj¹c optymalizatorowi ¿adnych ograniczeñ, dlatego te¿ nie zdecydowaliœmy siê na tego typu kroki.\\\\
+W algorytmie zosta³y u¿yte wczeœniej wyliczone w Matlabie paramtry RR12, RR10, RR10
+RR22, RR21, RR20, tak aby zwolniæ sterownik z obliczeñ i proœciæ implementacjê.\\\\
 
-Parametry cz³onu inercyjnego drugiego rzêdu z opóŸnieniem wyznaczone przy pomocy optymalizatora:
-dla odpowiedzi skokowej obliczonej dla skoku sterowania do wartoœci $\num{50}\%$:\\
-$T1=\num{14,875560};\\    T2=\num{77,388071};\\    K=\num{0,461244}$;\\\\
+Implementacja na sterowniku wraz z zabezpieczeniem opisanym w zadaniu 2.
 
-dla odpowiedzi skokowej obliczonej dla skoku sterowania do wartoœci $\num{90}\%$:\\
-$T1=\num{13,342281};\\    T2=\num{76,79432};\\    K=\num{0,286991}$;\\\\
+\begin{lstlisting}
+AWARIAY1 := FALSE;
+AWARIAY2 := FALSE;
+YZAD1 := 4000;
+YZAD2 := 4000;
 
-Rezultaty, które uda³o nam siê uzyskaæ zosta³y przedstawione na poni¿szych wykresach:
+YY1 := INT_TO_REAL(D100);
+YY2 := INT_TO_REAL(D102);
 
-\begin{figure}[ht]
-	\centering
-	\begin{tikzpicture}
-	\begin{axis}[
-	enlargelimits=false,
-	width=5.0in,
-	height=3.4in,
-	%xmin=0,xmax=350,
-	ymin=-0.05,ymax=0.5,
-	xlabel={$k$},
-	ylabel={$Y$},
-	legend pos=south east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,red] file {wykresy/odp_skokowa_skok_50.txt};
-	\addplot[cyan] file {wykresy/funkcja_aproksymujaca_skok_50.txt};
-	\legend{orygina³,aproksymacja}
-	\end{axis}
-	\end{tikzpicture}
-	\caption{Porównanie odpowiedzi skokowej i jej aproksymacji przy skoku sterowania do wartoœci 50\%}
+IF (YY1 >15000.0) THEN
+	AWARIAY1 := TRUE;
+END_IF;
+
+IF (YY2 > 15000.0) THEN
+	AWARIAY2 := TRUE;
+END_IF;
+
+IF (NOT AWARIAY1 AND NOT AWARIAY2) THEN
+	YY1 := YY1-Y1pp;
+	YY2 := YY2-Y2pp;
+	
+	EE1 := YZAD1-YY1;
+	EE2 := YZAD2-YY2;
+	
+	du1 := (RR12*e1_2)+(RR11*e1_1)+(RR10*EE1);
+	du2 := (RR22*e2_2)+(RR21*e2_1)+(RR20*EE2);
+	
+	
+	UU1 := UU1+du1+U1pp;
+	UU2 := UU2+du2+U2pp;
+	
+	e1_2 := e1_1;
+	e2_2 := e2_1;
+	
+	e1_1 := EE1;
+	e2_1 := EE2;
+	
+	
+	D110 := 500;
+	D111 := 500;
+	
+	IF (UU1>1000.0) THEN
+		UU1 := 1000.0;
+	END_IF;
+	
+	IF (UU1<0.0) THEN
+		UU1 := 0.0;
+	END_IF;
+
+END_IF;
+
+
+IF (UU2>1000.0) THEN
+	UU2 := 1000.0;
+END_IF;
+
+IF (UU2<0.0) THEN
+	UU2 := 0.0;
+END_IF;
+
+
+//ZACHOWANIE W PRZYPADKU AWARII
+IF(AWARIAY1) THEN
+	UU1 := 0.0;
+END_IF;
+
+IF(AWARIAY2) THEN
+	UU2 := 0.0;
+END_IF;
+
+
+D114 := REAL_TO_INT(UU1);
+D115 := REAL_TO_INT(UU2);
+\end{lstlisting}
+
+\begin{figure}
+	Na poni¿szych wykresach mo¿emy zaobserwowaæ dzia³anie regulatora dla wartoœci zadanej
+	dla obu temperatur, T1 oraz T3 = $\num{50}\degree$C. Pocz¹tkowy stan wynosi³ ok. T1 = T3 = $\num{25}\degree$C.
 \end{figure}
 
 
@@ -47,18 +98,64 @@ Rezultaty, które uda³o nam siê uzyskaæ zosta³y przedstawione na poni¿szych wykre
 	\begin{axis}[
 	enlargelimits=false,
 	width=5.0in,
-	height=3.4in,
-	%xmin=0,xmax=350,
-	ymin=-0.05,ymax=0.5,
-	xlabel={$k$},
-	ylabel={$Y$},
+	height=2.5in,
+	%xmin=0,xmax=300,
+	ymin=2000,ymax=6000,
+	%xlabel={$k$},
+	ylabel={$Y1$},
 	legend pos=south east,
-	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,red] file {wykresy/odp_skokowa_skok_90.txt};
-	\addplot[cyan] file {wykresy/funkcja_aproksymujaca_skok_90.txt};
-	\legend{orygina³,aproksymacja}
+	\addplot[const plot,cyan] file {wykresy/zadanie3_Y1.txt};
+	\addplot[red] file {wykresy/zadanie3_Y1zad.txt};
+	\legend{$Y1$, $Y1_{zad}$}
 	\end{axis}
 	\end{tikzpicture}
-	\caption{Porównanie odpowiedzi skokowej i jej aproksymacji przy skoku sterowania do wartoœci 90\%}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=5.0in,
+	height=2.5in,
+	%xmin=0,xmax=300,
+	ymin=2000,ymax=6000,
+	%xlabel={$k$},
+	ylabel={$Y2$},
+	legend pos=south east,
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie3_Y2.txt};
+	\addplot[red] file {wykresy/zadanie3_Y2zad.txt};
+	\legend{$Y2$, $Y2_{zad}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=5.0in,
+	height=1.9in,
+	%xmin=0,xmax=300,
+	ymin=-100,ymax=1100,
+	%xlabel={$k$},
+	ylabel={$U1$},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie3_U1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=5.0in,
+	height=1.9in,
+	%xmin=0,xmax=300,
+	ymin=-100,ymax=1100,
+	xlabel={$k$},
+	ylabel={$U2$},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie3_U2.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Sygna³y wyjœciowe i wejœciowe procesu}
+	
 \end{figure}

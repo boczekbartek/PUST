@@ -1,37 +1,95 @@
 %LAB3
 \chapter{Punkt 1 }
 
-Komunikacja z obiektem grzej¹co-ch³odz¹cym przebiega poprzez port szeregowy. Uda³o nam siê skomunikowaæ ze œrodowiskiem za pomoc¹ funkcji \verb|readMeasurements| oraz \verb|sendControls| dostarczonymi w pakiecie laboratoryjnym. Wysy³anie sygna³ów steruj¹cych do wiatraczka, grza³ki oraz odczyt pomiarów z czujników znajduj¹cych siê na obiekcie
-przebiega³ pomyœlnie. Wartoœci, którymi bêdziemy sterowaæ w tym æwiczeniu to W1 - 1 paramert funkcji \verb|sendControls|, oraz G1 - 5 parametr. Pomiarem nas interesuj¹cym bêdzie pierwsza wartoœæ
-w wektorze zwracanym przez \verb|readMeasurements|, czyli pomiar temperatury T1.
 
-Wyznaczanie punktu pracy:\\
-wys³aliœmy sta³¹ wartoœæ sterowania $U_{pp} = \num{35}\%$ oraz zmierzyliœmy wartoœæ wyjœcia. Wiatraczek W1 (cecha œrodowiska) zosta³ ustawiony na $W1 = \num{50}\%$ obrotów maksymalnych.\\
+Uda³o nam siê skomunikowaæ sterownik z obiektem grzej¹co-ch³odz¹cym oraz oprogramowanie \verb|GxWorks3|. Opis rejestrów sterownika:\\\\
 
-Poni¿ej przedstawiony zosta³ przebieg eksperymentu:
+Grza³ki:\\
+D100 (temperatura T1: sygna³ Y1) - pomiar temperatury na grza³ce G1 (np wartoœæ 2300 oznacza $\num{23}\degree$C)\\
+D102 (temperatura T3: sygna³ Y2) - pomiar temperatury na grza³ce G3\\\\
+
+D114 (sygna³ U1) - sygna³ steruj¹cy grza³k¹ G1 (zakres 0-1000 czyli 0-100\%)\\
+D115 (sygna³ U2) - sygna³ steruj¹cy grza³k¹ G2 \\\\
+
+Wiatraczki:\\
+D110 - sygna³ steruj¹cy wiatraczka W1   (zakres 0-1000 czyli 0-100\%)\\
+D111 - sygna³ steruj¹cy wiatraczka W2\\\\
+
+Aby ustaliæ punkt pracy wyprowadziliœmy obiekt z równowagi a nastêpnie podaliœmy mu sta³e sterowanie na obie grza³ki, przy wiatraczkach ustawionych na 50\% mocy.\\
+Wartoœci sterowania:\\
+G1 = 35 \%\\
+G2 = 40 \%\\\\
+
+Poni¿ej przedstawiony jest przebieg eksperymentu:
+
+
 
 \begin{figure}[ht]
 	\centering
 	\begin{tikzpicture}
 	\begin{axis}[
+	enlargelimits=false,
 	width=5.0in,
-	height=3.4in,
-	xmin=0,xmax=300,ymin=32,ymax=34,
-	xlabel={$k$},
-	ylabel={$T1$},
-	legend pos=south east,
-	y tick label style={/pgf/number format/1000 sep=},
+	height=2.0in,
+	%xmin=0,xmax=300,
+	ymin=3500,ymax=8000,
+	%xlabel={$k$},
+	ylabel={$Y1$},
 	]
-	\addplot[const plot,cyan] file {wykresy/zadanie1.txt};
+	\addplot[const plot,cyan] file {wykresy/zadanie1_Y1.txt};
 	\end{axis}
 	\end{tikzpicture}
 
-	\caption{Punkt pracy}
+	\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=5.0in,
+	height=2.0in,
+	%xmin=0,xmax=300,
+	ymin=3500,ymax=8000,
+	%xlabel={$k$},
+	ylabel={$Y2$},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie1_Y2.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=5.0in,
+	height=1.1in,
+	%xmin=0,xmax=300,ymin=32,ymax=34,
+	%xlabel={$k$},
+	ylabel={$U1$},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie1_U1.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=5.0in,
+	height=1.1in,
+	%xmin=0,xmax=300,ymin=32,ymax=34,
+	xlabel={$k$},
+	ylabel={$U2$},
+	]
+	\addplot[const plot,cyan] file {wykresy/zadanie1_U2.txt};
+	\end{axis}
+	\end{tikzpicture}
+
+	\caption{Sygna³y wyjœciowe i wejœciowe procesu}
 	
 \end{figure}
 
+
+
+
 \begin{figure}
-	Na wykresie mo¿emy zaobserwowaæ, ¿e wartoœæ temperatury T1 (wyjœcia obiektu) stabilizuje sie na wartoœci $\num{33,25}\degree$C.
-	Zatem mo¿emy stwierdziæ, ¿e punkt pracy obiektu to: ($U_{pp}$; $Y_{pp}$) = ($\num{35}$; $\num{33,25}$).
+Jak widaæ wartoœci temperatur w punkcie pracy prezentuj¹ siê nastêpuj¹co:\\
+Y1 = $\num{42,5}\degree$C\\ 
+Y2 =  $\num{39}\degree$C\\
 	
 \end{figure}

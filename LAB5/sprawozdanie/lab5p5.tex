@@ -1,66 +1,17 @@
 %LAB4
 \chapter{Punkt 5}
 
-W tym zadaniu wykonaliœmy eksperyment z uzyciem pierwszego regulatora PID obliczonego w zadaniu poprzednim. Niestety, w zwi¹zku z nieliniowoœci¹ obiektu, regulacja nie daje zadowalaj¹cych rezultatów. Regulator PID to regulator liniowy, który mo¿na zastosowaæ jedynie do 
-obiektów o charakterystyce liniowej.\\
-
-W zwi¹zku z ograniczeniem czasowym zajêæ labolatoryjnych oraz d³ugim czasem stabilizacji obiektu po skoku sterowania (oko³o 300 sekund), zdecydowaliœmy siê zastosowaæ mniej skoków sterowania ni¿ zalecane by³o w poleceniu.  
-
-B³¹d skumulowany w tym przypadku wyniós³: $\num{3762,4}$\\\\
+\includegraphics[width=6.1in]{Zadanie5}
 
 
-\begin{figure}[h!]
-	\centering
-	
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=4.667in,
-	height=1.8in,
-	enlargelimits=false,
-	%xmin=0,xmax=1600,
-	ymin=25,ymax=55,
-	xlabel={$k$},
-	ylabel={$Y$},
-	legend pos=north east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,blue] file {wykresy/zadanie5_PID_Y.txt};
-	\addplot[red] file {wykresy/zadanie5_PID_Yzad.txt};
-	\legend{$Y$, $Y_{zad}$}
-	\end{axis}
-	\end{tikzpicture}
-	
-	\begin{tikzpicture}
-	\begin{axis}[
-	width=4.667in,
-	height=1.8in,
-	enlargelimits=false,
-	%xmin=0,xmax=1600,
-	ymin=-5,ymax=105,
-	xlabel={$k$},
-	ylabel={$U$},
-	legend pos=north east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,blue] file {wykresy/zadanie5_PID_U.txt};
-	\end{axis}
-	\end{tikzpicture}
-	
-		\begin{tikzpicture}
-	\begin{axis}[
-	width=4.667in,
-	height=1.8in,
-	enlargelimits=false,
-	xmin=0,xmax=1050,
-	ymin=-5,ymax=20,
-	xlabel={$k$},
-	ylabel={$E$},
-	legend pos=north east,
-	y tick label style={/pgf/number format/1000 sep=},
-	]
-	\addplot[const plot,blue] file {wykresy/zadanie5_PID_blad.txt};
-	\end{axis}
-	\end{tikzpicture}
-	
-	\caption{Przebiegi sygna³ów uzyskanych podczas eksperymentu na rzeczywistym obiekcie w przypadku zastosowania 1 regulatora PID}
-\end{figure}
+Zaprojektowaliœmy prosty interfejs u¿ytkownika do monitorowania stanowiska grzej¹co ch³odz¹cego.\\\\
+
+Od lewej: \\\\
+Kolor ró¿owy Y1 - pomiar temperatury T1, zakres: ($\num{0}\degree$C - pusty s³upek, $\num{100}\degree$C - pe³ny s³upek) \\
+Kolor ró¿owy Y1ZAD - wartoœæ zadana temperatury T1, zakres j.w.\\
+Kolor zielony Y2 - pomiar temperatury T3, zakres: ($\num{0}\degree$C - pusty s³upek, $\num{100}\degree$C - pe³ny s³upek) \\
+Kolor zileony Y2ZAD - wartoœæ zadana temperatury T2, zakres j.w.\\
+Kolor ¿ó³ty U1 - wartoœc sterowania podana na grza³kê G1, zakres (0 \% - pusty s³upek, 100 \% - pe³ny s³upek)\\
+Kolor ¿ó³ty U2 - wartoœc sterowania podana na grza³kê G2, zakres (0 \% - pusty s³upek, 100 \% - pe³ny s³upek)\\\\
+
+Panel jest dostêpny po wciœniêcu po prawej stronie przycisku MENU, a nastêpnie przycisku PID.\\
