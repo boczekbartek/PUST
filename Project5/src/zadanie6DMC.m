@@ -46,7 +46,7 @@ yzad(2,110:czas)=10;
 yzad(2,410:czas)=4;
 yzad(2,710:czas)=8;
 
-yzad(3,210:czas)=2;
+yzad(3,210:czas)=2; 
 yzad(3,510:czas)=5;
 yzad(3,810:czas)=0;
 

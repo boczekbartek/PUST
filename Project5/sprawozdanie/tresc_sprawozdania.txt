@@ -1,0 +1,36 @@
+1. Obiekt po podaniu zerowego sterowania na wszystkie 4 wejścia, nie zmienia swojego stanu, wszystkie wyjścia są w stanie ustalonym mają wartość y1=y2=y3=0 co potwierdza prawdziwość punktów pracy Upp i Ypp dla każdego z wejść/wyjść. (Tu wykres że wszystko stoi)
+2. Zebrane symulacyjnie odpowiedzi skokowe ('równoległe' i skrośne) z punktów pracy Upp=0 do U=1 w chwili k=0. (Tu wykresy)
+3. Implementacja znana z poprzednich projektów. W tym przypadku obiekt ma 4 wejścia i 3 wyjścia, jednak nasza implementacja regulatora PID i DMC przewiduje obliczanie jednego sterowania na podstawie sprzężenia zwrotnego od jednego wyjścia więc jedno wejście jest nadmiarowe. Decyzję które wejście odrzucamy podejmujemy na podstawie macierzy wzmocnień statycznych (tu jebnij macierz 4x3 czy tam 3x4 kolumny związane z Y wierszse z U, wartości to wzmocnienia statyczne). Aby znaleźć optymalne rozwiązanie, musimy wydzielić z tej macierzy 4 macierze kwadratowe (minory) usuwając kolejno po jednym wierszu a następnie policzyć wskaźniki uwarunkowania dla tych macierzy metodą 'cond()' matlaba.  
+	
+a) (usuwasz 1 wiersz) wkaźnik = 4.3788
+b) (usuwasz 2 wiersz) wskaźnik = 7.2582
+c) (trzeci) wskaźnik = 7.1957
+d) (czwarty) wskaźnik = 5.8635
+
+Wybieramy macierz dla której wskaźnik uwarunkowania jest najmniejszy, w naszym przypadku to macierz pierwsza a następnie mnożymy ją przez jej odwrotność. Otrzymujemy także macierz kwadratową na podstawie której wyciągamy wnioski o torach wejście-wyjście. Jako że wykreśliliśmy pierwszy wiersz, wejście U1 zostaje odrzucone. Następnie patrzymy które wartości macierzy mają wartość jak najbliższą jedności i na podstawie tego dobieramy tory sterowań. W naszym przypadku najrozsądniej jest wybrać U2->Y3, U3->Y1, U4->Y2.
+   -0.0818    0.4386    0.6432
+    0.6102   -0.1053    0.4951
+    0.4716    0.6667   -0.1383
+
+ 
+Po wybraniu odpowiednich torów, jesteśmy w stanie dla różnych oddziaływań uchyb-sterowanie dobrać optymalne nastawy optymalizatorem fmincon optymalizująć 3 zestawy stałych: wzmocnienia K, stałej całkowania Ti oraz stałej różniczkowania Td. Eksperymentalnie dobraliśmy punkt startowy optymalizatora, tak aby regulator w nim nie uciekał do nieskończoności. (Tutaj wykresy + wartości nastaw błędów itd., pierwszy przypadek
+
+% K=[0.538210731709642 17.5567698133576 2.84874354508141];
+% Ti=[0.514450740056430 7.09460846761444 0.811278380840613];
+% Td=[0.00139346599837573 7.42420077987114e-06 0.00565178796268570];
+
+drugi 
+
+% K=[0.816330655981226 16.3643555598206 -0.954969903810093];
+% Ti=[1.28949929474805 7.85960058872968 1.24575952603491];
+% Td=[0.330632288546404 0.0415636656320979 0.156826026915013];
+
+trzeci
+
+K=[0.540533050840108 -3.93533097394258 -0.401112728951613];
+Ti=[2.52943070390993 16.9552270428315 2.01049506267861];
+Td=[0.609413583637298 3.30122276050988 -0.00822846142602021];
+)
+
+
+(Tu napisz dla którego przypadku najmniejszy błąd wyszedł) 
