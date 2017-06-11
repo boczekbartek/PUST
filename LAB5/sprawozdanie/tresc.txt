@@ -1,0 +1,36 @@
+Zadanie 1
+
+Uda³o nam siê skomunikowaæ sterownik z obiektem grzej¹co-ch³odz¹cym oraz oprogramowanie GxWorks3. Opis rejestrów sterownika:
+Grza³ki:
+D100 - T1   (Y1) -> pomiar temperatury na grza³ce 1 (np wartoœæ 2300 oznacza 23 st C)
+D102 - T3   (Y2) -> pomiar temperatury na grza³ce 3
+
+D114 - G1   (U1) -> sygna³ steruj¹cy grza³k¹ G1 ( 0 - 1000 => 0-100%)
+D115 - G2   (U2) -> sygna³ steruj¹cy grza³k¹ G2 
+
+Wiatraczki:
+D110 - W1   -> sygna³ steruj¹cy wiatraczka W1   ( 0 - 1000 => 0-100%)
+D111 - W2   -> sygna³ steruj¹cy wiatraczka W2
+
+Aby ustaliæ punkt pracy wyprowadziliœmy obiekt z równowagi a nastêpnie podaliœmy mu sta³e sterowanie na obie grza³ki, przy wiatraczkach ustawionych na 50% mocy.
+Wartoœci sterowania:
+G1 = 35 %
+G2 = 40 %
+
+Poni¿ej przedstawiony jest przebieg eksperymentu:
+
+pliki: zadanie1_Y1/Y2 na jednym wykresie
+pliki: zadanie1_U1/U2 na jednym wykresie
+
+Jak widaæ wartoœci temperatur w punkcie pracy prezentuj¹ siê nastêpuj¹co:
+Y1 = 39 st C
+Y2 = 42,5 st C
+
+Zadanie 2
+Na sterowniku zaimplementowaliœmy zabezpieczenie obiektu przed uszkodzeniem.
+Jeœli odczyt z czujnika T1 > 150 st C ( czyli w rejestrze D100 > 15000) wy³¹czana jest grza³ka 1,czyli do rejestru
+D114 jest wpisywane 0.
+Analogicznie dla czujnika T1 oraz grza³ki G2.
+
+
+
