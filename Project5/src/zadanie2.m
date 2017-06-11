@@ -1,4 +1,4 @@
-czas=200;
+czas=210;
 
 y=zeros(3,czas);
 
@@ -18,6 +18,11 @@ for i=1:4
         y(2,k-1),y(2,k-2),y(2,k-3),y(2,k-4),...
         y(3,k-1),y(3,k-2),y(3,k-3),y(3,k-4));
     end
+    
+    savePlot(1:czas-10,y(1,11:czas),sprintf('odp_skokU%dY1.txt',i));
+    savePlot(1:czas-10,y(2,11:czas),sprintf('odp_skokU%dY2.txt',i));
+    savePlot(1:czas-10,y(3,11:czas),sprintf('odp_skokU%dY3.txt',i));
+    
     
     subplot(2,2,i);
     
