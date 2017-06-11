@@ -29,8 +29,99 @@ Y2 = 42,5 st C
 Zadanie 2
 Na sterowniku zaimplementowaliœmy zabezpieczenie obiektu przed uszkodzeniem.
 Jeœli odczyt z czujnika T1 > 150 st C ( czyli w rejestrze D100 > 15000) wy³¹czana jest grza³ka 1,czyli do rejestru
-D114 jest wpisywane 0.
+D114 jest wpisywane 0.  
 Analogicznie dla czujnika T1 oraz grza³ki G2.
+
+Zadanie 3
+
+Nastawy PID:
+(takie jak na labolatorium 3)
+K1 = 1,228038; Ti1 = 11,602531; Td1 = 1,166250; Ts = 0,5; K2 = 0,851927; Ti2 = 9,777445; Td2 = 0,842038; Ts = 0,5;
+
+W algorytmie zosta³y u¿yte wczeœniej wyliczone w Matlabie paramtry RR12, RR10, RR10
+RR22, RR21, RR20, tak aby zwolniæ sterownik z obliczeñ i proœciæ implementacjê.
+
+Implementacja na sterowniku wraz z zabezpieczeniem opisanym w zadaniu 2.
+
+//reg PID w domyœle
+AWARIAY1 := FALSE;
+AWARIAY2 := FALSE;
+YZAD1 := 4000;
+YZAD2 := 4000;
+ 
+YY1 := INT_TO_REAL(D100);
+YY2 := INT_TO_REAL(D102);
+ 
+IF (YY1 >15000.0) THEN
+    AWARIAY1 := TRUE;
+END_IF;
+ 
+IF (YY2 > 15000.0) THEN
+    AWARIAY2 := TRUE;
+END_IF;
+ 
+IF (NOT AWARIAY1 AND NOT AWARIAY2) THEN
+    YY1 := YY1-Y1pp;
+    YY2 := YY2-Y2pp;
+ 
+    EE1 := YZAD1-YY1;
+    EE2 := YZAD2-YY2;
+ 
+    du1 := (RR12*e1_2)+(RR11*e1_1)+(RR10*EE1);
+    du2 := (RR22*e2_2)+(RR21*e2_1)+(RR20*EE2);
+ 
+ 
+    UU1 := UU1+du1+U1pp;
+    UU2 := UU2+du2+U2pp;
+ 
+    e1_2 := e1_1;
+    e2_2 := e2_1;
+ 
+    e1_1 := EE1;
+    e2_1 := EE2;
+ 
+ 
+    D110 := 500;
+    D111 := 500;
+ 
+    IF (UU1>1000.0) THEN
+        UU1 := 1000.0;
+    END_IF;
+       
+    IF (UU1<0.0) THEN
+        UU1 := 0.0;
+    END_IF;
+   
+END_IF;
+   
+   
+IF (UU2>1000.0) THEN
+    UU2 := 1000.0;
+END_IF;
+   
+IF (UU2<0.0) THEN
+    UU2 := 0.0;
+END_IF;
+ 
+ 
+//ZACHOWANIE W PRZYPADKU AWARII
+IF(AWARIAY1) THEN
+    UU1 := 0.0;
+END_IF;
+IF(AWARIAY2) THEN
+    UU2 := 0.0;
+END_IF;
+ 
+  
+D114 := REAL_TO_INT(UU1);
+D115 := REAL_TO_INT(UU2);
+
+Na poni¿szych wykresach mo¿emy zaobserwowaæ dzia³anie regulatora dla wartoœci zadnej
+dla obu temperatur, T1 oraz T3 = 50 st C. Pocz¹tkowy stan wynosi³ ok. T1 = T3 = 25 st C.
+
+wykres zadanie3_Y1/Y2/Y1zad/Y2zad na jednym
+wykres zadanie3_U1/U2 na drugim
+
 
 
 
