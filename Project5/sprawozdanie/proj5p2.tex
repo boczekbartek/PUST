@@ -1,0 +1,94 @@
+%LAB4
+\chapter{Punkt 2}
+
+W tym eksperymencie wyznaczaliœmy odpowiedzi skokowe dla piêciu ró¿nych zmian sygna³u struj¹cego G1 rozpoczyn¹j¹c z punktu pracy. Niestety, zanim zaczêliœmy pomiary, w labolatorium zaczê³o œwieciæ s³once
+i punkt pracy naszego obiektu przesun¹³ siê do wartoœci ($U_{pp}$; $Y_{pp}$) = ($\num{35}$; $\num{35}$) i aby ujednoliciæ wyniki to w³aœnie dla niego zebraliœmy odpowiedzi skokowe dla wszystkich skoków sygna³u steruj¹cego.\\\\
+Wykonane przez nas skoki sygna³u to:\\
+1) 35 $\rightarrow$ 40\\
+2) 35 $\rightarrow$ 45\\
+3) 35 $\rightarrow$ 50\\
+4) 35 $\rightarrow$ 60 \\
+5) 35 $\rightarrow$ 70\\
+6) 35 $\rightarrow$ 80\\
+7) 35 $\rightarrow$ 90\\\\
+
+Wykonaliœmy wiêcej pomiarów by lepiej móc zaobserwowaæ punkt przegiêcia charakterystyki statycznej obiektu.
+Wyniki pomiarów zosta³y przedstawione na poni¿szym wykresie zbiorczym:
+
+
+
+
+\begin{figure}[ht]
+	\centering
+		
+	\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=4.667in,
+	height=5in,
+	%xmin=0,xmax=350
+	ymin=34,ymax=52,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,green] file {wykresy/zadanie2_skok_40.txt};
+	\addplot[const plot,yellow] file {wykresy/zadanie2_skok_45.txt};
+	\addplot[const plot,gray] file {wykresy/zadanie2_skok_50.txt};
+	\addplot[const plot,red] file {wykresy/zadanie2_skok_60.txt};
+	\addplot[const plot,blue] file {wykresy/zadanie2_skok_70.txt};
+	\addplot[const plot,magenta] file {wykresy/zadanie2_skok_80.txt};
+	\addplot[const plot,black] file {wykresy/zadanie2_skok_90.txt};
+	\legend{$G1_{\mathrm{skok}}=\num{40}$,
+			$G1_{\mathrm{skok}}=\num{45}$,
+			$G1_{\mathrm{skok}}=\num{50}$,
+			$G1_{\mathrm{skok}}=\num{60}$,
+			$G1_{\mathrm{skok}}=\num{70}$,
+			$G1_{\mathrm{skok}}=\num{80}$,
+			$G1_{\mathrm{skok}}=\num{90}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Odpowiedzi skokowe procesu dla siedmiu ró¿nych zmian sygna³u steruj¹cego}
+	
+\end{figure}
+
+
+\begin{figure}
+W³aœciwoœci statycznych tego obiektu nie mo¿emy okreœliæ jako w przybli¿eniu liniowe. Jako dowód mo¿na podaæ charakterystykê statyczn¹ obiektu, na której doskonale widaæ, ¿e charakterystyka obiektu jest z³o¿ona z dwóch liniowych czêœci, których przegiêcie nastêpuje w okolicach punktu ($X_{przeg}$; $Y_{przeg}$) = ($\num{50}$; $\num{42}$).
+	
+\end{figure}
+
+
+
+
+
+\begin{figure}[ht]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	enlargelimits=false,
+	width=4.667in,
+	height=5in,
+	%xmin=0,xmax=350
+	ymin=37,ymax=52,
+	xlabel={$U$},
+	ylabel={$Y$},
+	legend pos=south east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[green] file {wykresy/zadanie2_charakterystyka_statyczna.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Charakterystyka statyczna}
+	
+\end{figure}
+
+
+\begin{figure}
+	
+	Nie mo¿na obliczyæ wzmocnienia statycznego dla nieliniowego procesu.
+\end{figure}

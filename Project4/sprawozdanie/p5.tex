@@ -1,12 +1,14 @@
 %PROJ4
 \chapter{Punkt 5}
+Rozmyty regulator PID:\\\\
 
-W tym zadaniu wykonaliœmy eksperyment z uzyciem pierwszego regulatora PID obliczonego w zadaniu poprzednim. Niestety, w zwi¹zku z nieliniowoœci¹ obiektu, regulacja nie daje zadowalaj¹cych rezultatów. Regulator PID to regulator liniowy, który mo¿na zastosowaæ jedynie do 
-obiektów o charakterystyce liniowej.\\
 
-W zwi¹zku z ograniczeniem czasowym zajêæ labolatoryjnych oraz d³ugim czasem stabilizacji obiektu po skoku sterowania (oko³o 300 sekund), zdecydowaliœmy siê zastosowaæ mniej skoków sterowania ni¿ zalecane by³o w poleceniu.  
-
-B³¹d skumulowany w tym przypadku wyniós³: $\num{3762,4}$\\\\
+We wszystkich przypadkach poza pierwszym jakoœæ regulacji jest lepsza zarówno pod wzglêdem wskaŸnika E jak i jakoœci przebiegów.
+Regulatory rozmyte dobrze sobie radz¹ z nieliniowoœci¹ obiektu, drobne wahania b³êdu wzglêdem liczby regulatorów lokalnych wynikaj¹
+z niedok³adnego podzielenia dziedziny U pomiêdzy funkcje przynale¿noœci. 
+Rozmyty regulator z jednym regulatorem lokalnym kiepsko radzi sobie z wolniejsz¹ czêœci¹ charakterystyki statycznej obiektu;
+200 chwil k ledwo wystarcza aby obiekt osi¹gn¹³ wartoœæ zadan¹. Dobieranie parametrów regulatorów lokalnych odby³o siê przy pomocy optymalizatora 'ga'. Dodaliœmy ograniczenia kostkowe na ka¿dy parametr
+0 < param < 50; i uœredniliœmy kilka wyników optymalizatora poniewa¿ jest to algorytm niedeterministyczny i za ka¿dym razem dawa³ inny wynik.
 
 
 \begin{figure}[h!]
@@ -18,14 +20,14 @@ B³¹d skumulowany w tym przypadku wyniós³: $\num{3762,4}$\\\\
 	height=1.8in,
 	enlargelimits=false,
 	%xmin=0,xmax=1600,
-	ymin=25,ymax=55,
+	ymin=-2.5,ymax=0.5,
 	xlabel={$k$},
 	ylabel={$Y$},
 	legend pos=north east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,blue] file {wykresy/zadanie5_PID_Y.txt};
-	\addplot[red] file {wykresy/zadanie5_PID_Yzad.txt};
+	\addplot[const plot,blue] file {../wykresy/zad5_Y_1_reg.txt};
+	\addplot[red] file {../wykresy/yzad5.txt};
 	\legend{$Y$, $Y_{zad}$}
 	\end{axis}
 	\end{tikzpicture}
@@ -36,31 +38,182 @@ B³¹d skumulowany w tym przypadku wyniós³: $\num{3762,4}$\\\\
 	height=1.8in,
 	enlargelimits=false,
 	%xmin=0,xmax=1600,
-	ymin=-5,ymax=105,
+	ymin=-1.5,ymax=1.5,
 	xlabel={$k$},
 	ylabel={$U$},
 	legend pos=north east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,blue] file {wykresy/zadanie5_PID_U.txt};
+	\addplot[const plot,blue] file {../wykresy/zad5_U_1_reg.txt};
 	\end{axis}
 	\end{tikzpicture}
 	
-		\begin{tikzpicture}
+	
+	\caption{Przebiegi sygna³ów dla 1 regulatora, b³¹d E = $\num{159,1203}$}
+\end{figure}
+
+
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
 	\begin{axis}[
 	width=4.667in,
 	height=1.8in,
 	enlargelimits=false,
-	xmin=0,xmax=1050,
-	ymin=-5,ymax=20,
+	%xmin=0,xmax=1600,
+	ymin=-2.5,ymax=0.5,
 	xlabel={$k$},
-	ylabel={$E$},
+	ylabel={$Y$},
 	legend pos=north east,
 	y tick label style={/pgf/number format/1000 sep=},
 	]
-	\addplot[const plot,blue] file {wykresy/zadanie5_PID_blad.txt};
+	\addplot[const plot,blue] file {../wykresy/zad5_Y_2_reg.txt};
+	\addplot[red] file {../wykresy/yzad5.txt};
+	\legend{$Y$, $Y_{zad}$}
 	\end{axis}
 	\end{tikzpicture}
 	
-	\caption{Przebiegi sygna³ów uzyskanych podczas eksperymentu na rzeczywistym obiekcie w przypadku zastosowania 1 regulatora PID}
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=-1.5,ymax=1.5,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {../wykresy/zad5_U_2_reg.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+	\caption{Przebiegi sygna³ów dla 2 regulatorów, b³¹d E = $\num{126,4950}$}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=-2.5,ymax=0.5,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {../wykresy/zad5_Y_3_reg.txt};
+	\addplot[red] file {../wykresy/yzad5.txt};
+	\legend{$Y$, $Y_{zad}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=-1.5,ymax=1.5,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {../wykresy/zad5_U_3_reg.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+	\caption{Przebiegi sygna³ów dla 3  regulatorów, b³¹d E = $\num{129,3428}$}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=-2.5,ymax=0.5,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {../wykresy/zad5_Y_4_reg.txt};
+	\addplot[red] file {../wykresy/yzad5.txt};
+	\legend{$Y$, $Y_{zad}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=-1.5,ymax=1.5,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {../wykresy/zad5_U_4_reg.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+	\caption{Przebiegi sygna³ów dla 4 regulatorów, b³¹d E = $\num{121,9314}$}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=-2.5,ymax=0.5,
+	xlabel={$k$},
+	ylabel={$Y$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {../wykresy/zad5_Y_5_reg.txt};
+	\addplot[red] file {../wykresy/yzad5.txt};
+	\legend{$Y$, $Y_{zad}$}
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	width=4.667in,
+	height=1.8in,
+	enlargelimits=false,
+	%xmin=0,xmax=1600,
+	ymin=-1.5,ymax=1.5,
+	xlabel={$k$},
+	ylabel={$U$},
+	legend pos=north east,
+	y tick label style={/pgf/number format/1000 sep=},
+	]
+	\addplot[const plot,blue] file {../wykresy/zad5_U_5_reg.txt};
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+	\caption{Przebiegi sygna³ów dla 5 regulatorów, b³¹d E = $\num{126,6583}$}
 \end{figure}
