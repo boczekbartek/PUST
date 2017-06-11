@@ -55,65 +55,65 @@ e3=sum(e(3,:).^2);
 
 E=e1+e2+e3;
 
-savePlot(1:czas,u(regs(1),:),'zad4_U1_e1_na_u3_e3_na_u2_e2_na_u1.txt');
-savePlot(1:czas,u(regs(2),:),'zad4_U2_e1_na_u3_e3_na_u2_e2_na_u1.txt');
-savePlot(1:czas,u(regs(3),:),'zad4_U3_e1_na_u3_e3_na_u2_e2_na_u1.txt');
+% savePlot(1:czas,u(regs(1),:),'zad4_U1_e1_na_u3_e3_na_u2_e2_na_u1.txt');
+% savePlot(1:czas,u(regs(2),:),'zad4_U2_e1_na_u3_e3_na_u2_e2_na_u1.txt');
+% savePlot(1:czas,u(regs(3),:),'zad4_U3_e1_na_u3_e3_na_u2_e2_na_u1.txt');
+% 
+% savePlot(1:czas,y(1,:),'zad4_Y1_e1_na_u3_e3_na_u2_e2_na_u1.txt');
+% savePlot(1:czas,y(2,:),'zad4_Y2_e1_na_u3_e3_na_u2_e2_na_u1.txt');
+% savePlot(1:czas,y(3,:),'zad4_Y3_e1_na_u3_e3_na_u2_e2_na_u1.txt');
+%     
+% savePlot(1:czas,yzad(1,:),'zad4_Yzad1_e1_na_u3_e3_na_u2_e2_na_u1.txt');
+% savePlot(1:czas,yzad(2,:),'zad4_Yzad2_e1_na_u3_e3_na_u2_e2_na_u1.txt');
+% savePlot(1:czas,yzad(3,:),'zad4_Yzad3_e1_na_u3_e3_na_u2_e2_na_u1.txt');
+%     
+% savePlot(0,0,sprintf('zad4_blad_E_%f_e1_na_u3_e3_na_u2_e2_na_u1.txt',E));
+% % 
 
-savePlot(1:czas,y(1,:),'zad4_Y1_e1_na_u3_e3_na_u2_e2_na_u1.txt');
-savePlot(1:czas,y(2,:),'zad4_Y2_e1_na_u3_e3_na_u2_e2_na_u1.txt');
-savePlot(1:czas,y(3,:),'zad4_Y3_e1_na_u3_e3_na_u2_e2_na_u1.txt');
+subplot(231)
+plot(u(regs(1),:));
+title({['Nastawy PID:K = ', num2str(K(1)), ', Ti = ', num2str(Ti(1)),', Td = ',num2str(Td(1))]});
+xlabel('k')
+ylabel(sprintf('u%d(k)',regs(1)))
+   
+subplot(232)
+plot(u(regs(2),:));
+title({['Nastawy PID:K = ', num2str(K(2)), ', Ti = ', num2str(Ti(2)),', Td = ',num2str(Td(2))]});
+xlabel('k')
+ylabel(sprintf('u%d(k)',regs(2)))
     
-savePlot(1:czas,yzad(1,:),'zad4_Yzad1_e1_na_u3_e3_na_u2_e2_na_u1.txt');
-savePlot(1:czas,yzad(2,:),'zad4_Yzad2_e1_na_u3_e3_na_u2_e2_na_u1.txt');
-savePlot(1:czas,yzad(3,:),'zad4_Yzad3_e1_na_u3_e3_na_u2_e2_na_u1.txt');
+subplot(233)
+plot(u(regs(3),:));
+title({['Nastawy PID:K = ', num2str(K(3)), ', Ti = ', num2str(Ti(3)),', Td = ',num2str(Td(3))]});
+xlabel('k')
+ylabel(sprintf('u%d(k)',regs(3)))
     
-savePlot(0,0,sprintf('zad4_blad_E_%f_e1_na_u3_e3_na_u2_e2_na_u1.txt',E));
-% 
-% 
-% subplot(231)
-% plot(u(regs(1),:));
-% title({['Nastawy PID:K = ', num2str(K(1)), ', Ti = ', num2str(Ti(1)),', Td = ',num2str(Td(1))]});
-% xlabel('k')
-% ylabel(sprintf('u%d(k)',regs(1)))
-%    
-% subplot(232)
-% plot(u(regs(2),:));
-% title({['Nastawy PID:K = ', num2str(K(2)), ', Ti = ', num2str(Ti(2)),', Td = ',num2str(Td(2))]});
-% xlabel('k')
-% ylabel(sprintf('u%d(k)',regs(2)))
-%     
-% subplot(233)
-% plot(u(regs(3),:));
-% title({['Nastawy PID:K = ', num2str(K(3)), ', Ti = ', num2str(Ti(3)),', Td = ',num2str(Td(3))]});
-% xlabel('k')
-% ylabel(sprintf('u%d(k)',regs(3)))
-%     
-% subplot(234)
-% plot(y(1,:));
-% title({['bląd ',num2str(E)];['E1 = ',num2str(e1)]})
-% hold on;
-% stairs(yzad(1,:),'--')
-% legend('Y1(k)','Y_z_a_d_1(k)');
-% xlabel('k')
-% ylabel('Y1(k)')
-%     
-% subplot(235)
-% plot(y(2,:));
-% title({['bląd E= ',num2str(E)];['E2 = ',num2str(e2)]})
-% hold on;
-% stairs(yzad(2,:),'--')
-% legend('Y2(k)','Y_z_a_d_2(k)');
-% xlabel('k')
-% ylabel('Y2(k)')
-%     
-% subplot(236)
-% plot(y(3,:));
-% title({['bląd ',num2str(E)];['E3 = ',num2str(e3)]})
-% hold on;
-% stairs(yzad(3,:),'--')
-% legend('Y3(k)','Y_z_a_d_3(k)');
-% xlabel('k')
-% ylabel('Y3(k)')
+subplot(234)
+plot(y(1,:));
+title({['bląd ',num2str(E)];['E1 = ',num2str(e1)]})
+hold on;
+stairs(yzad(1,:),'--')
+legend('Y1(k)','Y_z_a_d_1(k)');
+xlabel('k')
+ylabel('Y1(k)')
+    
+subplot(235)
+plot(y(2,:));
+title({['bląd E= ',num2str(E)];['E2 = ',num2str(e2)]})
+hold on;
+stairs(yzad(2,:),'--')
+legend('Y2(k)','Y_z_a_d_2(k)');
+xlabel('k')
+ylabel('Y2(k)')
+    
+subplot(236)
+plot(y(3,:));
+title({['bląd ',num2str(E)];['E3 = ',num2str(e3)]})
+hold on;
+stairs(yzad(3,:),'--')
+legend('Y3(k)','Y_z_a_d_3(k)');
+xlabel('k')
+ylabel('Y3(k)')
 
 
 
