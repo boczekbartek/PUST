@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  12 JUN 2017 16:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  12 JUN 2017 17:52
 entering extended mode
 **./sprawozdanie-proj5.tex
 (sprawozdanie-proj5.tex
@@ -1456,17 +1456,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--98
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
+Underfull \hbox (badness 10000) in paragraph at lines 99--101
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--106
+Underfull \hbox (badness 10000) in paragraph at lines 99--101
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--106
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--109
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--109
 
  []
 
@@ -1483,22 +1493,22 @@ PGFPlots: reading {wykresy/zad345pid/zad4_Yzad3_e1_na_u1_e2_na_u2_e3_na_u3.txt}
 
 PGFPlots: reading {wykresy/zad345pid/zad4_U3_e1_na_u1_e2_na_u2_e3_na_u3.txt}
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--229
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--229
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--233
+Underfull \hbox (badness 10000) in paragraph at lines 233--236
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--233
+Underfull \hbox (badness 10000) in paragraph at lines 233--236
 
  []
 
@@ -1515,22 +1525,22 @@ PGFPlots: reading {wykresy/zad345pid/zad4_Yzad3_e1_na_u3_e2_na_u2_e3_na_u1.txt}
 
 PGFPlots: reading {wykresy/zad345pid/zad4_U3_e1_na_u3_e2_na_u2_e3_na_u1.txt}
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--357
+Underfull \hbox (badness 10000) in paragraph at lines 359--360
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--357
+Underfull \hbox (badness 10000) in paragraph at lines 359--360
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--361
+Underfull \hbox (badness 10000) in paragraph at lines 361--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--361
+Underfull \hbox (badness 10000) in paragraph at lines 361--364
 
  []
 
@@ -1546,6 +1556,11 @@ PGFPlots: reading {wykresy/zad345pid/zad4_Y3_e1_na_u3_e3_na_u2_e2_na_u1.txt}
 PGFPlots: reading {wykresy/zad345pid/zad4_Yzad3_e1_na_u3_e3_na_u2_e2_na_u1.txt}
 
 PGFPlots: reading {wykresy/zad345pid/zad4_U3_e1_na_u3_e3_na_u2_e2_na_u1.txt}
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--499
+
+ []
+
 PGFPlots: reading {wykresy/zad345dmc/zad4_Y1.txt}
 PGFPlots: reading {wykresy/zad345dmc/zad4_Yzad1.txt}
 PGFPlots: reading {wykresy/zad345dmc/zad4dmc_U1.txt}
@@ -1556,9 +1571,9 @@ PGFPlots: reading {wykresy/zad345dmc/zad4_Y3.txt}
 PGFPlots: reading {wykresy/zad345dmc/zad4_Yzad3.txt}
 PGFPlots: reading {wykresy/zad345dmc/zad4dmc_U3.txt}
 
-LaTeX Warning: Float too large for page by 3.82619pt on input line 601.
+LaTeX Warning: Float too large for page by 3.82619pt on input line 607.
 
-) (proj5p6.tex [7] [8] [9] [10] [11] [12] [13] [14]
+) (proj5p6.tex [7] [8] [9] [10] [11] [12] [13] [14] [15]
 Rozdzia\PlPrIeC {\l } 4.
 PGFPlots: reading {wykresy/zad6/zad6_Y1.txt}
 PGFPlots: reading {wykresy/zad6/zad6_Yzad1.txt}
@@ -1572,13 +1587,13 @@ PGFPlots: reading {wykresy/zad6/zad6dmc_U3.txt}
 
 LaTeX Warning: Float too large for page by 3.82619pt on input line 113.
 
-) [15
+) [16
 
-] [16] [17] (sprawozdanie-proj5.aux) ) 
+] [17] [18] (sprawozdanie-proj5.aux) ) 
 Here is how much of TeX's memory you used:
  37075 strings out of 493329
  888847 string characters out of 3139066
- 22655488 words of memory out of 25602204
+ 22655946 words of memory out of 25602662
  39964 multiletter control sequences out of 15000+200000
  24139 words of font info for 72 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1599,9 +1614,9 @@ b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr8.pfb><C:/Program Files
 /type1/public/pl/plsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/p
 lsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plti10.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/pl/pltt10.pfb>
-Output written on sprawozdanie-proj5.pdf (18 pages, 462573 bytes).
+Output written on sprawozdanie-proj5.pdf (19 pages, 464712 bytes).
 PDF statistics:
- 125 PDF objects out of 1000 (max. 8388607)
+ 129 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

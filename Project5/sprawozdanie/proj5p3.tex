@@ -31,7 +31,7 @@ a)\\
 \right]
 \end{equation}
 
- wkaŸnik = 4.3788\\\\
+ wkaŸnik jakoœci E = 4.3788\\\\
  
 b)\\
 \begin{equation}
@@ -45,7 +45,7 @@ b)\\
 \right]
 \end{equation}
 
-wskaŸnik = 7.2582\\\\
+wskaŸnik jakoœci E = 7.2582\\\\
 
 
 
@@ -61,7 +61,7 @@ c) \\
 \right]
 \end{equation}
 
- wskaŸnik = 7.1957\\\\
+ wskaŸnik jakoœci E = 7.1957\\\\
 
 
 
@@ -77,7 +77,7 @@ d)
 \right]
 \end{equation}
 
- wskaŸnik = 5.8635\\\\
+ wskaŸnik jakoœci E = 5.8635\\\\
 
 Wybieramy macierz, dla której wskaŸnik uwarunkowania jest najmniejszy, w naszym przypadku to macierz pierwsza, a nastêpnie mno¿ymy j¹ przez jej odwrotnoœæ. Otrzymujemy tak¿e macierz kwadratow¹, na podstawie której wyci¹gamy wnioski o torach wejœcie-wyjœcie. Jako ¿e wykreœliliœmy pierwszy wiersz, wejœcie U1 zostaje odrzucone. Nastêpnie patrzymy, które wartoœci macierzy maj¹ wartoœæ jak najbli¿sz¹ jednoœci i na podstawie tego dobieramy tory sterowañ. W naszym przypadku najrozs¹dniej jest wybraæ U2-Y3, U3-Y1, U4-Y2.\\\\
 
@@ -95,6 +95,9 @@ Wybieramy macierz, dla której wskaŸnik uwarunkowania jest najmniejszy, w naszym 
 
 
 Po wybraniu odpowiednich torów, jesteœmy w stanie dla ró¿nych oddzia³ywañ uchyb-sterowanie dobraæ optymalne nastawy optymalizatorem \verb|fmincon| optymalizuj¹c 3 zestawy sta³ych: wzmocnienia K, sta³ej ca³kowania Ti oraz sta³ej ró¿niczkowania Td. Eksperymentalnie dobraliœmy punkt startowy optymalizatora, tak aby regulator w nim nie ucieka³ do nieskoñczonoœci. \\\\\
+
+Najlepszym regulatorem PID okaza³ siê ten z przypadku pierwszego, gdzie e1 na u1, e2 na u2, e3 na u3. Po przebiegach mo¿emy oceniæ, ze wahania oraz nag³e skoki sygna³u 
+wyjœciowego s¹ du¿o mniejsze ni¿ w pozosta³ych PIDach, wiêc jakoœæ regulacji jest najlepsza. Potwierdza to najmniejsza wartoœæ wskaŸnika jakoœci E dla tego przypadku.\\\\
 
 
 \begin{figure}
@@ -212,7 +215,7 @@ Td=[0,00139346599837573 7,42420077987114e-06 0,00565178796268570];\\\\
  	\end{axis}
  	\end{tikzpicture}
  	
- 	\caption{PID - Sygna³y procesu, oddzia³ywanie e1 na u1, e2 na u2, e3 na u3, b³¹d E = $\num{17,188697}$}
+ 	\caption{PID - Sygna³y procesu, oddzia³ywanie e1 na u1, e2 na u2, e3 na u3, b³¹d E = $\num{417,188697}$}
  \end{figure}
  
  
@@ -475,8 +478,6 @@ Td=[0,609413583637298 3,30122276050988 -0,00822846142602021];\\\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-(Tu napisz dla którego przypadku najmniejszy b³¹d wyszed³) 
-
 	
 
 
@@ -489,7 +490,12 @@ Td=[0,609413583637298 3,30122276050988 -0,00822846142602021];\\\\
 
 
 \begin{figure}
-
+	Nastawy regulatora DMC:\\
+$\lambda$=[809756633,229638	 4368.69435554494 	1201371,16173047 	512033,480105263];\\
+$\mu$=[28729993,8373922	 1543438461,32905	 13758389,8059698];\\
+D=200;\\
+N=200;\\
+Nu=200;\\
 \end{figure}
 
 \begin{figure}
@@ -600,3 +606,7 @@ Td=[0,609413583637298 3,30122276050988 -0,00822846142602021];\\\\
 	\caption{DMC - Sygna³y procesu, b³¹d E = $\num{375,535682}$}
 \end{figure}
 
+\begin{figure}
+	Zgodnie z oczekiwaniami algorytm DMC najlepiej poradzi³ sobie z regulacj¹ tego procesu. Wartoœæ wyjœciowa jest lepiej dopasowana do watroœci zadanej ni¿ w PID, a wskaŸnik 
+	jakoœci regulacji E ma mniejsz¹ wartoœæ.
+\end{figure}
