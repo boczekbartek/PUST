@@ -4,9 +4,9 @@
 
 
 Implementacja znana z poprzednich projektów. W tym przypadku obiekt ma 4 wejœcia i 3 wyjœcia, jednak nasza implementacja regulatora PID i DMC przewiduje obliczanie jednego sterowania na podstawie sprzê¿enia zwrotnego od jednego wyjœcia wiêc jedno wejœcie jest nadmiarowe. Decyzjê które wejœcie odrzucamy podejmujemy na podstawie macierzy wzmocnieñ statycznych \\\\
- ///TODO: skad wartosci tej macierzy. Jak j¹ nazwaæ
+
 \begin{equation}
-	\boldsymbol{W_1}=\left[
+	\left[
 	\begin{array}
 		{ccc}
 		0.4991 & 0.9999 & 0.3482\\
@@ -21,7 +21,7 @@ Aby znaleŸæ optymalne rozwi¹zanie, musimy wydzieliæ z tej macierzy 4 macierze kw
 
 a)\\
 \begin{equation}
-\boldsymbol{}=\left[
+	\left[
 \begin{array}
 {ccc}
 0.1000 & 0.4998 & 0.7000\\
@@ -35,7 +35,7 @@ a)\\
  
 b)\\
 \begin{equation}
-\boldsymbol{W_1}=\left[
+\left[
 \begin{array}
 {ccc}
 0.4991 & 0.9999 & 0.3482\\
@@ -51,7 +51,7 @@ wskaŸnik = 7.2582\\\\
 
 c) \\
 \begin{equation}
-\boldsymbol{}=\left[
+\left[
 \begin{array}
 {ccc}
 0.4991 & 0.9999 & 0.3482\\
@@ -65,9 +65,9 @@ c) \\
 
 
 
-d) (czwarty)
+d)
 \begin{equation}
-\boldsymbol{W_1}=\left[
+\left[
 \begin{array}
 {ccc}
 0.4991 & 0.9999 & 0.3482\\
@@ -79,12 +79,19 @@ d) (czwarty)
 
  wskaŸnik = 5.8635\\\\
 
-Wybieramy macierz dla której wskaŸnik uwarunkowania jest najmniejszy, w naszym przypadku to macierz pierwsza a nastêpnie mno¿ymy j¹ przez jej odwrotnoœæ. Otrzymujemy tak¿e macierz kwadratow¹ na podstawie której wyci¹gamy wnioski o torach wejœcie-wyjœcie. Jako ¿e wykreœliliœmy pierwszy wiersz, wejœcie U1 zostaje odrzucone. Nastêpnie patrzymy które wartoœci macierzy maj¹ wartoœæ jak najbli¿sz¹ jednoœci i na podstawie tego dobieramy tory sterowañ. W naszym przypadku najrozs¹dniej jest wybraæ U2-Y3, U3-Y1, U4-Y2.\\\\
+Wybieramy macierz, dla której wskaŸnik uwarunkowania jest najmniejszy, w naszym przypadku to macierz pierwsza, a nastêpnie mno¿ymy j¹ przez jej odwrotnoœæ. Otrzymujemy tak¿e macierz kwadratow¹, na podstawie której wyci¹gamy wnioski o torach wejœcie-wyjœcie. Jako ¿e wykreœliliœmy pierwszy wiersz, wejœcie U1 zostaje odrzucone. Nastêpnie patrzymy, które wartoœci macierzy maj¹ wartoœæ jak najbli¿sz¹ jednoœci i na podstawie tego dobieramy tory sterowañ. W naszym przypadku najrozs¹dniej jest wybraæ U2-Y3, U3-Y1, U4-Y2.\\\\
 
-////TODO a to co to jest, takich wartosci w ogole nie ma w macierzy 4x3 (ktora powstala z plikow zad2u1y1.txt itp):\\
--0.0818    0.4386    0.6432\\
-0.6102   -0.1053    0.4951\\
-0.4716    0.6667   -0.1383\\\\
+
+\begin{equation}
+\left[
+\begin{array}
+{ccc}
+-0.0818 & 0.4386 & 0.6432\\
+0.6102 & -0.1053 & 0.4951\\
+0.4716 & 0.6667 & -0.1383\\
+\end{array}
+\right]
+\end{equation}
 
 
 Po wybraniu odpowiednich torów, jesteœmy w stanie dla ró¿nych oddzia³ywañ uchyb-sterowanie dobraæ optymalne nastawy optymalizatorem \verb|fmincon| optymalizuj¹c 3 zestawy sta³ych: wzmocnienia K, sta³ej ca³kowania Ti oraz sta³ej ró¿niczkowania Td. Eksperymentalnie dobraliœmy punkt startowy optymalizatora, tak aby regulator w nim nie ucieka³ do nieskoñczonoœci. \\\\\

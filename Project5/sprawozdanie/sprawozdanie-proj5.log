@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  12 JUN 2017 13:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  12 JUN 2017 16:22
 entering extended mode
 **./sprawozdanie-proj5.tex
 (sprawozdanie-proj5.tex
@@ -1353,7 +1353,12 @@ PGFPlots: reading {wykresy/zad2u4y3.txt}
 ] [4] [5]
 Rozdzia\PlPrIeC {\l } 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 6--8
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
@@ -1435,43 +1440,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--83
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--88
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--88
-
- []
-
-
-Overfull \hbox (7.94263pt too wide) in paragraph at lines 90--91
+Overfull \hbox (7.94263pt too wide) in paragraph at lines 97--98
 []\OT4/cmr/m/n/10.95 Po wy-bra-niu od-po-wied-nich to-rów, je-ste-±my w sta-nie
  dla ró»-nych od-dzia-ªy-wa« uchyb-sterowanie
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--91
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--91
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--99
+Underfull \hbox (badness 10000) in paragraph at lines 103--106
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--99
+Underfull \hbox (badness 10000) in paragraph at lines 103--106
 
  []
 
@@ -1488,22 +1483,22 @@ PGFPlots: reading {wykresy/zad345pid/zad4_Yzad3_e1_na_u1_e2_na_u2_e3_na_u3.txt}
 
 PGFPlots: reading {wykresy/zad345pid/zad4_U3_e1_na_u1_e2_na_u2_e3_na_u3.txt}
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--222
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--222
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--226
+Underfull \hbox (badness 10000) in paragraph at lines 230--233
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--226
+Underfull \hbox (badness 10000) in paragraph at lines 230--233
 
  []
 
@@ -1520,22 +1515,22 @@ PGFPlots: reading {wykresy/zad345pid/zad4_Yzad3_e1_na_u3_e2_na_u2_e3_na_u1.txt}
 
 PGFPlots: reading {wykresy/zad345pid/zad4_U3_e1_na_u3_e2_na_u2_e3_na_u1.txt}
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--350
+Underfull \hbox (badness 10000) in paragraph at lines 356--357
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--350
+Underfull \hbox (badness 10000) in paragraph at lines 356--357
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 351--354
+Underfull \hbox (badness 10000) in paragraph at lines 358--361
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 351--354
+Underfull \hbox (badness 10000) in paragraph at lines 358--361
 
  []
 
@@ -1561,7 +1556,7 @@ PGFPlots: reading {wykresy/zad345dmc/zad4_Y3.txt}
 PGFPlots: reading {wykresy/zad345dmc/zad4_Yzad3.txt}
 PGFPlots: reading {wykresy/zad345dmc/zad4dmc_U3.txt}
 
-LaTeX Warning: Float too large for page by 3.82619pt on input line 594.
+LaTeX Warning: Float too large for page by 3.82619pt on input line 601.
 
 ) (proj5p6.tex [7] [8] [9] [10] [11] [12] [13] [14]
 Rozdzia\PlPrIeC {\l } 4.
@@ -1579,35 +1574,34 @@ LaTeX Warning: Float too large for page by 3.82619pt on input line 113.
 
 ) [15
 
-] [16] (sprawozdanie-proj5.aux) ) 
+] [16] [17] (sprawozdanie-proj5.aux) ) 
 Here is how much of TeX's memory you used:
- 37098 strings out of 493329
- 889117 string characters out of 3139066
- 22655579 words of memory out of 25602295
- 39978 multiletter control sequences out of 15000+200000
- 28836 words of font info for 86 fonts, out of 3000000 for 9000
+ 37075 strings out of 493329
+ 888847 string characters out of 3139066
+ 22655488 words of memory out of 25602204
+ 39964 multiletter control sequences out of 15000+200000
+ 24139 words of font info for 72 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,19n,100p,10392b,2118s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/p
-l/plrm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}{C:/Program
- Files/MiKTeX 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Program Files/MiKTeX 2.9/font
-s/enc/dvips/pl/pltt.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plme.en
-c}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plit.enc}<C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/pl/plbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/pl/plbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plb
-x8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plex10.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/pl/plmi10.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/pl/plmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/pl/plmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmib10.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr10.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/pl/plr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/pl/plr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy6
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/pl/plti10.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/pl/pltt10.pfb>
-Output written on sprawozdanie-proj5.pdf (17 pages, 463835 bytes).
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dv
+ips/pl/plrm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}{C:/Pr
+ogram Files/MiKTeX 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Program Files/MiKTeX 2.9
+/fonts/enc/dvips/pl/pltt.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/pl
+me.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plit.enc}<C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/pl/plbx10.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/pl/plbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/p
+l/plex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi7.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/pl/plr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr6.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr8.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/pl/plsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/p
+lsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plti10.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/pl/pltt10.pfb>
+Output written on sprawozdanie-proj5.pdf (18 pages, 462573 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
+ 125 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
