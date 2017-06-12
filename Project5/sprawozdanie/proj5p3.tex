@@ -9,40 +9,38 @@ Implementacja znana z poprzednich projektów. W tym przypadku obiekt ma 4 wejœcia
 	\boldsymbol{W_1}=\left[
 	\begin{array}
 		{ccc}
-		2.1000 & 2.5000 & 0.1000\\
-		2.9000 & 0.1000 & 1.9000\\
-		1.5000 & 0.5000 & 0.4500\\
-		1.5000 & 0.5000 & 0.4500
+		0.4991 & 0.9999 & 0.3482\\
+		0.1000 & 0.4998 & 0.7000\\
+		1.9000 & 0.2000 & 1.5000\\
+		1.2999 & 0.9500 & 0.2500
 	\end{array}
 	\right]
 \end{equation}
 
 Aby znaleŸæ optymalne rozwi¹zanie, musimy wydzieliæ z tej macierzy 4 macierze kwadratowe (minory) usuwaj¹c kolejno po jednym wierszu a nastêpnie policzyæ wskaŸniki uwarunkowania dla tych macierzy metod¹ 'cond()' matlaba.  \\\\
 
-a) (usuwasz 1 wiersz)\\
-////TODO
+a)\\
 \begin{equation}
-	\boldsymbol{W_1}=\left[
-	\begin{array}
-	{ccc}
-	2.9000 & 0.1000 & 1.9000\\
-	1.5000 & 0.5000 & 0.4500\\
-	1.5000 & 0.5000 & 0.4500
-	\end{array}
-	\right]
+\boldsymbol{}=\left[
+\begin{array}
+{ccc}
+0.1000 & 0.4998 & 0.7000\\
+1.9000 & 0.2000 & 1.5000\\
+1.2999 & 0.9500 & 0.2500
+\end{array}
+\right]
 \end{equation}
 
  wkaŸnik = 4.3788\\\\
  
-b) (usuwasz 2 wiersz) 
-////TODO
+b)\\
 \begin{equation}
 \boldsymbol{W_1}=\left[
 \begin{array}
 {ccc}
-2.9000 & 0.1000 & 1.9000\\
-1.5000 & 0.5000 & 0.4500\\
-1.5000 & 0.5000 & 0.4500
+0.4991 & 0.9999 & 0.3482\\
+1.9000 & 0.2000 & 1.5000\\
+1.2999 & 0.9500 & 0.2500
 \end{array}
 \right]
 \end{equation}
@@ -51,15 +49,14 @@ wskaŸnik = 7.2582\\\\
 
 
 
-c) (trzeci)
-////TODO
+c) \\
 \begin{equation}
-\boldsymbol{W_1}=\left[
+\boldsymbol{}=\left[
 \begin{array}
 {ccc}
-2.9000 & 0.1000 & 1.9000\\
-1.5000 & 0.5000 & 0.4500\\
-1.5000 & 0.5000 & 0.4500
+0.4991 & 0.9999 & 0.3482\\
+0.1000 & 0.4998 & 0.7000\\
+1.2999 & 0.9500 & 0.2500
 \end{array}
 \right]
 \end{equation}
@@ -69,14 +66,13 @@ c) (trzeci)
 
 
 d) (czwarty)
-////TODO
 \begin{equation}
 \boldsymbol{W_1}=\left[
 \begin{array}
 {ccc}
-2.9000 & 0.1000 & 1.9000\\
-1.5000 & 0.5000 & 0.4500\\
-1.5000 & 0.5000 & 0.4500
+0.4991 & 0.9999 & 0.3482\\
+0.1000 & 0.4998 & 0.7000\\
+1.9000 & 0.2000 & 1.5000
 \end{array}
 \right]
 \end{equation}
@@ -85,7 +81,7 @@ d) (czwarty)
 
 Wybieramy macierz dla której wskaŸnik uwarunkowania jest najmniejszy, w naszym przypadku to macierz pierwsza a nastêpnie mno¿ymy j¹ przez jej odwrotnoœæ. Otrzymujemy tak¿e macierz kwadratow¹ na podstawie której wyci¹gamy wnioski o torach wejœcie-wyjœcie. Jako ¿e wykreœliliœmy pierwszy wiersz, wejœcie U1 zostaje odrzucone. Nastêpnie patrzymy które wartoœci macierzy maj¹ wartoœæ jak najbli¿sz¹ jednoœci i na podstawie tego dobieramy tory sterowañ. W naszym przypadku najrozs¹dniej jest wybraæ U2-Y3, U3-Y1, U4-Y2.\\\\
 
-////TODO a to co to jest:
+////TODO a to co to jest, takich wartosci w ogole nie ma w macierzy 4x3 (ktora powstala z plikow zad2u1y1.txt itp):\\
 -0.0818    0.4386    0.6432\\
 0.6102   -0.1053    0.4951\\
 0.4716    0.6667   -0.1383\\\\

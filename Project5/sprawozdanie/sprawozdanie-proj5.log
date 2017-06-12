@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  12 JUN 2017 00:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.22)  12 JUN 2017 13:38
 entering extended mode
 **./sprawozdanie-proj5.tex
 (sprawozdanie-proj5.tex
@@ -1368,75 +1368,95 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
 
 [6
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--92
+Underfull \hbox (badness 10000) in paragraph at lines 84--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--92
+Underfull \hbox (badness 10000) in paragraph at lines 84--88
 
  []
 
 
-Overfull \hbox (7.94263pt too wide) in paragraph at lines 94--95
+Overfull \hbox (7.94263pt too wide) in paragraph at lines 90--91
 []\OT4/cmr/m/n/10.95 Po wy-bra-niu od-po-wied-nich to-rów, je-ste-±my w sta-nie
  dla ró»-nych od-dzia-ªy-wa« uchyb-sterowanie
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
@@ -1446,17 +1466,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 94--95
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+Underfull \hbox (badness 10000) in paragraph at lines 96--99
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--103
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--103
+Underfull \hbox (badness 10000) in paragraph at lines 96--99
 
  []
 
@@ -1473,22 +1488,22 @@ PGFPlots: reading {wykresy/zad345pid/zad4_Yzad3_e1_na_u1_e2_na_u2_e3_na_u3.txt}
 
 PGFPlots: reading {wykresy/zad345pid/zad4_U3_e1_na_u1_e2_na_u2_e3_na_u3.txt}
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--230
+Underfull \hbox (badness 10000) in paragraph at lines 223--226
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--230
+Underfull \hbox (badness 10000) in paragraph at lines 223--226
 
  []
 
@@ -1505,22 +1520,22 @@ PGFPlots: reading {wykresy/zad345pid/zad4_Yzad3_e1_na_u3_e2_na_u2_e3_na_u1.txt}
 
 PGFPlots: reading {wykresy/zad345pid/zad4_U3_e1_na_u3_e2_na_u2_e3_na_u1.txt}
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--354
+Underfull \hbox (badness 10000) in paragraph at lines 349--350
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--354
+Underfull \hbox (badness 10000) in paragraph at lines 349--350
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 355--358
+Underfull \hbox (badness 10000) in paragraph at lines 351--354
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 355--358
+Underfull \hbox (badness 10000) in paragraph at lines 351--354
 
  []
 
@@ -1546,7 +1561,7 @@ PGFPlots: reading {wykresy/zad345dmc/zad4_Y3.txt}
 PGFPlots: reading {wykresy/zad345dmc/zad4_Yzad3.txt}
 PGFPlots: reading {wykresy/zad345dmc/zad4dmc_U3.txt}
 
-LaTeX Warning: Float too large for page by 3.82619pt on input line 598.
+LaTeX Warning: Float too large for page by 3.82619pt on input line 594.
 
 ) (proj5p6.tex [7] [8] [9] [10] [11] [12] [13] [14]
 Rozdzia\PlPrIeC {\l } 4.
@@ -1568,7 +1583,7 @@ LaTeX Warning: Float too large for page by 3.82619pt on input line 113.
 Here is how much of TeX's memory you used:
  37098 strings out of 493329
  889117 string characters out of 3139066
- 22655491 words of memory out of 25602207
+ 22655579 words of memory out of 25602295
  39978 multiletter control sequences out of 15000+200000
  28836 words of font info for 86 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1590,7 +1605,7 @@ pe1/public/pl/plr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy6
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Program F
 iles/MiKTeX 2.9/fonts/type1/public/pl/plti10.pfb><C:/Program Files/MiKTeX 2.9/f
 onts/type1/public/pl/pltt10.pfb>
-Output written on sprawozdanie-proj5.pdf (17 pages, 463514 bytes).
+Output written on sprawozdanie-proj5.pdf (17 pages, 463835 bytes).
 PDF statistics:
  126 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
