@@ -8,7 +8,7 @@ function [E]=zad50dmc(N,Nu,lambda,n,d,c,latex)
 %Nu skalar
 %lambda wektor n liczb
 %rozmiar lambdy, ilosc reg lokalnych
-%d skalar
+%d skalar? z równañ ni¿ej wynika ¿e skalar, ale oni w optymalizatorze podawali wektor n liczb
 %c wektor n-1 liczb
 
 close all
@@ -43,6 +43,10 @@ MP=zeros(N,D-1);
 I=eye(Nu);
 ku=zeros(n,D-1);
 ke=zeros(1,n);
+
+%chyba rozumiem, tu trzeba podzielic odcinek -1:1 na 50 rownych(?) kawalkow
+%z nich zebrac odpowiedzi skokowe w sensie skok z jednej granicy do drugiej
+%i je wrzuciæ do tych 50 dmcków
 for m=1:n
     if m==1
         s=s1(:,2);
@@ -67,6 +71,7 @@ for m=1:n
         stemp=load('skok_0.377_0.502.txt');
         s=stemp(:,2);
     end
+    
 %     s=z2_y21(16:115,2);
     
     
@@ -130,7 +135,7 @@ for k=7:kk
     
     mi(1)=1-1/(1+exp(-d*(Y(k)-c(1)))); %j=1      
     for j=2:n-1
-        mi(j)=1/(1+exp(-d*(Y(k)-c(j-1))))-1/(1+exp(-d*(Y(k)-c(j))));%0.5, j=2:n-1
+        mi(j)=1/(1+exp(-d*(Y(k)-c(j-1))))-1/(1+exp(-d*(Y(k)-c(j))));%j=2:n-1
     end
     mi(n)=1/(1+exp(-d*(Y(k)-c(n-1)))); %j=n
     
