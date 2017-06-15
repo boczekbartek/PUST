@@ -1,5 +1,6 @@
 clear all;
 %trapezowa funkcja przynale�no�ci
+
 reg = 5;
 switch reg
     case 1
@@ -11,7 +12,7 @@ switch reg
             -0.2 0 0.8 1];
     D = {40, 50};
     lambda = {500, 10};
-    case 7
+    case 3
     fun_przyn_u = [-1 -0.9 -0.5 -0.4;...
             -0.5 -0.4 0.1 0.2;...
             0.1 0.2 0.9 1];
