@@ -1,4 +1,3 @@
-clear all;
 % x0 = [0.1, 5, 0.4, 0.1, 5, 0.4,10,0.3];
 % lb = [0, 0, 0,0,0,0,0,-0.16];
 % [nastawy,min_error] = fmincon(@(x)(p5PID([x(1) x(4)],[x(2) x(5)],[x(3) x(6)],2,x(7),x(8),false)),x0,[],[],[],[],lb)
@@ -30,12 +29,8 @@ ub=[100 100 Inf Inf Inf Inf Inf Inf];
 lambda = ones(1,50) * 0.1;
 n=50;
 c = ones(1,49)*0.01;
-x0=[100 100 lambda 10 c];
-
-
+x0=nastawy;
 
 [nastawy, min_error]=fmincon(@(x)(zad50dmc(x(1),x(2),x(3:2+n), n ,x(3+n) ,x(4+n:4+2*n-2),false)),x0,[],[],[],[],lb,ub);
 
-
-% E=zad50dmc(nastawy(1),nastawy(2),[nastawy(3) nastawy(4) nastawy(5)],3,[nastawy(6) nastawy(7) nastawy(8)],[-0.05 1.4],false);
-
+E=zad50dmc(nastawy(1),nastawy(2),nastawy(3:2+n) , 50 ,nastawy(3+n) , nastawy(4+n:4+2*n-2),true);
