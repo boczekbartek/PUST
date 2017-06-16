@@ -23,15 +23,19 @@ clear all;
 % [nastawy, min_error]=fmincon(@(x)(p6DMC(x(1),x(2),x(3),2,[x(4) x(5)],x(6),false)),x0,[],[],[],[],lb,ub)
 % E=p6DMC(nastawy(1),nastawy(2),nastawy(3),2,[nastawy(4) nastawy(5)],nastawy(6),false)
 
-x0=[100 100 10 10 10 10 10 10];
 
 
 lb=[1 1 0 0 0 0 0 0];
 ub=[100 100 Inf Inf Inf Inf Inf Inf];
-lambda = ones(1,50) * 100;
+lambda = ones(1,50) * 0.1;
 n=50;
+c = ones(1,49)*0.01;
+x0=[100 100 lambda 10 c];
 
 
-[nastawy, min_error]=fmincon(@(x)(zad50dmc(x(1),x(2),lambda,n,[x(6) x(7) x(8)],[-0.05 1.4],false)),x0,[],[],[],[],lb,ub);
-E=zad50dmc(nastawy(1),nastawy(2),[nastawy(3) nastawy(4) nastawy(5)],3,[nastawy(6) nastawy(7) nastawy(8)],[-0.05 1.4],false);
+
+[nastawy, min_error]=fmincon(@(x)(zad50dmc(x(1),x(2),x(3:2+n), n ,x(3+n) ,x(4+n:4+2*n-2),false)),x0,[],[],[],[],lb,ub);
+
+
+% E=zad50dmc(nastawy(1),nastawy(2),[nastawy(3) nastawy(4) nastawy(5)],3,[nastawy(6) nastawy(7) nastawy(8)],[-0.05 1.4],false);
 
