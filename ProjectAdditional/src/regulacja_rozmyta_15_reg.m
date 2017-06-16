@@ -12,7 +12,7 @@ kk=2210;
 startk=10;
 
 n = 15 
-%Ładowanie parametrów ke i ku dla każdego z 50 regulatorów lokalnych wyliczonych poczas
+%�?adowanie parametrów ke i ku dla każdego z 50 regulatorów lokalnych wyliczonych poczas
 %optymalizacji
 
 load('OptymalizacjaGa_15reg_iter=15.mat')
@@ -85,11 +85,7 @@ for k=7:kk
     for i=D-1:-1:2
         deltaup(i)=deltaup(i-1);
     end
-    
-    %pytanie o co mu chodzi�o z -0,1 <= du <= 0,1
-    %czy w sensie przyrostu wszystkich lokalnych po kolei czy ju�
-    %zsumowanych, mysl� �e to drugie, kurde komar mnie ugryz�
-    
+        
     if deltauk>0.1
         deltauk = dupmax;
     elseif deltauk<-0.1

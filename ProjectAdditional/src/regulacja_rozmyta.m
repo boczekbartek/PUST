@@ -1,27 +1,5 @@
-
-%aktualnie najlepsze: 
-%p6DMC(12,1,[800 0.01 1 110],4,0.4,[-0.05 0.5 1.4],false)
-%p6DMC(100,100,[510 25],2,0.2,[0.5],false)
-
-%N skalar
-%Nu skalar
-%lambda wektor n liczb
-%rozmiar lambdy, ilosc reg lokalnych
-%d skalar? z r�wna� ni�ej wynika �e skalar, ale oni w optymalizatorze podawali wektor n liczb
-%c wektor n-1 liczb
 n = 50;
-% close all
-% 
-% N=round(N);
-% Nu=round(Nu);
-% 
-% % 
-% % s1=load('skok_-1.000_-0.900.txt');
-% % sn=load('skok_0.900_1.000.txt');
-% s1 = odpowiedzi_skokowe(-1.000,-0.96);
-% sn = odpowiedzi_skokowe(0.96,1);
-% 
-% 
+
 D=80;
 Upp=0;
 Ypp=0;
@@ -29,20 +7,11 @@ Umin=-1;
 Umax=1;
 dupmax = 0.1;
 dupmin = -0.1;
-% 
-%inicjalizacja sta?ych
+
 kk=1410;
 startk=10;
-% 
 
-%DMC
-%----------------------------------------------------------------
-
-%chyba rozumiem, tu trzeba podzielic odcinek -1:1 na 50 rownych(?) kawalkow
-%z nich zebrac odpowiedzi skokowe w sensie skok z jednej granicy do drugiej
-%i je wrzuci� do tych 50 dmck�w
  load('OptymalizacjaGa_2proba_iter=50.mat')
-% Liczenie zakreów przedziałów
 Us = ones(1,50);
 Ue = ones(1,50);
 Us(1) = -1
@@ -112,10 +81,6 @@ for k=7:kk
         deltaup(i)=deltaup(i-1);
     end
     
-    %pytanie o co mu chodzi�o z -0,1 <= du <= 0,1
-    %czy w sensie przyrostu wszystkich lokalnych po kolei czy ju�
-    %zsumowanych, mysl� �e to drugie, kurde komar mnie ugryz�
-    
     if deltauk>0.1
         deltauk = dupmax;
     elseif deltauk<-0.1
@@ -131,7 +96,6 @@ for k=7:kk
     elseif U(k)<Umin
         U(k)=Umin;
     end
-    
     
 end
 figure
