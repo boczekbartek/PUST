@@ -16,9 +16,11 @@ close all
 N=round(N);
 Nu=round(Nu);
 
-
-s1=load('skok_-1.000_-0.900.txt');
-sn=load('skok_0.900_1.000.txt');
+% 
+% s1=load('skok_-1.000_-0.900.txt');
+% sn=load('skok_0.900_1.000.txt');
+s1 = odpowiedzi_skokowe(-1.000,-0.96);
+sn = odpowiedzi_skokowe(0.96,1);
 
 
 D=100;
@@ -47,29 +49,36 @@ ke=zeros(1,n);
 %z nich zebrac odpowiedzi skokowe w sensie skok z jednej granicy do drugiej
 %i je wrzuciæ do tych 50 dmcków
 for m=1:n
+    
     if m==1
-        s=s1(:,2);
+        s=s1;
     elseif m==n
-        s=sn(:,2);
-    elseif m==2 && n==3
-        stemp=load('skok_-0.089_0.502.txt');
-        s=stemp(:,2);
-    elseif m==2 && n==4
-        stemp=load('skok_-0.089_0.293.txt');
-        s=stemp(:,2);
-    elseif m==3 && n==4
-        stemp=load('skok_0.293_0.502.txt');
-        s=stemp(:,2);
-    elseif m==2 && n==5
-        stemp=load('skok_-0.089_0.194.txt');
-        s=stemp(:,2);
-    elseif m==3 && n==5
-        stemp=load('skok_0.194_0.377.txt');
-        s=stemp(:,2);
-    elseif m==4 && n==5
-        stemp=load('skok_0.377_0.502.txt');
-        s=stemp(:,2);
+        s=sn;
+    else
+        s = odpowiedzi_skokowe(-1 + m*0.04, -1 + (m*0.04) + 0.2);
     end
+    
+%     elseif m==2 && n==3
+%         stemp=load('skok_-0.089_0.502.txt');
+%         s=stemp(:,2);
+%     elseif m==2 && n==4
+%         stemp=load('skok_-0.089_0.293.txt');
+%         s=stemp(:,2);
+%     elseif m==3 && n==4
+%         stemp=load('skok_0.293_0.502.txt');
+%         s=stemp(:,2);
+%     elseif m==2 && n==5
+%         stemp=load('skok_-0.089_0.194.txt');
+%         s=stemp(:,2);
+%     elseif m==3 && n==5
+%         stemp=load('skok_0.194_0.377.txt');
+%         s=stemp(:,2);
+%     elseif m==4 && n==5
+%         stemp=load('skok_0.377_0.502.txt');
+%         s=stemp(:,2);
+%     end
+%     
+    
     
 %     s=z2_y21(16:115,2);
     
@@ -106,13 +115,13 @@ e=zeros(1,kk);
 
 
 Yzad(1:startk)=Ypp;
-Yzad(startk:210)=5;
-Yzad(210:410)=2;
-Yzad(410:610)=4;
-Yzad(610:810)=-0.15;
+Yzad(startk:210)=0.08;
+Yzad(210:410)=0;
+Yzad(410:610)=-2.5;
+Yzad(610:810)=-1;
 Yzad(810:1010)=-0.05;
-Yzad(1010:1210)=-0.1;
-Yzad(1210:1410)=1;
+Yzad(1010:1210)=-0.5;
+Yzad(1210:1410)=-1;
 
 
 deltaup=zeros(1,D-1);
