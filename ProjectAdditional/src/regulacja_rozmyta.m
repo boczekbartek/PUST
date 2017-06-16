@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+n = 50;
+>>>>>>> cd499943e54a83d4c68f16de6133e27a72a24807
 
 D=80;
 Upp=0;
@@ -7,10 +11,8 @@ Umax=1;
 dupmax = 0.1;
 dupmin = -0.1;
 
-
 kk=2210;
 startk=10;
-
 
 %Ładowanie parametrów ke i ku dla każdego z 50 regulatorów lokalnych wyliczonych poczas
 %optymalizacji
@@ -18,6 +20,7 @@ startk=10;
 load('OptymalizacjaGa_2proba_iter=50.mat')
 
 % Liczenie zakreów każdego z 50 przedziałów przedziałów
+
 Us = ones(1,50);
 Ue = ones(1,50);
 Us(1) = -1
@@ -86,10 +89,6 @@ for k=7:kk
         deltaup(i)=deltaup(i-1);
     end
     
-    %pytanie o co mu chodzi�o z -0,1 <= du <= 0,1
-    %czy w sensie przyrostu wszystkich lokalnych po kolei czy ju�
-    %zsumowanych, mysl� �e to drugie, kurde komar mnie ugryz�
-    
     if deltauk>0.1
         deltauk = dupmax;
     elseif deltauk<-0.1
@@ -105,7 +104,6 @@ for k=7:kk
     elseif U(k)<Umin
         U(k)=Umin;
     end
-    
     
 end
 figure

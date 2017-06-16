@@ -17,5 +17,5 @@ for m=1:50
     Uend = Ue(m)
     tic; [ku(m,:),ke(m), e(m) ]=optymalizacja(Ustart,Uend);toc;
     e(m)
-    save(sprintf("OptymalizacjaGa_2proba_iter=%d",m))
+    save(sprintf("OptymalizacjaGa_3proba_iter=%d",m))
 end
