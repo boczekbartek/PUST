@@ -11,7 +11,6 @@ Us(50)=Ue(49);
 for m=1:50
     Ustart = Us(m)
     Uend = Ue(m)
-    figure
-    plot(odpowiedzi_skokowe(Ustart,Uend))
-    title(sprintf("Odpowiedź skokowa dla regulatora lokalnego \nz przedziału (%2.4f, %2.4f)",Ustart,Uend))
+    
+  
 end
