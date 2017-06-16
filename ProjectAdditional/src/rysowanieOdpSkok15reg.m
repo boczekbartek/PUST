@@ -16,5 +16,5 @@ for m=1:15
     Uend = Ue15(m);
     figure
     plot(odpowiedzi_skokowe(Ustart,Uend))
-    title(sprintf("Odpowiedź skokowa dla regulatora lokalnego \nz przedziału (%2.4f, %2.4f)",Ustart,Uend))
+    title(sprintf('Odpowiedz skokowa dla regulatora lokalnego \nz przedzialu (%2.4f, %2.4f)',Ustart,Uend))
 end
