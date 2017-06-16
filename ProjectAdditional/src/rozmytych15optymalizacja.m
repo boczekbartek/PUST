@@ -18,5 +18,5 @@ for m=1:50
     Uend = Ue15(m)
     tic; [ku(m,:),ke(m), e(m) ]=optymalizacja(Ustart,Uend);toc;
     e(m)
-    save(sprintf("OptymalizacjaGa_15reg_iter=%d",m))
+    save(sprintf('OptymalizacjaGa_15reg_iter=%d',m))
 end
