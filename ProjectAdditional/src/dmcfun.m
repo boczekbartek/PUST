@@ -105,6 +105,8 @@ end
 if wykresy
     figure 
     plot(Yzad, '-')
+    
     hold on
     plot(Y)
+    title(sprintf("Regulator lokalny do przedzialu (%2.4f: %2.4f)", Ustart, Uend))
 end
