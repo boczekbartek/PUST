@@ -8,7 +8,7 @@ dupmax = 0.1;
 dupmin = -0.1;
 
 
-kk=2210;
+kk=1410;
 startk=10;
 
 
@@ -16,8 +16,7 @@ startk=10;
 %optymalizacji
 
 load('OptymalizacjaGa_2proba_iter=50.mat')
-
-% Liczenie zakreów każdego z 50 przedziałów przedziałów
+% Liczenie zakreów przedziałów
 Us = ones(1,50);
 Ue = ones(1,50);
 Us(1) = -1
@@ -28,13 +27,14 @@ for m=0:47
 end
 Us(50)=Ue(49);
 
+
+
 U(1:kk)=Upp;
 Y(1:kk)=Ypp;
 
 e=zeros(1,kk);
 
 
-%Losowe dobieranie 10 wartości zadanych
 xmin1 = -2.6;
 xmax1 = 0;
 
@@ -42,16 +42,16 @@ xmin2 = 0;
 xmax2 = 0.08;
 
 Yzad(startk:210)=xmin1+rand*(xmax1-xmin1);
-Yzad(210:410)=xmin2+rand*(xmax2-xmin2);
-Yzad(410:610)=xmin1+rand*(xmax1-xmin1);
+Yzad(210:310)=xmin2+rand*(xmax2-xmin2);
+Yzad(310:410)=xmin1+rand*(xmax1-xmin1);
+Yzad(410:510)=xmin2+rand*(xmax2-xmin2);
+Yzad(510:610)=xmin1+rand*(xmax1-xmin1);
 Yzad(610:810)=xmin2+rand*(xmax2-xmin2);
-Yzad(810:1010)=xmin1+rand*(xmax1-xmin1);
-Yzad(1010:1210)=xmin2+rand*(xmax2-xmin2);
+Yzad(810:910)=xmin1+rand*(xmax1-xmin1);
+Yzad(90:1010)=xmin2+rand*(xmax2-xmin2);
+Yzad(1010:1110)=xmin1+rand*(xmax1-xmin1);
+Yzad(1110:1210)=xmin2+rand*(xmax2-xmin2);
 Yzad(1210:1410)=xmin1+rand*(xmax1-xmin1);
-Yzad(1410:1610)=xmin2+rand*(xmax2-xmin2);
-Yzad(1610:1810)=xmin1+rand*(xmax1-xmin1);
-Yzad(1810:2010)=xmin2+rand*(xmax2-xmin2);
-Yzad(2010:2210)=xmin1+rand*(xmax1-xmin1);
 
 
 deltaup=zeros(1,D-1);
