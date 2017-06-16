@@ -1,5 +1,5 @@
-function [ku, ke] = optymalizacja(Ustart,Uend,odpSkok)
-
+function [ku, ke] = optymalizacja(Ustart,Uend)
+odpSkok = odpowiedzi_skokowe(Ustart, Uend);
 x0 = [2 2 10];
 lb = [1, 1, 0.0001];
 ub = [80,90,1000];
@@ -8,4 +8,4 @@ ub = [80,90,1000];
 N = nastawy(1);
 Nu = nastawy(2);
 Lambda = nastawy(3);
-[e, ku, ke] = dmcfun(nastawy, Ustart,Uend,odpowiedzi_skokowe(Ustart,Uend), false);
+[e, ku, ke] = dmcfun(nastawy, Ustart,Uend,odpowiedzi_skokowe(Ustart,Uend), true);
