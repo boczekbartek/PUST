@@ -17,10 +17,9 @@ N=round(N);
 Nu=round(Nu);
 
 
-load('p2/z2_y21.txt')
-
 s1=load('skok_-1.000_-0.900.txt');
 sn=load('skok_0.900_1.000.txt');
+
 
 D=100;
 Upp=0;
