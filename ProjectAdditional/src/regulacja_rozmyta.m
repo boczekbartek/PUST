@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-=======
+
 n = 50;
->>>>>>> cd499943e54a83d4c68f16de6133e27a72a24807
 
 D=80;
 Upp=0;
@@ -62,7 +60,7 @@ deltaup=zeros(1,D-1);
 Un=zeros(1,n);
 mi=zeros(1,n);
 
-d = 250 % "nachylenie" sigmoidy
+d = 500 % "nachylenie" sigmoidy
 c = Us(2:50) % offsety każdej z sigmoid, granice przedziałów dla regulatorów lokalnych
 
 

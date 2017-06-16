@@ -1,4 +1,6 @@
 
+
+
 D=80;
 Upp=0;
 Ypp=0;
@@ -7,26 +9,28 @@ Umax=1;
 dupmax = 0.1;
 dupmin = -0.1;
 
-
 kk=2210;
 startk=10;
-
 n = 15 
-%�?adowanie parametrów ke i ku dla każdego z 50 regulatorów lokalnych wyliczonych poczas
+%�?adowanie parametrów ke i ku dla każdego z 50 regulatorów lokalnych wyliczonych poczas
 %optymalizacji
 
 load('OptymalizacjaGa_15reg_iter=15.mat')
 
 % Liczenie zakreów każdego z 50 przedziałów przedziałów
-Us = ones(1,50);
-Ue = ones(1,50);
-Us(1) = -1
-Ue(1) = -0.98;
-for m=0:47
-  Us(m+2) = -0.98 + m*0.0408333333333333;
-  Ue(m+2) = -0.98 + (m*0.0408333333333333) + 0.0408333333333333;
+
+Us15 = ones(1,15);
+Ue15= ones(1,15);
+Us15(1) = -1
+Ue15(1) = -0.6;
+Ue15(end)=1
+for m=0:12
+  Us15(m+2) = -0.6+ m*0.0538461538461538;
+  Ue15(m+2) = -0.6 + (m*0.0538461538461538) + 0.0538461538461538;
 end
-Us(50)=Ue(49);
+Us15(end)=0.1;
+Ue15(end-1)=0.1;
+
 
 U(1:kk)=Upp;
 Y(1:kk)=Ypp;
@@ -59,8 +63,8 @@ deltaup=zeros(1,D-1);
 Un=zeros(1,n);
 mi=zeros(1,n);
 
-d = 100 % "nachylenie" sigmoidy
-c = Us(2:50) % offsety każdej z sigmoid, granice przedziałów dla regulatorów lokalnych
+d = 500 % "nachylenie" sigmoidy
+c = Us15(2:15) % offsety każdej z sigmoid, granice przedziałów dla regulatorów lokalnych
 
 
 for k=7:kk
