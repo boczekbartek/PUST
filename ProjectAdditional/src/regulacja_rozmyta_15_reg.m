@@ -104,8 +104,15 @@ for k=7:kk
     
     
 end
-figure
-plot(Yzad)
+figure('Position',  [403 246 820 420]);
+subplot('Position', [0.1 0.12 0.8 0.15]);
+stairs(U)
+ylabel('u');
+xlabel('k');
+subplot('Position', [0.1 0.37 0.8 0.6]);
+stairs(Y)
+ylabel('y');
+xlabel('k');
 hold on
-plot(Y)
+stairs(Yzad,':');
 E=sum((e).^2);
