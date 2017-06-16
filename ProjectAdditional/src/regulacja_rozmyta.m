@@ -12,7 +12,7 @@ dupmin = -0.1;
 kk=2210;
 startk=10;
 
-%Ładowanie parametrów ke i ku dla każdego z 50 regulatorów lokalnych wyliczonych poczas
+%�?adowanie parametrów ke i ku dla każdego z 50 regulatorów lokalnych wyliczonych poczas
 %optymalizacji
 
 load('OptymalizacjaGa_2proba_iter=50.mat')
@@ -104,8 +104,15 @@ for k=7:kk
     end
     
 end
-figure
-plot(Yzad)
+figure('Position',  [403 246 820 420]);
+subplot('Position', [0.1 0.12 0.8 0.15]);
+stairs(U)
+ylabel('u');
+xlabel('k');
+subplot('Position', [0.1 0.37 0.8 0.6]);
+stairs(Y)
+ylabel('y');
+xlabel('k');
 hold on
-plot(Y)
+stairs(Yzad,':');
 E=sum((e).^2);
