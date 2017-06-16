@@ -21,11 +21,13 @@ Ymax=char_stat_fun(Uend);
 % 
 N=round(N);
 Nu=round(Nu);
+Ymin
+Ymax
 Yzad(1:n) = Ymin;
-Yzad(21:n) = (Ymax+Ymin)/2;
-Yzad(400:n)=(Ymax+Ymin)/3;
-Yzad(900:n)=(Ymax+Ymin)/8;
-Yzad(1600:n)=(Ymax+Ymin)*7/8;
+Yzad(21:n) = Ymin+(Ymax-Ymin)/2;
+Yzad(400:n)=Ymin+(Ymax-Ymin)/3;
+Yzad(900:n)=Ymin+(Ymax-Ymin)/8;
+Yzad(1600:n)=Ymin + (Ymax-Ymin)*7/8;
 
 M=zeros(N,Nu);
 MP=zeros(N,D-1);
@@ -57,7 +59,7 @@ end;
 % Obliczanie parametr�w regulatora
 
 I=eye(Nu);
-K=((M'*M+lambda*I)^-1)*M'
+K=((M'*M+lambda*I)^-1)*M';
 ku=K(1,:)*MP;
 ke=sum(K(1,:));
 
@@ -65,13 +67,14 @@ Upp = Ustart;
 Ypp = Ymin;
 U(1:n)=Upp;
 Y(1:n)=Ypp;
-
+y(1:n) = 0;
 e=zeros(1,n);
 
 deltaup=zeros(1,D-1);
 
 Un=zeros(1,n);
 err = 0;
+
 for k=7:n
     %symulacja obiektu
     Y(k)= symulacja_obiektu10y(U(k-5),U(k-6),Y(k-1),Y(k-2));

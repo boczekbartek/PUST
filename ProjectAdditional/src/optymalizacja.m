@@ -16,8 +16,8 @@ function [nastawy] = optymalizacja(Ustart,Uend,odpSkok)
 
 
 
-x0 = [50 50 250];
-lb = [1, 1, 0.001];
+x0 = [1 1 1];
+lb = [1, 1, 0.0001];
 ub = [80,80,1000];
 % [nastawy, min_error, exitfalg] = ga(@(x)(dmcfun(x,Ustart,Uend,odpSkok,false)),3,[], [], [],[],lb,ub,[],[]);
 [nastawy, min_error]=fmincon(@(x)(dmcfun(x,Ustart,Uend,odpSkok,false)),x0,[],[],[],[],lb,ub);
