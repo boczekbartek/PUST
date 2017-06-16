@@ -1,4 +1,4 @@
-function err = dmcfun( param,Ustart,Uend,odpSkok, wykresy)
+function [err, ku, ke] = dmcfun( param,Ustart,Uend,odpSkok, wykresy)
 %DMC_ERR liczy wartosc bledu regulatora dla zadanych parametrow przy D=120
 
 s = odpSkok;
@@ -21,8 +21,6 @@ Ymax=char_stat_fun(Uend);
 % 
 N=round(N);
 Nu=round(Nu);
-Ymin
-Ymax
 Yzad(1:n) = Ymin;
 Yzad(21:n) = Ymin+(Ymax-Ymin)/2;
 Yzad(400:n)=Ymin+(Ymax-Ymin)/3;
